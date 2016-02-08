@@ -1,0 +1,87 @@
+.row.margin-rows
+    .large-12.columns
+        h2 Мы на связи
+    #contactForm.large-6.columns
+        form#feedback_form(method='post', data-abide='', novalidate='novalidate')
+            label Ваше имя
+            small.error Заполните это поле
+            input(type='text', placeholder='Ваше имя', required='')
+            label Email
+            small.error Заполните это поле, для связи с вами
+            input(type='email', placeholder='username@address.com', required='')
+            label Чем мы можем помочь?
+            textarea(placeholder='Введите ваше сообщение')
+            input.radius.button(type='submit', value='Отправить сообщение')
+    .large-2.small-4.columns
+        .profile-image
+            img(src='./images/girl1.png')
+        h5.text-center Алена Ратникова
+        h6.text-center
+            | Менеджер
+            br
+            | по продажам
+        .social-link.text-center
+            a(href='#')
+                i.fi.fi-social-twitter
+            a(href='#')
+                i.fi.fi-social-facebook
+            a(href='#')
+                i.fi.fi-social-linkedin
+    .large-2.small-4.columns
+        .profile-image
+            img(src='./images/girl2.png')
+        h5.text-center Мария Свешникова
+        h6.text-center
+            | Менеджер
+            br
+            | по маркетингу
+        .social-link.text-center
+            a(href='#')
+                i.fi.fi-social-twitter
+            a(href='#')
+                i.fi.fi-social-facebook
+            a(href='#')
+                i.fi.fi-social-linkedin
+    .large-2.small-4.columns
+        .profile-image
+            img(src='./images/girl3.png')
+        h5.text-center Мария Свешникова
+        h6.text-center
+            | Менеджер
+            br
+            | по маркетингу
+        .social-link.text-center
+            a(href='#')
+                i.fi.fi-social-twitter
+            a(href='#')
+                i.fi.fi-social-facebook
+            a(href='#')
+                i.fi.fi-social-linkedin
+.row.margin-rows
+    .large-12.columns
+        iframe(width='100%', height='450', frameborder='0', style='border:0', src='https://www.google.com/maps/embed/v1/place?q=place_id:ChIJbdtxrKqWskYRdnGdTkcjiDE&key=AIzaSyBYVjJcUC97p7X-BR-JufMT-23LdHAXjnY', allowfullscreen='')
+.row.margin-rows
+    .large-3.columns
+        h4 Адрес офиса
+        p Проспект Ленина, дом 25, 6 этаж, офис 606 (Адрес для курьера)
+    .large-3.columns
+        h4 Телефоны
+        h5 +7 (499) 918-43-57
+        p
+            | Новые Клиенты — нажмите «0» Текущие Клиенты — добавочные и мобильные телефоны проектных менеджеров
+        h5 +7 (905) 134-51-91
+        p Резервный круглосуточный номер для действительно самых экстренных ситуаций
+    .large-3.columns
+        h4 Email
+        h5
+            a(href='mailto:welcome@ceteralabs.ru') welcome@ceteralabs.ru
+        p Для новых Клиентов
+        h5
+            a(href='mailto:support@ceteralabs.ru') support@ceteralabs.ru
+        p Для текущих Клиентов
+        h5
+            a(href='mailto:hr@ceteralabs.ru') hr@ceteralabs.ru
+        p Для кандидатов в коллеги
+    .large-3.columns
+        h4 Почтовый адрес
+        p ООО «Цетера Лабс» Куда: 150040, г.Ярославль, п/о 40, а/я 62

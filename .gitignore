@@ -1,17 +1,10 @@
-# common, PHPStorm
+# common, PHPStorm, WebStorm
 .DS_Store
 .idea/*
 Thumbs.db
 
-*.sql
-
-# working: layout, wireframes etc
-working/*
-!working/.gitignore
-!working/layout
-
-# site
-www/*
-!www/.gitignore
-!www/local
-!www/robots.txt
+#project
+bower_components
+node_modules
+npm-debug.log
+dist
