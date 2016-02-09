@@ -1,4 +1,4 @@
-$(document).foundation();
+;$(document).foundation();
 function rotateCard(btn) {
     var $card = $(btn).closest('.card-container');
     console.log($card);
@@ -8,3 +8,4 @@ function rotateCard(btn) {
         $card.addClass('hover');
     }
 }
+alert(1);

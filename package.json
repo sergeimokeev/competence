@@ -4,7 +4,8 @@
   "description": "Шаблон прототипов на фреймворке Foundation в компании Cetera Labs.",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "minify": "minify"
   },
   "author": "Denis Sakharov <d.sakharov@ceteralabs.com> (http://cetera.ru/)",
   "license": "UNLICENSED",
@@ -14,11 +15,15 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.1.0",
     "gulp-jade": "^1.1.0",
-    "gulp-usemin": "^0.3.9",
+    "gulp-useref": "^3.0.5",
+    "gulp-if": "^2.0.0",
+    "gulp-ignore": "^2.0.1",
     "gulp-uglify": "^1.5.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-replace": "^0.3.0",
     "gulp-imagemin": "^2.4.0",
     "imagemin-pngquant": "^4.2.0",
-    "sprity": "^1.0.0",
     "jstransformer-uglify-js": "^1.1.1"
   }
 }
