@@ -36,7 +36,7 @@ var path = {
     },
     watch: {
         html: 'src/jade/**/*.jade',
-        js: ['src/js/*.js', 'src/jade/components/_js.jade', 'bower_components/**/*.js'],
+        js: ['src/js/*.js', 'src/jade/**/*.jade', 'bower_components/**/*.js'],
         css: 'src/scss/**/*.scss',
         images: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*',
@@ -86,7 +86,7 @@ gulp.task('jade', ['clean-html'], function() {
         .pipe(jade({
             pretty: true
         }))
-        .pipe(gulp.dest(path.dist.html))
+        .pipe(gulp.dest(path.dist.html));
 });
 
 gulp.task('images', ['clean-images'], function () {
@@ -105,9 +105,10 @@ gulp.task('fonts', ['clean-fonts'], function() {
         .pipe(gulp.dest(path.dist.fonts));
 });
 
-gulp.task('js-app-copy', ['clean-js'], function () {
-    return gulp.src('src/js/**/*.js')
-        .pipe(gulp.dest(path.dist.js));
+gulp.task('js-copy', ['clean-js', 'jade'], function () {
+    return gulp.src(path.src.js)
+        .pipe(useref())
+        .pipe(gulp.dest(path.dist.html));
 });
 
 gulp.task('js-minify', ['clean-js', 'jade'], function () {
@@ -119,12 +120,12 @@ gulp.task('js-minify', ['clean-js', 'jade'], function () {
 
 gulp.task('minify', ['sass', 'jade', 'images', 'fonts', 'js-minify']);
 
-gulp.task('default', ['sass', 'jade', 'images', 'fonts', 'js-app-copy', 'js-minify'], function () {
+gulp.task('default', ['sass', 'jade', 'images', 'fonts', 'js-copy'], function () {
     gulp.watch([path.watch.css], ['sass']);
     gulp.watch([path.watch.html], ['jade']);
     gulp.watch([path.watch.images], ['images']);
     gulp.watch([path.watch.fonts], ['fonts']);
-    gulp.watch(path.watch.js, ['js-app-copy', 'js-minify']);
+    gulp.watch(path.watch.js, ['js-copy']);
 });
 
 //https://gist.github.com/Insayt/272c9b81936a03884768
