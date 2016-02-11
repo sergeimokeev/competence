@@ -15,7 +15,8 @@ var gulp = require('gulp'),
 var sassPaths = [
     './bower_components/foundation-sites/scss',
     './bower_components/motion-ui/src',
-    './bower_components/components-font-awesome/scss/'
+    './bower_components/components-font-awesome/scss/',
+    './bower_components/owl.carousel/src/scss/'
 ];
 
 var path = {
