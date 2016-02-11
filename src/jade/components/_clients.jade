@@ -3,15 +3,8 @@
         h2 Наши клиенты
         p &nbsp;
         .row.small-up-2.medium-up-4.large-up-6.text-center
-            .column
-                p: img(src='./images/image.svg', style='width:100px;height:75px;background:#FEF141;', alt='1')
-            .column
-                p: img(src='./images/image.svg', style='width:100px;height:75px;background:#FEF141;', alt='1')
-            .column
-                p: img(src='./images/image.svg', style='width:100px;height:75px;background:#FEF141;', alt='1')
-            .column
-                p: img(src='./images/image.svg', style='width:100px;height:75px;background:#FEF141;', alt='1')
-            .column
-                p: img(src='./images/image.svg', style='width:100px;height:75px;background:#FEF141;', alt='1')
-            .column
-                p: img(src='./images/image.svg', style='width:100px;height:75px;background:#FEF141;', alt='1')
+            - var n = 0
+            while n < 6
+                .column
+                    p: img(src='./images/image.svg', style='width:100px;height:75px;background:#FEF141;', alt=n)
+                - n++

@@ -80,3 +80,9 @@
     }
   }
 }
+
+@media #{$small-only} {
+  .owl-theme .owl-nav [class*='owl-'] {
+    display: none !important;
+  }
+}

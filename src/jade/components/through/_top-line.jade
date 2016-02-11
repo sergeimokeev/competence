@@ -5,12 +5,9 @@
                 span.menu-icon.dark(data-toggle)
             .top-line__menu#responsive-menu
                 ul.menu-top
-                    li.menu-top__item
-                        a.menu-top__link(href='#') Контакты
-                    li.menu-top__item
-                        a.menu-top__link(href='#') Узнайте цены
-                    li.menu-top__item
-                        a.menu-top__link(href='#') Личный кабинет
+                    each title in ['Контакты', 'Узнайте цены', 'Личный кабинет']
+                        li.menu-top__item
+                            a.menu-top__link(href='#')= title
         .small-12.large-4.columns
             .top-line__contacts.text-left.large-text-right
                 a(href='tel:+71234567890')
