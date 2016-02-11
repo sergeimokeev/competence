@@ -1,0 +1,133 @@
+h3 Выберите необходимый набор услуг — получите предложение через 5 минут
+form
+    .alert.callout(data-closable='')
+        h5 This a friendly message.
+        p And when you're done with me, I close using a Motion UI animation.
+        button.close-button(aria-label='Dismiss alert', type='button', data-close='')
+            span(aria-hidden='true') &times;
+    .success.callout(data-closable='')
+        h5 This a friendly message.
+        p And when you're done with me, I close using a Motion UI animation.
+        button.close-button(aria-label='Dismiss alert', type='button', data-close='')
+            span(aria-hidden='true') &times;
+    .callout.text-center
+        .row.small-up-1.medium-up-2.large-up-3(data-equalizer='form-switch', data-equalize-by-row='true')
+            .column
+                p(data-equalizer-watch='form-switch') Консультирование
+                .switch.large
+                    input#yes1.switch-input(type='checkbox', name='exampleSwitch')
+                    label.switch-paddle(for='yes1')
+                        span.show-for-sr Консультирование
+                        span.switch-active(aria-hidden='true')
+                        span.switch-inactive(aria-hidden='true')
+            .column
+                p(data-equalizer-watch='form-switch') Дизайн (сайты, баннеры, схемы и прочие изображения для нужд интернета)
+                .switch.large
+                    input#yes2.switch-input(type='checkbox', name='exampleSwitch')
+                    label.switch-paddle(for='yes2')
+                        span.show-for-sr Дизайн (сайты, баннеры, схемы и прочие изображения для нужд интернета)
+                        span.switch-active(aria-hidden='true')
+                        span.switch-inactive(aria-hidden='true')
+            .column
+                p(data-equalizer-watch='form-switch') Вёрстка HTML-страниц и сайтов
+                .switch.large
+                    input#yes3.switch-input(type='checkbox', name='exampleSwitch')
+                    label.switch-paddle(for='yes3')
+                        span.show-for-sr Вёрстка HTML-страниц и сайтов
+                        span.switch-active(aria-hidden='true')
+                        span.switch-inactive(aria-hidden='true')
+            .column
+                p(data-equalizer-watch='form-switch') Консультирование
+                .switch.large
+                    input#yes4.switch-input(type='checkbox', name='exampleSwitch')
+                    label.switch-paddle(for='yes4')
+                        span.show-for-sr Программирование
+                        span.switch-active(aria-hidden='true')
+                        span.switch-inactive(aria-hidden='true')
+            .column
+                p(data-equalizer-watch='form-switch') Тестирование разработанных сайтов и сервисов
+                .switch.large
+                    input#yes5.switch-input(type='checkbox', name='exampleSwitch')
+                    label.switch-paddle(for='yes5')
+                        span.show-for-sr Тестирование разработанных сайтов и сервисов
+                        span.switch-active(aria-hidden='true')
+                        span.switch-inactive(aria-hidden='true')
+            .column
+                p(data-equalizer-watch='form-switch') Размещение сайтов или администрирование серверов
+                .switch.large
+                    input#yes6.switch-input(type='checkbox', name='exampleSwitch')
+                    label.switch-paddle(for='yes6')
+                        span.show-for-sr Размещение сайтов или администрирование серверов
+                        span.switch-active(aria-hidden='true')
+                        span.switch-inactive(aria-hidden='true')
+            .column
+                p(data-equalizer-watch='form-switch') Вёрстка HTML-страниц и сайтов
+                .switch.large
+                    input#yes7.switch-input(type='checkbox', name='exampleSwitch')
+                    label.switch-paddle(for='yes7')
+                        span.show-for-sr Публикация текстовых материалов на сайты
+                        span.switch-active(aria-hidden='true')
+                        span.switch-inactive(aria-hidden='true')
+            .column
+                p(data-equalizer-watch='form-switch') Обучение Заказчика использованию сайтов
+                .switch.large
+                    input#yes8.switch-input(type='checkbox', name='exampleSwitch')
+                    label.switch-paddle(for='yes8')
+                        span.show-for-sr Обучение Заказчика использованию сайтов
+                        span.switch-active(aria-hidden='true')
+                        span.switch-inactive(aria-hidden='true')
+            .column
+                p(data-equalizer-watch='form-switch') Интеграция с внешними системами
+                .switch.large
+                    input#yes9.switch-input(type='checkbox', name='exampleSwitch')
+                    label.switch-paddle(for='yes9')
+                        span.show-for-sr Интеграция с внешними системами
+                        span.switch-active(aria-hidden='true')
+                        span.switch-inactive(aria-hidden='true')
+            .column
+                p(data-equalizer-watch='form-switch') Обучение Заказчика использованию сайтов
+                .switch.large
+                    input#yes10.switch-input(type='checkbox', name='exampleSwitch')
+                    label.switch-paddle(for='yes10')
+                        span.show-for-sr Управление продвижением
+                        span.switch-active(aria-hidden='true')
+                        span.switch-inactive(aria-hidden='true')
+        p &nbsp;
+        hr
+        p &nbsp;
+        .row
+            .small-12.medium-6.large-3.columns
+                label
+                    | Input Label
+                    input(type='text', placeholder='large-4.columns')
+            .small-12.medium-6.large-3.columns
+                label
+                    | Input Label
+                    input(type='text', placeholder='large-4.columns')
+            .small-12.medium-6.large-3.columns
+                .row.collapse
+                    label Input Label
+                    .small-9.columns
+                        input(type='text', placeholder='small-9.columns')
+                    .small-3.columns
+                        span.postfix .com
+            .small-12.medium-6.large-3.columns
+                label
+                    | Select Box
+                    select
+                        option(value='husker') Husker
+                        option(value='starbuck') Starbuck
+                        option(value='hotdog') Hot Dog
+                        option(value='apollo') Apollo
+        .row
+            .small-12.large-6.columns
+                label
+                    | Input Label
+                    input(type='text', placeholder='large-12.columns')
+            .small-12.large-6.columns
+                label
+                    | Textarea Label
+                    textarea(placeholder='small-12.columns')
+        .row.column.text-center
+                button.button.large(type='button') Получите предложение через 5 минут &nbsp;
+                    i.fa.fa-long-arrow-right.fa-lg

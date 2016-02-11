@@ -1,0 +1,62 @@
+.text-primary {
+  color: $primary-color;
+  &:hover, &:focus {
+    color: $primary-color;
+  }
+}
+
+.text-secondary {
+  color: $secondary-color;
+  &:hover, &:focus {
+    color: $secondary-color;
+  }
+}
+
+.text-success {
+  color: $success-color;
+  &:hover, &:focus {
+    color: $success-color;
+  }
+}
+
+.text-alert {
+  color: $alert-color;
+  &:hover, &:focus {
+    color: $alert-color;
+  }
+}
+
+.text-warning {
+  color: $warning-color;
+  &:hover, &:focus {
+    color: $warning-color;
+  }
+}
+
+.text-white {
+  color: $white;
+  &:hover, &:focus {
+    color: $white;
+  }
+}
+
+.text-gray {
+  color: $color-gray;
+  &:hover, &:focus {
+    color: $color-gray;
+  }
+}
+
+.text-light-gray {
+  color: $light-gray;
+  &:hover, &:focus {
+    color: $light-gray;
+  }
+}
+
+.text-dark-gray {
+  color: $dark-gray;
+  &:hover, &:focus {
+    color: $dark-gray;
+  }
+}

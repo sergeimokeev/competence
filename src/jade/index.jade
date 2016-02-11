@@ -1,223 +1,28 @@
 doctype html
 html.no-js(lang='en')
-    include components/_head
+    include components/service/_head
     body
-        include components/_header
-        .slideshow-wrapper
-            .orbit.orbit-first-slider(role='region', aria-label='Favorite Space Pictures', data-orbit='', data-use-m-u-i='true')
-                ul.orbit-container
-                    button.orbit-previous(aria-label='previous')
-                        span.show-for-sr Previous Slide
-                        | ◀
-                    button.orbit-next(aria-label='next')
-                        span.show-for-sr Next Slide
-                        | ▶
-                    li.is-active.gradient.orbit-slide(style="background-images: url('http://chicagoarchitecturebiennial.org/site/assets/files/1024/iwan_3-1.jpg');")
-                        .row
-                            .large-8.large-centered.columns.padding-right.slide
-                                .vertical-align.text-center
-                                    h1 Абонентское обслуживание
-                                    p
-                                        | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене. Часто — нулевая стоимость сайта до открытия.
-                                    a.button.radius(href='#') Узнайте стоимость сайта ›
-                    li.orbit-slide.gradient(style="background-images: url('http://chicagoarchitecturebiennial.org/site/assets/files/1024/iwan_3-1.jpg');")
-                        .row
-                            .large-8.large-centered.columns.padding-right.slide
-                                .vertical-align.text-center
-                                    h1 Абонентское обслуживание
-                                    p
-                                        | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене. Часто — нулевая стоимость сайта до открытия.
-                                    a.button.radius(href='#') Узнайте стоимость сайта ›
-                    li.orbit-slide.gradient(style="background-images: url('http://chicagoarchitecturebiennial.org/site/assets/files/1024/iwan_3-1.jpg');")
-                        .row
-                            .large-8.large-centered.columns.padding-right.slide
-                                .vertical-align.text-center
-                                    h1 Абонентское обслуживание
-                                    p
-                                        | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене. Часто — нулевая стоимость сайта до открытия.
-                                    a.button.radius(href='#') Узнайте стоимость сайта ›
-        include components/_services
-        .hello-intro
-            .row.intro
-                .large-centered.small-centered.large-12.columns.text-center
-                    h2 Пригласите нас на презентацию
-                    p
-                        | Расскажем, где найти клиентов для вашего бизнеса. За 5 минут изложим ключевые тезисы нашего предложения.
-                        br
-                        | Поможем организовать проект создания сайта. Предоставим план создания сайта. И ответим на все ваши вопросы сразу.
-                    a.button.radius(href='#') Узнайте стоимость сайта ›
-        .row.margin-rows
-            .large-12.columns
-                h2 Новые проекты
-                a(href='#', data-reveal-id='#1') Все проекты
-            .large-4.medium-6.small-12.columns
-                .card-container.manual-flip
-                    .card
-                        .front.favblue
-                            .cover
-                                img(src='http://milosz.is/lib/images/bg-trapcall.png')
-                            .content
-                                h3.color-white Бизнес-мода
-                                .footer
-                                    a.button.border-button.radius(onclick='rotateCard(this)') Подробнее ›
-                        .back
-                            .header.mg
-                                h3 Бизнес-мода
-                            .content
-                                p
-                                    | Торгово-производственная компания «Бизнес-мода» является одной из ведущих компаний России в сфере производства и сбыта классической одежды
-                            .footer.bottom-null
-                                a.small.secondary.radius.button(onclick='rotateCard(this)') Назад
-                                a.small.radius.button(role='button', href='#') Страница проекта ›
-            .large-4.medium-6.small-12.columns
-                .card-container.manual-flip
-                    .card
-                        .front.favyellow
-                            .cover
-                                img(src='http://milosz.is/lib/images/bg-artrank.png')
-                            .content
-                                h3.color-white
-                                    | Статистика
-                                    br
-                                    | больших данных
-                                .footer
-                                    a.button.border-button.radius(onclick='rotateCard(this)') Подробнее ›
-                        .back
-                            .header.mg
-                                h3
-                                    | Статистика
-                                    br
-                                    | больших данных
-                            .content
-                                p
-                                    | Торгово-производственная компания «Бизнес-мода» является одной из ведущих компаний России в сфере производства и сбыта классической одежды
-                            .footer.bottom-null
-                                a.small.secondary.radius.button(onclick='rotateCard(this)') Назад
-                                a.small.radius.button(role='button', href='#') Страница проекта ›
-            .large-4.medium-6.small-12.columns
-                .card-container.manual-flip
-                    .card
-                        .front.favgreen
-                            .cover
-                                img(src='http://milosz.is/lib/images/bg-callfromwork.png')
-                            .content
-                                h3.color-white Мобильная разработка
-                                .footer
-                                    a.button.border-button.radius(onclick='rotateCard(this)') Подробнее ›
-                        .back
-                            .header.mg
-                                h3 Мобильная разработка
-                            .content
-                                p
-                                    | Торгово-производственная компания «Бизнес-мода» является одной из ведущих компаний России в сфере производства и сбыта классической одежды
-                            .footer.bottom-null
-                                a.small.secondary.radius.button(onclick='rotateCard(this)') Назад
-                                a.small.radius.button(role='button', href='#') Страница проекта ›
-            .large-4.medium-6.small-12.columns
-                .card-container.manual-flip
-                    .card
-                        .front.favgrey
-                            .cover
-                                img(src='http://milosz.is/lib/images/bg-duzepodroze.png')
-                            .content
-                                h3.color-white Серверная защита
-                                .footer
-                                    a.button.border-button.radius(onclick='rotateCard(this)') Подробнее ›
-                        .back
-                            .header.mg
-                                h3 Серверная защита
-                            .content
-                                p
-                                    | Торгово-производственная компания «Бизнес-мода» является одной из ведущих компаний России в сфере производства и сбыта классической одежды
-                            .footer.bottom-null
-                                a.small.secondary.radius.button(onclick='rotateCard(this)') Назад
-                                a.small.radius.button(role='button', href='#') Страница проекта ›
-            .large-4.medium-6.small-12.columns
-                .card-container.manual-flip
-                    .card
-                        .front.favpurple
-                            .cover
-                                img(src='http://milosz.is/lib/images/bg-octobox.png')
-                            .content
-                                h3.color-white
-                                    | Развивающее приложение
-                                    br
-                                    | для детей
-                                .footer
-                                    a.button.border-button.radius(onclick='rotateCard(this)') Подробнее ›
-                        .back
-                            .header.mg
-                                h3
-                                    | Развивающее приложение
-                                    br
-                                    | для детей
-                            .content
-                                p
-                                    | Торгово-производственная компания «Бизнес-мода» является одной из ведущих компаний России в сфере производства и сбыта классической одежды
-                            .footer.bottom-null
-                                a.small.secondary.radius.button(onclick='rotateCard(this)') Назад
-                                a.small.radius.button(role='button', href='#') Страница проекта ›
-            .large-4.medium-6.small-12.columns
-                .card-container.manual-flip
-                    .card
-                        .front.favrose
-                            .cover
-                                img(src='http://milosz.is/lib/images/bg-art9.png')
-                            .content
-                                h3.color-white Анимация
-                                .footer
-                                    a.button.border-button.radius(onclick='rotateCard(this)') Подробнее ›
-                        .back
-                            .header.mg
-                                h3 Анимация
-                            .content
-                                p
-                                    | Торгово-производственная компания «Бизнес-мода» является одной из ведущих компаний России в сфере производства и сбыта классической одежды
-                            .footer.bottom-null
-                                a.small.secondary.radius.button(onclick='rotateCard(this)') Назад
-                                a.small.radius.button(role='button', href='#') Страница проекта ›
-        hr
-        .row.margin-rows
-            .orbit-container
-                .orbit-second-slider(role='region', aria-label='Favorite Space Pictures', data-orbit='', data-use-m-u-i='false')
-                    ul.orbit-container
-                        button.orbit-previous(aria-label='previous')
-                            span.show-for-sr Previous Slide
-                            | ◀
-                        button.orbit-next(aria-label='next')
-                            span.show-for-sr Next Slide
-                            | ▶
-                        li.is-active.orbit-slide
-                            .row
-                                .large-6.text-center.columns
-                                    img(src='./images/site-clients.png', alt='slide images')
-                                .large-6.columns.padding-right
-                                    h2 Абонентское обслуживание
-                                    p
-                                        | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене. Часто — нулевая стоимость сайта до открытия.
-                                    a.button.radius(href='#') Узнайте стоимость сайта ›
-                        li.orbit-slide
-                            .row
-                                .large-6.text-center.columns
-                                    img(src='./images/fast-start.png', alt='slide images')
-                                .large-6.columns.padding-right
-                                    h2 Быстрый старт
-                                    p
-                                        | Откроем сайт в индивидуальном дизайне за 3 дня. Используем Cetera CMS и методологию запуска собственного авторства.
-                                    a.button.radius(href='#') Узнайте стоимость сайта ›
-                        li.orbit-slide
-                            .row
-                                .large-6.text-center.columns
-                                    img(src='./images/complex.png', alt='slide images')
-                                .large-6.columns.padding-right
-                                    h2 Сайт и клиенты
-                                    p
-                                        | Откроем сайт. Обеспечим поддержкой и развитием. Привлечем покупателей. Конвертируем в заявки. Организуем продажи.
-                                    a.button.radius(href='#') Узнайте стоимость сайта ›
-        hr
-        include components/_events
-        include components/_news-tiles
-        include components/_clients
-        include components/_footer_contacts
-        include components/_footer
-        include components/_js
+        include components/through/_top-line
+        include components/through/_header
+
+        block page
+            include components/_carousel-main
+            include components/_services
+            include components/_promo-line
+            include components/_projects
+            include components/_carousel-services
+            .row.column: hr
+            include components/_events
+            .row.column: hr
+            include components/_news-tiles
+            .row.column: hr
+            include components/_clients
+
+        .row.column: hr
+        include components/through/_footer-form
+        .row.column: hr
+        //-include components/through/_footer-map
+        //-.row.column: hr
+        include components/through/_footer-contacts
+        include components/through/_footer
+        include components/service/_js

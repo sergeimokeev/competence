@@ -1,0 +1,36 @@
+.top-line {
+  font-size: rem-calc(12);
+  padding: 1rem 0;
+}
+
+.top-line__humburger {
+  display: block;
+  padding: 0 0 0.5rem;
+}
+
+.top-line__menu {
+  display: none;
+  padding: 0;
+}
+
+.top-line__contacts {
+  padding: 1rem 0 0;
+}
+
+@media #{$medium-up} {
+  .top-line__humburger {
+    display: none;
+  }
+
+  .top-line__menu {
+    margin-top: 0;
+    display: block;
+  }
+}
+
+@media #{$large-up} {
+  .top-line__contacts {
+    padding: 0;
+    margin: 0;
+  }
+}

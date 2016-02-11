@@ -1,0 +1,23 @@
+.top-line
+    .row
+        .small-12.large-8.columns
+            .top-line__humburger(data-responsive-toggle='responsive-menu', data-hide-for='medium')
+                span.menu-icon.dark(data-toggle)
+            .top-line__menu#responsive-menu
+                ul.menu-top
+                    li.menu-top__item
+                        a.menu-top__link(href='#') Контакты
+                    li.menu-top__item
+                        a.menu-top__link(href='#') Узнайте цены
+                    li.menu-top__item
+                        a.menu-top__link(href='#') Личный кабинет
+        .small-12.large-4.columns
+            .top-line__contacts.text-left.large-text-right
+                a(href='tel:+71234567890')
+                    strong
+                        i.fa.fa-phone.fa-lg
+                        | &nbsp; +7 123 456-78-90&nbsp;&nbsp;&nbsp;&nbsp;
+                a(href='mailto:support@cetera.ru')
+                    strong
+                        i.fa.fa-envelope-o.fa-lg
+                        | &nbsp; support@cetera.ru

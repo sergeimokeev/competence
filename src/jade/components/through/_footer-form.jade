@@ -1,0 +1,60 @@
+.content
+    .row.column
+        h2 Мы на связи
+    .row
+        .small-12.large-7.columns
+            form(method='post', data-abide='', novalidate='novalidate')
+                .row
+                    .small-12.medium-4.columns
+                        label Ваше имя
+                    .small-12.medium-8.columns
+                        input(type='text', placeholder='Ваше имя', required='')
+                        p.help-text Поле обязательно для заполнения
+                .row
+                    .small-12.medium-4.columns
+                        label Email
+                    .small-12.medium-8.columns
+                        input(type='email', placeholder='username@address.com', required='')
+                        p.help-text Введите ваш электронный адрес
+                .row
+                    .small-12.medium-4.columns
+                        label Чем мы можем помочь?
+                    .small-12.medium-8.columns
+                        textarea(placeholder='Введите ваше сообщение')
+                .row
+                    .small-12.medium-8.medium-offset-4.columns
+                        button.radius.button(type='submit')
+                            | Отправить сообщение &nbsp;
+                            i.fa.fa-envelope-o.fa-lg
+        .large-2.large-offset-1.small-6.columns.text-center
+            p.hide-for-large &nbsp;
+            p
+                img(src='./images/image.svg', alt='1', style='max-width: 150px')
+            h5 Алена Ратникова
+            h6
+                | Менеджер
+                br
+                | по продажам
+            p
+                a(href='#')
+                    i.fa.fa-twitter.fa-lg &nbsp;&nbsp;
+                a(href='#')
+                    i.fa.fa-facebook.fa-lg &nbsp;&nbsp;
+                a(href='#')
+                    i.fa.fa-vk.fa-lg
+        .large-2.small-6.columns.text-center
+            p.hide-for-large &nbsp;
+            p
+                img(src='./images/image.svg', alt='2', style='max-width: 150px')
+            h5 Мария Свешникова
+            h6
+                | Менеджер
+                br
+                | по маркетингу
+            p
+                a(href='#')
+                    i.fa.fa-twitter.fa-lg &nbsp;&nbsp;
+                a(href='#')
+                    i.fa.fa-facebook.fa-lg &nbsp;&nbsp;
+                a(href='#')
+                    i.fa.fa-vk.fa-lg

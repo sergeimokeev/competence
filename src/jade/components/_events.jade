@@ -1,94 +1,100 @@
-.row.margin-rows
-    .large-8.columns
-        h3 События компании
-        article.event
-            .large-2.medium-2.columns
-                p.event-month Окт
-                p.event-day 27
-            .large-10.medium-10.columns
-                h4.event-desc-header Приняли на комплексное обслуживание новый сайт
-                p.event-desc-detail
-                    | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет- магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-                a(href='#') Подробнее ›
-        hr
-        article.event
-            .large-2.medium-2.columns
-                p.event-month Окт
-                p.event-day 21
-            .large-10.medium-10.columns
-                h4.event-desc-header Приняли на комплексное обслуживание новый сайт
-                p.event-desc-detail
-                    | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет- магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-                a(href='#') Подробнее ›
-        hr
-        article.event
-            .large-2.medium-2.columns
-                p.event-month Сен
-                p.event-day 29
-            .large-10.medium-10.columns
-                h4.event-desc-header Приняли на комплексное обслуживание новый сайт
-                p.event-desc-detail
-                    | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет- магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-                a(href='#') Подробнее ›
-    .columns.large-4
-        h3 Календарь событий
-        table.calendar
-            tbody
-                tr
-                    th.calendar__th.text-center(colspan='2')
-                        a.calendar__arrow(href='#') ←
-                    th.calendar__th.calendar__month.text-center(colspan='3') Сентябрь
-                    th.calendar__th.text-center(colspan='2')
-                        a.calendar__arrow(href='#') →
-                tr
-                    td.calendar__td Пн
-                    td.calendar__td Вт
-                    td.calendar__td Ср
-                    td.calendar__td Чт
-                    td.calendar__td Пт
-                    td.calendar__td Сб
-                    td.calendar__td Вс
-                tr
-                    td.calendar__td.calendar__gray 29
-                    td.calendar__td.calendar__gray 30
-                    td.calendar__td.calendar__gray 31
-                    td.calendar__td 1
-                    td.calendar__td 2
-                    td.calendar__td 3
-                    td.calendar__td 4
-                tr
-                    td.calendar__td 5
-                    td.calendar__td
-                        a.calendar__active(href='#') 6
-                    td.calendar__td 7
-                    td.calendar__td 8
-                    td.calendar__td 9
-                    td.calendar__td 10
-                    td.calendar__td 11
-                tr
-                    td.calendar__td 12
-                    td.calendar__td 13
-                    td.calendar__td 14
-                    td.calendar__td
-                        a.calendar__active(href='#') 15
-                    td.calendar__td 16
-                    td.calendar__td 17
-                    td.calendar__td 18
-                tr
-                    td.calendar__td 19
-                    td.calendar__td 20
-                    td.calendar__td 21
-                    td.calendar__td 22
-                    td.calendar__td 23
-                    td.calendar__td 24
-                    td.calendar__td 25
-                tr
-                    td.calendar__td 26
-                    td.calendar__td 27
-                    td.calendar__td
-                        a.calendar__active(href='#') 28
-                    td.calendar__td
-                        a.calendar__active(href='#') 29
-                    td.calendar__td 30
-                    td.calendar__td.calendar__gray 1
-                    td.calendar__td.calendar__gray 2
+.content
+    .row
+        .small-12.large-8.columns
+            h2 События компании
+            article
+                .small-12.medium-3.columns.text-center
+                    .date
+                        .date__day 27
+                        .date__month 02.2015
+                .small-12.medium-9.columns
+                    h4: a(href='#') Приняли на комплексное обслуживание новый сайт
+                    p
+                        | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет- магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
+            hr
+            p
+            article
+                .small-12.medium-3.columns.text-center
+                    .date
+                        .date__day 27
+                        .date__month 02.2015
+                .small-12.medium-9.columns
+                    h4: a(href='#') Приняли на комплексное обслуживание новый сайт
+                    p
+                        | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет- магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
+            hr
+            p
+            article
+                .small-12.medium-3.columns.text-center
+                    .date
+                        .date__day 27
+                        .date__month 02.2015
+                .small-12.medium-9.columns
+                    h4: a(href='#') Приняли на комплексное обслуживание новый сайт
+                    p
+                        | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет- магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
+        .small-12.large-4.columns
+            p.hide-for-large &nbsp;
+            h2 Календарь событий
+            table.text-center
+                tbody
+                    tr
+                        th.text-left(colspan='2')
+                            a(href='#')
+                                i.fa.fa-long-arrow-left.fa-2x
+                        th(colspan='3') Сентябрь
+                        th.text-right(colspan='2')
+                            a(href='#')
+                                i.fa.fa-long-arrow-right.fa-2x
+                    tr
+                        th Пн
+                        th Вт
+                        th Ср
+                        th Чт
+                        th Пт
+                        th Сб
+                        th Вс
+                    tr
+                        td.text-secondary 29
+                        td.text-secondary 30
+                        td.text-secondary 31
+                        td 1
+                        td 2
+                        td 3
+                        td 4
+                    tr
+                        td 5
+                        td
+                            a(href='#'): strong 6
+                        td 7
+                        td 8
+                        td 9
+                        td 10
+                        td 11
+                    tr
+                        td 12
+                        td 13
+                        td 14
+                        td
+                            a(href='#'): strong 15
+                        td 16
+                        td 17
+                        td 18
+                    tr
+                        td 19
+                        td 20
+                        td 21
+                        td 22
+                        td 23
+                        td 24
+                        td 25
+                    tr
+                        td 26
+                        td 27
+                        td
+                            a(href='#'): strong 28
+                        td
+                            a(href='#'): strong 29
+                        td 30
+                        td.text-secondary 1
+                        td.text-secondary 2

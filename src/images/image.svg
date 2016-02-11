@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="none">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+        fill-opacity: 0.05;
+      }
+
+      .cls-2 {
+        fill: #777;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="500" height="500"/>
+  <path class="cls-2" d="M1 0 L 500 499 L 499 500 L0 1 Z"/>
+  <path class="cls-2" d="M1 500 L 500 1 L 499 0 L0 499 Z"/>
+</svg>
