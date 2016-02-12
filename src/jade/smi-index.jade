@@ -6,27 +6,46 @@ html.no-js(lang='en')
         include components/through/_header
 
         block page
-            include components/smi/_top-news-slider
-            include components/_services
-            include components/_promo-line
-            include components/_projects
-            include components/_carousel-services
-            .row.column: hr
-            include components/_events
-            .row.column: hr
-            include components/_news-tiles
-            .row.column: hr
-            include components/_video-tiles
-            .row.column: hr
-            include components/_photo-tiles
-            .row.column: hr
-            include components/_clients
+            include components/smi/_news-top-slider
+            .row
+                //main
+                .small-12.medium-9.column
+                    include components/_news-tiles
+                    .row.column: hr
+                    include components/_video-tiles
+                    .row.column: hr
+                aside.medium-3.show-for-medium.column
+                    include components/smi/_aside-advisory
+                    include components/smi/_aside-mobilereporter
+                    include components/smi/_aside-billboard
+                    include components/smi/_aside-broadcasts
+                    include components/smi/_aside-horoscope
+                    include components/smi/_aside-subscribe
+                    include components/smi/_aside-recent-comments
+                    include components/smi/_aside-horoscope
+
+                    //
+                        .callout.text-center
+                            h3 Мобильный репортёр
+
+            include components/smi/_now-read-comment
+
+            .row
+                //main
+                .small-12.medium-9.column
+                    include components/smi/_news-sharing
+                    .row.column: hr
+                    include components/_social-widgets
+                    .row.column: hr
+                aside.medium-3.show-for-medium.column
+                    include components/smi/_aside-tags
+                    include components/smi/_aside-quote
 
         .row.column: hr
         include components/through/_footer-form
         .row.column: hr
-        //-include components/through/_footer-map
-        //-.row.column: hr
+        include components/through/_footer-map
+        .row.column: hr
         include components/through/_footer-contacts
         include components/through/_footer
         include components/service/_js
