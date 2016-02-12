@@ -1,0 +1,32 @@
+doctype html
+html.no-js(lang='en')
+    include components/service/_head
+    body
+        include components/through/_top-line
+        include components/through/_header
+
+        block page
+            include components/smi/_top-news-slider
+            include components/_services
+            include components/_promo-line
+            include components/_projects
+            include components/_carousel-services
+            .row.column: hr
+            include components/_events
+            .row.column: hr
+            include components/_news-tiles
+            .row.column: hr
+            include components/_video-tiles
+            .row.column: hr
+            include components/_photo-tiles
+            .row.column: hr
+            include components/_clients
+
+        .row.column: hr
+        include components/through/_footer-form
+        .row.column: hr
+        //-include components/through/_footer-map
+        //-.row.column: hr
+        include components/through/_footer-contacts
+        include components/through/_footer
+        include components/service/_js

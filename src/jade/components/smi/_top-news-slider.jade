@@ -1,0 +1,26 @@
+.content
+    .row
+        .small-9.columns
+            .row
+                .small-12.large-8.columns
+                    //Slider body
+                    .owl-carousel.x-carousel-main.carousel.owl-theme
+                        - var n = 1
+                        while n < 4
+                            .carousel__item(style='background: #1ccacd url("./images/image.svg") 100% 100% no-repeat;')
+                                .vertical-middle.text-center
+                                    p Слайд новостей
+                                    p.stat= n++
+
+                .large-4.show-for-large-only.columns
+                    //Recent news headings
+                    - var n = 1
+                    while n < 4
+                        .callout
+                            a(href='', title='') Заголовок свежей новости&nbsp;
+                                = n++
+
+                    a.hollow.button.secondary.expanded(href='', title='') Архив новостей
+        .small-3.columns
+            .callout
+                span.text-gray От спонсора
