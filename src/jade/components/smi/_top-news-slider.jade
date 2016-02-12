@@ -1,5 +1,5 @@
 .content
-    .row
+    .row(data-equalizer='top-news')
         .small-9.columns
             .row
                 .small-12.large-8.columns
@@ -7,12 +7,12 @@
                     .owl-carousel.x-carousel-main.carousel.owl-theme
                         - var n = 1
                         while n < 4
-                            .carousel__item(style='background: #1ccacd url("./images/image.svg") 100% 100% no-repeat;')
+                            .carousel__item(data-equalizer-watch='top-news', style='background: #1ccacd url("./images/image.svg") 0 0/100% 100% no-repeat;')
                                 .vertical-middle.text-center
                                     p Слайд новостей
                                     p.stat= n++
 
-                .large-4.show-for-large-only.columns
+                .large-4.show-for-large.columns(data-equalizer-watch='top-news')
                     //Recent news headings
                     - var n = 1
                     while n < 4
@@ -22,5 +22,5 @@
 
                     a.hollow.button.secondary.expanded(href='', title='') Архив новостей
         .small-3.columns
-            .callout
+            .callout.text-center(data-equalizer-watch='top-news', style='background: #2ad url("./images/image.svg") 0 0/100% 100% no-repeat;')
                 span.text-gray От спонсора
