@@ -1,2 +1,25 @@
-.callout.text-center
-    h3 Последние комментарии
+//- mixin START
+mixin commentAuthor()
+    .media-object
+        .media-object-section
+            .thumbnail
+                img(src='./images/image.svg', alt='Аватар', style='background:#bbb;width:45px;height:45px;')
+        .media-object-section
+            span.text-dark-gray Юзер Пользовательский, &nbsp; 11&nbsp;сентября 2015
+//- mixin END
+
+.callout
+    h3
+        a.text-dark-gray(href='#', title='') Последние комментарии
+
+    +commentAuthor
+    p Приходите, будет весело =) В программе мероприяитяи запланированы сюрпризы, о которых вы вряд ли догадываетесь
+    br
+
+    +commentAuthor
+    p Обязательно придём!!!
+    br
+
+    +commentAuthor
+    p Приходите, будет весело =) В программе мероприяитяи запланированы сюрпризы, о которых вы вряд ли догадываетесь
+    br

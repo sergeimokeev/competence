@@ -1,2 +1,14 @@
-.callout.text-center
-    h3 Гороскопы
+.callout
+    h3
+        a.text-dark-gray(href='#', title='') Гороскопы
+
+    .media-object
+        .media-object-section
+            .thumbnail
+                img(src='./images/image.svg', alt='Знак зодиака Рыбы', style='background:#abcdef;width:45px;height:45px;')
+        .media-object-section
+            p Рыбы — вы сможете извлечь из событий этого дня очень…
+                a(href='#') Читать &nbsp;
+                    i.fa.fa-long-arrow-right
+
+    a.button.hollow.expanded(href='#', title='') Другие гороскопы

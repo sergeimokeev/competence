@@ -1,3 +1,23 @@
+//- newsTile mixin START
+mixin newsTile(title)
+    .column
+        .callout.news-card
+            .clearfix(data-equalizer-watch='news')
+                p
+                    img(src='./images/image.svg', alt='Новый сайт', style='background:#4dc7a0;width:100%;height:220px;')
+                h4
+                    if title
+                        a(href='#')= title
+                    else
+                        a(href='#') Приняли на комплексное обслуживание новый сайт
+                if block
+                    block
+                else
+                    p Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
+            a(href='#') Подробнее &nbsp;
+                i.fa.fa-long-arrow-right
+//- newsTile mixin END
+
 .content
     .row
         .small-12.medium-8.columns
@@ -5,66 +25,13 @@
         .small-12.medium-4.columns.medium-text-right
             a.button(href='#') Все новости &nbsp;<i class="fa fa-long-arrow-right"></i>
     .row.small-up-1.medium-up-2.large-up-3(data-equalizer='news', data-equalize-by-row='true')
-        .column
-            .callout.news-card
-                .clearfix(data-equalizer-watch='news')
-                    p
-                        img(src='./images/image.svg', alt='Новый сайт', style='background:#4dc7a0;width:100%;height:250px;;')
-                    h4
-                        a(href='#') Приняли на комплексное обслуживание новый сайт
-                    p
-                        | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет- магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-                a(href='#') Подробнее &nbsp;<i class="fa fa-long-arrow-right"></i>
-        .column
-            .callout.news-card
-                .clearfix(data-equalizer-watch='news')
-                    p
-                        img(src='./images/image.svg', alt='Новый сайт', style='background:#4dc7a0;width:100%;height:250px;;')
-                    h4
-                        a(href='#') Приняли на комплексное обслуживание новый сайт
-                    p
-                        | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет- магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-                a(href='#') Подробнее &nbsp;<i class="fa fa-long-arrow-right"></i>
-        .column
-            .callout.news-card
-                .clearfix(data-equalizer-watch='news')
-                    p
-                        img(src='./images/image.svg', alt='Новый сайт', style='background:#4dc7a0;width:100%;height:250px;;')
-                    h4
-                        a(href='#') Приняли на комплексное обслуживание новый сайт
-                    p
-                        | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет- магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-                a(href='#') Подробнее &nbsp;<i class="fa fa-long-arrow-right"></i>
-        .column
-            .callout.news-card
-                .clearfix(data-equalizer-watch='news')
-                    p
-                        img(src='./images/image.svg', alt='Новый сайт', style='background:#4dc7a0;width:100%;height:250px;;')
-                    h4
-                        a(href='#') Приняли на комплексное обслуживание новый сайт
-                    p
-                        | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет- магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-                a(href='#') Подробнее &nbsp;<i class="fa fa-long-arrow-right"></i>
-        .column
-            .callout.news-card
-                .clearfix(data-equalizer-watch='news')
-                    p
-                        img(src='./images/image.svg', alt='Новый сайт', style='background:#4dc7a0;width:100%;height:250px;;')
-                    h4
-                        a(href='#') Разработаем несколько интернет- магазинов по продаже сантехники
-                    p
-                        | Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
-                a(href='#') Подробнее &nbsp;<i class="fa fa-long-arrow-right"></i>
-        .column
-            .callout.news-card
-                .clearfix(data-equalizer-watch='news')
-                    p
-                        img(src='./images/image.svg', alt='Новый сайт', style='background:#4dc7a0;width:100%;height:250px;;')
-                    h4
-                        a(href='#') Приняли на комплексное обслуживание новый сайт
-                    p
-                        | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет- магазинов по продаже сантехники.
-                a(href='#') Подробнее &nbsp;<i class="fa fa-long-arrow-right"></i>
+        +newsTile()
+        +newsTile()
+        +newsTile()
+        +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники')
+            p Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
+        +newsTile()
+
     .row.column
         p &nbsp;
         include ./_pagination

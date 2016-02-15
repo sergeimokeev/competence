@@ -2,8 +2,11 @@ include _mixin-news-tile
 
 .content
     .row.column
-        h2 Интересное в Интернете
+        h2 Свежие статьи
     .row.small-up-1.medium-up-2.large-up-3(data-equalizer='news', data-equalize-by-row='true')
+        +newsTile()
+        +newsTile()
+        +newsTile()
         +newsTile()
         +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники')
             p Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».

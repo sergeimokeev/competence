@@ -10,34 +10,28 @@ html.no-js(lang='en')
             .row
                 //main
                 .small-12.medium-9.column
-                    include components/_news-tiles
+                    include components/smi/_articles-tiles
                     .row.column: hr
                     include components/_video-tiles
+                    .row.column: hr
+                    include components/_photo-tiles
+                    .row.column: hr
+                    include components/smi/_magazine-tiles
+                    .row.column: hr
+                    include components/smi/_now-read-comment
+                    .row.column: hr
+                    include components/smi/_news-sharing
+                    .row.column: hr
+                    include components/_social-widgets
                     .row.column: hr
                 aside.medium-3.show-for-medium.column
                     include components/smi/_aside-advisory
                     include components/smi/_aside-mobilereporter
                     include components/smi/_aside-billboard
                     include components/smi/_aside-broadcasts
-                    include components/smi/_aside-horoscope
                     include components/smi/_aside-subscribe
                     include components/smi/_aside-recent-comments
                     include components/smi/_aside-horoscope
-
-                    //
-                        .callout.text-center
-                            h3 Мобильный репортёр
-
-            include components/smi/_now-read-comment
-
-            .row
-                //main
-                .small-12.medium-9.column
-                    include components/smi/_news-sharing
-                    .row.column: hr
-                    include components/_social-widgets
-                    .row.column: hr
-                aside.medium-3.show-for-medium.column
                     include components/smi/_aside-tags
                     include components/smi/_aside-quote
 
