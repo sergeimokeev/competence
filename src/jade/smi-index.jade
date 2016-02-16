@@ -2,8 +2,8 @@ doctype html
 html.no-js(lang='en')
     include components/service/_head
     body
-        include components/through/_top-line
-        include components/through/_header
+        include components/smi/_top-nav
+        include components/smi/_header
 
         block page
             include components/smi/_news-top-slider
@@ -36,10 +36,11 @@ html.no-js(lang='en')
                     include components/smi/_aside-quote
 
         .row.column: hr
-        include components/through/_footer-form
-        .row.column: hr
-        include components/through/_footer-map
-        .row.column: hr
-        include components/through/_footer-contacts
-        include components/through/_footer
+        include components/smi/_footer
+        //- include components/through/_footer-form
+        //- .row.column: hr
+        //- include components/through/_footer-map
+        //- .row.column: hr
+        //- include components/through/_footer-contacts
+
         include components/service/_js
