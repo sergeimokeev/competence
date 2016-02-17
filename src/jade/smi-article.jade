@@ -1,9 +1,10 @@
-extends smi-regular
+extends smi-index
 
-include components/smi/_mixin-news-tile
-include components/smi/_mixin-comment-author
+block article
+    include components/smi/_mixin-news-tile
 
-block content
+    include components/through/_breadcrumbs
+
     .row
         .small-12.medium-9.column
 
@@ -19,7 +20,15 @@ block content
                 a(href='#', title=''): i.fa.fa-vk &#160;
 
             .content
-                h4 Ещё по этой теме
+                .callout
+                    h4 Ешё по этой теме
+                    ul
+                        li: a(href='#', title='') УЕФА может исключить футболиста «Локомотива» за майку
+                        li: a(href='#', title='') Источник: ФСБ и ФНС провели операцию по зачистке алкогольного рынка
+                        li: a(href='#', title='') Пол Маккартни не прошел фейс-контроль на вечеринку после «Грэмми»
+
+            .content
+                h4 Похожие новости
                 .row.small-up-1.medium-up-2.large-up-3
                     +newsTile()
                     +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники')
@@ -30,35 +39,7 @@ block content
 
             .content
                 .callout
-                    h2 Комментарии (3)
-
-                    +commentAuthor
-                    p Приходите, будет весело =) В программе мероприяитяи запланированы сюрпризы, о которых вы вряд ли догадываетесь
-                    br
-
-                    +commentAuthor
-                    p Обязательно придём!!!
-                    br
-
-                    +commentAuthor
-                    p Приходите, будет весело =) В программе мероприяитяи запланированы сюрпризы, о которых вы вряд ли догадываетесь
-                    br
-
-                    hr
-                    br
-
-                    h3 Добавить комментарий
-                    form(method='post', data-abide='', novalidate='novalidate')
-                        .row.column
-                            input(type='text', placeholder='Представьтесь *', required='')
-                            p.help-text Ваше имя для комментария
-                        .row.column
-                            input(type='email', placeholder='Ваша электронная почта', required='')
-                        .row.column
-                            textarea(placeholder='Текст комментария')
-                        .row.column
-                            button.button(type='submit') Отправить сообщение &nbsp;
-                                i.fa.fa-envelope-o.fa-lg
+                    include components/smi/_comments
 
         aside.medium-3.show-for-medium.column
             +newsTile
@@ -66,3 +47,6 @@ block content
             +newsTile
             +newsTile
             +newsTile
+
+    .row.column
+        hr

@@ -5,6 +5,8 @@ html.no-js(lang='en')
         include components/smi/_top-nav
         include components/smi/_header
 
+        block article
+
         block page
             include components/smi/_news-top-slider
             .row
@@ -37,10 +39,5 @@ html.no-js(lang='en')
 
         .row.column: hr
         include components/smi/_footer
-        //- include components/through/_footer-form
-        //- .row.column: hr
-        //- include components/through/_footer-map
-        //- .row.column: hr
-        //- include components/through/_footer-contacts
 
         include components/service/_js
