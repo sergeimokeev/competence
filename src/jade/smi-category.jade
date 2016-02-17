@@ -1,0 +1,41 @@
+extends smi-regular
+
+include components/smi/_mixin-news-tile
+
+block content
+    .row.column
+        h1
+            small Рубрика: &#160;
+            | Потребительские рынки
+        br
+    .row
+        .columns.small-12.medium-7.large-8
+
+            block category-сontent
+                .row
+                    .small-12.medium-8.columns
+                        h2 Cтатьи
+                    .small-12.medium-4.columns.medium-text-right
+                        a.button(href='#') Все статьи &nbsp;
+                            i.fa.fa-long-arrow-right
+
+                .row.small-up-1.medium-up-2
+                    +newsTile()
+                    +newsTile()
+                    +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники')
+                        p Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
+                    +newsTile()
+                .row.column
+                    br
+                    hr
+
+                include components/_video-tiles
+                .row.column: hr
+                include components/_photo-tiles
+
+        aside.columns.small-12.medium-5.large-4
+            h2 Календарь материалов
+            include components/through/_calendar
+            br
+
+            include components/smi/_aside-index
