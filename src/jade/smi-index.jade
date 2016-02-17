@@ -1,0 +1,34 @@
+doctype html
+html.no-js(lang='en')
+    include components/service/_head
+    body
+        include components/smi/_top-nav
+        include components/smi/_header
+
+        block article
+
+        block page
+            include components/smi/_news-top-slider
+            .row
+                //main
+                .small-12.medium-9.column
+                    include components/smi/_articles-tiles
+                    .row.column: hr
+                    include components/_video-tiles
+                    .row.column: hr
+                    include components/_photo-tiles
+                    .row.column: hr
+                    include components/smi/_magazine-tiles
+                    .row.column: hr
+                    include components/smi/_now-read-comment
+                    .row.column: hr
+                    include components/smi/_news-sharing
+                    .row.column: hr
+                    include components/_social-widgets
+                    .row.column: hr
+                aside.medium-3.show-for-medium.column
+                    include components/smi/_aside-index
+
+        .row.column: hr
+        include components/smi/_footer
+        include components/service/_js

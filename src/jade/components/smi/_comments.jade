@@ -1,0 +1,31 @@
+include _mixin-comment-author
+
+h2 Комментарии (3)
+
++commentAuthor
+p Приходите, будет весело =) В программе мероприяитяи запланированы сюрпризы, о которых вы вряд ли догадываетесь
+br
+
++commentAuthor
+p Обязательно придём!!!
+br
+
++commentAuthor
+p Приходите, будет весело =) В программе мероприяитяи запланированы сюрпризы, о которых вы вряд ли догадываетесь
+br
+
+hr
+br
+
+h3 Добавить комментарий
+form(method='post', data-abide='', novalidate='novalidate')
+    .row.column
+        input(type='text', placeholder='Представьтесь *', required='')
+        p.help-text Ваше имя для комментария
+    .row.column
+        input(type='email', placeholder='Ваша электронная почта', required='')
+    .row.column
+        textarea(placeholder='Текст комментария')
+    .row.column
+        button.button(type='submit') Отправить сообщение &nbsp;
+            i.fa.fa-envelope-o.fa-lg

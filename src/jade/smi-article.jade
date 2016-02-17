@@ -1,0 +1,58 @@
+extends smi-index
+
+block article
+    include components/smi/_mixin-news-tile
+
+    include components/through/_breadcrumbs
+
+    .row
+        .small-12.medium-9.column
+
+            h1 Заголовок новости
+            p.text-dark-gray Константин Александропольский, 12:20 16.02.2016
+
+            include components/pages/_text
+
+            .callout.text-center
+                span.text-gray Поделиться в соц. сетях: &#160;
+                a(href='#', title=''): i.fa.fa-twitter &#160;
+                a(href='#', title=''): i.fa.fa-facebook &#160;
+                a(href='#', title=''): i.fa.fa-vk &#160;
+
+            .content
+                .callout
+                    h4 Ешё по этой теме
+                    ul
+                        li: a(href='#', title='') УЕФА может исключить футболиста «Локомотива» за майку
+                        li: a(href='#', title='') Источник: ФСБ и ФНС провели операцию по зачистке алкогольного рынка
+                        li: a(href='#', title='') Пол Маккартни не прошел фейс-контроль на вечеринку после «Грэмми»
+
+            .clearfix
+                h4 Похожие новости
+                .row.small-up-1.medium-up-2.large-up-3
+                    +newsTile()
+                    +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники')
+                        p Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
+                    +newsTile()
+
+            include components/smi/_aside-subscribe
+
+            .content
+                .callout
+                    include components/smi/_comments
+
+        aside.medium-3.show-for-medium.column
+            h2 Календарь материалов
+            include components/through/_calendar
+            br
+
+            h2 Другие новости
+
+            -var n = 1
+            while n < 11
+                .callout
+                    a(href='', title='')=  'Достаточно длинный заголовок другой новости ' + n++
+                    span.text-gray &#160; 17 февраля, 10:59 &#160;
+
+    .row.column
+        hr
