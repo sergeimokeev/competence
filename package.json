@@ -24,6 +24,14 @@
     "gulp-replace": "^0.3.0",
     "gulp-imagemin": "^2.4.0",
     "imagemin-pngquant": "^4.2.0",
-    "jstransformer-uglify-js": "^1.1.1"
+    "jstransformer-uglify-js": "^1.1.1",
+
+
+    "foundation-sites": "~6.1.2",
+    "motion-ui": "~1.2.0",
+    "font-awesome": "~4.5.0",
+    "npm-modernizr": "~2.8.3",
+    "slick-carousel": "~1.5.9",
+    "jquery": "~2.2.0"
   }
 }

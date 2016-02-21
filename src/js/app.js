@@ -4,28 +4,32 @@
     "use strict";
     $(function () {
 
-        $(".x-carousel-main").owlCarousel({
-            loop: true,
+        $(".x-carousel-main").slick({
+            infinite: true,
             dots: false,
-            nav: true,
-            items: 1,
+            arrows: true,
+            slidesPerRow: 1,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             autoplay: true,
-            autoplayTimeout: 5000,
+            autoplaySpeed: 5000,
             autoplayHoverPause: true,
-            animateOut: 'fadeOut',
-            navText: ['<i class="fa fa-angle-left fa-3x"></i>', '<i class="fa fa-angle-right fa-3x"></i>']
+            fade: true,
+            swipeToSlide: true,
+            prevArrow: '<i class="slick-prev fa fa-angle-left fa-3x"> </i>',
+            nextArrow: '<i class="slick-next fa fa-angle-right fa-3x"> </i>'
         });
 
-        $(".x-carousel-services").owlCarousel({
-            loop: true,
+        $(".x-carousel-services").slick({
+            infinite: true,
             dots: true,
-            nav: false,
-            items: 1,
+            arrows: false,
+            slidesPerRow: 1,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             autoplay: true,
-            autoplayTimeout: 5000,
-            autoplayHoverPause: true,
-            //animateOut: 'fadeOut',
-            navText: ['<i class="fa fa-angle-left fa-3x"></i>', '<i class="fa fa-angle-right fa-3x"></i>']
+            autoplaySpeed: 5000,
+            autoplayHoverPause: true
         });
 
     });

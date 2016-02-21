@@ -13,10 +13,10 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant');
 
 var sassPaths = [
-    './bower_components/foundation-sites/scss',
-    './bower_components/motion-ui/src',
-    './bower_components/components-font-awesome/scss/',
-    './bower_components/owl.carousel/src/scss/'
+    './node_modules/foundation-sites/scss',
+    './node_modules/motion-ui/src',
+    './node_modules/font-awesome/scss/',
+    './node_modules/slick-carousel/slick/'
 ];
 
 var path = {
@@ -33,15 +33,15 @@ var path = {
         css: 'src/scss/style.scss',
         images: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*',
-        awesome: 'bower_components/components-font-awesome/fonts/**/*.*'
+        awesome: 'node_modules/font-awesome/fonts/**/*.*'
     },
     watch: {
         html: 'src/jade/**/*.jade',
-        js: ['src/js/*.js', 'src/jade/**/*.jade', 'bower_components/**/*.js'],
+        js: ['src/js/*.js', 'src/jade/**/*.jade'],//, 'node_modules/**/*.js'
         css: 'src/scss/**/*.scss',
         images: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*',
-        awesome: 'bower_components/components-font-awesome/fonts/**/*.*'
+        awesome: 'node_modules/font-awesome/fonts/**/*.*'
     }
 };
 

@@ -1,8 +1,7 @@
 @import "foundation";
 @import "motion-ui";
 @import "font-awesome";
-@import "owl.carousel";
-@import "owl.animate";
+@import "slick.scss";
 
 @include foundation-global-styles;
 @include foundation-grid;
