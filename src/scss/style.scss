@@ -3,9 +3,10 @@
 @import "settings";
 @import "external";
 
-@import "owl/owl.theme";
+@import "slick/slick-theme";
 
-@import "carousel";
+@import "carousel-main";
+@import "carousel-services";
 @import "content";
 @import "date";
 @import "footer";
