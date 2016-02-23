@@ -29,15 +29,17 @@ var path = {
     },
     src: {
         html: 'src/jade/*.jade',
-        js: 'dist/*.html',
+        js: 'src/jade/**/_js.html',
+        jsHtml: 'dist/*.html',
         css: 'src/scss/style.scss',
         images: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*',
         awesome: 'node_modules/font-awesome/fonts/**/*.*'
     },
     watch: {
-        html: 'src/jade/**/*.jade',
-        js: ['src/js/*.js', 'src/jade/**/*.jade'],//, 'node_modules/**/*.js'
+        html: ['src/jade/**/*.jade', 'src/jade/**/*.html'],
+        js: ['src/js/**/*.js', 'src/jade/**/_js.html'],
+        jsHtml: ['src/jade/**/*.jade', 'src/jade/**/*.html'],
         css: 'src/scss/**/*.scss',
         images: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*',
@@ -63,6 +65,14 @@ gulp.task('clean-fonts', function() {
 
 gulp.task('clean-js', function() {
     return gulp.src(path.dist.js, {read: false}).pipe(rimraf());
+});
+
+gulp.task('clean-js-copy', ['js-copy'], function() {
+    return gulp.src('dist/components', {read: false}).pipe(rimraf());
+});
+
+gulp.task('clean-js-minify', ['js-minify'], function() {
+    return gulp.src('dist/components', {read: false}).pipe(rimraf());
 });
 
 gulp.task('clean', function() {
@@ -106,7 +116,13 @@ gulp.task('fonts', ['clean-fonts'], function() {
         .pipe(gulp.dest(path.dist.fonts));
 });
 
-gulp.task('js-copy', ['clean-js', 'jade'], function () {
+gulp.task('js-html', ['jade'], function () {
+    return gulp.src(path.src.jsHtml)
+        .pipe(useref({noAssets: true}))
+        .pipe(gulp.dest(path.dist.html));
+});
+
+gulp.task('js-copy', ['clean-js'], function () {
     return gulp.src(path.src.js)
         .pipe(useref())
         .pipe(gulp.dest(path.dist.html));
@@ -119,14 +135,15 @@ gulp.task('js-minify', ['clean-js', 'jade'], function () {
         .pipe(gulp.dest(path.dist.html));
 });
 
-gulp.task('minify', ['sass', 'jade', 'images', 'fonts', 'js-minify']);
+gulp.task('minify', ['sass', 'jade', 'images', 'fonts', 'js-html', 'js-minify', 'clean-js-minify']);
 
-gulp.task('default', ['sass', 'jade', 'images', 'fonts', 'js-copy'], function () {
+gulp.task('default', ['sass', 'jade', 'images', 'fonts', 'js-html', 'js-copy', 'clean-js-copy'], function () {
     gulp.watch([path.watch.css], ['sass']);
     gulp.watch([path.watch.html], ['jade']);
     gulp.watch([path.watch.images], ['images']);
     gulp.watch([path.watch.fonts], ['fonts']);
-    gulp.watch(path.watch.js, ['js-copy']);
+    gulp.watch([path.watch.jsHtml], ['js-html']);
+    gulp.watch([path.watch.js], ['js-copy', 'clean-js-copy']);
 });
 
 //https://gist.github.com/Insayt/272c9b81936a03884768
