@@ -1,13 +1,13 @@
 extends smi-index
 
 block page
-    include components/through/_breadcrumbs
+    include components/common/_breadcrumbs
     block content
+        .row.column
+            h1 Заголовок страницы h1
         .content
-            .row.column
-                h1 Заголовок страницы h1
             .row
                 .columns.small-12.medium-7.large-8
-                    include components/pages/_text
+                    include components/common/_text
                 .columns.small-12.medium-5.large-4
-                    include components/through/_sidebar
+                    include components/corporate/_sidebar

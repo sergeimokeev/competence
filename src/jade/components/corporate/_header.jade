@@ -1,10 +1,11 @@
-.header
+.red-line
     .row
         .small-12.large-3.columns.text-center.large-text-left
             a(href='#')
-                img(src='./images/image.svg', style='width: 400px; height: 60px', alt='logo')
+                img(src='./images/image.svg', style='width: 400px; height: 70px', alt='logo')
         .small-12.large-9.columns
-            ul.menu-main
+            br
+            ul.menu-base.large-text-right
                 each title in ['Сайт', 'Магазин', 'Интернет-СМИ', 'Реклама', 'Мобильные', 'Обучение', 'Конверсия']
-                    li.menu-main__item
-                        a.menu-main__link(href='#')= title
+                    li.menu-base__item
+                        a.menu-base__link(href='#')= title

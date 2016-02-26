@@ -1,0 +1,42 @@
+.menu-base {
+  display: block;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.menu-base__item {
+  display: block;
+  @include disable-mouse-outline;
+  padding: rem-calc(5 15 5 0);
+}
+
+.menu-base__link {
+  @include disable-mouse-outline;
+  display: block;
+  color: $white;
+
+  &:hover, &:focus {
+    color: $white;
+  }
+}
+
+@media #{$medium-up} {
+  .menu-base__item {
+    display: inline-block;
+  }
+
+  .menu-base__link {
+    display: inline-block;
+  }
+}
+
+@media #{$xlarge-up} {
+  .menu-base__item {
+    padding-right: rem-calc(30);
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

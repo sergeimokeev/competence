@@ -77,6 +77,12 @@ $slick-dot-color-active: rgba(0, 0, 0, 0.2) !default;
   }
 }
 
+@media #{$small-only} {
+  .slick-prev, .slick-next {
+    display: none !important;
+  }
+}
+
 /* Dots */
 
 .slick-dots {

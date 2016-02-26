@@ -3,17 +3,18 @@
 @import "settings";
 @import "external";
 
+@import "common";
 @import "slick/slick-theme";
 
-@import "carousel-main";
-@import "carousel-services";
+@import "carousel/carousel-main";
+@import "carousel/carousel-news";
+@import "carousel/carousel-services";
 @import "content";
 @import "date";
 @import "footer";
-@import "header";
-@import "menu-footer";
+@import "menu-base";
 @import "menu-top";
-@import "menu-main";
+@import "red-line";
 @import "text";
 @import "top-line";
 @import "vertical-middle";

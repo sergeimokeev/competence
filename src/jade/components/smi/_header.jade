@@ -1,55 +1,62 @@
-.smi-header
-    .row
-        .small-11.large-3.columns.text-center.large-text-left
+.row
+    .small-10.large-3.columns.text-center.large-text-left
+        p
             a(href='#')
                 img(src='./images/image.svg', style='width: 400px; height: 60px', alt='logo')
-        .small-1.columns.text-center
-            span.fa-stack
-                i.fa.fa-circle.fa-stack-2x
-                i.fa.fa-inverse.fa-stack-1x 18+
-        .small-12.large-3.large-offset-5.columns
-            form(method='post', data-abide='', novalidate='novalidate')
-                .input-group
-                    input.input-group-field(type='text', placeholder='Поиск', required='')
-                    .input-group-button
-                            button.button.secondary(type='submit', name='Найти')
-                                i.fa.fa-search.fa-inverse
-            br
-        hr
-        br
-    .row.small-up-1.medium-up-2.large-up-4
-        .column
-            | 10:10
-            | 14.15.2016
-        .column
-            | $77.05 &euro;88.20
-        .column
-            | -1&deg;C, снег
-        .column
-            | Локомотив 1:3 Медвешчак
-        br
-        br
-    .smi-menu-main
-        .row
-            .small-12.columns
-                .title-bar(data-responsive-toggle='main-menu', data-hide-for='medium')
-                    button.menu-icon(type='button', data-toggle)
-                    .title-bar-title Рубрики
-                ul#main-menu.vertical.medium-horizontal.menu.simple
-                    li: a.menu-main__link(href='#') Экономика
-                    li: a.menu-main__link(href='#') Финансы
-                    li: a.menu-main__link(href='#') ТЭК
-                    li: a.menu-main__link(href='#') Интернет
-                    li: a.menu-main__link(href='#') Промышленность
-                    li: a.menu-main__link(href='#') Транспорт
-                    li: a.menu-main__link(href='#') Наука
-                    li: a.menu-main__link(href='#') ИТ и Медиа
-                    li: a.menu-main__link(href='#') Потребительские рынки
-                    li: a.menu-main__link(href='#') ВПК
-                    li: a.menu-main__link(href='#') Бренды
-                    li: a.menu-main__link(href='#') Спорт
-                    li: a.menu-main__link(href='#') Видео
-                    li: a.menu-main__link(href='#') Интервью
-                    li: a.menu-main__link(href='#') Пресс-релизы
-                    li: a.menu-main__link(href='#') Отставки и назначения
-                    li: a.menu-main__link(href='#') Мнения
+    .small-2.large-1.columns.text-center
+        p
+            span.fa-stack.text-dark-gray.fa-lg
+                i.fa.fa-square.fa-stack-2x
+                i.fa.fa-inverse.fa-stack-1x
+                    strong 18+
+    .small-12.large-3.large-offset-5.columns
+        form(method='post', data-abide='', novalidate='novalidate')
+            .input-group
+                input.input-group-field(type='text', placeholder='Поиск', required='')
+                .input-group-button
+                    button.button.secondary(type='submit', name='Найти')
+                        i.fa.fa-search.fa-inverse
+.row.column
+    hr
+    br
+.row
+    .columns.small-12.medium-6.large-3
+        p 10:10 14.15.2016
+    .columns.small-12.medium-6.large-3
+        p
+            span.fa-stack.text-dark-gray
+                i.fa.fa-square.fa-stack-2x
+                i.fa.fa-dollar.fa-stack-1x.fa-inverse
+            | &nbsp;77.05&nbsp;&nbsp;&nbsp;
+            span.fa-stack.text-dark-gray
+                i.fa.fa-square.fa-stack-2x
+                i.fa.fa-euro.fa-stack-1x.fa-inverse
+            | &nbsp;88.20
+    .columns.small-12.medium-6.large-3
+        p -1&deg;C, снег
+    .columns.small-12.medium-6.large-3
+        p Локомотив 1:3 Медвешчак
+.red-line
+    .row
+        .small-12.columns
+            .title-bar(data-responsive-toggle='main-menu', data-hide-for='medium')
+                button.menu-icon(type='button', data-toggle)
+                .title-bar-title Рубрики
+            ul#main-menu.menu-base
+                li.menu-base__item: a.menu-base__link(href='#') Экономика
+                li.menu-base__item: a.menu-base__link(href='#') Финансы
+                li.menu-base__item: a.menu-base__link(href='#') ТЭК
+                li.menu-base__item: a.menu-base__link(href='#') Интернет
+                li.menu-base__item: a.menu-base__link(href='#') Промышленность
+                li.menu-base__item: a.menu-base__link(href='#') Транспорт
+                li.menu-base__item: a.menu-base__link(href='#') Наука
+                li.menu-base__item: a.menu-base__link(href='#') ИТ и Медиа
+                li.menu-base__item: a.menu-base__link(href='#') Потребительские рынки
+                li.menu-base__item: a.menu-base__link(href='#') ВПК
+                li.menu-base__item: a.menu-base__link(href='#') Бренды
+                li.menu-base__item: a.menu-base__link(href='#') Спорт
+                li.menu-base__item: a.menu-base__link(href='#') Видео
+                li.menu-base__item: a.menu-base__link(href='#') Интервью
+                li.menu-base__item: a.menu-base__link(href='#') Пресс-релизы
+                li.menu-base__item: a.menu-base__link(href='#') Отставки и назначения
+                li.menu-base__item: a.menu-base__link(href='#') Мнения

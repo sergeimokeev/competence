@@ -1,33 +1,42 @@
 .content
     .row(data-equalizer='top-news')
-        .small-9.columns
-            .row
+        .small-12.medium-8.large-9.columns
+            .row.collapse
                 .small-12.large-8.columns
                     //Slider body
-                    .owl-carousel.x-carousel-main.carousel.owl-theme
-                        - var n = 1
-                        while n < 4
-                            .carousel__item(data-equalizer-watch='top-news', style='background: #1ccacd url("./images/image.svg") 0 0/100% 100% no-repeat;')
-                                .vertical-middle.text-center
-                                    p Слайд новостей
-                                    p.stat= n++
+                    .x-carousel-news.carousel-news
+                        .carousel-news__item(data-equalizer-watch='top-news', style='background: #1ccacd url(./images/image.svg) 0 0/100% 100% no-repeat;')
+                            a(href='#', title='').carousel-news__link Длинный-длинный заголовок новости 1
+                        .carousel-news__item(data-equalizer-watch='top-news', style='background: #0c75bc url(./images/image.svg) 0 0/100% 100% no-repeat;')
+                            a(href='#', title='').carousel-news__link Длинный-длинный заголовок новости 123
+                        .carousel-news__item(data-equalizer-watch='top-news', style='background: #4dc7a0 url(./images/image.svg) 0 0/100% 100% no-repeat;')
+                            a(href='#', title='').carousel-news__link Длинный-длинный заголовок новости 321
+                        .carousel-news__item(data-equalizer-watch='top-news', style='background: #ca3034 url(./images/image.svg) 0 0/100% 100% no-repeat;')
+                            a(href='#', title='').carousel-news__link Длинный-длинный заголовок новости 777
 
-                .large-4.show-for-large.columns(data-equalizer-watch='top-news')
-                    //Recent news headings
-                    mixin recentNewsHeading(title)
-                        .callout
-                            a(href='', title='')= title
-                            block
+                .small-12.large-4.show-for-large.columns
+                    .callout.x-carousel-news-links(data-equalizer-watch='top-news')
+                        mixin recentNewsHeading(title)
+                            p
+                                a.x-carousel-news-link(href='#', title='#')= title
+                                block
+                            hr
+                            br
 
-                    + recentNewsHeading('12:08 Заголовок свежей новости')
-                        | &nbsp;
-                        i.fa.fa-comments &nbsp;7
-                    + recentNewsHeading('10:10 Заголовок свежей новости')
-                    + recentNewsHeading('9:53 Заголовок свежей новости')
-                        | &nbsp;
-                        i.fa.fa-comments &nbsp;19
+                        + recentNewsHeading('12:08 Заголовок свежей новости')
+                            | &nbsp;
+                            i.fa.fa-comments &nbsp;7
+                        + recentNewsHeading('10:10 Заголовок свежей новости')
+                        + recentNewsHeading('10:10 Заголовок свежей новости')
+                        + recentNewsHeading('9:53 Заголовок свежей новости')
+                            | &nbsp;
+                            i.fa.fa-comments &nbsp;19
 
-                    a.hollow.button.secondary.expanded(href='', title='') Архив новостей
-        .small-3.columns
-            .callout.text-center(data-equalizer-watch='top-news', style='background: #2ad url("./images/image.svg") 0 0/100% 100% no-repeat;')
+                        a(href='#', title='#') Архив новостей &nbsp;
+                            i.fa.fa-long-arrow-right
+
+                        .clearfix
+
+        .small-12.medium-4.large-3.columns
+            .callout.text-center(data-equalizer-watch='top-news', style='background: #2ad url(./images/image.svg) 0 0/100% 100% no-repeat;')
                 span.text-gray От спонсора

@@ -9,12 +9,12 @@ mixin readCommentTile(title)
                 else
                     a(href='#') Приняли на комплексное обслуживание новый сайт
             block
-            a(href='#') Читать &nbsp;
-                i.fa.fa-long-arrow-right
+        a(href='#') Читать &nbsp;
+            i.fa.fa-long-arrow-right
 
 .content
-    .row
-        .small-12.medium-6.columns(data-equalizer='readCommentTile', data-equalize-by-row='true')
+    .row(data-equalizer='readCommentTile', data-equalize-by-row='true')
+        .small-12.medium-6.columns
             h2 Сейчас читают
             +readCommentTile()
                 p

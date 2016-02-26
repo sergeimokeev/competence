@@ -9,14 +9,15 @@ html.no-js(lang='en')
 
         block page
             include components/smi/_news-top-slider
+            .row.column: hr
             .row
                 //main
-                .small-12.medium-9.column
+                .small-12.medium-8.column
                     include components/smi/_articles-tiles
                     .row.column: hr
-                    include components/_video-tiles
+                    include components/common/_video-tiles
                     .row.column: hr
-                    include components/_photo-tiles
+                    include components/common/_photo-tiles
                     .row.column: hr
                     include components/smi/_magazine-tiles
                     .row.column: hr
@@ -24,9 +25,9 @@ html.no-js(lang='en')
                     .row.column: hr
                     include components/smi/_news-sharing
                     .row.column: hr
-                    include components/_social-widgets
+                    include components/common/_social-widgets
                     .row.column: hr
-                aside.medium-3.show-for-medium.column
+                aside.medium-4.show-for-medium.column
                     include components/smi/_aside-index
 
         .row.column: hr

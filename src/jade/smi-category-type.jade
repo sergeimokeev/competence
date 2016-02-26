@@ -1,27 +1,28 @@
 extends smi-category
 
 block category-сontent
-    .row.column
-        ul.menu
-            li.menu-text Статьи
-            li: a(href='#', title='') Фото
-            li: a(href='#', title='') Видео
-            li: a(href='#', title='') Журналы
-        br
-    .row.small-up-1.medium-up-2
-        +newsTile()
-        +newsTile()
-        +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники')
-            p Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
-        +newsTile()
-        +newsTile()
-        +newsTile()
-        +newsTile()
-        +newsTile()
-        +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники')
-            p Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
-        +newsTile()
+    .content
+        .row.column
+            ul.menu
+                li.menu-text Статьи
+                li: a(href='#', title='') Фото
+                li: a(href='#', title='') Видео
+                li: a(href='#', title='') Журналы
+            br
+        .row.small-up-1.medium-up-2(data-equalizer='news', data-equalize-by-row='true')
+            +newsTile(false, 'news')
+            +newsTile(false, 'news')
+            +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники')
+                p Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
+            +newsTile(false, 'news')
+            +newsTile(false, 'news')
+            +newsTile(false, 'news')
+            +newsTile(false, 'news')
+            +newsTile(false, 'news')
+            +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники', 'news')
+                p Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
+            +newsTile(false, 'news')
 
-    .row.column
-        .content
-            include components/_pagination
+        .row.column
+            .content
+                include components/common/_pagination

@@ -1,4 +1,4 @@
-include ./smi/_mixin-news-tile
+include ../mixins/_mixin-news-tile
 
 .content
     .row
@@ -13,7 +13,8 @@ include ./smi/_mixin-news-tile
         +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники', 'news')
             p Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
         +newsTile(false, 'news')
+        +newsTile(false, 'news')
 
     .row.column
         p &nbsp;
-        include ./_pagination
+        include _pagination

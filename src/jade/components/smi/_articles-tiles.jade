@@ -1,4 +1,4 @@
-include _mixin-news-tile
+include ../mixins/_mixin-news-tile
 
 .content
     .row
@@ -8,11 +8,11 @@ include _mixin-news-tile
             a.button(href='#') Все материалы &nbsp;
                 i.fa.fa-long-arrow-right
 
-    .row.small-up-1.medium-up-2.large-up-3(data-equalizer='news', data-equalize-by-row='true')
-        +newsTile()
-        +newsTile()
-        +newsTile()
-        +newsTile()
-        +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники')
+    .row.small-up-1.medium-up-2.large-up-3(data-equalizer='articles', data-equalize-by-row='true')
+        +newsTile(false, 'articles')
+        +newsTile(false, 'articles')
+        +newsTile(false, 'articles')
+        +newsTile(false, 'articles')
+        +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники', 'articles')
             p Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
-        +newsTile()
+        +newsTile(false, 'articles')

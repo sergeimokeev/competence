@@ -32,5 +32,25 @@
             autoplayHoverPause: true
         });
 
+        $(".x-carousel-news").slick({
+            infinite: true,
+            arrows: false,
+            slidesPerRow: 1,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            swipeToSlide: true,
+            autoplay: true,
+            autoplaySpeed: 7000,
+            autoplayHoverPause: true
+        });
+        $('.x-carousel-news-link').on('click', function(e){
+
+            e.preventDefault();
+            var $this = $(this),
+                index = $this.closest('.x-carousel-news-links').find('.x-carousel-news-link').index($this);
+            $('.x-carousel-news').slick('slickGoTo', index);
+        });
+
     });
 })(jQuery);
