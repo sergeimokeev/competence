@@ -1,4 +1,7 @@
 @charset "utf-8";
+$imagesPath: '../images' !default;
+$fontsPath: '../fonts' !default;
+$fa-font-path: $fontsPath;
 
 @import "settings";
 @import "external";
