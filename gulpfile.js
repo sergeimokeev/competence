@@ -31,15 +31,15 @@ var path = {
         html: 'src/jade/*.jade',
         js: 'src/jade/**/_js.html',
         jsHtml: 'dist/*.html',
-        css: ['src/scss/style.scss', 'src/scss/style-inline.scss'],
+        css: ['src/scss/style.scss'],//, 'src/scss/style-inline.scss'
         images: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*',
         awesome: 'node_modules/font-awesome/fonts/**/*.*'
     },
     watch: {
-        html: ['src/jade/**/*.jade', 'src/jade/**/*.html', 'src/scss/**/*.scss'],
+        html: ['src/jade/**/*.jade', 'src/jade/**/*.html'],//, 'src/scss/**/*.scss'
         js: ['src/js/**/*.js', 'src/jade/**/_js.html'],
-        jsHtml: ['src/jade/**/*.jade', 'src/jade/**/*.html', 'src/scss/**/*.scss'],
+        jsHtml: ['src/jade/**/*.jade', 'src/jade/**/*.html'],//, 'src/scss/**/*.scss'
         css: 'src/scss/**/*.scss',
         images: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*',
