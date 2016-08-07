@@ -2,7 +2,7 @@
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    jade = require('gulp-jade'),
+    pug = require('gulp-pug'),
     autoprefixer = require('gulp-autoprefixer'),
     useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
@@ -28,8 +28,8 @@ var path = {
         fonts: 'dist/fonts/'
     },
     src: {
-        html: 'src/jade/*.jade',
-        js: 'src/jade/**/_js.html',
+        html: 'src/pug/*.pug',
+        js: 'src/pug/**/_js.html',
         jsHtml: 'dist/*.html',
         css: ['src/scss/style.scss'],//, 'src/scss/style-inline.scss'
         images: 'src/images/**/*.*',
@@ -37,9 +37,9 @@ var path = {
         awesome: 'node_modules/font-awesome/fonts/**/*.*'
     },
     watch: {
-        html: ['src/jade/**/*.jade', 'src/jade/**/*.html'],//, 'src/scss/**/*.scss'
-        js: ['src/js/**/*.js', 'src/jade/**/_js.html'],
-        jsHtml: ['src/jade/**/*.jade', 'src/jade/**/*.html'],//, 'src/scss/**/*.scss'
+        html: ['src/pug/**/*.pug', 'src/pug/**/*.html'],//, 'src/scss/**/*.scss'
+        js: ['src/js/**/*.js', 'src/pug/**/_js.html'],
+        jsHtml: ['src/pug/**/*.pug', 'src/pug/**/*.html'],//, 'src/scss/**/*.scss'
         css: 'src/scss/**/*.scss',
         images: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*',
@@ -92,9 +92,9 @@ gulp.task('sass', ['clean-css'], function () {
         .pipe(gulp.dest(path.dist.css));
 });
 
-gulp.task('jade', ['clean-html', 'sass'], function() {
+gulp.task('pug', ['clean-html', 'sass'], function() {
     return gulp.src(path.src.html)
-        .pipe(jade({
+        .pipe(pug({
             pretty: true,
             cache: true
         }))
@@ -117,7 +117,7 @@ gulp.task('fonts', ['clean-fonts'], function() {
         .pipe(gulp.dest(path.dist.fonts));
 });
 
-gulp.task('js-html', ['jade'], function () {
+gulp.task('js-html', ['pug'], function () {
     return gulp.src(path.src.jsHtml)
         .pipe(useref({noAssets: true}))
         .pipe(gulp.dest(path.dist.html));
@@ -129,18 +129,18 @@ gulp.task('js-copy', ['clean-js'], function () {
         .pipe(gulp.dest(path.dist.html));
 });
 
-gulp.task('js-minify', ['clean-js', 'jade'], function () {
+gulp.task('js-minify', ['clean-js', 'pug'], function () {
     return gulp.src(path.src.js)
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulp.dest(path.dist.html));
 });
 
-gulp.task('minify', ['sass', 'jade', 'images', 'fonts', 'js-html', 'js-minify', 'clean-js-minify']);
+gulp.task('minify', ['sass', 'pug', 'images', 'fonts', 'js-html', 'js-minify', 'clean-js-minify']);
 
-gulp.task('default', ['sass', 'jade', 'images', 'fonts', 'js-html', 'js-copy', 'clean-js-copy'], function () {
+gulp.task('default', ['sass', 'pug', 'images', 'fonts', 'js-html', 'js-copy', 'clean-js-copy'], function () {
     gulp.watch([path.watch.css], ['sass']);
-    gulp.watch([path.watch.html], ['jade']);
+    gulp.watch([path.watch.html], ['pug']);
     gulp.watch([path.watch.images], ['images']);
     gulp.watch([path.watch.fonts], ['fonts']);
     gulp.watch([path.watch.jsHtml], ['js-html']);

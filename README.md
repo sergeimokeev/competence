@@ -12,7 +12,7 @@
 * менеджер пакетов и внешних зависимостей - [npm](https://www.npmjs.com)
 * автоматические сборки - [Gulp](http://gulpjs.com)
 * препроцессор CSS - [Sass](http://sass-lang.com)
-* шаблонизатор HTML - [Jade](http://jade-lang.com)
+* шаблонизатор HTML - [Pug(ex-Jade)](http://jade-lang.com) - _для работы с Pug в PhpStorm и WebStorm необходимо обновить программы до последних версий, удалить плагин Jade, если он был установлен, и установить плагин Pug._ 
 * CSS-фреймворк - [Foundation](http://foundation.zurb.com)
 * динамика - [JQuery](http://jquery.com) и его плагины
 * набор иконок - [Font Awesome](http://fortawesome.github.io/Font-Awesome)
