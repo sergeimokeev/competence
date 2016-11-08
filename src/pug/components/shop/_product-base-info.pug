@@ -1,0 +1,84 @@
+p  А4, 600×600 dpi, 27/27 стр в мин., ADF, Duplex, USB, Ethernet
+
+.row
+    .small-12.large-2.column Цвет:
+    .small-12.large-10.column
+        .checkbox-group
+            input.checkbox-group__item(type='radio' id='color1' name='color')
+            label.checkbox-group__label(for='color1' style='background-color: #eee;') &nbsp;
+            input.checkbox-group__item(type='radio' id='color2' name='color')
+            label.checkbox-group__label(for='color2' style='background-color: #ca3034;') &nbsp;
+            input.checkbox-group__item(type='radio' id='color3' name='color')
+            label.checkbox-group__label(for='color3' style='background-color: #578b93;') &nbsp;
+            input.checkbox-group__item(type='radio' id='color4' name='color')
+            label.checkbox-group__label(for='color4' style='background-color: #deb887;') &nbsp;
+
+.row
+    .small-12.large-2.column Размер:
+    .small-12.large-10.column
+        .checkbox-group
+            input.checkbox-group__item(type='radio' id='size1' name='size')
+            label.checkbox-group__label(for='size1') 39
+            input.checkbox-group__item(type='radio' id='size2' name='size')
+            label.checkbox-group__label(for='size2') 40
+            input.checkbox-group__item(type='radio' id='size3' name='size')
+            label.checkbox-group__label(for='size3') 41
+            input.checkbox-group__item(type='radio' id='size4' name='size')
+            label.checkbox-group__label(for='size4') 42
+            input.checkbox-group__item(type='radio' id='size5' name='size')
+            label.checkbox-group__label(for='size5') 43
+
+.row
+    .small-12.large-10.large-push-2.column
+        p
+            a(href='#', title='') Таблица размеров
+            br
+            span.text-dark-gray Нет нужного размера или цвета?
+            a.pseudo-link(href='#') &nbsp; Сообщим о появлении.
+
+br
+
+.row
+    .small-12.large-4.column
+        p
+            span.stat
+                | 25 280&nbsp;
+                i.fa.fa-rub
+            br
+            del.text-dark-gray
+                | 27 150 &nbsp;
+                i.fa.fa-rub
+            | &nbsp;&nbsp;
+            span.label.warning Бонус <i>+45</i>
+    .small-6.large-4.column
+        .input-group
+            .input-group-button
+                button.button –
+            input.input-group-field(type='text' value='1' )
+            .input-group-button
+                button.button +
+    .small-6.large-4.end.column
+        a(href='#' title="Товар добавлен в корзину").button.expanded
+            i.fa.fa-shopping-basket.fa-lg
+            | &nbsp;В корзину
+
+.row.column
+    p
+        span.rating
+            span.rating__star
+            span.rating__star
+            span.rating__star.rating__star-active
+            span.rating__star
+            span.rating__star
+        | &nbsp;&nbsp;
+        a(href='#', title='')
+            i.fa.fa-lg.fa-comments
+            | &nbsp; Отзывы (3)
+        | &nbsp;&nbsp;
+        a(href='#' title="Товар добавлен к сравнению.")
+            i.fa.fa-lg.fa-balance-scale
+            | &nbsp;К сравнению
+        | &nbsp;&nbsp;
+        a(data-open="add-to-favourites-auth-popup")
+            i.fa.fa-lg.fa-heart-o
+            | &nbsp;Запомнить

@@ -60,3 +60,38 @@
     color: $dark-gray;
   }
 }
+
+.text-fb {
+  color: $facebook-color;
+  &:hover, &:focus {
+    color: $facebook-color;
+  }
+}
+
+.text-vk {
+  color: $vk-color;
+  &:hover, &:focus {
+    color: $vk-color;
+  }
+}
+
+.text-twi {
+  color: $twitter-color;
+  &:hover, &:focus {
+    color: $twitter-color;
+  }
+}
+
+.text-ok {
+  color: $odnoklassniki-color;
+  &:hover, &:focus {
+    color: $odnoklassniki-color;
+  }
+}
+
+.text-insta {
+  color: $instagram-color;
+  &:hover, &:focus {
+    color: $instagram-color;
+  }
+}

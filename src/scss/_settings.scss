@@ -65,6 +65,7 @@ $facebook-color: #3F619C;
 $twitter-color: #2FA4CC;
 $vk-color: #3E709C;
 $odnoklassniki-color: #FC6719;
+$instagram-color: #000000;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
@@ -238,7 +239,7 @@ $breadcrumbs-item-slash: true;
 // 11. Button
 // ----------
 
-$button-padding: 0.83rem 1rem;
+$button-padding: 0.83rem;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
@@ -258,7 +259,7 @@ $button-opacity-disabled: 0.25;
 // ----------------
 
 $buttongroup-margin: 1rem;
-$buttongroup-spacing: 1px;
+$buttongroup-spacing: 0px;
 $buttongroup-child-selector: '.button';
 $buttongroup-expand-max: 6;
 

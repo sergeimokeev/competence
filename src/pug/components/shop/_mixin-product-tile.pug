@@ -1,0 +1,36 @@
+mixin productTile(title, discount)
+    .column
+        .clearfix(data-equalizer-watch)
+            p
+                a(href='#'): img(src='images/image.svg' alt='' style='background: #CA3034')
+                span.button-group.primary.expanded
+                    a(title='Запомнить' data-open="add-to-favourites-auth-popup").button
+                        i.fa.fa-heart-o
+                    a(title='Быстрый просмотр' data-open="product-quickview").button
+                        i.fa.fa-eye
+                    a(title="Добавить к сравнению").button
+                        i.fa.fa-balance-scale
+            p
+                if discount
+                    span.label.success
+                        i.fa.fa-star-o
+                        | &nbsp;Акция
+                    | &nbsp;
+                a(href='shop-product.html')
+                    if title
+                        = title
+                    else
+                        | Название товара
+
+        .row.collapse
+            .small-7.columns
+                strong
+                    | 1&nbsp;250&nbsp;
+                    i.fa.fa-rub
+                if discount
+                    br
+                    del.text-alert
+                        | 1&nbsp;750&nbsp;
+                        i.fa.fa-rub
+            .small-5.columns
+                a(href='#').button.small.primary.hollow.expanded Купить

@@ -1,0 +1,24 @@
+.rating {
+  direction: rtl;
+  font-size: 1.35rem;
+  unicode-bidi: bidi-override;
+}
+.rating__star {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+.rating__star:hover {
+  cursor: pointer;
+}
+.rating__star::before {
+  color: #777;
+  content: $fa-var-star-o;
+  padding-right: 5px;
+}
+.rating__star:hover::before, .rating__star:hover ~ .rating__star::before,
+.rating:not(:hover) .rating__star-active:before, .rating:not(:hover) .rating__star-active ~ .rating__star::before {
+  color: #e3cf7a;
+  content: $fa-var-star;
+}

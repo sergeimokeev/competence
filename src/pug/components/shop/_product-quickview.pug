@@ -1,0 +1,15 @@
+#product-quickview.reveal.large(data-reveal)
+    .row
+        .small-12.medium-6.column.medium-push-6
+            p
+                span.label.success
+                    i.fa.fa-star-o
+                    | &nbsp;Акция
+            h2
+                | Принтер лазерный HP LaserJet Pro M477fnw (CF377A#ACB)&nbsp;
+                small Артикул 123456
+            include _product-base-info
+        .small-12.medium-6.column.medium-pull-6
+            include _product-images
+    button.close-button(data-close aria-label="Закрыть")
+        span(aria-hidden="true") &times;

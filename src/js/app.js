@@ -4,6 +4,9 @@
     "use strict";
     $(function () {
 
+        /**
+         * Разные карусели
+         */
         $(".x-carousel-main").slick({
             infinite: true,
             dots: false,
@@ -50,6 +53,37 @@
             var $this = $(this),
                 index = $this.closest('.x-carousel-news-links').find('.x-carousel-news-link').index($this);
             $('.x-carousel-news').slick('slickGoTo', index);
+        });
+
+        /**
+         * Показ любого блока по наведению на другой
+         */
+        var toggleLeaveTimer;
+        $('[data-toggle-hover-dd]').on('mouseenter mouseleave', function(e) {
+            var selector = '#' + $(this).data('toggle-hover-dd');
+            if ($(selector).length > 0)
+            {
+                var $toggler = $(selector);
+                var className = $toggler.data('toggler-hover-dd');
+                if (e.type == 'mouseenter' && !$toggler.hasClass(className))
+                {
+                    $toggler.addClass(className)
+                }
+                if (e.type == 'mouseleave' && $toggler.hasClass(className))
+                {
+                    toggleLeaveTimer = setTimeout(function () {$toggler.removeClass(className)}, 300);
+                }
+            }
+        });
+        $('[data-toggler-hover-dd]').on('mouseenter', function () {
+            clearTimeout(toggleLeaveTimer);
+        }).on('mouseleave', function () {
+            var $toggler = $(this);
+            var className = $toggler.data('toggler-hover-dd');
+            if ($toggler.hasClass(className))
+            {
+                toggleLeaveTimer = setTimeout(function () {$toggler.removeClass(className)}, 300);
+            }
         });
 
     });

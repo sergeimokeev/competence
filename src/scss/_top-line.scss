@@ -3,9 +3,14 @@
   padding: 1rem 0;
 }
 
+.top-line_dark {
+  background: $black;
+}
+
 .top-line__humburger {
   display: block;
   padding: 0 0 0.5rem;
+  color: $secondary-color;
 }
 
 .top-line__menu {
