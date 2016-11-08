@@ -1,0 +1,85 @@
+extends shop-regular
+
+block content
+    .row.column
+        h1 Принтер лазерный HP LaserJet Pro M477fnw (CF377A#ACB)
+    .content
+        .row
+            .small-12.medium-6.column.medium-push-6
+                p
+                    span.label.success
+                        i.fa.fa-star-o
+                        | &nbsp;Акция
+                    span.text-dark-gray &nbsp; Артикул 123456
+                include components/shop/_product-base-info
+                hr
+                br
+                include components/shop/_product-stock-delivery-info
+                hr
+                br
+                include components/shop/_product-share-links
+
+            .small-12.medium-6.column.medium-pull-6
+                include components/shop/_product-images
+    .row.column: hr
+    .content
+        .row.column
+            ul.tabs#product-tabs-1(data-tabs)
+                li.tabs-title.is-active
+                    a(href='#product-tab-description', aria-selected='true') Описание
+                li.tabs-title
+                    a(href='#product-tab-spec') Характеристики товара
+                li.tabs-title
+                    a(href='#product-tab-files') Дополнительные материалы
+                li.tabs-title
+                    a(href='#product-tab-comments') Отзывы (3)
+
+            .tabs-content(data-tabs-content="product-tabs-1")
+                .tabs-panel.is-active#product-tab-description
+                    include components/shop/_product-tab-description
+                .tabs-panel#product-tab-spec
+                    include components/shop/_product-tab-spec
+                .tabs-panel#product-tab-files
+                    include components/shop/_product-tab-files
+                .tabs-panel#product-tab-comments
+                    include components/shop/_product-tab-comments
+    .row.column
+        br
+        hr
+    .content
+        .row.column
+            ul.tabs#product-tabs-2(data-tabs)
+                li.tabs-title.is-active
+                    a(href='#product-tab-consumables-original', aria-selected='true') Расходные материалы
+                li.tabs-title
+                    a(href='#product-tab-accessories') Аксессуары
+
+            .tabs-content(data-tabs-content="product-tabs-2")
+                .tabs-panel.is-active#product-tab-consumables-original
+                    include components/shop/_product-tab-consumables
+                .tabs-panel#product-tab-accessories
+                    include components/shop/_product-tab-accessories
+    .row.column
+        br
+        hr
+    .content
+        .row.column
+            h2 Похожие товары
+        .row.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
+            +productTile('Комби-перфоратор Metabo KHE 2650', false)
+            +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+            +productTile('Лобзик Metabo STEB 65 Quick', false)
+            +productTile('Торцовочная пила Ryobi EMS254L', true)
+            +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+            +productTile('Лобзик Metabo STEB 65 Quick', false)
+    .row.column: hr
+    .content
+        .row.column
+            h2 Вы смотрели
+        .row.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
+            +productTile('Комби-перфоратор Metabo KHE 2650', false)
+            +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+            +productTile('Лобзик Metabo STEB 65 Quick', false)
+            +productTile('Торцовочная пила Ryobi EMS254L', true)
+            +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+            +productTile('Лобзик Metabo STEB 65 Quick', false)

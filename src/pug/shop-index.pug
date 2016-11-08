@@ -6,11 +6,11 @@ html.no-js(lang='en')
         include components/shop/_header
         include components/shop/_menu-line
 
-        block page
-            include components/shop/_mixin-product-tile
-            include components/shop/_product-quickview
-            include components/shop/_add-to-favourites-auth-popup
+        include components/shop/_mixin-product-tile
+        include components/shop/_product-quickview
+        include components/shop/_add-to-favourites-auth-popup
 
+        block page
             include components/shop/_carousel-main
             .content
                 .row.small-up-2.medium-up-4.text-center

@@ -1,0 +1,41 @@
+mixin productLine(discount, onDemand, inCart)
+    .row
+        .column.small-4.medium-2.large-1
+            p: img(src='./images/image.svg')
+        .column.small-8.medium-4.large-5
+            p
+                if discount
+                    span.label.alert Акция
+                    | &#160;&#160;
+                span.text-dark-gray Артикул 123456
+                br
+                a.text-dark(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
+
+        .column.small-12.medium-4
+            p
+                strong
+                    | 47&nbsp;692,99&nbsp;
+                    i.fa.fa-rub
+                br
+                if discount
+                    del.text-dark-gray
+                        | 51&nbsp;099,68&nbsp;
+                        i.fa.fa-rub
+        .column.small-12.medium-2
+            p
+                if onDemand
+                    | На заказ
+                else
+                    span.text-success В наличии &#160;
+
+                br
+
+                if inCart
+                    span.dark-gray ✓ В корзине &#160;
+                else
+                    if onDemand
+                        a(href='#').button.small.expanded Заказать
+                    else
+                        a(href='#').button.small.expanded
+                            i.fa.fa-shopping-basket.fa-lg &#160;
+                            | В корзину

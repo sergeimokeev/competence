@@ -39,7 +39,7 @@ p  А4, 600×600 dpi, 27/27 стр в мин., ADF, Duplex, USB, Ethernet
 br
 
 .row
-    .small-12.large-4.column
+    .small-12.large-6.column
         p
             span.stat
                 | 25 280&nbsp;
@@ -50,17 +50,16 @@ br
                 i.fa.fa-rub
             | &nbsp;&nbsp;
             span.label.warning Бонус <i>+45</i>
-    .small-6.large-4.column
+    .small-12.large-6.column
         .input-group
-            .input-group-button
-                button.button –
-            input.input-group-field(type='text' value='1' )
-            .input-group-button
-                button.button +
-    .small-6.large-4.end.column
-        a(href='#' title="Товар добавлен в корзину").button.expanded
-            i.fa.fa-shopping-basket.fa-lg
-            | &nbsp;В корзину
+            input.input-group-field(type='number' value='1' min='1')
+            .input-group-field
+                a(href='#' title="Товар добавлен в корзину").button
+                    | &nbsp;
+                    i.fa.fa-shopping-basket.fa-lg
+                    | &nbsp;В корзину
+                    | &nbsp;
+
 
 .row.column
     p
@@ -70,15 +69,17 @@ br
             span.rating__star.rating__star-active
             span.rating__star
             span.rating__star
-        | &nbsp;&nbsp;
+        em.text-dark-gray &nbsp;оценок 25
+        | &nbsp; &nbsp;
+        br
         a(href='#', title='')
             i.fa.fa-lg.fa-comments
             | &nbsp; Отзывы (3)
-        | &nbsp;&nbsp;
+        | &nbsp; &nbsp;
         a(href='#' title="Товар добавлен к сравнению.")
             i.fa.fa-lg.fa-balance-scale
             | &nbsp;К сравнению
-        | &nbsp;&nbsp;
+        | &nbsp; &nbsp;
         a(data-open="add-to-favourites-auth-popup")
             i.fa.fa-lg.fa-heart-o
             | &nbsp;Запомнить
