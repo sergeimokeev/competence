@@ -1,0 +1,34 @@
+extends shop-regular
+
+block content
+    .row.column
+        h1 Любимые товары
+    .content
+        .row.column
+            +productLine(false,'onDemand')
+            hr
+            br
+            +productLine(false,false,'inCart')
+            hr
+            br
+            +productLine('discount')
+            hr
+            br
+            +productLine(false,'onDemand')
+            hr
+            br
+            +productLine(false,false,'inCart')
+            hr
+            br
+            +productLine('discount')
+            hr
+            br
+            +productLine(false,'onDemand')
+            hr
+            br
+            +productLine(false,false,'inCart')
+            hr
+            br
+            +productLine('discount')
+            p &nbsp;
+            include components/common/_pagination
