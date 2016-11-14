@@ -54,6 +54,7 @@ $foundation-palette: (
         success: #36B6AD,
         warning: #FEF143,
         alert: #CA3034,
+        light-gray: #e6e6e6
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
@@ -199,7 +200,7 @@ $input-error-font-weight: $global-weight-bold;
 // 7. Accordion
 // ------------
 
-$accordion-background: $white;
+$accordion-background: $light-gray;
 $accordion-plusminus: true;
 $accordion-item-color: foreground($accordion-background, $primary-color);
 $accordion-item-background-hover: $light-gray;

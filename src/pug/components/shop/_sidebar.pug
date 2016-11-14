@@ -1,0 +1,84 @@
+a.button.secondary.hollow.expanded(href='catalog-compare.html')
+    i.fa.fa-lg.fa-balance-scale
+    | &nbsp;Сравнить: 5
+ul.accordion(data-accordion data-multi-expand='true' data-allow-all-closed='true')
+    li.accordion-item.is-active(data-accordion-item)
+        a.accordion-title(href='#'): strong Категория
+        .accordion-content(data-tab-content)
+            ul.menu.vertical
+                li: a(href='#') Всё для сада
+                li: a(href='#') Ручной инструмент
+                li: a(href='#') Расходные материалы
+                li
+                    a(href='#') Инструменты
+                    ul.menu.vertical.nested
+                        li: a(href='#') Аккумуляторный инструмент
+                        li: a(href='#') Гайковёрты
+                        li: a(href='#') Краскопульты
+                li: a(href='#') Силовая техника
+
+ul.accordion(data-accordion data-multi-expand='true' data-allow-all-closed='true')
+    li.accordion-item.is-active(data-accordion-item)
+        a.accordion-title(href='#'): strong Цена, руб
+        .accordion-content(data-tab-content)
+            .slider(data-slider data-start="0" data-end="1000" data-initial-start="200" data-initial-end="800" data-binding="true")
+                span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1")
+                span.slider-fill(data-slider-fill)
+                span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2")
+            .row
+                .small-6.columns: input(type="number" id="sliderOutput1")
+                .small-6.columns: input(type="number" id="sliderOutput2")
+    li.accordion-item.is-active(data-accordion-item)
+        a.accordion-title(href='#'): strong Мощность, W
+        .accordion-content(data-tab-content)
+            input#checkbox1(type='checkbox')
+            label(for='checkbox1') до 100
+            br
+            input#checkbox2(type='checkbox')
+            label(for='checkbox2') 100-500
+            br
+            input#checkbox3(type='checkbox')
+            label(for='checkbox3') 500-2000
+            br
+            input#checkbox4(type='checkbox')
+            label(for='checkbox4') больше 2000
+    li.accordion-item(data-accordion-item)
+        a.accordion-title(href='#'): strong Цвет
+        .accordion-content(data-tab-content)
+            input#checkbox5(type='checkbox')
+            label(for='checkbox5') Красный
+            br
+            input#checkbox6(type='checkbox')
+            label(for='checkbox6') Синий
+            br
+            input#checkbox7(type='checkbox')
+            label(for='checkbox7') Зеленый
+            br
+            input#checkbox8(type='checkbox')
+            label(for='checkbox8') Белый
+            br
+            input#checkbox9(type='checkbox')
+            label(for='checkbox9') Черный
+    li.accordion-item(data-accordion-item)
+        a.accordion-title(href='#'): strong Бренд
+        .accordion-content(data-tab-content)
+            input#checkbox10(type='checkbox')
+            label(for='checkbox10') Красный
+            br
+            input#checkbox11(type='checkbox')
+            label(for='checkbox11') Синий
+            br
+            input#checkbox12(type='checkbox')
+            label(for='checkbox12') Зеленый
+            br
+            input#checkbox13(type='checkbox')
+            label(for='checkbox13') Белый
+            br
+            input#checkbox14(type='checkbox')
+            label(for='checkbox14') Черный
+button.button.primary.expanded
+    i.fa.fa-filter.fa-lg
+    | &nbsp;Подобрать
+button.button.light-gray.expanded
+    i.fa.fa-ban.fa-lg
+    | &nbsp;Сбросить фильтр
