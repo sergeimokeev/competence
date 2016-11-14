@@ -6,56 +6,56 @@ block content
     .content
         .row
             .columns.small-12.medium-4.large-3
+                a.button.light-gray.expanded(href='catalog-compare.html')
+                    i.fa.fa-lg.fa-balance-scale
+                    | &nbsp;Сравнить: 5
+            .columns.small-12.medium-6.large-7
+                p
+                    span.button-group
+                        a.button.light-gray(href='#')
+                            | Цена&nbsp;
+                            i.fa.fa-sort-amount-desc
+                        a.button.light-gray(href='#')
+                            | Цена&nbsp;
+                            i.fa.fa-sort-amount-asc
+                        a.button.light-gray(href='#') Новинки
+                        a.button.light-gray(href='#') Популярные
+            .columns.small-12.medium-2.large-2.medium-text-right
+                p
+                    span.button-group
+                        a.button.light-gray(href='shop-catalog.html'): i.fa.fa-lg.fa-th
+                        a.button.light-gray(href='shop-catalog-lines.html'): i.fa.fa-lg.fa-th-list
+
+        .row
+            .columns.small-12.medium-4.large-3
                 include components/shop/_sidebar
             .columns.small-12.medium-8.large-9
-                .row
-                    .columns.small-12.medium-8.large-10
-                        p
-                            strong Сортировать: &nbsp; &nbsp;
-                            a(href='#')
-                                | Цена&nbsp;
-                                i.fa.fa-sort-amount-desc
-                            | &nbsp; &nbsp;
-                            a(href='#')
-                                | Цена&nbsp;
-                                i.fa.fa-sort-amount-asc
-                            | &nbsp; &nbsp;
-                            a(href='#')
-                                | Новинки
-                            | &nbsp; &nbsp;
-                            a(href='#')
-                                | Популярные
-                    .columns.small-12.medium-4.large-2.medium-text-right
-                        p
-                            strong Вид: &nbsp;&nbsp;
-                            a(href='shop-catalog.html'): i.fa.fa-lg.fa-th
-                            | &nbsp;
-                            a(href='shop-catalog-lines.html'): i.fa.fa-lg.fa-th-list
-                .row.small-up-1.medium-up-2.large-up-4(data-equalizer data-equalize-by-row="true")
-                    +productTile('Комби-перфоратор Metabo KHE 2650', false)
-                    +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
-                    +productTile('Лобзик Metabo STEB 65 Quick', false)
-                    +productTile('Торцовочная пила Ryobi EMS254L', true)
-                    +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
-                    +productTile('Лобзик Metabo STEB 65 Quick', false)
-                    +productTile('Комби-перфоратор Metabo KHE 2650', false)
-                    +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
-                    +productTile('Лобзик Metabo STEB 65 Quick', false)
-                    +productTile('Торцовочная пила Ryobi EMS254L', true)
-                    +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
-                    +productTile('Лобзик Metabo STEB 65 Quick', false)
-                    +productTile('Комби-перфоратор Metabo KHE 2650', false)
-                    +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
-                    +productTile('Лобзик Metabo STEB 65 Quick', false)
-                    +productTile('Торцовочная пила Ryobi EMS254L', true)
-                    +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
-                    +productTile('Лобзик Metabo STEB 65 Quick', false)
-                    +productTile('Комби-перфоратор Metabo KHE 2650', false)
-                    +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
-                    +productTile('Лобзик Metabo STEB 65 Quick', false)
-                    +productTile('Торцовочная пила Ryobi EMS254L', true)
-                    +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
-                    +productTile('Лобзик Metabo STEB 65 Quick', false)
+                block products
+                    .row.small-up-1.medium-up-2.large-up-4(data-equalizer data-equalize-by-row="true")
+                        +productTile('Комби-перфоратор Metabo KHE 2650', false)
+                        +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+                        +productTile('Лобзик Metabo STEB 65 Quick', false)
+                        +productTile('Торцовочная пила Ryobi EMS254L', true)
+                        +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+                        +productTile('Лобзик Metabo STEB 65 Quick', false)
+                        +productTile('Комби-перфоратор Metabo KHE 2650', false)
+                        +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+                        +productTile('Лобзик Metabo STEB 65 Quick', false)
+                        +productTile('Торцовочная пила Ryobi EMS254L', true)
+                        +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+                        +productTile('Лобзик Metabo STEB 65 Quick', false)
+                        +productTile('Комби-перфоратор Metabo KHE 2650', false)
+                        +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+                        +productTile('Лобзик Metabo STEB 65 Quick', false)
+                        +productTile('Торцовочная пила Ryobi EMS254L', true)
+                        +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+                        +productTile('Лобзик Metabo STEB 65 Quick', false)
+                        +productTile('Комби-перфоратор Metabo KHE 2650', false)
+                        +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+                        +productTile('Лобзик Metabo STEB 65 Quick', false)
+                        +productTile('Торцовочная пила Ryobi EMS254L', true)
+                        +productTile('Дрель-шуруповерт RYOBI R18DDP-LL13G', false)
+                        +productTile('Лобзик Metabo STEB 65 Quick', false)
                 p &nbsp;
                 include components/common/_pagination
 
