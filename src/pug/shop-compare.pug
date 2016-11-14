@@ -1,0 +1,78 @@
+extends shop-regular
+
+block content
+    .row.column
+        h1 Сравнить товары
+    .content
+        .row.column
+            p
+                span.text-dark-gray Показать:
+                | &nbsp; &nbsp;
+                strong Только отличия
+                | &nbsp; &nbsp;
+                a(href='#') Основные параметры
+                | &nbsp; &nbsp;
+                a(href='#') Все параметры
+
+            mixin productTileForCompare(instock, incart)
+                p
+                    a.text-dark-gray.no-wrap(href="#")
+                        i.fa.fa-lg.fa-times-circle-o
+                        | &nbsp;Убрать
+                p: a(href="shop-product.html"): img(src='./images/image.svg', style='height: 80px')
+                p: a(href='shop-product.html') Керамогранит Kerama Marazzi Сенегал, 50,2 х 50,2 см, бежевый
+                p: strong
+                    | 73&nbsp;250&nbsp;
+                    i.fa.fa-rub
+                p
+                    if instock
+                        if incart
+                            i.fa.fa-check &#160;
+                            | В корзинe
+                        unless incart
+                            a(href='#').button.hollow Купить
+                    unless instock
+                        span.text-dark-gray Нет в наличии
+
+            .table-scroll
+                table
+                    tr(style="vertical-align:top;")
+                        td
+                        td
+                            +productTileForCompare('instock')
+                        td
+                            +productTileForCompare
+                        td
+                            +productTileForCompare('instock','incart')
+                        td
+                            +productTileForCompare
+                        td
+                            +productTileForCompare
+                    tr
+                        th.text-user-small Вес
+                        td 25кг
+                        td 35кг
+                        td 30кг
+                        td 31кг
+                        td 27,5кг
+                    tr
+                        th.text-user-small Мощность
+                        td 0,25-160
+                        td 0,30-180
+                        td 0,25-155
+                        td 0,30-180
+                        td 0,30-170
+                    tr
+                        th.text-user-small Передаточное отношение
+                        td 4,8:1
+                        td 4,7:1
+                        td 4,8:1
+                        td 4,6:1
+                        td 4,8:1
+                    tr
+                        th.text-user-small Количество подшпиников
+                        td 1шт
+                        td 1+1шт
+                        td —
+                        td 1шт
+                        td —
