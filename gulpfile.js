@@ -25,6 +25,7 @@ var path = {
         js: 'dist/js/',
         css: 'dist/css/',
         images: 'dist/images/',
+        i: 'dist/i/',
         fonts: 'dist/fonts/'
     },
     src: {
@@ -33,6 +34,7 @@ var path = {
         jsHtml: 'dist/*.html',
         css: ['src/scss/style.scss'],//, 'src/scss/style-inline.scss'
         images: 'src/images/**/*.*',
+        i: 'src/i/**/*.*',
         fonts: 'src/fonts/**/*.*',
         awesome: 'node_modules/font-awesome/fonts/**/*.*'
     },
@@ -42,6 +44,7 @@ var path = {
         jsHtml: ['src/pug/**/*.pug', 'src/pug/**/*.html'],//, 'src/scss/**/*.scss'
         css: 'src/scss/**/*.scss',
         images: 'src/images/**/*.*',
+        i: 'src/i/**/*.*',
         fonts: 'src/fonts/**/*.*',
         awesome: 'node_modules/font-awesome/fonts/**/*.*'
     }
@@ -57,6 +60,10 @@ gulp.task('clean-html', function() {
 
 gulp.task('clean-images', function() {
     return gulp.src(path.dist.images, {read: false}).pipe(rimraf());
+});
+
+gulp.task('clean-i', function() {
+    return gulp.src(path.dist.i, {read: false}).pipe(rimraf());
 });
 
 gulp.task('clean-fonts', function() {
@@ -112,6 +119,11 @@ gulp.task('images', ['clean-images'], function () {
         .pipe(gulp.dest(path.dist.images));
 });
 
+gulp.task('i', ['clean-i'], function() {
+    return gulp.src(path.src.i)
+        .pipe(gulp.dest(path.dist.i));
+});
+
 gulp.task('fonts', ['clean-fonts'], function() {
     return gulp.src([path.src.fonts, path.src.awesome])
         .pipe(gulp.dest(path.dist.fonts));
@@ -136,12 +148,13 @@ gulp.task('js-minify', ['clean-js', 'pug'], function () {
         .pipe(gulp.dest(path.dist.html));
 });
 
-gulp.task('minify', ['sass', 'pug', 'images', 'fonts', 'js-html', 'js-minify', 'clean-js-minify']);
+gulp.task('minify', ['sass', 'pug', 'images', 'i', 'fonts', 'js-html', 'js-minify', 'clean-js-minify']);
 
-gulp.task('default', ['sass', 'pug', 'images', 'fonts', 'js-html', 'js-copy', 'clean-js-copy'], function () {
+gulp.task('default', ['sass', 'pug', 'images', 'i', 'fonts', 'js-html', 'js-copy', 'clean-js-copy'], function () {
     gulp.watch([path.watch.css], ['sass']);
     gulp.watch([path.watch.html], ['pug']);
     gulp.watch([path.watch.images], ['images']);
+    gulp.watch([path.watch.i], ['i']);
     gulp.watch([path.watch.fonts], ['fonts']);
     gulp.watch([path.watch.jsHtml], ['js-html']);
     gulp.watch([path.watch.js], ['js-copy', 'clean-js-copy']);
