@@ -1,0 +1,62 @@
+extends shop-regular
+
+block content
+    .row.column
+        h1 Персональный раздел
+    .content
+        .row
+            .column.small-12.medium-4.large-3
+                h4.text-dark-gray Пользователь
+                ul
+                    li: a(href='shop-user-personal.html') Регистрационные данные
+                    li: a(href='shop-user-edit.html') Изменить данные о себе
+
+                h4.text-dark-gray Заказы и корзина
+                ul
+                    li: a(href='shop-cart.html') Корзина
+                    li: a(href='shop-orders.html') Список заказов
+                    li: a(href='shop-wishlist.html') Любимые товары
+
+                h4.text-dark-gray Подписка
+                ul
+                    li: a(href='shop-user-personal.html') Изменить подписку
+
+            .column.small-12.medium-8.large-9
+                block personal
+                    .callout.text-center
+                        p.lead
+                            = 'Ваш '
+                            a(href='#') заказ №123 от 30.06.2016
+                            = ' подтверждён'
+
+                        a.button(href='#') Оплатить заказ
+
+                    h2 Регистрационные данные
+                    p
+                        span.text-dark-gray Электронная почта:&nbsp;
+                        | user@email.com
+                    p
+                        span.text-dark-gray Логин:&nbsp;
+                        | user
+                    p
+                        span.text-dark-gray Имя:&nbsp;
+                        | user
+                    p
+                        span.text-dark-gray Фамилия:&nbsp;
+                        | user
+
+                    hr
+                    br
+
+                    h2 Получать на электронную почту
+                    form
+                        label
+                            input(type='checkbox' checked required disabled)
+                            | Информацию о заказах
+                        label
+                            input(type='checkbox')
+                            | Сообщения о наших акциях
+                        label
+                            input(type='checkbox')
+                            | Сообщения про обновления ассортимента
+                        button.button Сохранить

@@ -1,0 +1,32 @@
+extends shop-user-personal
+
+block personal
+    form
+        fieldset
+            input#usertype1(type='radio' name='usertype' checked)
+            label(for='usertype1') Физ. лицо
+            input#usertype2(type='radio' name='usertype')
+            label(for='usertype2') Юр. лицо
+
+        label Имя *
+            input(type='text' required)
+
+        label Фамилия
+            input(type='text')
+
+        label Электронная почта
+            input(type='email')
+
+        label Контактный телефон *
+            input(type='text' required)
+
+        label Должность
+            input(type='text')
+
+        label Новый пароль
+            input(type='password')
+
+        label Подтверждение пароля
+            input(type='password')
+
+        button.button Сохранить
