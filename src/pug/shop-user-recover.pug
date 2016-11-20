@@ -1,0 +1,22 @@
+extends shop-regular
+
+block content
+    .row.column
+        h1 Восстановление пароля
+    .content
+        .row
+            .column.small-12.medium-8.large-6.medium-centered
+                p
+                    |Если вы забыли пароль, введите логин или E-Mail.
+                    br
+                    | Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.
+                form(action='shop-user-login.html')
+                    label Введите либо ваш логин
+                    input(type='email')
+                    label Либо ваш email
+                    input(type='password')
+                    button.button.small-expanded
+                        | Выслать контрольную строку &nbsp;
+                        i.fa.fa-envelope-o.fa-lg
+                p
+                    a(href='shop-user-login.html', title='') Авторизация
