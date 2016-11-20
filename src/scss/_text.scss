@@ -95,3 +95,10 @@
     color: $instagram-color;
   }
 }
+
+.text-gp {
+  color: $google-plus-color;
+  &:hover, &:focus {
+    color: $google-plus-color;
+  }
+}
