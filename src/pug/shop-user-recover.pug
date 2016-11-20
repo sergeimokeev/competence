@@ -11,10 +11,12 @@ block content
                     br
                     | Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.
                 form(action='shop-user-login.html')
-                    label Введите либо ваш логин
-                    input(type='email')
-                    label Либо ваш email
-                    input(type='password')
+                    label
+                        | Введите либо ваш логин
+                        input(type='text')
+                    label
+                        | Либо ваш email
+                        input(type='email')
                     button.button.small-expanded
                         | Выслать контрольную строку &nbsp;
                         i.fa.fa-envelope-o.fa-lg
