@@ -1,0 +1,53 @@
+extends shop-user-personal
+
+block personal
+    -
+        var data = [
+        {
+        'title':'Заказ №4 от 03.06.2014 на сумму 1 250 руб',
+        'statusClass':'success',
+        'status':'Оплачен',
+        'payed':true
+        },
+        {
+        'title':'Заказ №3 от 03.06.2014 на сумму 4 997 руб',
+        'statusClass':'warning',
+        'status':'Оформлен',
+        'payed':false
+        },
+        {
+        'title':'Заказ №2 от 03.06.2014 на сумму 321 руб',
+        'statusClass':'secondary',
+        'status':'Доставлен',
+        'payed':true
+        },
+        {
+        'title':'Заказ №1 от 03.06.2014 на сумму 1 080 руб',
+        'statusClass':'secondary',
+        'status':'Доставлен',
+        'payed':true
+        }
+        ]
+
+    h2 Заказы
+
+    - n = 0
+    each item in data
+        if n > 0
+            hr
+            br
+        - n++
+        .row
+            .small-10.large-7.column
+                p
+                    span(class='label ' + item.statusClass)= item.status
+                    | &nbsp;
+                    a(href='#')= item.title
+            .small-2.large-1.large-push-4.column.text-right
+                p
+                    a(href="" title='Отменить заказ'): i.fa.fa-2x.fa-times-circle-o
+            .small-12.large-4.large-pull-1.column
+                unless item.payed
+                    p
+                        | Не оплачен &#160;
+                        a(href="#") Оплатить
