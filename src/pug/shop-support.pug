@@ -1,0 +1,78 @@
+extends shop-regular
+
+mixin _faq-answer
+    p Программа клиента SSL VPN использует TСР порт 4100 для подключения к Firebox c целью загрузки обновлений программного обеспечения клиента и его конфигурационного файла.
+    p Если пользователь не может подключиться через ТСР порт 4100, но при наличии конфигурационного файла он может создать VPN-соединение, но при этом не cможет загрузить обновленный конфигурационный файл.
+    p Пользователь увидит диалоговое окно с ошибкой «Could not download the configuration from the server. Do you want to try to connect using the most recent configuration?». Затем пользователю следует нажать Yesи создать VPN-соединение, только если он не изменил параметры Mobile VPN with SSL в конфигурации Firebox.
+    p Если пользователь не может подключиться к устройству Firebox через порт 4100, так как он заблокирован брандмауэром или ISP, то вы можете пользователю отправить программу клиента и конфигурационный файл. Для более подробной информации см. Manually distribute and install the Mobile VPN with SSL client software and configuration file
+
+block content
+    .row.column
+        h1 Ваши вопросы
+    .content
+        .row
+            aside.small-12.medium-4.large-3.column
+                .callout
+                    ul.menu.vertical
+                        li
+                            a(href='#') Частые вопросы
+                        li
+                            a(href='#') Оплата
+                        li
+                            a(href='#') Доставка
+                        li
+                            a(href='#') Условия возврата
+
+            .small-12.medium-8.large-9.column
+                ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+                    li.accordion-item(data-accordion-item)
+                        a.accordion-title(href="#"): strong Почему я не могу загрузить конфигурацию программы клиента Mobile VPN with SSL из Firebox? [WSM/Fireware XTM v11.x]
+                        div.accordion-content(data-tab-content)
+                            +_faq-answer
+                    li.accordion-item(data-accordion-item)
+                        a.accordion-title(href="#"): strong Как настроить WatchGuard Mobile VPN для Windows Mobile? [WSM/Fireware XTM v11.x]
+                        div.accordion-content(data-tab-content)
+                            +_faq-answer
+                    li.accordion-item(data-accordion-item)
+                        a.accordion-title(href="#"): strong Установка и настройка ПО клиента Mobile VPN with IPSec для конечных пользователей?
+                        div.accordion-content(data-tab-content)
+                            +_faq-answer
+                    li.accordion-item(data-accordion-item)
+                        a.accordion-title(href="#"): strong Какие права необходимы на компьютере для запуска клиента Mobile VPN with SSL?
+                        div.accordion-content(data-tab-content)
+                            +_faq-answer
+                    li.accordion-item(data-accordion-item)
+                        a.accordion-title(href="#"): strong Есть ли версия клиента Mobile VPN for IPSec для Mac OS X? [WSM/Fireware XTM v11.x]
+                        div.accordion-content(data-tab-content)
+                            +_faq-answer
+                    li.accordion-item(data-accordion-item)
+                        a.accordion-title(href="#"): strong Настройка Mobile VPN with IPSec для работы с Firebox, у которого динамический внешний IP адрес?
+                        div.accordion-content(data-tab-content)
+                            +_faq-answer
+                    li.accordion-item(data-accordion-item)
+                        a.accordion-title(href="#"): strong Что такое группы Diffie-Hellman и чем они отличаются друг от друга?
+                        div.accordion-content(data-tab-content)
+                            +_faq-answer
+
+    .row.column
+        hr
+    .content
+        .row.column
+            h2.text-center
+                | Нет нужного ответа?&nbsp;
+                small Задайте свой вопрос
+        .row
+            .small-12.medium-9.large-7.medium-centered.columns
+                .callout
+                    form
+                        label Представьтесь
+                        input(type='text')
+
+                        label Ваш email *
+                            span.text-dark-gray &#160; для ответа вам на вопрос
+                        input(type='email')
+
+                        label Текст вопроса *
+                        textarea(rows='3')
+
+                        button.button.small-expanded Отправить вопрос
