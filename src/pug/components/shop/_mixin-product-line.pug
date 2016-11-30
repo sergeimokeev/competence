@@ -36,12 +36,12 @@ mixin productLine(discount, onDemand, inCart)
                                     i.fa.fa-rub
                     .small-5.columns
                         if inCart
-                            a(href='#')
+                            a(href='shop-cart.html')
                                 span.dark-gray
                                     i.fa.fa-check.fa-lg
                                     | &nbsp;В корзине
                         else
-                            a(href='#').button.hollow.expanded Купить
+                            a(href='shop-cart.html').button.hollow.expanded Купить
             div.hide-for-small-only
                 hr
                 br
@@ -56,6 +56,6 @@ mixin productLine(discount, onDemand, inCart)
                         i.fa.fa-heart-o
                         | &nbsp;Запомнить
                     | &nbsp;&nbsp;
-                    a(href='#')
+                    a(href='shop-compare.html')
                         i.fa.fa-balance-scale
                         | &nbsp;Сравнить

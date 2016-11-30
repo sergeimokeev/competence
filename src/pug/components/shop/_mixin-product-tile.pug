@@ -8,7 +8,7 @@ mixin productTile(title, discount)
                         i.fa.fa-heart-o
                     a(title='Быстрый просмотр' data-open="product-quickview").button
                         i.fa.fa-eye
-                    a(title="Добавить к сравнению").button
+                    a(title="Добавить к сравнению" href='shop-compare.html').button
                         i.fa.fa-balance-scale
             p
                 if discount
@@ -33,4 +33,4 @@ mixin productTile(title, discount)
                         | 1&nbsp;750&nbsp;
                         i.fa.fa-rub
             .small-5.columns
-                a(href='#').button.small.primary.hollow.expanded Купить
+                a(href='shop-cart.html').button.small.primary.hollow.expanded Купить
