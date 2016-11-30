@@ -1,0 +1,75 @@
+extends shop-user-personal
+
+block personal
+    h2 Заказ #4 от 11.03.2016 на сумму 6 388 руб
+
+    h3 Информация о покупателе
+    p
+        | Физ. лицо
+        br
+        | Иванов Иван Иванович
+        br
+        | i.ivanov@mail.com
+        br
+        | +7 900 456-87-98
+
+    h3 Адрес доставки
+    p Россия, Московская область, г. Москва, ул. Уличная, д. 11, кв. 42
+
+    h3 Способ доставки
+    p Самовывоз
+
+    h3 Способ оплаты
+    p Наличными
+
+    h3 Cостав заказа
+    .row
+        .column.small-3.medium-2.large-1
+            p: img(src='./i/image.svg')
+        .column.small-9.medium-5.large-6
+            h5: a.text-dark(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
+        .column.small-12.medium-5.large-5
+            .row
+                .column.small-6.medium-7.large-4
+                    p
+                        strong
+                            | 25 280&nbsp;
+                            i.fa.fa-rub
+                        br
+                        del.text-dark-gray
+                            | 27 150 &nbsp;
+                            i.fa.fa-rub
+                .column.small-6.medium-5.large-3 1 шт
+                .column.small-12.large-5
+                    p
+                        span.stat
+                            | 25 280&nbsp;
+                            i.fa.fa-rub
+    hr
+    br
+    .row
+        .column.small-3.medium-2.large-1
+            p: img(src='./i/image.svg')
+        .column.small-9.medium-5.large-6
+            h5: a.text-dark(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
+        .column.small-12.medium-5.large-5
+            .row
+                .column.small-6.medium-7.large-4
+                    p
+                        strong
+                            | 25 280&nbsp;
+                            i.fa.fa-rub
+                        br
+                        del.text-dark-gray
+                            | 27 150 &nbsp;
+                            i.fa.fa-rub
+                .column.small-6.medium-5.large-3 1 шт
+                .column.small-12.large-5
+                    p
+                        span.stat
+                            | 25 280&nbsp;
+                            i.fa.fa-rub
+    p.lead ИТОГО: &nbsp;
+        strong 6 388
+            = ' '
+            i.fa.fa-rub

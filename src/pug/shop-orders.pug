@@ -42,10 +42,10 @@ block personal
                 p
                     span(class='label ' + item.statusClass)= item.status
                     | &nbsp;
-                    a(href='#')= item.title
+                    a(href='shop-order.html')= item.title
             .small-2.large-1.large-push-4.column.text-right
                 p
-                    a(href="" title='Отменить заказ'): i.fa.fa-2x.fa-times-circle-o
+                    a(href='#' title='Отменить заказ'): i.fa.fa-2x.fa-times-circle-o
             .small-12.large-4.large-pull-1.column
                 unless item.payed
                     p
