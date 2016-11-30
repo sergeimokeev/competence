@@ -76,6 +76,20 @@ html.no-js(lang='en')
 
             .row.column: hr
             include components/shop/_index-news
+            .row.column: hr
+            .content
+                .row.column
+                    h2 Рассылка
+                .row
+                    .column.small-12.medium-8.large-6.end
+                        .input-group
+                            input.input-group-field(type='text' placeholder='Введите ваш e-mail')
+                            .input-group-button
+                                button.button(type='button')
+                                    i.fa.fa-envelope-o
+                                    = ' '
+                                    | Подписаться
+
 
         .row.column: hr
         include ../images/shop/ecommerce-icons.svg
