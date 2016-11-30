@@ -35,10 +35,11 @@
 .menu-line
     .row
         .small-12.columns
-            .title-bar(data-responsive-toggle='main-menu', data-hide-for='medium')
-                button.menu-icon(type='button', data-toggle)
-                .title-bar-title Рубрики
-            ul#main-menu.menu-base
+            .show-for-small-only(data-responsive-toggle='menu', data-hide-for='medium')
+                .text-white(data-toggle)
+                    i.fa.fa-bars.fa-lg
+                    | &nbsp;Меню
+            ul#menu.menu-base
                 li.menu-base__item: a.menu-base__link(href='#') Экономика
                 li.menu-base__item: a.menu-base__link(href='#') Финансы
                 li.menu-base__item: a.menu-base__link(href='#') ТЭК
