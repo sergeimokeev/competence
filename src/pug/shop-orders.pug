@@ -1,53 +1,97 @@
 extends shop-user-personal
 
 block personal
-    -
-        var data = [
-        {
-        'title':'Заказ №4 от 03.06.2014 на сумму 1 250 руб',
-        'statusClass':'success',
-        'status':'Оплачен',
-        'payed':true
-        },
-        {
-        'title':'Заказ №3 от 03.06.2014 на сумму 4 997 руб',
-        'statusClass':'warning',
-        'status':'Оформлен',
-        'payed':false
-        },
-        {
-        'title':'Заказ №2 от 03.06.2014 на сумму 321 руб',
-        'statusClass':'secondary',
-        'status':'Доставлен',
-        'payed':true
-        },
-        {
-        'title':'Заказ №1 от 03.06.2014 на сумму 1 080 руб',
-        'statusClass':'secondary',
-        'status':'Доставлен',
-        'payed':true
-        }
-        ]
-
     h2 Заказы
+    p: a(href='#') Посмотреть историю заказов
+    h3 Заказы в статусе «Оплачен, формируется к отправке»
 
-    - n = 0
-    each item in data
-        if n > 0
-            hr
+    .callout
+        h4: a(href='shop-order.html') Заказ №3 от 27.10.2016, 2 товара на сумму 4 398
+            = ' '
+            i.fa.fa-rub
+        h5.text-dark-gray Оплата
+        p
+            strong Счет №3/1 от 27.10.2016, Наличные курьеру
+            = ' '
+            span.label.success Оплачено
             br
-        - n++
+            | Сумма к оплате по счету: 4 398
+            = ' '
+            i.fa.fa-rub
+
+        h5.text-dark-gray Доставка
+        p
+            strong Отгрузка №3/2, стоимость доставки 500
+                = ' '
+                i.fa.fa-rub
+            = ' '
+            span.label Не отгружено
+            br
+            | Статус отгрузки:
+            = ' '
+            span.label.light-gray Ожидает обработки
+            br
+            | Служба доставки: Доставка курьером
+        hr
+        br
         .row
-            .small-10.large-7.column
+            .column.small-12.medium-4
+                a(href='shop-order.html') Подробнее о заказе
+            .column.small-12.medium-8.medium-text-right
+                a(href='#')
+                    i.fa.fa-undo
+                    = ' '
+                    | Повторить заказ
+                = ' '
+                a.text-dark-gray(href='#') Отменить заказ
+
+    h3 Заказы в статусе «Принят, ожидается оплата»
+
+    .callout
+        h4: a(href='shop-order.html') Заказ №6 от 27.10.2016, 2 товара на сумму 4 398
+            = ' '
+            i.fa.fa-rub
+        h5.text-dark-gray Оплата
+        .row
+            .column.small-12.medium-8
                 p
-                    span(class='label ' + item.statusClass)= item.status
-                    | &nbsp;
-                    a(href='shop-order.html')= item.title
-            .small-2.large-1.large-push-4.column.text-right
-                p
-                    a(href='#' title='Отменить заказ'): i.fa.fa-2x.fa-times-circle-o
-            .small-12.large-4.large-pull-1.column
-                unless item.payed
-                    p
-                        | Не оплачен &#160;
-                        a(href="#") Оплатить
+                    strong Счет №6/1 от 27.10.2016, Наличные курьеру
+                    = ' '
+                    span.label Не оплачено
+                    br
+                    | Сумма к оплате по счету: 4 398
+                    = ' '
+                    i.fa.fa-rub
+                    br
+                    a(href='#') Сменить способ оплаты
+            .column.small-12.medium-4.medium-text-right
+                p: a.button(href='#')
+                    i.fa.fa-credit-card
+                    = ' '
+                    | Оплатить
+
+        h5.text-dark-gray Доставка
+        p
+            strong Отгрузка №6/2, стоимость доставки 500
+                = ' '
+                i.fa.fa-rub
+            = ' '
+            span.label Не отгружено
+            br
+            | Статус отгрузки:
+            = ' '
+            span.label.light-gray Ожидает обработки
+            br
+            | Служба доставки: Доставка курьером
+        hr
+        br
+        .row
+            .column.small-12.medium-4
+                a(href='shop-order.html') Подробнее о заказе
+            .column.small-12.medium-8.medium-text-right
+                a(href='#')
+                    i.fa.fa-undo
+                    = ' '
+                    | Повторить заказ
+                = ' '
+                a.text-dark-gray(href='#') Отменить заказ
