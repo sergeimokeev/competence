@@ -16,9 +16,29 @@ block article
 
                 .callout.text-center
                     span.text-gray Поделиться в соц. сетях: &#160;
-                    a(href='#', title=''): i.fa.fa-twitter.fa-lg &#160;
-                    a(href='#', title=''): i.fa.fa-facebook.fa-lg &#160;
-                    a(href='#', title=''): i.fa.fa-vk.fa-lg &#160;
+                    a(href='#', title='').fa-stack.fa-lg.text-vk
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-vk.fa-stack-1x.fa-inverse
+                    | &nbsp;
+                    a(href='#', title='').fa-stack.fa-lg.text-twi
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                    | &nbsp;
+                    a(href='#', title='').fa-stack.fa-lg.text-fb
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                    | &nbsp;
+                    a(href='#', title='').fa-stack.fa-lg.text-ok
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-odnoklassniki.fa-stack-1x.fa-inverse
+                    | &nbsp;
+                    a(href='#', title='').fa-stack.fa-lg.text-insta
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-instagram.fa-stack-1x.fa-inverse
+                    | &nbsp;
+                    a(href='#', title='').fa-stack.fa-lg.text-gp
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-google-plus.fa-stack-1x.fa-inverse
 
                 .callout
                     h4 Ешё по этой теме
