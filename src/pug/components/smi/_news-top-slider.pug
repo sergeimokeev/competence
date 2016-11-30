@@ -1,5 +1,5 @@
 .content
-    .row(data-equalizer='top-news')
+    .row(data-equalizer='top-news' data-equalize-on-stack='true')
         .small-12.medium-8.large-9.columns
             .row.collapse
                 .small-12.large-8.columns
@@ -12,25 +12,30 @@
                         .carousel-news__item(data-equalizer-watch='top-news', style='background: #4dc7a0 url(./i/image.svg) 0 0/100% 100% no-repeat;')
                             a(href='#', title='').carousel-news__link Длинный-длинный заголовок новости 321
                         .carousel-news__item(data-equalizer-watch='top-news', style='background: #ca3034 url(./i/image.svg) 0 0/100% 100% no-repeat;')
-                            a(href='#', title='').carousel-news__link Длинный-длинный заголовок новости 777
+                            a(href='#', title='').carousel-news__link Длинный-длинный-длинный заголовок новости 777
 
                 .small-12.large-4.show-for-large.columns
                     .callout.x-carousel-news-links(data-equalizer-watch='top-news')
-                        mixin recentNewsHeading(title)
-                            p
-                                a.x-carousel-news-link(href='#', title='#')= title
-                                block
-                            hr
-                            br
-
-                        + recentNewsHeading('12:08 Заголовок свежей новости')
-                            | &nbsp;
-                            i.fa.fa-comments &nbsp;7
-                        + recentNewsHeading('10:10 Заголовок свежей новости')
-                        + recentNewsHeading('10:10 Заголовок свежей новости')
-                        + recentNewsHeading('9:53 Заголовок свежей новости')
-                            | &nbsp;
-                            i.fa.fa-comments &nbsp;19
+                        p: a.x-carousel-news-link(href='#', title='#')
+                            strong.text-dark-gray 12:08&nbsp;
+                            | Длинный-длинный заголовок новости 1
+                        hr
+                        br
+                        p: a.x-carousel-news-link(href='#', title='#')
+                            strong.text-dark-gray 10:10&nbsp;
+                            | Длинный-длинный заголовок новости 123
+                        hr
+                        br
+                        p: a.x-carousel-news-link(href='#', title='#')
+                            strong.text-dark-gray 10:00&nbsp;
+                            | Длинный-длинный заголовок новости 321
+                        hr
+                        br
+                        p: a.x-carousel-news-link(href='#', title='#')
+                            strong.text-dark-gray 9:53&nbsp;
+                            | Длинный-длинный-длинный заголовок новости 777
+                        hr
+                        br
 
                         a(href='#', title='#') Архив новостей &nbsp;
                             i.fa.fa-long-arrow-right
