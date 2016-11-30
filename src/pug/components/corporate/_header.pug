@@ -1,9 +1,14 @@
 .menu-line
     .row
-        .small-12.large-3.columns.text-center.large-text-left
+        .small-10.large-3.columns.text-center.large-text-left
             a(href='#')
                 img(src='./i/image.svg', style='width: 400px; height: 70px', alt='logo')
-        .small-12.large-9.columns
+        .small-2.column.hide-for-medium
+            .show-for-small-only(data-responsive-toggle='menu', data-hide-for='medium')
+                br
+                .text-white(data-toggle)
+                    i.fa.fa-bars.fa-2x
+        .small-12.large-9.columns#menu
             br
             ul.menu-base.large-text-right
                 each title in ['Сайт', 'Магазин', 'Интернет-СМИ', 'Реклама', 'Мобильные', 'Обучение', 'Конверсия']
