@@ -1,5 +1,8 @@
-.callout
+p.show-for-small-only(data-responsive-toggle='menu-left', data-hide-for='medium'): span.button.light-gray.expanded(data-toggle)
+    i.fa.fa-lg.fa-bars
+    | &nbsp;Навигация
+.callout#menu-left
     ul.menu.vertical
+        li.active: a(href='#') Главная
         each title in ['О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация']
-            li
-                a(href='#')= title
+            li: a(href='#')= title
