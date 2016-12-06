@@ -11,10 +11,10 @@
                     a.menu-base__link(href='#')
                         strong Распродажа %
         .small-12.large-4.columns
-            form.search-top.input-group
+            form.search-top.input-group(action='shop-search.html' method='get')
                 input.search-top__input.input-group-field(type='text', value='' placeholder='Введите поисковый запрос')
                 .input-group-button
-                    button.search-top__button.fa.fa-search(type='button')
+                    button.search-top__button.fa.fa-search(type='submit')
 
 .dd.hide-for-small-only#menu_item_0(data-toggler-hover-dd='dd_show')
     .dd__content.callout
