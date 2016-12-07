@@ -54,20 +54,23 @@ $foundation-palette: (
         success: #36B6AD,
         warning: #FEF143,
         alert: #CA3034,
-        light-gray: #e6e6e6
+        light-gray: #e6e6e6,
+        medium-gray: #cacaca,
+        dark-gray: #8a8a8a,
+        black: #333,
+        white: #fff,
+        fb: #3F619C,
+        vk: #3E709C,
+        twi: #2FA4CC,
+        ok: #FC6719,
+        insta: #000000,
+        gp: #DB4437
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #333;
-$white: #fff;
-// Social networks colours
-$facebook-color: #3F619C;
-$twitter-color: #2FA4CC;
-$vk-color: #3E709C;
-$odnoklassniki-color: #FC6719;
-$instagram-color: #000000;
-$google-plus-color: #DB4437;
+$light-gray: map-get($foundation-palette, light-gray);
+$medium-gray: map-get($foundation-palette, medium-gray);
+$dark-gray: map-get($foundation-palette, dark-gray);
+$black: map-get($foundation-palette, black);
+$white: map-get($foundation-palette, white);
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
@@ -148,7 +151,7 @@ $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $primary-color;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -50%);
+$anchor-color-hover: scale-color($anchor-color, $lightness: -25%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: underline;
 $hr-width: $global-width;
@@ -256,6 +259,8 @@ $button-sizes: (
         large: 1.25rem,
 );
 $button-opacity-disabled: 0.25;
+$button-background-hover-lightness: -20%;
+$button-hollow-hover-lightness: -50%;
 
 // 12. Button Group
 // ----------------
@@ -364,6 +369,7 @@ $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
 $input-radius: $global-radius;
+$button-radius: $global-radius;
 
 // 20. Label
 // ---------
@@ -444,6 +450,7 @@ $pagination-item-color-current: foreground($pagination-item-background-current);
 $pagination-item-color-disabled: $medium-gray;
 $pagination-ellipsis-color: $black;
 $pagination-mobile-items: false;
+$pagination-mobile-current-item: false;
 $pagination-arrows: true;
 
 // 27. Progress Bar
@@ -510,8 +517,11 @@ $table-row-stripe-hover: darken($table-background, $table-color-scale + $table-h
 $table-striped-background: smart-scale($table-background, $table-color-scale);
 $table-stripe: even;
 $table-head-background: smart-scale($table-background, $table-color-scale / 2);
+$table-head-row-hover: darken($table-head-background, $table-hover-scale);
 $table-foot-background: smart-scale($table-background, $table-color-scale);
+$table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
 $table-head-font-color: $body-font-color;
+$table-foot-font-color: $body-font-color;
 $show-header-for-stacked: false;
 
 // 32. Tabs
