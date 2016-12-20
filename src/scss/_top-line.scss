@@ -22,7 +22,7 @@
   padding: 1rem 0 0;
 }
 
-@media #{$medium-up} {
+@include breakpoint(medium up) {
   .top-line__humburger {
     display: none;
   }
@@ -33,7 +33,7 @@
   }
 }
 
-@media #{$large-up} {
+@include breakpoint(large up) {
   .top-line__contacts {
     padding: 0;
     margin: 0;

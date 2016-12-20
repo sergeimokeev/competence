@@ -6,8 +6,13 @@ $fontsPath: '../fonts' !default;
 
 $fa-font-path: $fontsPath;
 
-@import "settings";
-@import "external";
+@import "foundation-settings";
+
+@import "foundation";
+@import "motion-ui";
+@import "font-awesome";
+@import "slick.scss";
+@include foundation-everything;
 
 @import "common";
 @import "slick/slick-theme";

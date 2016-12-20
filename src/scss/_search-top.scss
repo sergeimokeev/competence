@@ -18,7 +18,7 @@ $search-height: $global-lineheight * rem-calc($global-font-size) + 2 * $search-i
   }
 }
 
-.search-top__button {
+button.search-top__button {
   border: 0;
   margin: 0;
   padding: 0;
@@ -28,7 +28,7 @@ $search-height: $global-lineheight * rem-calc($global-font-size) + 2 * $search-i
   color: map-get($foundation-palette, primary);
 }
 
-@media #{$medium-only} {
+@include breakpoint(medium only) {
   .search-top {
     margin: $global-margin 0 0;
   }

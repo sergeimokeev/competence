@@ -22,7 +22,7 @@
   }
 }
 
-@media #{$medium-up} {
+@include breakpoint(medium up) {
   .menu-base__item {
     display: inline-block;
   }
@@ -32,7 +32,7 @@
   }
 }
 
-@media #{$xlarge-up} {
+@include breakpoint(xlarge up) {
   .menu-base__item {
     padding-right: rem-calc(30);
     &:last-child {

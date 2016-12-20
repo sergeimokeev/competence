@@ -33,7 +33,7 @@
   color: $primary-color;
 }
 
-@media #{$medium-up} {
+@include breakpoint(medium up) {
   .menu-top__item {
     float: left;
     vertical-align: middle;
