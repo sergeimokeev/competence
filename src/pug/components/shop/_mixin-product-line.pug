@@ -1,4 +1,4 @@
-mixin productLine(discount, onDemand, inCart)
+mixin productLine(discount, onDemand, inCart, inFavourites)
     .row
         .column.small-4.medium-2
             p: img(src='./i/image.svg' alt='Товар')
@@ -52,9 +52,15 @@ mixin productLine(discount, onDemand, inCart)
                     i.fa.fa-truck
                     | &nbsp;Доставим на дом
                     br
-                    a(data-open="add-to-favourites-auth-popup")
-                        i.fa.fa-heart-o
-                        | &nbsp;Запомнить
+                    if !inFavourites
+                        a(data-open="add-to-favourites-auth-popup")
+                            i.fa.fa-heart-o
+                            | &nbsp;Запомнить
+
+                    else
+                        a(href='' title='')
+                            i.fa.fa-times
+                            | &nbsp;Удалить из списка
                     | &nbsp;&nbsp;
                     a(href='shop-compare.html' title='')
                         i.fa.fa-balance-scale

@@ -1,17 +1,17 @@
 h3 Выберите необходимый набор услуг — получите предложение через 5 минут
 form
     .alert.callout(data-closable='')
-        h5 This a friendly message.
-        p And when you're done with me, I close using a Motion UI animation.
+        h5 Это заголовок сообщения
+        p Пользователь может закрыть сообщение. Закрытие анимировано с помощью Motion UI.
         button.close-button(aria-label='Dismiss alert', type='button', data-close='')
             span(aria-hidden='true') &times;
     .success.callout(data-closable='')
-        h5 This a friendly message.
-        p And when you're done with me, I close using a Motion UI animation.
+        h5 Это заголовок сообщения
+        p Пользователь может закрыть сообщение. Закрытие анимировано с помощью Motion UI.
         button.close-button(aria-label='Dismiss alert', type='button', data-close='')
             span(aria-hidden='true') &times;
-    .callout.text-center
-        .row.small-up-1.medium-up-2.large-up-3
+    .callout
+        .row.small-up-1.medium-up-2.large-up-3.text-center
             - n = 0
             each title in ['Консультирование', 'Дизайн (сайты, баннеры, схемы и прочие изображения для нужд интернета)', 'Вёрстка HTML-страниц и сайтов', 'Вёрстка HTML-страниц и сайтов', 'Программирование', 'Тестирование разработанных сайтов и сервисов', 'Размещение сайтов или администрирование серверов', 'Публикация текстовых материалов на сайты', 'Обучение Заказчика использованию сайтов', 'Интеграция с внешними системами', 'Управление продвижением']
                 .column
@@ -29,22 +29,22 @@ form
         .row
             .small-12.medium-6.large-3.columns
                 label
-                    | Input Label
+                    | Текстовое поле
                     input(type='text', placeholder='large-4.columns')
             .small-12.medium-6.large-3.columns
                 label
-                    | Input Label
+                    | Текстовое поле
                     input(type='text', placeholder='large-4.columns')
             .small-12.medium-6.large-3.columns
                 .row.collapse
-                    label Input Label
+                    label Текстовое поле
                     .small-9.columns
                         input(type='text', placeholder='small-9.columns')
                     .small-3.columns
                         span.postfix .com
             .small-12.medium-6.large-3.columns
                 label
-                    | Select Box
+                    | Выпадающий список
                     select
                         option(value='husker') Husker
                         option(value='starbuck') Starbuck
@@ -53,11 +53,11 @@ form
         .row
             .small-12.large-6.columns
                 label
-                    | Input Label
+                    | Текстовое поле
                     input(type='text', placeholder='large-12.columns')
             .small-12.large-6.columns
                 label
-                    | Textarea Label
+                    | Многострочная текстовая область
                     textarea(placeholder='small-12.columns')
         .row.column.text-center
                 button.button.large(type='button') Получите предложение через 5 минут &nbsp;

@@ -5,30 +5,30 @@ block content
         h1 Любимые товары
     .content
         .row.column
-            +productLine(false,'onDemand')
+            +productLine(false, 'onDemand', false, 'inFavourites')
             hr
             br
-            +productLine(false,false,'inCart')
+            +productLine(false, false, 'inCart', 'inFavourites')
             hr
             br
-            +productLine('discount')
+            +productLine('discount', false, false, 'inFavourites')
             hr
             br
-            +productLine(false,'onDemand')
+            +productLine(false, 'onDemand', false, 'inFavourites')
             hr
             br
-            +productLine(false,false,'inCart')
+            +productLine(false, false, 'inCart', 'inFavourites')
             hr
             br
-            +productLine('discount')
+            +productLine('discount', false, false, 'inFavourites')
             hr
             br
-            +productLine(false,'onDemand')
+            +productLine(false, 'onDemand', false, 'inFavourites')
             hr
             br
-            +productLine(false,false,'inCart')
+            +productLine(false, false, 'inCart', 'inFavourites')
             hr
             br
-            +productLine('discount')
+            +productLine('discount', false, false, 'inFavourites')
             p &nbsp;
             include components/common/_pagination
