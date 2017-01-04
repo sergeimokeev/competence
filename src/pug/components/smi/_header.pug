@@ -1,14 +1,14 @@
 .row
     .small-10.large-3.columns.text-center.large-text-left
         p
-            a(href='#')
+            a(href='#' title='')
                 img(src='./i/image.svg', style='width: 400px; height: 60px', alt='logo')
     .small-2.large-1.columns.text-center
         p.text-age-rating.stat: strong 18+
     .small-12.large-3.large-offset-5.columns
-        form(method='post', data-abide='', novalidate='novalidate')
+        form(action='' method='post' data-abide='', novalidate='novalidate')
             .input-group
-                input.input-group-field(type='text', placeholder='Поиск', required='')
+                input.input-group-field(type='text', placeholder='Поиск')
                 .input-group-button
                     button.button.secondary(type='submit', name='Найти')
                         i.fa.fa-search.fa-inverse

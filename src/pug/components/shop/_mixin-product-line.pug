@@ -1,7 +1,7 @@
 mixin productLine(discount, onDemand, inCart)
     .row
         .column.small-4.medium-2
-            p: img(src='./i/image.svg')
+            p: img(src='./i/image.svg' alt='Товар')
         .column.small-8.medium-6.large-5
             h5
                 if discount
@@ -21,7 +21,7 @@ mixin productLine(discount, onDemand, inCart)
                 p
                     span.text-dark-gray: em Нет в наличии&nbsp;
                     br
-                    a(href='#'): strong Заказать
+                    a(href='#' title=''): strong Заказать
             else
                 .row.collapse
                     .small-7.columns
@@ -36,12 +36,12 @@ mixin productLine(discount, onDemand, inCart)
                                     i.fa.fa-rub
                     .small-5.columns
                         if inCart
-                            a(href='shop-cart.html')
+                            a(href='shop-cart.html' title='')
                                 span.dark-gray
                                     i.fa.fa-check.fa-lg
                                     | &nbsp;В корзине
                         else
-                            a(href='shop-cart.html').button.hollow.expanded Купить
+                            a(href='shop-cart.html' title='').button.hollow.expanded Купить
             div.hide-for-small-only
                 hr
                 br
@@ -56,6 +56,6 @@ mixin productLine(discount, onDemand, inCart)
                         i.fa.fa-heart-o
                         | &nbsp;Запомнить
                     | &nbsp;&nbsp;
-                    a(href='shop-compare.html')
+                    a(href='shop-compare.html' title='')
                         i.fa.fa-balance-scale
                         | &nbsp;Сравнить

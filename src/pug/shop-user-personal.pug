@@ -11,22 +11,22 @@ block content
                     | &nbsp;Навигация
                 .callout#menu-left
                     ul.menu.vertical
-                        li: a(href='shop-user-personal.html') Регистрационные данные
-                        li.active: a(href='shop-user-edit.html') Изменить данные о себе
-                        li: a(href='shop-cart.html') Корзина
-                        li: a(href='shop-orders.html') Список заказов
-                        li: a(href='shop-wishlist.html') Любимые товары
-                        li: a(href='shop-user-personal.html') Изменить подписку
+                        li: a(href='shop-user-personal.html' title='') Регистрационные данные
+                        li.active: a(href='shop-user-edit.html' title='') Изменить данные о себе
+                        li: a(href='shop-cart.html' title='') Корзина
+                        li: a(href='shop-orders.html' title='') Список заказов
+                        li: a(href='shop-wishlist.html' title='') Любимые товары
+                        li: a(href='shop-user-personal.html' title='') Изменить подписку
 
             .column.small-12.medium-8.large-9
                 block personal
                     .callout.text-center
                         p.lead
                             = 'Ваш '
-                            a(href='#') заказ №123 от 30.06.2016
+                            a(href='#' title='') заказ №123 от 30.06.2016
                             = ' подтверждён'
 
-                        a.button(href='#') Оплатить заказ
+                        a.button(href='#' title='') Оплатить заказ
 
                     h2 Регистрационные данные
                     p

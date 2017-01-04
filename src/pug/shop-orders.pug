@@ -2,11 +2,11 @@ extends shop-user-personal
 
 block personal
     h2 Заказы
-    p: a(href='#') Посмотреть историю заказов
+    p: a(href='#' title='') Посмотреть историю заказов
     h3 Заказы в статусе «Оплачен, формируется к отправке»
 
     .callout
-        h4: a(href='shop-order.html') Заказ №3 от 27.10.2016, 2 товара на сумму 4 398
+        h4: a(href='shop-order.html' title='') Заказ №3 от 27.10.2016, 2 товара на сумму 4 398
             = ' '
             i.fa.fa-rub
         h5.text-dark-gray Оплата
@@ -36,9 +36,9 @@ block personal
         br
         .row
             .column.small-12.medium-4
-                a(href='shop-order.html') Подробнее о заказе
+                a(href='shop-order.html' title='') Подробнее о заказе
             .column.small-12.medium-8.medium-text-right
-                a(href='#')
+                a(href='#' title='')
                     i.fa.fa-undo
                     = ' '
                     | Повторить заказ
@@ -48,7 +48,7 @@ block personal
     h3 Заказы в статусе «Принят, ожидается оплата»
 
     .callout
-        h4: a(href='shop-order.html') Заказ №6 от 27.10.2016, 2 товара на сумму 4 398
+        h4: a(href='shop-order.html' title='') Заказ №6 от 27.10.2016, 2 товара на сумму 4 398
             = ' '
             i.fa.fa-rub
         h5.text-dark-gray Оплата
@@ -63,7 +63,7 @@ block personal
                     = ' '
                     i.fa.fa-rub
                     br
-                    a(href='#') Сменить способ оплаты
+                    a(href='#' title='') Сменить способ оплаты
             .column.small-12.medium-4.medium-text-right
                 p: a.button(href='#')
                     i.fa.fa-credit-card
@@ -87,9 +87,9 @@ block personal
         br
         .row
             .column.small-12.medium-4
-                a(href='shop-order.html') Подробнее о заказе
+                a(href='shop-order.html' title='') Подробнее о заказе
             .column.small-12.medium-8.medium-text-right
-                a(href='#')
+                a(href='#' title='')
                     i.fa.fa-undo
                     = ' '
                     | Повторить заказ
