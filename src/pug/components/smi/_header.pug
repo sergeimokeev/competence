@@ -1,37 +1,53 @@
-.row
-    .small-10.large-3.columns.text-center.large-text-left
-        p
-            a(href='#' title='')
-                img(src='./i/image.svg', style='width: 400px; height: 60px', alt='logo')
-    .small-2.large-1.columns.text-center
-        p.text-age-rating.stat: strong 18+
-    .small-12.large-3.large-offset-5.columns
-        form(action='' method='post' data-abide='', novalidate='novalidate')
-            .input-group
-                input.input-group-field(type='text', placeholder='Поиск')
-                .input-group-button
-                    button.button.secondary(type='submit', name='Найти')
-                        i.fa.fa-search.fa-inverse
-.row.column
-    hr
-    br
-.row
-    .columns.small-12.medium-6.large-3
-        p.text-date 10:10 14.15.2016
-    .columns.small-12.medium-6.large-3
-        p.text-currencies
+.header
+    .row
+        .small-10.large-3.columns.text-center.large-text-left
+            p
+                a(href='#' title='')
+                    img(src='./i/image.svg', style='width: 400px; height: 60px', alt='logo')
+        .small-2.large-1.columns.text-center
+            p.text-age-rating.stat: strong 18+
+        .small-12.large-5.large-offset-3.columns
+            form(action='' method='post' data-abide='', novalidate='novalidate')
+                .input-group
+                    input.input-group-field(type='text', placeholder='Поиск')
+                    .input-group-button
+                        button.button.secondary(type='submit', name='Найти')
+                            i.fa.fa-search.fa-inverse
+    .row.column
+        hr
+        br
+    .row
+        .columns.small-12.medium-6.large-3.text-dark-gray
+            span.fa-stack.text-dark-gray
+                i.fa.fa-square.fa-stack-2x
+                i.fa.fa-calendar.fa-stack-1x.fa-inverse
+            strong &nbsp; 10:10 14.15.2016
+        .columns.small-12.medium-6.large-3.text-dark-gray
             span.fa-stack.text-dark-gray
                 i.fa.fa-square.fa-stack-2x
                 i.fa.fa-dollar.fa-stack-1x.fa-inverse
-            | &nbsp;77.05&nbsp;&nbsp;&nbsp;
+            span.text-alert
+                | &nbsp;77.05&nbsp;
+                i.fa.fa-long-arrow-down
+            | &nbsp;&nbsp;&nbsp;
             span.fa-stack.text-dark-gray
                 i.fa.fa-square.fa-stack-2x
                 i.fa.fa-euro.fa-stack-1x.fa-inverse
-            | &nbsp;88.20
-    .columns.small-12.medium-6.large-3
-        p.text-weather -1&deg;C, снег
-    .columns.small-12.medium-6.large-3
-        p.text-sport Локомотив 1:3 Медвешчак
+            span.text-success
+                | &nbsp;88.20&nbsp;
+                i.fa.fa-long-arrow-up
+        .columns.small-12.medium-6.large-3.text-dark-gray
+            span.fa-stack.text-dark-gray
+                i.fa.fa-square.fa-stack-2x
+                i.fa.fa-thermometer-half.fa-stack-1x.fa-inverse
+            | &nbsp;-1&deg;C, снег
+        .columns.small-12.medium-6.large-3.text-dark-gray
+            span.fa-stack.text-dark-gray
+                i.fa.fa-square.fa-stack-2x
+                i.fa.fa-flag.fa-stack-1x.fa-inverse
+            | &nbsp;Локомотив&nbsp;
+            span.label: strong 1:3
+            | &nbsp;Медвешчак
 .menu-line
     .row
         .small-12.columns
