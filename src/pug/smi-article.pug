@@ -15,7 +15,7 @@ block article
                 include components/common/_text
 
                 .callout.text-center
-                    span.text-medium-gray Поделиться в соц. сетях: &#160;
+                    span.show-for-large.text-medium-gray Поделиться в соц. сетях: &#160;
                     a(href='#', title='').fa-stack.fa-lg.text-vk
                         i.fa.fa-circle.fa-stack-2x
                         i.fa.fa-vk.fa-stack-1x.fa-inverse
@@ -51,11 +51,11 @@ block article
 
             .content
                 h3.text-dark-gray Похожие новости
-                .row.small-up-1.medium-up-2.large-up-3
-                    +newsTile()
-                    +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники')
+                .row.small-up-1.medium-up-2.large-up-3(data-equalizer='similar', data-equalize-by-row='true')
+                    +newsTile(false, 'similar')
+                    +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники', 'similar')
                         p Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
-                    +newsTile()
+                    +newsTile(false, 'similar')
 
                 include components/smi/_aside-subscribe
 
