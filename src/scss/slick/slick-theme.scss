@@ -26,6 +26,19 @@ $slick-dot-color-active: rgba(0, 0, 0, 0.2) !default;
   }
 }
 
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: initial;
+  -moz-transform: initial;
+  -ms-transform: initial;
+  -o-transform: initial;
+  transform: initial;
+}
+
+.slick-list {
+  z-index: 0;
+}
+
 /* Arrows */
 
 .slick-prev,
