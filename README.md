@@ -47,9 +47,11 @@ boilerplate_wireframe/
 
 Для работы с этим проектом необходимо предварительно установить [Git](https://git-scm.com) и [Node.js](https://nodejs.org).
 
+Инструкция по установке для [WSL](https://ru.wikipedia.org/wiki/Windows_Subsystem_for_Linux) находится [тут](WSL.md).
+
 #### Извлеките содержимое репозитория
 ```sh
-$ git clone git@git.cetera.ru:boilerplate_wireframe
+$ git clone git@gitlab.cetera.ru:boilerplate_wireframe
 ```
 #### Перейдите во вновь созданную папку
 ```sh
