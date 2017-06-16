@@ -3,11 +3,11 @@ extends smi-index
 block page
     include components/common/_breadcrumbs
     block content
-        .row.column
+        .row: .column
             h1 Заголовок страницы h1
         .content
             .row
-                .columns.small-12.medium-5.large-4.medium-push-7.large-push-8
+                .column.small-12.medium-5.large-4.medium-order-2
                     include components/common/_sidebar
-                .columns.small-12.medium-7.large-8.medium-pull-5.large-pull-4
+                .column.small-12.medium-7.large-8.medium-order-1
                     include components/common/_text

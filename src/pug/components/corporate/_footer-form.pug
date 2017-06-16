@@ -1,33 +1,33 @@
 .content
-    .row.column
+    .row: .column
         h2 Мы на связи
     .row
-        .small-12.large-7.columns
+        .small-12.large-7.column
             form(method='post', data-abide='', novalidate='novalidate')
                 .row
-                    .small-12.medium-4.columns
+                    .small-12.medium-4.column
                         label Ваше имя
-                    .small-12.medium-8.columns
+                    .small-12.medium-8.column
                         input(type='text', placeholder='Ваше имя', required='')
                         p.help-text Поле обязательно для заполнения
                 .row
-                    .small-12.medium-4.columns
+                    .small-12.medium-4.column
                         label Email
-                    .small-12.medium-8.columns
+                    .small-12.medium-8.column
                         input(type='email', placeholder='username@address.com', required='')
                         p.help-text Введите ваш электронный адрес
                 .row
-                    .small-12.medium-4.columns
+                    .small-12.medium-4.column
                         label Чем мы можем помочь?
-                    .small-12.medium-8.columns
+                    .small-12.medium-8.column
                         textarea(placeholder='Введите ваше сообщение')
                 .row
-                    .small-12.medium-8.medium-offset-4.columns
+                    .small-12.medium-8.medium-offset-4.column
                         button.radius.button(type='submit')
                             | Отправить сообщение &nbsp;
                             i.fa.fa-envelope-o.fa-lg
-        .large-2.large-offset-1.small-6.columns.text-center
-            p.hide-for-large &nbsp;
+        .large-2.large-offset-1.small-6.column.text-center
+            .mb-2.hide-for-large
             .mb-1
                 img(src='./i/image.svg', alt='1', style='max-width: 150px')
             h5.mb-0-25 Алена Ратникова
@@ -47,8 +47,8 @@
                 a(href='#', title='').fa-stack.fa-lg.text-fb
                     i.fa.fa-circle.fa-stack-2x
                     i.fa.fa-facebook.fa-stack-1x.fa-inverse
-        .large-2.small-6.columns.text-center
-            p.hide-for-large &nbsp;
+        .large-2.small-6.column.text-center
+            .mb-2.hide-for-large
             .mb-1
                 img(src='./i/image.svg', alt='2', style='max-width: 150px')
             h5.mb-0-25 Мария Свешникова

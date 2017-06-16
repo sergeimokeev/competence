@@ -5,7 +5,7 @@ block article
 
     include components/common/_breadcrumbs
 
-    .row.column: h1 Заголовок новости с длинным названием
+    .row: .column: h1 Заголовок новости с длинным названием
     .row
         .small-12.medium-7.large-8.column
 
@@ -47,7 +47,7 @@ block article
                         li: a(href='#', title='') Источник: ФСБ и ФНС провели операцию по зачистке алкогольного рынка
                         li: a(href='#', title='') Пол Маккартни не прошел фейс-контроль на вечеринку после «Грэмми»
 
-            .row.column: hr
+            .row: .column: hr
 
             .content
                 h3.text-dark-gray Похожие новости
@@ -70,10 +70,12 @@ block article
 
                 h2 Другие новости
 
-                -var n = 1
-                while n < 11
-                    .callout
-                        a(href='', title='')=  'Достаточно длинный заголовок другой новости ' + n++
-                        span.text-medium-gray &#160; 17 февраля, 10:59 &#160;
+                .callout
+                    -var n = 1
+                    while n < 11
+                        h5.mb-0-25: a(href='', title='')=  'Достаточно длинный заголовок другой новости ' + n++
+                        .mb-1.text-medium-gray 17 февраля, 10:59 &#160;
+                        if n < 11
+                            hr.mb-1
 
-    .row.column: hr
+    .row: .column: hr

@@ -22,12 +22,12 @@ html.no-js(lang='en')
                             h4: a(href='#') Раздел&nbsp;
                                 = n
                         - n++
-            .row.column: hr
+            .row: .column: hr
             .content
                 .row
-                    .small-12.medium-8.columns
+                    .small-12.medium-8.column
                         h2 Распродажа
-                    .small-12.medium-4.columns.medium-text-right
+                    .small-12.medium-4.column.medium-text-right
                         a.button.hollow(href='#') Все товары с распродажей &nbsp;
                             i.fa.fa-long-arrow-right
                 .row.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
@@ -37,11 +37,11 @@ html.no-js(lang='en')
                     +productTile('Торцовочная пила Ryobi EMS254L', true)
                     +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', true)
                     +productTile('Лобзик Metabo STEB 65 Quick', true)
-            .row.column: hr
+            .row: .column: hr
             include components/shop/_banners
-            .row.column: hr
+            .row: .column: hr
             .content
-                .row.column
+                .row: .column
                     h2 Рекомендуем
                 .row.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
                     +productTile('Комби-перфоратор Metabo KHE 2650', false)
@@ -50,8 +50,8 @@ html.no-js(lang='en')
                     +productTile('Торцовочная пила Ryobi EMS254L', true)
                     +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
                     +productTile('Лобзик Metabo STEB 65 Quick', false)
-            .content.content-promo(style='background-image: url("./i/image.svg"); background-color: #65318F; background-size: 100% 100%;')
-                .row.columns.vertical-middle
+            .content(style='background-image: url("./i/image.svg"); background-color: #65318F; background-size: 100% 100%;')
+                .row(style='height: 400px'): .column.align-self-middle
                     h2.text-white Тотальная распродажа
                     p.text-white
                         | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене.
@@ -60,30 +60,30 @@ html.no-js(lang='en')
                     p.text-white
                         a.button(href='#') Узнайте стоимость товаров &nbsp;<i class="fa fa-long-arrow-right"></i>
             include components/shop/_brands
-            .row.column: hr
+            .row: .column: hr
             .content
                 .row
-                    .small-12.medium-6.columns
+                    .small-12.medium-6.column
                         h2 О магазине
                         p Изоморфизм из группы (G, ∗) в себя называется автоморфизмом этой группы. Так как изоморфизм f : G → G  биективен.
                         p Автоморфизм всегда отображает нейтральный элемент в себя. Образ класса сопряжённости всегда является классом сопряжённости (тем же самым или другим). Образ элемента имеет тот же порядок, что и сам элемент.
                         p Композиция двух автоморфизмов снова является автоморфизмом, и эта операция с множеством всех автоморфизмов группы G, обозначаемая Aut(G), образует группу, группу автоморфизмов G.
-                    .small-12.medium-6.columns
+                    .small-12.medium-6.column
                         h2 Контакты
                         p 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
                         p: strong: a(href='tel:88007755293') 8 (800) 775-52-93
                         p: strong: a(href='mailto:welcome@cetera.ru') welcome@cetera.ru
 
-            .row.column: hr
+            .row: .column: hr
             include components/shop/_index-news
-            .row.column: hr
+            .row: .column: hr
             .content
-                .row.column
+                .row: .column
                     h2 Рассылка
                 .row
                     .column.small-12.medium-8.large-6.end
                         .input-group
-                            input.input-group-field(type='text' placeholder='Введите ваш e-mail')
+                            input.input-group-field(type='email' placeholder='Введите ваш e-mail')
                             .input-group-button
                                 button.button(type='button')
                                     i.fa.fa-envelope-o
@@ -91,7 +91,7 @@ html.no-js(lang='en')
                                     | Подписаться
 
 
-        .row.column: hr
+        .row: .column: hr
         include ../images/shop/ecommerce-icons.svg
         include components/shop/_benefits
         include components/shop/_footer

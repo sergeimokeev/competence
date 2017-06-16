@@ -2,7 +2,7 @@
 
 .row
     .small-12.large-2.column Цвет:
-    .small-12.large-10.column
+    .column
         .checkbox-group
             input.checkbox-group__item(type='radio' id='color1' name='color')
             label.checkbox-group__label(for='color1' style='background-color: #eee;') &nbsp;
@@ -15,7 +15,7 @@
 
 .row
     .small-12.large-2.column Размер:
-    .small-12.large-10.column
+    .column
         .checkbox-group
             input.checkbox-group__item(type='radio' id='size1' name='size')
             label.checkbox-group__label(for='size1') 39
@@ -29,7 +29,7 @@
             label.checkbox-group__label(for='size5') 43
 
 .row
-    .small-12.large-10.large-push-2.column
+    .large-10.large-offset-2.column
         .mb-1
             a(href='#', title='') Таблица размеров
             br
@@ -54,14 +54,14 @@ br
         .input-group
             input.input-group-field(type='number' value='1' min='1')
             .input-group-field
-                a(href='shop-cart.html' title="Товар добавлен в корзину").button
+                a(href='shop-cart.html' title="Товар добавлен в корзину").button.mb-0
                     | &nbsp;
                     i.fa.fa-shopping-basket.fa-lg
                     | &nbsp;В корзину
                     | &nbsp;
 
 
-.row.column
+.row: .column
     .mb-0-5
         span.rating
             span.rating__star

@@ -24,7 +24,7 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                     a(href='#' title=''): strong Заказать
             else
                 .row.collapse
-                    .small-7.columns
+                    .small-7.column
                         .mb-1
                             span.stat
                                 | 1&nbsp;250&nbsp;
@@ -34,7 +34,7 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                                 del.text-dark-gray
                                     | 1&nbsp;750&nbsp;
                                     i.fa.fa-rub
-                    .small-5.columns
+                    .small-5.column
                         .mb-1
                             if inCart
                                 a(href='shop-cart.html' title='')

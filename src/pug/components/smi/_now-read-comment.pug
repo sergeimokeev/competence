@@ -13,7 +13,7 @@ mixin readCommentTile(title)
 
 .content
     .row(data-equalizer='readCommentTile', data-equalize-by-row='true')
-        .small-12.medium-6.columns
+        .small-12.medium-6.column
             h2 Сейчас читают
             +readCommentTile()
                 .mb-1
@@ -21,7 +21,7 @@ mixin readCommentTile(title)
                     span.text-dark-gray Читают: 50
                 .mb-1 Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
 
-        .small-12.medium-6.columns
+        .small-12.medium-6.column
             h2 Сейчас комментируют
             +readCommentTile('Разработаем несколько интернет-магазинов по продаже сантехники')
                 .mb-1

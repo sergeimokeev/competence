@@ -13,7 +13,7 @@ $fa-font-path: $fontsPath;
 @import "motion-ui";
 @import "font-awesome";
 @import "slick.scss";
-@include foundation-everything();
+@include foundation-everything(true);
 
 @import "common";
 @import "slick/slick-theme";
@@ -36,4 +36,3 @@ $fa-font-path: $fontsPath;
 @import "sticky-footer";
 @import "text";
 @import "top-line";
-@import "vertical-middle";

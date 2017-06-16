@@ -3,7 +3,6 @@
 }
 
 .carousel-main__item {
-  height: rem-calc(400);
   background: center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -12,4 +11,8 @@
   &:first-child {
     display: block;
   }
+}
+
+.carousel-main__content {
+  height: rem-calc(400);
 }

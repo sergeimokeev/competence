@@ -1,15 +1,15 @@
 extends shop-regular
 
 block content
-    .row.column
+    .row: .column
         h1 Каталог
     .content
         .row
-            .columns.small-12.medium-4.large-3
+            .column.small-12.medium-4.large-3
                 a.button.light-gray.expanded(href='shop-compare.html')
                     i.fa.fa-lg.fa-balance-scale
                     | &nbsp;Сравнить: 5
-            .columns.small-12.medium-6.large-7.text-center.medium-text-left
+            .column.small-12.medium-6.large-7.text-center.medium-text-left
                 .mb-1
                     span.button-group
                         a.button.light-gray(href='#')
@@ -20,16 +20,16 @@ block content
                             i.fa.fa-sort-amount-asc
                         a.button.light-gray(href='#') Новинки
                         a.button.light-gray(href='#') Популярные
-            .columns.small-12.medium-2.large-2.medium-text-right.text-center
+            .column.small-12.medium-2.large-2.medium-text-right.text-center
                 .mb-1
                     span.button-group
                         a.button.light-gray(href='shop-catalog.html'): i.fa.fa-lg.fa-th
                         a.button.light-gray(href='shop-catalog-lines.html'): i.fa.fa-lg.fa-th-list
 
         .row
-            .columns.small-12.medium-4.large-3
+            .column.small-12.medium-4.large-3
                 include components/shop/_sidebar
-            .columns.small-12.medium-8.large-9
+            .column.small-12.medium-8.large-9
                 block products
                     .row.small-up-1.medium-up-2.large-up-4.mb-2(data-equalizer data-equalize-by-row="true")
                         +productTile('Комби-перфоратор Metabo KHE 2650', false)
@@ -58,9 +58,9 @@ block content
                         +productTile('Лобзик Metabo STEB 65 Quick', false)
                 include components/common/_pagination
 
-    .row.column: hr
+    .row: .column: hr
     .content
-        .row.column
+        .row: .column
             h2 Вы смотрели
         .row.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
             +productTile('Комби-перфоратор Metabo KHE 2650', false)

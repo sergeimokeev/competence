@@ -7,7 +7,7 @@ mixin _faq-answer
     p Если пользователь не может подключиться к устройству Firebox через порт 4100, так как он заблокирован брандмауэром или ISP, то вы можете пользователю отправить программу клиента и конфигурационный файл. Для более подробной информации см. Manually distribute and install the Mobile VPN with SSL client software and configuration file
 
 block content
-    .row.column
+    .row: .column
         h1 Ваши вопросы
     .content
         .row
@@ -57,15 +57,15 @@ block content
                         div.accordion-content(data-tab-content)
                             +_faq-answer
 
-    .row.column
+    .row: .column
         hr
     .content
-        .row.column
+        .row: .column
             h2.text-center
                 | Нет нужного ответа?&nbsp;
                 small Задайте свой вопрос
-        .row
-            .small-12.medium-9.large-7.medium-centered.columns
+        .row.align-center
+            .small-12.medium-9.large-7.column
                 .callout
                     form
                         label Представьтесь

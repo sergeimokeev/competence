@@ -16,13 +16,13 @@ hr.mb-2
 
 h3 Добавить комментарий
 form(action='' method='post', data-abide='', novalidate='novalidate')
-    .row.column
+    .row: .column
         input(type='text', placeholder='Представьтесь *', required='')
         p.help-text Ваше имя для комментария
-    .row.column
+    .row: .column
         input(type='email', placeholder='Ваша электронная почта', required='')
-    .row.column
+    .row: .column
         textarea(placeholder='Текст комментария')
-    .row.column
+    .row: .column
         button.button(type='submit') Отправить сообщение &nbsp;
             i.fa.fa-envelope-o.fa-lg

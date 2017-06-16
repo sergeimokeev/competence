@@ -2,7 +2,7 @@ extends smi-category
 
 block category-content
     .content
-        .row.column
+        .row: .column
             ul.menu
                 li.menu-text Статьи
                 li: a(href='#' title='') Фото
@@ -23,6 +23,6 @@ block category-content
                 | Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
             +newsTile(false, 'news')
 
-        .row.column
+        .row: .column
             .content
                 include components/common/_pagination

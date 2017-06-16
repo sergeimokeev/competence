@@ -1,6 +1,6 @@
 .top-line
     .row
-        .small-12.large-8.columns.hide-for-small-only
+        .small-12.large-8.column.hide-for-small-only
             .top-line__humburger(data-responsive-toggle='responsive-menu', data-hide-for='medium')
                 i.fa.fa-bars.fa-2x(data-toggle)
             .top-line__menu#responsive-menu
@@ -8,7 +8,7 @@
                     each title in ['Контакты', 'Узнайте цены', 'Личный кабинет']
                         li.menu-top__item
                             a.menu-top__link(href='#')= title
-        .small-12.large-4.columns
+        .small-12.large-4.column
             .top-line__contacts.text-left.large-text-right
                 a(href='tel:+71234567890')
                     strong

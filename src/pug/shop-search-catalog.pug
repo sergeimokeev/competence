@@ -3,15 +3,15 @@ extends shop-index
 block page
     include components/common/_breadcrumbs
     block content
-        .row.column
+        .row: .column
             h1 Поиск
         .content
-            .row.column
+            .row: .column
                 form(action='#' method='get')
                     .row
-                        .small-8.medium-9.large-10.columns
+                        .small-8.medium-9.large-10.column
                             label: input(type='text', placeholder='Введите строку для поиска')
-                        .small-4.medium-3.large-2.columns.end
+                        .small-4.medium-3.large-2.column.end
                             input.button.expanded(type='submit', value='Искать')
                 .mb-1 Результаты поиска 1-5 из 200
                 hr.mb-1

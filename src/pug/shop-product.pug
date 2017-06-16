@@ -1,11 +1,11 @@
 extends shop-regular
 
 block content
-    .row.column
+    .row: .column
         h1 Принтер лазерный HP LaserJet Pro M477fnw (CF377A#ACB)
     .content
         .row
-            .small-12.medium-6.column.medium-push-6
+            .small-12.medium-6.column.medium-order-2
                 .mb-1
                     span.label.success
                         i.fa.fa-star-o
@@ -17,11 +17,11 @@ block content
                 hr.mb-1
                 include components/shop/_product-share-links
 
-            .small-12.medium-6.column.medium-pull-6
+            .small-12.medium-6.column.medium-order-1
                 include components/shop/_product-images
-    .row.column: hr
+    .row: .column: hr
     .content
-        .row.column
+        .row: .column
             ul.tabs#product-tabs-1(data-tabs)
                 li.tabs-title.is-active
                     a(href='#product-tab-description' title='') Описание
@@ -41,11 +41,11 @@ block content
                     include components/shop/_product-tab-files
                 .tabs-panel#product-tab-comments
                     include components/shop/_product-tab-comments
-    .row.column
+    .row: .column
         br
         hr
     .content
-        .row.column
+        .row: .column
             ul.tabs#product-tabs-2(data-tabs)
                 li.tabs-title.is-active
                     a(href='#product-tab-consumables-original' title='') Расходные материалы
@@ -57,11 +57,11 @@ block content
                     include components/shop/_product-tab-consumables
                 .tabs-panel#product-tab-accessories
                     include components/shop/_product-tab-accessories
-    .row.column
+    .row: .column
         br
         hr
     .content
-        .row.column
+        .row: .column
             h2 Похожие товары
         .row.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
             +productTile('Комби-перфоратор Metabo KHE 2650', false)
@@ -70,9 +70,9 @@ block content
             +productTile('Торцовочная пила Ryobi EMS254L', true)
             +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
             +productTile('Лобзик Metabo STEB 65 Quick', false)
-    .row.column: hr
+    .row: .column: hr
     .content
-        .row.column
+        .row: .column
             h2 Вы смотрели
         .row.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
             +productTile('Комби-перфоратор Metabo KHE 2650', false)
