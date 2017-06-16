@@ -94,7 +94,8 @@ gulp.task('sass', ['clean-css'], function () {
             })
             .on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions', 'ie >= 9']
+            browsers: ['last 2 versions', 'ie >= 10'],
+            cascade: false
         }))
         .pipe(gulp.dest(path.dist.css));
 });
