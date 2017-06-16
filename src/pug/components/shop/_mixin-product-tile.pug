@@ -1,7 +1,7 @@
 mixin productTile(title, discount)
     .column
         .clearfix(data-equalizer-watch)
-            p
+            .mb-1
                 a(href='shop-product.html'): img(src='./i/image.svg' alt='товар' style='background:#e6e6e6;')
                 span.button-group.light-gray.expanded
                     a(title='Запомнить' data-open="add-to-favourites-auth-popup").button
@@ -10,7 +10,7 @@ mixin productTile(title, discount)
                         i.fa.fa-eye
                     a(title="Добавить к сравнению" href='shop-compare.html').button
                         i.fa.fa-balance-scale
-            p
+            .mb-0-5
                 if discount
                     span.label.success
                         i.fa.fa-star-o

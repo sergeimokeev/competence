@@ -1,0 +1,5 @@
+@each $name, $multiplier in $paddingMultipliers {
+  .mb-#{$name} {
+    margin-bottom: $global-margin * $multiplier;
+  }
+}

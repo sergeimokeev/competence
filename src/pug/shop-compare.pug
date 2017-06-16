@@ -5,7 +5,7 @@ block content
         h1 Сравнить товары
     .content
         .row.column
-            p
+            .mb-1
                 span.text-dark-gray Показать:
                 | &nbsp; &nbsp;
                 strong Только отличия
@@ -15,16 +15,16 @@ block content
                 a(href='#' title='') Все параметры
 
             mixin productTileForCompare(instock, incart)
-                p
+                .mb-1
                     a.text-dark-gray.no-wrap(href="#" title='')
                         i.fa.fa-lg.fa-times-circle-o
                         | &nbsp;Убрать
-                p: a(href="shop-product.html" title=''): img(src='./i/image.svg' alt='Товар' style='height: 80px')
-                p: a(href='shop-product.html' title='') Керамогранит Kerama Marazzi Сенегал, 50,2 х 50,2 см, бежевый
-                p: strong
+                .mb-1: a(href="shop-product.html" title=''): img(src='./i/image.svg' alt='Товар' style='height: 80px')
+                .mb-0-5: a(href='shop-product.html' title='') Керамогранит Kerama Marazzi Сенегал, 50,2 х 50,2 см, бежевый
+                .mb-0-5: strong
                     | 73&nbsp;250&nbsp;
                     i.fa.fa-rub
-                p
+                .mb-0-5
                     if instock
                         if incart
                             i.fa.fa-check &#160;

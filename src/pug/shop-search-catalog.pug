@@ -13,10 +13,9 @@ block page
                             label: input(type='text', placeholder='Введите строку для поиска')
                         .small-4.medium-3.large-2.columns.end
                             input.button.expanded(type='submit', value='Искать')
-                p Результаты поиска 1-5 из 200
-                hr
-                p
-                .row.small-up-1.medium-up-3.large-up-5(data-equalizer data-equalize-by-row="true")
+                .mb-1 Результаты поиска 1-5 из 200
+                hr.mb-1
+                .row.small-up-1.medium-up-3.large-up-5.mb-2(data-equalizer data-equalize-by-row="true")
                     +productTile('Комби-перфоратор Metabo KHE 2650', false)
                     +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
                     +productTile('Лобзик Metabo STEB 65 Quick', false)
@@ -47,5 +46,4 @@ block page
                     +productTile('Лобзик Metabo STEB 65 Quick', false)
                     +productTile('Торцовочная пила Ryobi EMS254L', true)
                     +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
-                p &nbsp;
                 include ./components/common/_pagination

@@ -1,0 +1,5 @@
+@each $name, $multiplier in $paddingMultipliers {
+  .pb-#{$name} {
+    padding-bottom: $global-padding * $multiplier;
+  }
+}

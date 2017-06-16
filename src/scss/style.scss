@@ -3,6 +3,7 @@
 // Все картинки и шрифты необходимо подключать с использованием этих двух переменных:
 $imagesPath: '../images' !default;
 $fontsPath: '../fonts' !default;
+$paddingMultipliers: ('0': 0, '0-125': 0.125, '0-25': 0.25, '0-5': 0.5, '1': 1, '1-5': 1.5, '2': 2, '3': 3, '4': 4) !default;
 
 $fa-font-path: $fontsPath;
 
@@ -12,7 +13,7 @@ $fa-font-path: $fontsPath;
 @import "motion-ui";
 @import "font-awesome";
 @import "slick.scss";
-@include foundation-everything;
+@include foundation-everything();
 
 @import "common";
 @import "slick/slick-theme";
@@ -22,12 +23,14 @@ $fa-font-path: $fontsPath;
 @import "carousel/carousel-services";
 @import "checkbox-group";
 @import "content";
+@import "dd";
 @import "footer";
 @import "header";
-@import "dd";
+@import "mb";
 @import "menu-base";
 @import "menu-top";
 @import "menu-line";
+@import "pb";
 @import "rating";
 @import "search-top";
 @import "sticky-footer";

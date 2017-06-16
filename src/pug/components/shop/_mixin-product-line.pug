@@ -1,9 +1,9 @@
 mixin productLine(discount, onDemand, inCart, inFavourites)
     .row
         .column.small-4.medium-2
-            p: img(src='./i/image.svg' alt='Товар')
+            .mb-1: img(src='./i/image.svg' alt='Товар')
         .column.small-8.medium-6.large-5
-            h5
+            h5.mb-0-5
                 if discount
                     span.label.success
                         i.fa.fa-star-o
@@ -18,14 +18,14 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
 
         .column.small-12.medium-4.large-offset-1
             if onDemand
-                p
+                .mb-1
                     span.text-dark-gray: em Нет в наличии&nbsp;
                     br
                     a(href='#' title=''): strong Заказать
             else
                 .row.collapse
                     .small-7.columns
-                        p
+                        .mb-1
                             span.stat
                                 | 1&nbsp;250&nbsp;
                                 i.fa.fa-rub
@@ -35,23 +35,23 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                                     | 1&nbsp;750&nbsp;
                                     i.fa.fa-rub
                     .small-5.columns
-                        if inCart
-                            a(href='shop-cart.html' title='')
-                                span.dark-gray
-                                    i.fa.fa-check.fa-lg
-                                    | &nbsp;В корзине
-                        else
-                            a(href='shop-cart.html' title='').button.hollow.expanded Купить
+                        .mb-1
+                            if inCart
+                                a(href='shop-cart.html' title='')
+                                    span.dark-gray
+                                        i.fa.fa-check.fa-lg
+                                        | &nbsp;В корзине
+                            else
+                                a(href='shop-cart.html' title='').button.hollow.expanded Купить
             div.hide-for-small-only
-                hr
-                br
-                p
+                hr.mb-1
+                .mb-0-25
                     i.fa.fa-credit-card
                     | &nbsp;Купить в кредит
-                    br
+                .mb-0-25
                     i.fa.fa-truck
                     | &nbsp;Доставим на дом
-                    br
+                .mb-1
                     if !inFavourites
                         a(data-open="add-to-favourites-auth-popup")
                             i.fa.fa-heart-o

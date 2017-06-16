@@ -2,7 +2,7 @@ extends shop-user-personal
 
 block personal
     h2 Заказы
-    p: a(href='#' title='') Посмотреть историю заказов
+    .mb-1: a(href='#' title='') Посмотреть историю заказов
     h3 Заказы в статусе «Оплачен, формируется к отправке»
 
     .callout
@@ -10,7 +10,7 @@ block personal
             = ' '
             i.fa.fa-rub
         h5.text-dark-gray Оплата
-        p
+        .mb-1
             strong Счет №3/1 от 27.10.2016, Наличные курьеру
             = ' '
             span.label.success Оплачено
@@ -20,7 +20,7 @@ block personal
             i.fa.fa-rub
 
         h5.text-dark-gray Доставка
-        p
+        .mb-1
             strong Отгрузка №3/2, стоимость доставки 500
                 = ' '
                 i.fa.fa-rub
@@ -32,8 +32,7 @@ block personal
             span.label.light-gray Ожидает обработки
             br
             | Служба доставки: Доставка курьером
-        hr
-        br
+        hr.mb-1
         .row
             .column.small-12.medium-4
                 a(href='shop-order.html' title='') Подробнее о заказе
@@ -54,7 +53,7 @@ block personal
         h5.text-dark-gray Оплата
         .row
             .column.small-12.medium-8
-                p
+                .mb-1
                     strong Счет №6/1 от 27.10.2016, Наличные курьеру
                     = ' '
                     span.label Не оплачено
@@ -65,13 +64,13 @@ block personal
                     br
                     a(href='#' title='') Сменить способ оплаты
             .column.small-12.medium-4.medium-text-right
-                p: a.button(href='#')
+                .mb-1: a.button(href='#')
                     i.fa.fa-credit-card
                     = ' '
                     | Оплатить
 
         h5.text-dark-gray Доставка
-        p
+        .mb-1
             strong Отгрузка №6/2, стоимость доставки 500
                 = ' '
                 i.fa.fa-rub
@@ -83,8 +82,7 @@ block personal
             span.label.light-gray Ожидает обработки
             br
             | Служба доставки: Доставка курьером
-        hr
-        br
+        hr.mb-1
         .row
             .column.small-12.medium-4
                 a(href='shop-order.html' title='') Подробнее о заказе

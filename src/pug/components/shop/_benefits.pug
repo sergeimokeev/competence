@@ -2,6 +2,6 @@
     .row.small-up-2.medium-up-3.large-up-6
         each item, index in {"truck-with-right-arrow":"Бесплатная доставка от 1200 рублей", "globe":"Доставка по всей России", "working-hours":"Доставка от 3 до 10 дней", "lock":"Защищённый платёж", "item-return":"Бесплатный возврат в течение 30 дней", "clothes-measure":"Можно примерить перед оплатой"}
             .column.text-center
-                svg(style='height: 70px; width:100%')
+                .mb-0-25: svg(style='height: 70px; width:100%')
                     use(xlink:href= '#' + index)
-                p= item
+                .mb-1= item
