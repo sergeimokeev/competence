@@ -1,0 +1,56 @@
+mixin productLineWide(discount, onDemand, inCart, inFavourites)
+    .row
+        .column.medium-2.large-1.hide-for-small-only
+            .mb-1: img(src='./i/image.svg' alt='Товар')
+        .column.medium-4.large-6
+            h5.mb-0-5
+                if discount
+                    span.label.success
+                        i.fa.fa-star-o
+                        | &nbsp;Акция
+                    | &nbsp;
+                a(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
+            .mb-0-5.hide-for-small-only: a.text-dark-gray.text-size-small(href='shop-catalog.html') Шуроповерты
+        .column.small-12.medium-6.large-5
+            .mb-1
+                .row
+                    .column.small-12.medium-4.medium-order-2
+                        if onDemand
+                            span.text-dark-gray: em Нет в наличии&nbsp;
+                        else
+                            strong.text-size-xlarge
+                                | 1&nbsp;250&nbsp;
+                                i.fa.fa-rub
+                                | &nbsp;&nbsp;
+                            if discount
+                                br.hide-for-small-only
+                                del.text-dark-gray
+                                    | 1&nbsp;750&nbsp;
+                                    i.fa.fa-rub
+                        .mb-0-5.show-for-small-only
+                    .column.small-5.medium-4.medium-order-3
+                        if onDemand
+                            a(href='#' title='')
+                                i.fa.fa-bell-o
+                                | &nbsp;Заказать
+                        else
+                            if inCart
+                                a(href='shop-cart.html' title='')
+                                    span.dark-gray
+                                        i.fa.fa-check.fa-lg
+                                        | &nbsp;В корзине
+                            else
+                                a(href='shop-cart.html' title='').button.hollow.mb-0
+                                    i.fa.fa-shopping-basket
+                                    | &nbsp;Купить
+                    .column.small-7.medium-4.medium-order-1.text-right.medium-text-left
+                        if !inFavourites
+                            a.text-dark-gray(data-open="add-to-favourites-auth-popup")
+                                i.fa.fa-heart-o.fa-lg
+
+                        else
+                            a.text-dark-gray(href='' title='Удалить из запомненных')
+                                i.fa.fa-heart.fa-lg
+                        | &nbsp;&nbsp;
+                        a.text-dark-gray(href='shop-compare.html' title='')
+                            i.fa.fa-balance-scale.fa-lg

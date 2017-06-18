@@ -1,32 +1,25 @@
 mixin productLine(discount, onDemand, inCart, inFavourites)
     .row
-        .column.small-4.medium-2
+        .column.small-4.medium-3
             .mb-1: img(src='./i/image.svg' alt='Товар')
-        .column.small-8.medium-6.large-5
-            h5.mb-0-5
-                if discount
-                    span.label.success
-                        i.fa.fa-star-o
-                        | &nbsp;Акция
-                    | &nbsp;
-                a.text-dark(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
-            ul.hide-for-small-only
-                li Гарантия: 1 год
-                li Мощность: 1000W
-                li Цвет: Красный
-                li Страна: Китай
-
-        .column.small-12.medium-4.large-offset-1
-            if onDemand
-                .mb-1
-                    span.text-dark-gray: em Нет в наличии&nbsp;
-                    br
-                    a(href='#' title=''): strong Заказать
-            else
-                .row.collapse
-                    .small-7.column
+        .column.small-8.medium-9
+            .row
+                .column.small-12.medium-7
+                    h5.mb-0
+                        if discount
+                            span.label.success
+                                i.fa.fa-star-o
+                                | &nbsp;Акция
+                            | &nbsp;
+                        a(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
+                    .mb-0-5: a.text-dark-gray.text-size-small(href='shop-catalog.html') Шуроповерты
+                .column.small-12.medium-5.large-4.large-offset-1
+                    if onDemand
                         .mb-1
-                            span.stat
+                            span.text-dark-gray: em Нет в наличии&nbsp;
+                    else
+                        .mb-1
+                            strong.text-size-xlarge
                                 | 1&nbsp;250&nbsp;
                                 i.fa.fa-rub
                             if discount
@@ -34,7 +27,34 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                                 del.text-dark-gray
                                     | 1&nbsp;750&nbsp;
                                     i.fa.fa-rub
-                    .small-5.column
+            .row
+                .column.small-12.medium-7.align-self-middle
+                    ul.mb-0-5.hide-for-small-only
+                        li Гарантия: 1 год
+                        li Мощность: 1000W
+                        li Цвет: Красный
+                        li Страна: Китай
+                    .mb-1
+                        if !inFavourites
+                            a.text-dark-gray(data-open="add-to-favourites-auth-popup")
+                                i.fa.fa-heart-o
+                                | &nbsp;Запомнить
+
+                        else
+                            a.text-dark-gray(href='' title='Удалить из запомненных')
+                                i.fa.fa-heart
+                                | &nbsp;Запомнено
+                        | &nbsp;&nbsp;
+                        a.text-dark-gray(href='shop-compare.html' title='')
+                            i.fa.fa-balance-scale
+                            | &nbsp;Сравнить
+                .column.small-12.medium-5.large-4.large-offset-1.align-self-bottom
+                    if onDemand
+                        .mb-1
+                            a(href='#' title='')
+                                i.fa.fa-bell-o
+                                | &nbsp;Заказать
+                    else
                         .mb-1
                             if inCart
                                 a(href='shop-cart.html' title='')
@@ -42,26 +62,6 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                                         i.fa.fa-check.fa-lg
                                         | &nbsp;В корзине
                             else
-                                a(href='shop-cart.html' title='').button.hollow.expanded Купить
-            div.hide-for-small-only
-                hr.mb-1
-                .mb-0-25
-                    i.fa.fa-credit-card
-                    | &nbsp;Купить в кредит
-                .mb-0-25
-                    i.fa.fa-truck
-                    | &nbsp;Доставим на дом
-                .mb-1
-                    if !inFavourites
-                        a(data-open="add-to-favourites-auth-popup")
-                            i.fa.fa-heart-o
-                            | &nbsp;Запомнить
-
-                    else
-                        a(href='' title='Удалить из запомненных')
-                            i.fa.fa-heart
-                            | &nbsp;Запомнено
-                    | &nbsp;&nbsp;
-                    a(href='shop-compare.html' title='')
-                        i.fa.fa-balance-scale
-                        | &nbsp;Сравнить
+                                a(href='shop-cart.html' title='').button.hollow.mb-0
+                                    i.fa.fa-shopping-basket
+                                    | &nbsp;Купить

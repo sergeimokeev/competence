@@ -22,7 +22,7 @@ block content
     .row: .column: hr
     .content
         .row: .column
-            ul.tabs#product-tabs-1(data-tabs)
+            ul.tabs#product-tabs-1(data-responsive-accordion-tabs="accordion medium-tabs" data-deep-link="true" data-update-history="false")
                 li.tabs-title.is-active
                     a(href='#product-tab-description' title='') Описание
                 li.tabs-title
@@ -42,11 +42,11 @@ block content
                 .tabs-panel#product-tab-comments
                     include components/shop/_product-tab-comments
     .row: .column
-        br
+        .mb-1
         hr
     .content
         .row: .column
-            ul.tabs#product-tabs-2(data-tabs)
+            ul.tabs#product-tabs-2(data-responsive-accordion-tabs="accordion medium-tabs" data-deep-link="true" data-update-history="false")
                 li.tabs-title.is-active
                     a(href='#product-tab-consumables-original' title='') Расходные материалы
                 li.tabs-title
@@ -58,7 +58,7 @@ block content
                 .tabs-panel#product-tab-accessories
                     include components/shop/_product-tab-accessories
     .row: .column
-        br
+        .mb-1
         hr
     .content
         .row: .column

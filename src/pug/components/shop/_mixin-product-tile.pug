@@ -3,13 +3,6 @@ mixin productTile(title, discount)
         .clearfix(data-equalizer-watch)
             .mb-1
                 a(href='shop-product.html'): img(src='./i/image.svg' alt='товар' style='background:#e6e6e6;')
-                span.button-group.light-gray.expanded
-                    a(title='Запомнить' data-open="add-to-favourites-auth-popup").button
-                        i.fa.fa-heart-o
-                    a(title='Быстрый просмотр' data-open="product-quickview").button
-                        i.fa.fa-eye
-                    a(title="Добавить к сравнению" href='shop-compare.html').button
-                        i.fa.fa-balance-scale
             .mb-0-5
                 if discount
                     span.label.success
@@ -21,16 +14,24 @@ mixin productTile(title, discount)
                         = title
                     else
                         | Название товара
-
-        .row.collapse
-            .small-7.column
-                strong
-                    | 1&nbsp;250&nbsp;
+                br
+                a.text-dark-gray.text-size-small(href='shop-catalog.html') Шуроповерты
+        hr.mb-0-5
+        .mb-0-5
+            strong.text-size-large
+                | 1&nbsp;250&nbsp;
+                i.fa.fa-rub
+            if discount
+                | &nbsp;&nbsp;
+                del.text-dark-gray.text-size-small
+                    | 1&nbsp;750&nbsp;
                     i.fa.fa-rub
-                if discount
-                    br
-                    del.text-dark-gray
-                        | 1&nbsp;750&nbsp;
-                        i.fa.fa-rub
+        .row.collapse.mb-1
             .small-5.column
-                a(href='shop-cart.html').button.small.primary.hollow.expanded Купить
+                a(href='shop-cart.html').button.small.primary.hollow.expanded.mb-0 Купить
+            .small-7.column.text-right.align-self-middle
+                a.text-dark-gray(title='Запомнить' data-open="add-to-favourites-auth-popup")
+                    i.fa.fa-heart-o.fa-lg
+                | &nbsp;&nbsp;&nbsp;
+                a.text-dark-gray(title="Добавить к сравнению" href='shop-compare.html')
+                    i.fa.fa-balance-scale.fa-lg
