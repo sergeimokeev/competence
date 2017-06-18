@@ -4,6 +4,7 @@
 $imagesPath: '../images' !default;
 $fontsPath: '../fonts' !default;
 $paddingMultipliers: ('0': 0, '0-125': 0.125, '0-25': 0.25, '0-5': 0.5, '1': 1, '1-5': 1.5, '2': 2, '3': 3, '4': 4) !default;
+$textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 1.25rem, xlarge: 1.5rem, xxlarge: 2rem) !default;
 
 $fa-font-path: $fontsPath;
 
@@ -35,4 +36,5 @@ $fa-font-path: $fontsPath;
 @import "search-top";
 @import "sticky-footer";
 @import "text";
+@import "text-size";
 @import "top-line";
