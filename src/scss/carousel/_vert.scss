@@ -1,0 +1,129 @@
+.vert {
+  margin-bottom: rem-calc(30);
+
+  .slick-dots {
+    width: rem-calc(40);
+    margin-top: rem-calc(-40);
+    margin-bottom: rem-calc(0);
+    top: 50%;
+    position: absolute;
+    left: calc(122% - 600px);
+
+    li {
+      display: block;
+
+      button {
+        cursor: pointer;
+        transition: 0.3s all;
+        width: rem-calc(14);
+        height: rem-calc(14);
+        border: rem-calc(2) solid $white;
+
+        &:hover {
+          background: $white;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background: $primary;
+          border-color: $primary;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    right: auto;
+    color: $white;
+    left: calc(107.1% - 600px);
+    background: none;
+
+    &:hover {
+      color: $dark-gray;
+    }
+  }
+
+  .slick-prev {
+    top: rem-calc(33);
+    transform: rotate(90deg);
+  }
+
+  .slick-next {
+    top: auto;
+    bottom: rem-calc(33);
+    height: rem-calc(49);
+    transform: rotate(90deg);
+  }
+
+  .vert__slide {
+    background-size: cover;
+    height: rem-calc(580);
+    border: rem-calc(0);
+    position: relative;
+    background-repeat: no-repeat;
+  }
+
+  &__align {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__info {
+    padding-left: rem-calc(24);
+    padding-right: rem-calc(48);
+    height: 100%;
+    position: absolute;
+    display: table;
+    overflow: hidden;
+    padding-top: rem-calc(20);
+    padding-bottom: rem-calc(20);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.6868) 100%);
+    color: $white;
+  }
+  @include breakpoint(large down) {
+    .slick-arrow {
+      left: 57%;
+    }
+
+    .slick-dots {
+      left: 71%;
+    }
+  }
+  @include breakpoint(medium down) {
+    .slick-arrow {
+      left: 73%;
+    }
+
+    .slick-dots {
+      left: auto;
+      right: rem-calc(11);
+    }
+  }
+  @include breakpoint(small only) {
+    .slick-dots {
+      bottom: rem-calc(0);
+      top: auto;
+      left: rem-calc(0);
+      width: 100%;
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    .vert__slide {
+      height: rem-calc(590);
+
+    }
+
+    &__info {
+      bottom: rem-calc(0);
+      height: rem-calc(350);
+      
+      padding-bottom: rem-calc(40);
+
+      background: linear-gradient(to bottom, rgba(0,0,0,0.68) 0%, rgba(0,0,0,1) 100%);
+    }
+  }
+}

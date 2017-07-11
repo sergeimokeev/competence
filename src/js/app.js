@@ -4,6 +4,34 @@
     "use strict";
     $(function () {
 
+      //begin of .vert vertical slick slider
+      $(".vert").slick({
+          vertical:true,
+          verticalSwiping:true,
+          infinite: true,
+          dots: true,
+          arrows: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          autoplayHoverPause: true,
+          fade: false,
+          swipeToSlide: true,
+          prevArrow: '<i class="slick-prev fa fa-angle-left fa-3x"> </i>',
+          nextArrow: '<i class="slick-next fa fa-angle-right fa-3x"> </i>',
+          responsive: [
+    {
+      breakpoint: 640,
+      settings: {
+        vertical:false,
+        verticalSwiping:false,
+      }
+    }
+  ]
+      });
+       //end of .vert vertical slick slider
+
         /**
          * Разные карусели
          */

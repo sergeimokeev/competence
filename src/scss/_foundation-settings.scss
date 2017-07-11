@@ -72,6 +72,7 @@ $medium-gray: map-get($foundation-palette, medium-gray);
 $dark-gray: map-get($foundation-palette, dark-gray);
 $black: map-get($foundation-palette, black);
 $white: map-get($foundation-palette, white);
+$primary: map-get($foundation-palette, primary);
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
@@ -629,4 +630,3 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
-
