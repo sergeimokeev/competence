@@ -10,7 +10,7 @@ block article
         .small-12.medium-7.large-8.column
 
             .content
-                .mb-1.text-dark-gray Константин Александропольский, 12:20 16.02.2016
+                .margin-bottom-10.text-dark-gray Константин Александропольский, 12:20 16.02.2016
 
                 include components/common/_text
 
@@ -73,9 +73,9 @@ block article
                 .callout
                     -var n = 1
                     while n < 11
-                        h5.mb-0-25: a(href='', title='')=  'Достаточно длинный заголовок другой новости ' + n++
-                        .mb-1.text-medium-gray 17 февраля, 10:59 &#160;
+                        h5.margin-bottom-3: a(href='', title='')=  'Достаточно длинный заголовок другой новости ' + n++
+                        .margin-bottom-10.text-medium-gray 17 февраля, 10:59 &#160;
                         if n < 11
-                            hr.mb-1
+                            hr.margin-bottom-10
 
     .row: .column: hr

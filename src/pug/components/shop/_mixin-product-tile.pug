@@ -1,9 +1,9 @@
 mixin productTile(title, discount)
     .column
         .clearfix(data-equalizer-watch)
-            .mb-1
+            .margin-bottom-10
                 a(href='shop-product.html'): img(src='./i/image.svg' alt='товар' style='background:#e6e6e6;')
-            .mb-0-5
+            .margin-bottom-5
                 if discount
                     span.label.success
                         i.fa.fa-star-o
@@ -16,8 +16,8 @@ mixin productTile(title, discount)
                         | Название товара
                 br
                 a.text-dark-gray.text-size-small(href='shop-catalog.html') Шуроповерты
-        hr.mb-0-5
-        .mb-0-5
+        hr.margin-bottom-5
+        .margin-bottom-5
             strong.text-size-large
                 | 1&nbsp;250&nbsp;
                 i.fa.fa-rub
@@ -26,9 +26,9 @@ mixin productTile(title, discount)
                 del.text-dark-gray.text-size-small
                     | 1&nbsp;750&nbsp;
                     i.fa.fa-rub
-        .row.collapse.mb-1
+        .row.collapse.margin-bottom-10
             .small-5.column
-                a(href='shop-cart.html').button.small.primary.hollow.expanded.mb-0 Купить
+                a(href='shop-cart.html').button.small.primary.hollow.expanded.margin-bottom-0 Купить
             .small-7.column.text-right.align-self-middle
                 a.text-dark-gray(title='Запомнить' data-open="add-to-favourites-auth-popup")
                     i.fa.fa-heart-o.fa-lg

@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     rimraf = require('gulp-rimraf'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant');
+    pngquant = require('imagemin-pngquant'),
+    plumber = require('gulp-plumber');
 
 var sassPaths = [
     './node_modules/foundation-sites/scss',
@@ -94,7 +95,7 @@ gulp.task('sass', ['clean-css'], function () {
             })
             .on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions', 'ie >= 10'],
+            browsers: ['last 2 versions'],
             cascade: false
         }))
         .pipe(gulp.dest(path.dist.css));
@@ -102,6 +103,7 @@ gulp.task('sass', ['clean-css'], function () {
 
 gulp.task('pug', ['clean-html', 'sass'], function() {
     return gulp.src(path.src.html)
+        .pipe(plumber())
         .pipe(pug({
             pretty: true,
             cache: true
@@ -160,9 +162,3 @@ gulp.task('default', ['sass', 'pug', 'images', 'i', 'fonts', 'js-html', 'js-copy
     gulp.watch([path.watch.jsHtml], ['js-html']);
     gulp.watch([path.watch.js], ['js-copy', 'clean-js-copy']);
 });
-
-//https://gist.github.com/Insayt/272c9b81936a03884768
-//https://gist.github.com/Deraen/9488df411b61fbe6c831
-//https://habrahabr.ru/post/250569/
-//https://blog.engineyard.com/2014/frontend-dependencies-management-part-2
-//https://gist.github.com/dshafik/07dc3985b5f4888865ea

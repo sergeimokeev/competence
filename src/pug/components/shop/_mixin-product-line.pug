@@ -1,24 +1,24 @@
 mixin productLine(discount, onDemand, inCart, inFavourites)
     .row
         .column.small-4.medium-3
-            .mb-1: img(src='./i/image.svg' alt='Товар')
+            .margin-bottom-10: img(src='./i/image.svg' alt='Товар')
         .column.small-8.medium-9
             .row
                 .column.small-12.medium-7
-                    h5.mb-0
+                    h5.margin-bottom-0
                         if discount
                             span.label.success
                                 i.fa.fa-star-o
                                 | &nbsp;Акция
                             | &nbsp;
                         a(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
-                    .mb-0-5: a.text-dark-gray.text-size-small(href='shop-catalog.html') Шуроповерты
+                    .margin-bottom-5: a.text-dark-gray.text-size-small(href='shop-catalog.html') Шуроповерты
                 .column.small-12.medium-5.large-4.large-offset-1
                     if onDemand
-                        .mb-1
+                        .margin-bottom-10
                             span.text-dark-gray: em Нет в наличии&nbsp;
                     else
-                        .mb-1
+                        .margin-bottom-10
                             strong.text-size-xlarge
                                 | 1&nbsp;250&nbsp;
                                 i.fa.fa-rub
@@ -29,12 +29,12 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                                     i.fa.fa-rub
             .row
                 .column.small-12.medium-7.align-self-middle
-                    ul.mb-0-5.hide-for-small-only
+                    ul.margin-bottom-5.hide-for-small-only
                         li Гарантия: 1 год
                         li Мощность: 1000W
                         li Цвет: Красный
                         li Страна: Китай
-                    .mb-1
+                    .margin-bottom-10
                         if !inFavourites
                             a.text-dark-gray(data-open="add-to-favourites-auth-popup")
                                 i.fa.fa-heart-o
@@ -50,18 +50,18 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                             | &nbsp;Сравнить
                 .column.small-12.medium-5.large-4.large-offset-1.align-self-bottom
                     if onDemand
-                        .mb-1
+                        .margin-bottom-10
                             a(href='#' title='')
                                 i.fa.fa-bell-o
                                 | &nbsp;Заказать
                     else
-                        .mb-1
+                        .margin-bottom-10
                             if inCart
                                 a(href='shop-cart.html' title='')
                                     span.dark-gray
                                         i.fa.fa-check.fa-lg
                                         | &nbsp;В корзине
                             else
-                                a(href='shop-cart.html' title='').button.hollow.mb-0
+                                a(href='shop-cart.html' title='').button.hollow.margin-bottom-0
                                     i.fa.fa-shopping-basket
                                     | &nbsp;Купить
