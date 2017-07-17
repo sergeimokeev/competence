@@ -1,0 +1,47 @@
+before_script:
+  # Install ssh-agent if not already installed, it is required by Docker.
+  # (change apt-get to yum if you use a CentOS-based image)
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
+
+  # Run ssh-agent (inside the build environment)
+  - eval $(ssh-agent -s)
+
+  # Add the SSH key stored in DEPLOY_KEY variable to the agent store
+  - ssh-add <(echo "$DEPLOY_KEY")
+
+  # For Docker builds disable host key checking. Be aware that by adding that
+  # you are suspectible to man-in-the-middle attacks.
+  # WARNING: Use this only with the Docker executor, if you use it with shell
+  # you will overwrite your user's SSH config.
+  # - mkdir -p ~/.ssh
+  # - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  # In order to properly check the server's host key, assuming you created the
+  # SSH_SERVER_HOSTKEYS variable previously, uncomment the following two lines
+  # instead.
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts'
+
+stages:
+  - build
+  - deploy
+
+minify:
+  stage: build
+  script:
+  - cd $CI_PROJECT_DIR && npm install && npm run minify
+  artifacts:
+    paths:
+    - dist/
+    expire_in: 1 week
+
+job_deploy_to_staging:
+  stage: deploy
+  environment:
+    name: staging
+    url: http://wireframes.cetera.ru/$CI_PROJECT_NAME/
+  script:
+  - rsync -avuz $CI_PROJECT_DIR/dist/ --chown=www-data:www-data vps10.cetera.ru:/var/www/cetera.ru/wireframes/$CI_PROJECT_NAME/
+  only:
+  - master
+  when: manual
