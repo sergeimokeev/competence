@@ -3,11 +3,11 @@ extends shop-index
 block page
     include components/common/_breadcrumbs
     block content
-        .row: .column
+        .grid-container: .grid-x.grid-padding-x: .cell
             h1 Заголовок страницы h1
         .content
-            .row
-                .column.small-12.medium-5.large-3
+            .grid-container: .grid-x.grid-padding-x
+                .cell.small-12.medium-5.large-3
                     include components/common/_sidebar
-                .column.small-12.medium-7.large-9
+                .cell.small-12.medium-7.large-9
                     include components/common/_text

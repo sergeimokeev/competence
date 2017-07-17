@@ -2,14 +2,14 @@ extends smi-category
 
 block category-content
     .content
-        .row: .column
+        .grid-x.grid-padding-x: .cell
             ul.menu
                 li.menu-text Статьи
                 li: a(href='#' title='') Фото
                 li: a(href='#' title='') Видео
                 li: a(href='#' title='') Журналы
             br
-        .row.small-up-1.medium-up-2(data-equalizer='news', data-equalize-by-row='true')
+        .grid-x.grid-padding-x.small-up-1.medium-up-2(data-equalizer='news', data-equalize-by-row='true')
             +newsTile(false, 'news')
             +newsTile(false, 'news')
             +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники', 'news')
@@ -23,6 +23,6 @@ block category-content
                 | Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
             +newsTile(false, 'news')
 
-        .row: .column
+        .grid-x.grid-padding-x: .cell
             .content
                 include components/common/_pagination

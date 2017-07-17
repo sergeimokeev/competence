@@ -1,10 +1,10 @@
 extends shop-regular
 
 block content
-    .row: .column
+    .grid-container: .grid-x.grid-padding-x: .cell
         h1 Любимые товары
     .content
-        .row: .column
+        .grid-container: .grid-x.grid-padding-x: .cell
             .margin-bottom-20
                 +productLine(false, 'onDemand', false, 'inFavourites')
                 hr.margin-bottom-10

@@ -1,5 +1,5 @@
 mixin productTile(title, discount)
-    .column
+    .cell
         .clearfix(data-equalizer-watch)
             .margin-bottom-10
                 a(href='shop-product.html'): img(src='./i/image.svg' alt='товар' style='background:#e6e6e6;')
@@ -26,10 +26,10 @@ mixin productTile(title, discount)
                 del.text-dark-gray.text-size-small
                     | 1&nbsp;750&nbsp;
                     i.fa.fa-rub
-        .row.collapse.margin-bottom-10
-            .small-5.column
+        .grid-x.margin-bottom-10
+            .small-5.cell
                 a(href='shop-cart.html').button.small.primary.hollow.expanded.margin-bottom-0 Купить
-            .small-7.column.text-right.align-self-middle
+            .small-7.cell.text-right.align-self-middle
                 a.text-dark-gray(title='Запомнить' data-open="add-to-favourites-auth-popup")
                     i.fa.fa-heart-o.fa-lg
                 | &nbsp;&nbsp;&nbsp;

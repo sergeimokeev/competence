@@ -1,6 +1,6 @@
 .background-primary.padding-vertical-10
-    .row
-        .small-12.large-8.column#menu
+    .grid-container: .grid-x.grid-padding-x
+        .small-12.large-8.cell#menu
             ul.menu-base
                 - n = 0
                 each title in ['Новинки', 'Бренды', 'Одежда', 'Обувь', 'Аксессуары']
@@ -11,7 +11,7 @@
                     a.menu-base__link(href='#')
                         strong Распродажа %
             .margin-bottom-10.show-for-small-only
-        .small-12.large-4.column
+        .small-12.large-4.cell
             form.search-top.input-group(action='shop-search.html' method='get')
                 input.search-top__input.input-group-field(type='text', value='' placeholder='Введите поисковый запрос')
                 .input-group-button
@@ -19,20 +19,20 @@
 
 .dd.hide-for-small-only#menu_item_0(data-toggler-hover-dd='dd_show')
     .dd__content.callout
-        .row
-            .small-6.medium-4.large-3.column
+        .grid-container: .grid-x.grid-padding-x
+            .small-6.medium-4.large-3.cell
                 h5 Одежда
                 ul
                     each title in ['Все категории', 'Платья', 'Пальто', 'Пуховики', 'Куртки', 'Парки', 'Юбки', 'Брюки', 'Блузы и рубашки', 'Деним', 'Свитеры и трикотаж', 'Комбинезоны', 'Топы', 'Нижнее белье', 'Распродажа']
                         li
                             a(href='#' title='')= title
-            .small-6.medium-4.large-3.column
+            .small-6.medium-4.large-3.cell
                 h5 Актуально
                 ul
                     each title in ['Классика гардероба', 'Одежда для фитнеса', 'Новый сезон', 'Бизнес-класс', 'Выход в свет', 'Бестселлеры', 'Рукав-колокол', 'Миниатюрные сумки', 'Бархат', 'Вечерние образы', 'Пуховики']
                         li
                             a(href='#' title='')= title
-            .small-12.medium-4.large-offset-2.column
+            .small-12.medium-4.large-offset-2.cell
                 .margin-bottom-10: img(src='./i/image.svg' alt='1')
                 span.label.success
                     i.fa.fa-star-o
@@ -41,20 +41,20 @@
                 a(href='shop-product.html' title='') Торцовочная пила Ryobi EMS254L
 .dd.hide-for-small-only#menu_item_1(data-toggler-hover-dd='dd_show')
     .dd__content.callout
-        .row
-            .small-6.medium-4.large-3.column
+        .grid-container: .grid-x.grid-padding-x
+            .small-6.medium-4.large-3.cell
                 h5 Одежда Одежда
                 ul
                     each title in ['Все категории', 'Платья', 'Пальто', 'Пуховики', 'Куртки', 'Парки', 'Юбки', 'Брюки', 'Блузы и рубашки', 'Деним', 'Свитеры и трикотаж', 'Комбинезоны', 'Топы', 'Нижнее белье', 'Распродажа']
                         li
                             a(href='#' title='')= title
-            .small-6.medium-4.large-3.column
+            .small-6.medium-4.large-3.cell
                 h5 Актуально
                 ul
                     each title in ['Классика гардероба', 'Одежда для фитнеса', 'Новый сезон', 'Бизнес-класс', 'Выход в свет', 'Бестселлеры', 'Рукав-колокол', 'Миниатюрные сумки', 'Бархат', 'Вечерние образы', 'Пуховики']
                         li
                             a(href='#')= title
-            .small-12.medium-4.large-offset-2.column
+            .small-12.medium-4.large-offset-2.cell
                 .margin-bottom-10: img(src='./i/image.svg' alt='2' style='background: #1ccacd;')
                 span.label.success
                     i.fa.fa-star-o
@@ -63,20 +63,20 @@
                 a(href='shop-product.html') Торцовочная пила Ryobi EMS254L
 .dd.hide-for-small-only#menu_item_2(data-toggler-hover-dd='dd_show')
     .dd__content.callout
-        .row
-            .small-6.medium-4.large-3.column
+        .grid-container: .grid-x.grid-padding-x
+            .small-6.medium-4.large-3.cell
                 h5 Одежда
                 ul
                     each title in ['Все категории', 'Платья', 'Пальто', 'Пуховики', 'Куртки', 'Парки', 'Юбки', 'Брюки', 'Блузы и рубашки', 'Деним', 'Свитеры и трикотаж', 'Комбинезоны', 'Топы', 'Нижнее белье', 'Распродажа']
                         li
                             a(href='#')= title
-            .small-6.medium-4.large-3.column
+            .small-6.medium-4.large-3.cell
                 h5 Актуально Актуально
                 ul
                     each title in ['Классика гардероба', 'Одежда для фитнеса', 'Новый сезон', 'Бизнес-класс', 'Выход в свет', 'Бестселлеры', 'Рукав-колокол', 'Миниатюрные сумки', 'Бархат', 'Вечерние образы', 'Пуховики']
                         li
                             a(href='#')= title
-            .small-12.medium-4.large-offset-2.column
+            .small-12.medium-4.large-offset-2.cell
                 .margin-bottom-10: img(src='./i/image.svg' alt='3' style='background: #CA3034;')
                 span.label.success
                     i.fa.fa-star-o

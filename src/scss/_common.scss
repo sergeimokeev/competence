@@ -5,3 +5,7 @@ a {
   -o-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
 }
+
+table {
+  margin-bottom: 10 * $global-margin;
+}

@@ -5,9 +5,9 @@ block article
 
     include components/common/_breadcrumbs
 
-    .row: .column: h1 Заголовок новости с длинным названием
-    .row
-        .small-12.medium-7.large-8.column
+    .grid-container: .grid-x.grid-padding-x: .cell: h1 Заголовок новости с длинным названием
+    .grid-container: .grid-x.grid-padding-x
+        .small-12.medium-7.large-8.cell
 
             .content
                 .margin-bottom-10.text-dark-gray Константин Александропольский, 12:20 16.02.2016
@@ -47,11 +47,11 @@ block article
                         li: a(href='#', title='') Источник: ФСБ и ФНС провели операцию по зачистке алкогольного рынка
                         li: a(href='#', title='') Пол Маккартни не прошел фейс-контроль на вечеринку после «Грэмми»
 
-            .row: .column: hr
+            .grid-x.grid-padding-x: .cell: hr
 
             .content
                 h3.text-dark-gray Похожие новости
-                .row.small-up-1.medium-up-2.large-up-3(data-equalizer='similar', data-equalize-by-row='true')
+                .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-3(data-equalizer='similar', data-equalize-by-row='true')
                     +newsTile(false, 'similar')
                     +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники', 'similar')
                         | Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
@@ -62,7 +62,7 @@ block article
                 .callout
                     include components/smi/_comments
 
-        aside.medium-5.large-4.show-for-medium.column
+        aside.medium-5.large-4.show-for-medium.cell
             .content
                 h2 Календарь материалов
                 include components/common/_calendar
@@ -78,4 +78,4 @@ block article
                         if n < 11
                             hr.margin-bottom-10
 
-    .row: .column: hr
+    .grid-container: .grid-x.grid-padding-x: .cell: hr

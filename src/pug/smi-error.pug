@@ -3,9 +3,9 @@ extends smi-index
 block page
     include components/common/_breadcrumbs
     block content
-        .row: .column
+        .grid-container: .grid-x.grid-padding-x: .cell
             h1 Ошибка 404: страница не найдена
         .content
-            .row
-                .column.small-12.medium-10.large-8
+            .grid-container: .grid-x.grid-padding-x
+                .cell.small-12.medium-10.large-8
                     include components/common/_404

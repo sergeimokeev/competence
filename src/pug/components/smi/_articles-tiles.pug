@@ -1,14 +1,14 @@
 include ../mixins/_mixin-news-tile
 
 .content
-    .row
-        .small-12.medium-8.column
+    .grid-x.grid-padding-x
+        .small-12.medium-8.cell
             h2 Свежие статьи
-        .small-12.medium-4.column.medium-text-right
+        .small-12.medium-4.cell.medium-text-right
             a.button(href='#') Все материалы &nbsp;
                 i.fa.fa-long-arrow-right
 
-    .row.small-up-1.medium-up-2.large-up-3(data-equalizer='articles', data-equalize-by-row='true')
+    .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-3(data-equalizer='articles', data-equalize-by-row='true')
         +newsTile(false, 'articles')
         +newsTile(false, 'articles')
         +newsTile(false, 'articles')

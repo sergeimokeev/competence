@@ -3,19 +3,19 @@ extends shop-index
 block page
     include components/common/_breadcrumbs
     block content
-        .row: .column
+        .grid-container: .grid-x.grid-padding-x: .cell
             h1 Поиск
         .content
-            .row: .column
+            .grid-container: .grid-x.grid-padding-x: .cell
                 form(action='#' method='get')
-                    .row
-                        .small-8.medium-9.large-10.column
+                    .grid-x.grid-padding-x
+                        .small-8.medium-9.large-10.cell
                             label: input(type='text', placeholder='Введите строку для поиска')
-                        .small-4.medium-3.large-2.column.end
+                        .small-4.medium-3.large-2.cell.end
                             input.button.expanded(type='submit', value='Искать')
                 .margin-bottom-10 Результаты поиска 1-5 из 200
                 hr.margin-bottom-10
-                .row.small-up-1.medium-up-3.large-up-5.margin-bottom-20(data-equalizer data-equalize-by-row="true")
+                .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-5.margin-bottom-20(data-equalizer data-equalize-by-row="true")
                     +productTile('Комби-перфоратор Metabo KHE 2650', false)
                     +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
                     +productTile('Лобзик Metabo STEB 65 Quick', false)

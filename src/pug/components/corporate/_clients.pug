@@ -1,10 +1,10 @@
 .content
-    .row: .column
+    .grid-container: .grid-x.grid-padding-x: .cell
         h2 Наши клиенты
         br
-        .row.small-up-2.medium-up-4.large-up-6.text-center
+        .grid-x.grid-padding-x.small-up-2.medium-up-4.large-up-6.text-center
             - var n = 0
             while n < 6
-                .column
+                .cell
                     img.margin-bottom-10(src='./i/image.svg', style='width:100px;height:75px;background:#FEF141;', alt=n)
                 - n++

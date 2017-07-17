@@ -1,11 +1,11 @@
 extends shop-regular
 
 block content
-    .row: .column
+    .grid-container: .grid-x.grid-padding-x: .cell
         h1 Принтер лазерный HP LaserJet Pro M477fnw (CF377A#ACB)
     .content
-        .row
-            .small-12.medium-6.column.medium-order-2
+        .grid-container: .grid-x.grid-padding-x
+            .small-12.medium-6.cell.medium-order-2
                 .margin-bottom-10
                     span.label.success
                         i.fa.fa-star-o
@@ -17,11 +17,11 @@ block content
                 hr.margin-bottom-10
                 include components/shop/_product-share-links
 
-            .small-12.medium-6.column.medium-order-1
+            .small-12.medium-6.cell.medium-order-1
                 include components/shop/_product-images
-    .row: .column: hr
+    .grid-container: .grid-x.grid-padding-x: .cell: hr
     .content
-        .row: .column
+        .grid-container: .grid-x.grid-padding-x: .cell
             ul.tabs#product-tabs-1(data-responsive-accordion-tabs="accordion medium-tabs" data-deep-link="true" data-update-history="false")
                 li.tabs-title.is-active
                     a(href='#product-tab-description' title='') Описание
@@ -41,11 +41,10 @@ block content
                     include components/shop/_product-tab-files
                 .tabs-panel#product-tab-comments
                     include components/shop/_product-tab-comments
-    .row: .column
-        .margin-bottom-10
-        hr
+    .grid-container: .grid-x.grid-padding-x: .cell
+        hr.margin-top-10
     .content
-        .row: .column
+        .grid-container: .grid-x.grid-padding-x: .cell
             ul.tabs#product-tabs-2(data-responsive-accordion-tabs="accordion medium-tabs" data-deep-link="true" data-update-history="false")
                 li.tabs-title.is-active
                     a(href='#product-tab-consumables-original' title='') Расходные материалы
@@ -57,24 +56,23 @@ block content
                     include components/shop/_product-tab-consumables
                 .tabs-panel#product-tab-accessories
                     include components/shop/_product-tab-accessories
-    .row: .column
-        .margin-bottom-10
-        hr
+    .grid-container: .grid-x.grid-padding-x: .cell
+        hr.margin-top-10
     .content
-        .row: .column
+        .grid-container: .grid-x.grid-padding-x: .cell
             h2 Похожие товары
-        .row.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
+        .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
             +productTile('Комби-перфоратор Metabo KHE 2650', false)
             +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
             +productTile('Лобзик Metabo STEB 65 Quick', false)
             +productTile('Торцовочная пила Ryobi EMS254L', true)
             +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
             +productTile('Лобзик Metabo STEB 65 Quick', false)
-    .row: .column: hr
+    .grid-container: .grid-x.grid-padding-x: .cell: hr
     .content
-        .row: .column
+        .grid-container: .grid-x.grid-padding-x: .cell
             h2 Вы смотрели
-        .row.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
+        .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
             +productTile('Комби-перфоратор Metabo KHE 2650', false)
             +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
             +productTile('Лобзик Metabo STEB 65 Quick', false)

@@ -7,11 +7,11 @@ mixin _faq-answer
     p Если пользователь не может подключиться к устройству Firebox через порт 4100, так как он заблокирован брандмауэром или ISP, то вы можете пользователю отправить программу клиента и конфигурационный файл. Для более подробной информации см. Manually distribute and install the Mobile VPN with SSL client software and configuration file
 
 block content
-    .row: .column
+    .grid-container: .grid-x.grid-padding-x: .cell
         h1 Ваши вопросы
     .content
-        .row
-            aside.small-12.medium-4.large-3.column
+        .grid-container: .grid-x.grid-padding-x
+            aside.small-12.medium-4.large-3.cell
                 .margin-bottom-10.show-for-small-only(data-responsive-toggle='menu-left', data-hide-for='medium'): span.button.light-gray.expanded(data-toggle)
                     i.fa.fa-lg.fa-bars
                     | &nbsp;Навигация
@@ -26,7 +26,7 @@ block content
                         li
                             a(href='#') Условия возврата
 
-            .small-12.medium-8.large-9.column
+            .small-12.medium-8.large-9.cell
                 ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true")
                     li.accordion-item(data-accordion-item)
                         a.accordion-title(href="#"): strong Почему я не могу загрузить конфигурацию программы клиента Mobile VPN with SSL из Firebox? [WSM/Fireware XTM v11.x]
@@ -57,15 +57,15 @@ block content
                         div.accordion-content(data-tab-content)
                             +_faq-answer
 
-    .row: .column
+    .grid-container: .grid-x.grid-padding-x: .cell
         hr
     .content
-        .row: .column
+        .grid-container: .grid-x.grid-padding-x: .cell
             h2.text-center
                 | Нет нужного ответа?&nbsp;
                 small Задайте свой вопрос
-        .row.align-center
-            .small-12.medium-9.large-7.column
+        .grid-container: .grid-x.grid-padding-x.align-center
+            .small-12.medium-9.large-7.cell
                 .callout
                     form
                         label Представьтесь

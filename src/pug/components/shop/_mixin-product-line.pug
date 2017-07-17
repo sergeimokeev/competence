@@ -1,10 +1,10 @@
 mixin productLine(discount, onDemand, inCart, inFavourites)
-    .row
-        .column.small-4.medium-3
+    .grid-x.grid-padding-x
+        .cell.small-4.medium-3
             .margin-bottom-10: img(src='./i/image.svg' alt='Товар')
-        .column.small-8.medium-9
-            .row
-                .column.small-12.medium-7
+        .cell.small-8.medium-9
+            .grid-x.grid-padding-x
+                .cell.small-12.medium-7
                     h5.margin-bottom-0
                         if discount
                             span.label.success
@@ -13,7 +13,7 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                             | &nbsp;
                         a(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
                     .margin-bottom-5: a.text-dark-gray.text-size-small(href='shop-catalog.html') Шуроповерты
-                .column.small-12.medium-5.large-4.large-offset-1
+                .cell.small-12.medium-5.large-4.large-offset-1
                     if onDemand
                         .margin-bottom-10
                             span.text-dark-gray: em Нет в наличии&nbsp;
@@ -27,8 +27,8 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                                 del.text-dark-gray
                                     | 1&nbsp;750&nbsp;
                                     i.fa.fa-rub
-            .row
-                .column.small-12.medium-7.align-self-middle
+            .grid-x.grid-padding-x
+                .cell.small-12.medium-7.align-self-middle
                     ul.margin-bottom-5.hide-for-small-only
                         li Гарантия: 1 год
                         li Мощность: 1000W
@@ -48,7 +48,7 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                         a.text-dark-gray(href='shop-compare.html' title='')
                             i.fa.fa-balance-scale
                             | &nbsp;Сравнить
-                .column.small-12.medium-5.large-4.large-offset-1.align-self-bottom
+                .cell.small-12.medium-5.large-4.large-offset-1.align-self-bottom
                     if onDemand
                         .margin-bottom-10
                             a(href='#' title='')

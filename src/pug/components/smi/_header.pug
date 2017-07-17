@@ -1,28 +1,28 @@
 .padding-vertical-10
-    .row
-        .small-10.large-3.column.text-center.large-text-left
+    .grid-container: .grid-x.grid-padding-x
+        .small-10.large-3.cell.text-center.large-text-left
             .margin-bottom-10
                 a(href='#' title='')
                     img(src='./i/image.svg', style='width: 400px; height: 60px', alt='logo')
-        .small-2.large-1.column.text-center
+        .small-2.large-1.cell.text-center
             .margin-bottom-10.text-age-rating.stat: strong 18+
-        .small-12.large-5.large-offset-3.column
+        .small-12.large-5.large-offset-3.cell
             form(action='' method='post' data-abide='', novalidate='novalidate')
                 .input-group
                     input.input-group-field(type='text', placeholder='Поиск')
                     .input-group-button
                         button.button.secondary(type='submit', name='Найти')
                             i.fa.fa-search.fa-inverse
-    .row: .column
+    .grid-container: .grid-x.grid-padding-x: .cell
         hr.margin-bottom-10
-    .row
-        .column.small-12.medium-6.large-3.text-dark-gray
+    .grid-container: .grid-x.grid-padding-x
+        .cell.small-12.medium-6.large-3.text-dark-gray
             span.fa-stack.text-dark-gray
                 i.fa.fa-square.fa-stack-2x
                 i.fa.fa-calendar.fa-stack-1x.fa-inverse
             strong &nbsp; 10:10 14.15.2016
             .margin-bottom-3.hide-for-large
-        .column.small-12.medium-6.large-3.text-dark-gray
+        .cell.small-12.medium-6.large-3.text-dark-gray
             span.fa-stack.text-dark-gray
                 i.fa.fa-square.fa-stack-2x
                 i.fa.fa-dollar.fa-stack-1x.fa-inverse
@@ -37,13 +37,13 @@
                 | &nbsp;88.20&nbsp;
                 i.fa.fa-long-arrow-up
             .margin-bottom-3.hide-for-large
-        .column.small-12.medium-6.large-3.text-dark-gray
+        .cell.small-12.medium-6.large-3.text-dark-gray
             span.fa-stack.text-dark-gray
                 i.fa.fa-square.fa-stack-2x
                 i.fa.fa-thermometer-half.fa-stack-1x.fa-inverse
             | &nbsp;-1&deg;C, снег
             .margin-bottom-3.hide-for-large
-        .column.small-12.medium-6.large-3.text-dark-gray
+        .cell.small-12.medium-6.large-3.text-dark-gray
             span.fa-stack.text-dark-gray
                 i.fa.fa-square.fa-stack-2x
                 i.fa.fa-flag.fa-stack-1x.fa-inverse
@@ -52,8 +52,8 @@
             | &nbsp;Медвешчак
             .margin-bottom-3.hide-for-large
 .background-primary.padding-vertical-10
-    .row
-        .small-12.column
+    .grid-container: .grid-x.grid-padding-x
+        .small-12.cell
             .show-for-small-only(data-responsive-toggle='menu', data-hide-for='medium')
                 .text-white(data-toggle)
                     i.fa.fa-bars.fa-lg

@@ -1,8 +1,8 @@
 .content
-    .row(data-equalizer='top-news' data-equalize-on-stack='true')
-        .small-12.medium-8.large-9.column
-            .row.collapse
-                .small-12.large-8.column
+    .grid-container: .grid-x.grid-padding-x(data-equalizer='top-news' data-equalize-on-stack='true')
+        .small-12.medium-8.large-9.cell
+            .grid-x
+                .small-12.large-8.cell
                     //Slider body
                     .x-carousel-news.carousel-news
                         .carousel-news__item(data-equalizer-watch='top-news', style='background: #1ccacd url(./i/image.svg) 0 0/100% 100% no-repeat;')
@@ -14,7 +14,7 @@
                         .carousel-news__item(data-equalizer-watch='top-news', style='background: #ca3034 url(./i/image.svg) 0 0/100% 100% no-repeat;')
                             a(href='#', title='').carousel-news__link Длинный-длинный-длинный заголовок новости 777
 
-                .small-12.large-4.show-for-large.column
+                .small-12.large-4.show-for-large.cell
                     .callout.x-carousel-news-links(data-equalizer-watch='top-news')
                         .margin-bottom-10: a.x-carousel-news-link(href='#', title='#')
                             strong.text-dark-gray 12:08&nbsp;
@@ -38,6 +38,6 @@
 
                         .clearfix
 
-        .small-12.medium-4.large-3.column
+        .small-12.medium-4.large-3.cell
             .callout.text-center(data-equalizer-watch='top-news', style='background: #2ad url(./i/image.svg) 0 0/100% 100% no-repeat;')
                 span.text-medium-gray От спонсора

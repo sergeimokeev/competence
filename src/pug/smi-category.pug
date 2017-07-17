@@ -3,35 +3,35 @@ extends smi-regular
 include components/mixins/_mixin-news-tile
 
 block content
-    .row: .column
+    .grid-container: .grid-x.grid-padding-x: .cell
         h1
             small Рубрика: &#160;
             | Потребительские рынки
-    .row
-        .column.small-12.medium-7.large-8
+    .grid-container: .grid-x.grid-padding-x
+        .cell.small-12.medium-7.large-8
 
             block category-content
                 .content
-                    .row
-                        .small-12.medium-8.column
+                    .grid-x.grid-padding-x
+                        .small-12.medium-8.cell
                             h2 Статьи
-                        .small-12.medium-4.column.medium-text-right
+                        .small-12.medium-4.cell.medium-text-right
                             a.button(href='#') Все статьи &nbsp;
                                 i.fa.fa-long-arrow-right
 
-                    .row.small-up-1.medium-up-2(data-equalizer='news', data-equalize-by-row='true')
+                    .grid-x.grid-padding-x.small-up-1.medium-up-2(data-equalizer='news', data-equalize-by-row='true')
                         +newsTile(false, 'news')
                         +newsTile(false, 'news')
                         +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники', 'news')
                             | Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
                         +newsTile(false, 'news')
-                .row: .column: hr
+                .grid-x.grid-padding-x: .cell: hr
 
                 include components/common/_video-tiles
-                .row: .column: hr
+                .grid-x.grid-padding-x: .cell: hr
                 include components/common/_photo-tiles
 
-        aside.column.small-12.medium-5.large-4
+        aside.cell.small-12.medium-5.large-4
             .content
                 h2 Календарь материалов
                 include components/common/_calendar

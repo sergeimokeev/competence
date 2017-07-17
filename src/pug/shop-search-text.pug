@@ -3,8 +3,8 @@ extends shop-index
 block page
     include components/common/_breadcrumbs
     block content
-        .row: .column
+        .grid-container: .grid-x.grid-padding-x: .cell
             h1 Поиск
         .content
-            .row: .column
+            .grid-container: .grid-x.grid-padding-x: .cell
                 include components/common/_search

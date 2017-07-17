@@ -1,8 +1,8 @@
 .margin-bottom-10  А4, 600×600 dpi, 27/27 стр в мин., ADF, Duplex, USB, Ethernet
 
-.row
-    .small-12.large-2.column Цвет:
-    .column
+.grid-x.grid-padding-x
+    .small-12.large-2.cell Цвет:
+    .cell.auto
         .checkbox-group
             input.checkbox-group__item(type='radio' id='color1' name='color')
             label.checkbox-group__label(for='color1' style='background-color: #eee;') &nbsp;
@@ -13,9 +13,9 @@
             input.checkbox-group__item(type='radio' id='color4' name='color')
             label.checkbox-group__label(for='color4' style='background-color: #deb887;') &nbsp;
 
-.row
-    .small-12.large-2.column Размер:
-    .column
+.grid-x.grid-padding-x
+    .small-12.large-2.cell Размер:
+    .cell.auto
         .checkbox-group
             input.checkbox-group__item(type='radio' id='size1' name='size')
             label.checkbox-group__label(for='size1') 39
@@ -28,8 +28,8 @@
             input.checkbox-group__item(type='radio' id='size5' name='size')
             label.checkbox-group__label(for='size5') 43
 
-.row
-    .large-10.large-offset-2.column
+.grid-x.grid-padding-x
+    .large-10.large-offset-2.cell
         .margin-bottom-10
             a(href='#', title='') Таблица размеров
             br
@@ -38,8 +38,8 @@
 
 br
 
-.row
-    .small-12.large-5.column
+.grid-x.grid-padding-x
+    .small-12.large-5.cell
         .margin-bottom-10
             span.stat
                 | 25 280&nbsp;
@@ -50,7 +50,7 @@ br
                 i.fa.fa-rub
             | &nbsp;&nbsp;
             span.label.warning Бонус <i>+45</i>
-    .small-12.large-7.column
+    .small-12.large-7.cell
         .input-group
             input.input-group-field(type='number' value='1' min='1')
             .input-group-field
@@ -61,7 +61,7 @@ br
                     | &nbsp;
 
 
-.row: .column
+.grid-x.grid-padding-x: .cell
     .margin-bottom-5
         span.rating
             span.rating__star

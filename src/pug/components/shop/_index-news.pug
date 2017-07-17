@@ -1,10 +1,10 @@
 .content
-    .row: .column
+    .grid-container: .grid-x.grid-padding-x: .cell
         h2 Новости магазина
-    .row.small-up-2.medium-up-4
+    .grid-container: .grid-x.grid-padding-x.small-up-2.medium-up-4
         - var n = 0
         while n < 4
-            .column
+            .cell
                 .margin-bottom-10
                     a(href='#', title='') Изменение в графике работы магазина в праздничные дни
                     br

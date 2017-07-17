@@ -1,15 +1,15 @@
 extends shop-regular
 
 block content
-    .row: .column
+    .grid-container: .grid-x.grid-padding-x: .cell
         h1 Каталог
     .content
-        .row
-            .column.small-12.medium-4.large-3
+        .grid-container: .grid-x.grid-padding-x
+            .cell.small-12.medium-4.large-3
                 a.button.light-gray.expanded(href='shop-compare.html')
                     i.fa.fa-lg.fa-balance-scale
                     | &nbsp;Сравнить: 5
-            .column.small-12.medium-6.large-7.text-center.medium-text-left
+            .cell.small-12.medium-6.large-7.text-center.medium-text-left
                 .margin-bottom-10
                     span.button-group
                         a.button.light-gray(href='#')
@@ -20,18 +20,18 @@ block content
                             i.fa.fa-sort-amount-asc
                         a.button.light-gray(href='#') Новинки
                         a.button.light-gray(href='#') Популярные
-            .column.small-12.medium-2.large-2.medium-text-right.text-center
+            .cell.small-12.medium-2.large-2.medium-text-right.text-center
                 .margin-bottom-10
                     span.button-group
                         a.button.light-gray(href='shop-catalog.html'): i.fa.fa-lg.fa-th
                         a.button.light-gray(href='shop-catalog-lines.html'): i.fa.fa-lg.fa-th-list
 
-        .row
-            .column.small-12.medium-4.large-3
+        .grid-container: .grid-x.grid-padding-x
+            .cell.small-12.medium-4.large-3
                 include components/shop/_sidebar
-            .column.small-12.medium-8.large-9
+            .cell.small-12.medium-8.large-9
                 block products
-                    .row.small-up-1.medium-up-2.large-up-4.margin-bottom-20(data-equalizer data-equalize-by-row="true")
+                    .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-4.margin-bottom-20(data-equalizer data-equalize-by-row="true")
                         +productTile('Комби-перфоратор Metabo KHE 2650', false)
                         +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
                         +productTile('Лобзик Metabo STEB 65 Quick', false)
@@ -58,11 +58,11 @@ block content
                         +productTile('Лобзик Metabo STEB 65 Quick', false)
                 include components/common/_pagination
 
-    .row: .column: hr
+    .grid-container: .grid-x.grid-padding-x: .cell: hr
     .content
-        .row: .column
+        .grid-container: .grid-x.grid-padding-x: .cell
             h2 Вы смотрели
-        .row.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
+        .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
             +productTile('Комби-перфоратор Metabo KHE 2650', false)
             +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
             +productTile('Лобзик Metabo STEB 65 Quick', false)

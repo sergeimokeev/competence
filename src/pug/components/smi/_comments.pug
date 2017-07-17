@@ -16,13 +16,13 @@ hr.margin-bottom-20
 
 h3 Добавить комментарий
 form(action='' method='post', data-abide='', novalidate='novalidate')
-    .row: .column
+    .grid-x.grid-padding-x: .cell
         input(type='text', placeholder='Представьтесь *', required='')
         p.help-text Ваше имя для комментария
-    .row: .column
+    .grid-x.grid-padding-x: .cell
         input(type='email', placeholder='Ваша электронная почта', required='')
-    .row: .column
+    .grid-x.grid-padding-x: .cell
         textarea(placeholder='Текст комментария')
-    .row: .column
+    .grid-x.grid-padding-x: .cell
         button.button(type='submit') Отправить сообщение &nbsp;
             i.fa.fa-envelope-o.fa-lg

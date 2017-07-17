@@ -1,32 +1,32 @@
 .content
-    .row: .column
+    .grid-container: .grid-x.grid-padding-x: .cell
         h2 Мы на связи
-    .row
-        .small-12.large-7.column
+    .grid-container: .grid-x.grid-padding-x
+        .small-12.large-7.cell
             form(method='post', data-abide='', novalidate='novalidate')
-                .row
-                    .small-12.medium-4.column
+                .grid-x.grid-padding-x
+                    .small-12.medium-4.cell
                         label Ваше имя
-                    .small-12.medium-8.column
+                    .small-12.medium-8.cell
                         input(type='text', placeholder='Ваше имя', required='')
                         p.help-text Поле обязательно для заполнения
-                .row
-                    .small-12.medium-4.column
+                .grid-x.grid-padding-x
+                    .small-12.medium-4.cell
                         label Email
-                    .small-12.medium-8.column
+                    .small-12.medium-8.cell
                         input(type='email', placeholder='username@address.com', required='')
                         p.help-text Введите ваш электронный адрес
-                .row
-                    .small-12.medium-4.column
+                .grid-x.grid-padding-x
+                    .small-12.medium-4.cell
                         label Чем мы можем помочь?
-                    .small-12.medium-8.column
+                    .small-12.medium-8.cell
                         textarea(placeholder='Введите ваше сообщение')
-                .row
-                    .small-12.medium-8.medium-offset-4.column
+                .grid-x.grid-padding-x
+                    .small-12.medium-8.medium-offset-4.cell
                         button.radius.button(type='submit')
                             | Отправить сообщение &nbsp;
                             i.fa.fa-envelope-o.fa-lg
-        .large-2.large-offset-1.small-6.column.text-center
+        .large-2.large-offset-1.small-6.cell.text-center
             .margin-bottom-20.hide-for-large
             .margin-bottom-10
                 img(src='./i/image.svg', alt='1', style='max-width: 150px')
@@ -47,7 +47,7 @@
                 a(href='#', title='').fa-stack.fa-lg.text-fb
                     i.fa.fa-circle.fa-stack-2x
                     i.fa.fa-facebook.fa-stack-1x.fa-inverse
-        .large-2.small-6.column.text-center
+        .large-2.small-6.cell.text-center
             .margin-bottom-20.hide-for-large
             .margin-bottom-10
                 img(src='./i/image.svg', alt='2', style='max-width: 150px')
