@@ -2,14 +2,14 @@ mixin newsTile(title, dataEq)
     .cell
         .callout
             .clearfix(data-equalizer-watch=dataEq)
-                .margin-bottom-10
+                .margin-bottom-6
                     img(src='./i/image.svg', alt='Новый сайт', style='background:#4dc7a0;width:100%;height:220px;')
-                h4.margin-bottom-5
+                h4.margin-bottom-3
                     if title
                         a(href='smi-article.html')= title
                     else
                         a(href='smi-article.html') Приняли на комплексное обслуживание новый сайт
-                .margin-bottom-5
+                .margin-bottom-3
                     if block
                         block
                     else
