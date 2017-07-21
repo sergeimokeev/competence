@@ -1,8 +1,8 @@
-.top-line.top-line_dark
+.padding-top-4.padding-bottom-2.text-size-small.background-black
     .grid-container: .grid-x.grid-padding-x: .cell
-        .top-line__humburger(data-responsive-toggle='responsive-menu', data-hide-for='medium')
+        .padding-bottom-2.text-secondary.show-for-small-only(data-responsive-toggle='responsive-menu', data-hide-for='medium')
             span.menu-icon(data-toggle)
-        .top-line__menu#responsive-menu
+        #responsive-menu.padding-bottom-2
             ul.menu-top
                 li.menu-top__item
                     a.menu-top__link(href='#') Новости
@@ -14,3 +14,4 @@
                     a.menu-top__link(href='#') Музыка
                 li.menu-top__item
                     a.menu-top__link(href='#') Дизайн
+            .clearfix

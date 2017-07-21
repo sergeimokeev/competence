@@ -1,15 +1,10 @@
-.top-line
+.padding-top-4.padding-bottom-2.text-size-small
     .grid-container: .grid-x.grid-padding-x
-        .small-12.large-8.cell.hide-for-small-only
-            .top-line__humburger(data-responsive-toggle='responsive-menu', data-hide-for='medium')
-                i.fa.fa-bars.fa-2x(data-toggle)
-            .top-line__menu#responsive-menu
-                ul.menu-top
-                    each title in ['Контакты', 'Узнайте цены', 'Личный кабинет']
-                        li.menu-top__item
-                            a.menu-top__link(href='#')= title
-        .small-12.large-4.cell
-            .top-line__contacts.text-left.large-text-right
+        .small-12.large-4.cell.medium-order-2
+            .padding-bottom-2.text-left.large-text-right
+                span.text-secondary.show-for-small-only(data-responsive-toggle='responsive-menu', data-hide-for='medium')
+                    i.fa.fa-bars.fa-lg(data-toggle)
+                    | &nbsp;&nbsp;&nbsp;&nbsp;
                 a(href='tel:+71234567890')
                     strong
                         i.fa.fa-phone.fa-lg
@@ -18,3 +13,10 @@
                     strong
                         i.fa.fa-envelope-o.fa-lg
                         | &nbsp; support@cetera.ru
+        .small-12.large-8.cell.medium-order-1
+            .padding-bottom-2#responsive-menu
+                ul.menu-top
+                    each title in ['Контакты', 'Узнайте цены', 'Личный кабинет']
+                        li.menu-top__item
+                            a.menu-top__link(href='#')= title
+                .clearfix

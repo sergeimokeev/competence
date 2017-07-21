@@ -1,21 +1,23 @@
-.top-line.top-line_dark
+.padding-top-4.padding-bottom-2.text-size-small.background-black
     .grid-container: .grid-x.grid-padding-x
-        .small-12.medium-6.large-8.cell.hide-for-small-only
-            .top-line__humburger(data-responsive-toggle='responsive-menu', data-hide-for='medium')
-                i.fa.fa-bars.fa-2x(data-toggle)
-            .top-line__menu#responsive-menu
+        .small-12.medium-6.large-4.cell.medium-order-2
+            .padding-bottom-2.text-left.medium-text-right
+                span.text-secondary.show-for-small-only(data-responsive-toggle='responsive-menu', data-hide-for='medium')
+                    i.fa.fa-bars.fa-lg(data-toggle)
+                    | &nbsp;&nbsp;&nbsp;&nbsp;
+                a(href='#', data-toggle='location').text-secondary
+                    strong
+                        i.fa.fa-globe.fa-lg
+                        | &nbsp;
+                        | Ярославская область
+                        | &nbsp;
+                        i.fa.fa-caret-down.fa-lg
+        .small-12.medium-6.large-8.cell.medium-order-1
+            .padding-bottom-2#responsive-menu
                 ul.menu-top
                     each title in ['Доставка', 'Оплата', 'Контакты', 'Помощь']
                         li.menu-top__item
                             a.menu-top__link(href='#')= title
-        .small-12.medium-6.large-4.cell.text-left.medium-text-right
-            a(href='#', data-toggle='location').text-secondary
-                strong
-                    i.fa.fa-globe.fa-lg
-                    | &nbsp;
-                    | Ярославская область
-                    | &nbsp;
-                    i.fa.fa-caret-down.fa-lg
 
 .grid-container: .grid-x.grid-padding-x
     .cell.small-12.large-9.large-offset-3
