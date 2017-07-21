@@ -146,7 +146,7 @@ $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.4;
-$header-margin-bottom: 10 * $global-margin;
+$header-margin-bottom: 6 * $global-margin;
 $header-styles: (
   small: (
     'h1': ('font-size': 32, 'margin-bottom': 0),
@@ -169,7 +169,7 @@ $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.5;
-$paragraph-margin-bottom: 10 * $global-margin;
+$paragraph-margin-bottom: 6 * $global-margin;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
 $code-font-family: $font-family-monospace;
@@ -190,7 +190,7 @@ $list-style-type: disc;
 $list-style-position: outside;
 $list-side-margin: 1.25rem;
 $list-nested-side-margin: 1.25rem;
-$defnlist-margin-bottom: 10 * $global-margin;
+$defnlist-margin-bottom: 6 * $global-margin;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
 $blockquote-color: $dark-gray;
@@ -273,7 +273,7 @@ $badge-font-size: 0.8rem;
 // 10. Breadcrumbs
 // ---------------
 
-$breadcrumbs-margin: $global-margin * 20 0;
+$breadcrumbs-margin: $global-margin * 12 0;
 $breadcrumbs-item-font-size: rem-calc(12);
 $breadcrumbs-item-color: $primary-color;
 $breadcrumbs-item-color-current: $black;
@@ -290,7 +290,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 
 $button-font-family: inherit;
 $button-padding: 0.83rem;
-$button-margin: 0 0 10 * $global-margin 0;
+$button-margin: 0 0 6 * $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
@@ -325,8 +325,8 @@ $buttongroup-radius-on-each: true;
 $callout-background: $white;
 $callout-background-fade: 85%;
 $callout-border: 1px solid rgba($black, 0.25);
-$callout-margin: 0 0 10 * $global-margin 0;
-$callout-padding: 10 * $global-padding;
+$callout-margin: 0 0 6 * $global-margin 0;
+$callout-padding: 6 * $global-padding;
 $callout-font-color: $body-font-color;
 $callout-font-color-alt: $body-background;
 $callout-radius: $global-radius;
@@ -341,8 +341,8 @@ $card-divider-background: $light-gray;
 $card-border: 1px solid $light-gray;
 $card-shadow: none;
 $card-border-radius: $global-radius;
-$card-padding: 10 * $global-padding;
-$card-margin-bottom: 10 * $global-margin;
+$card-padding: 6 * $global-padding;
+$card-margin-bottom: 6 * $global-margin;
 
 // 15. Close Button
 // ----------------
@@ -471,8 +471,8 @@ $label-radius: $global-radius;
 // 22. Media Object
 // ----------------
 
-$mediaobject-margin-bottom: 10 * $global-margin;
-$mediaobject-section-padding: 10 * $global-padding;
+$mediaobject-margin-bottom: 6 * $global-margin;
+$mediaobject-section-padding: 6 * $global-padding;
 $mediaobject-image-width-stacked: 100%;
 
 // 23. Menu
@@ -537,7 +537,7 @@ $orbit-control-zindex: 10;
 // --------------
 
 $pagination-font-size: rem-calc(14);
-$pagination-margin-bottom: 10 * $global-margin;
+$pagination-margin-bottom: 6 * $global-margin;
 $pagination-item-color: $black;
 $pagination-item-padding: rem-calc(3 10);
 $pagination-item-spacing: rem-calc(1);
@@ -556,7 +556,7 @@ $pagination-arrows: true;
 
 $progress-height: 1rem;
 $progress-background: $medium-gray;
-$progress-margin-bottom: 10 * $global-margin;
+$progress-margin-bottom: 6 * $global-margin;
 $progress-meter-background: $primary-color;
 $progress-radius: $global-radius;
 
@@ -665,7 +665,7 @@ $prototype-separator-align: center;
 $prototype-separator-height: rem-calc(2);
 $prototype-separator-width: 3rem;
 $prototype-separator-background: $primary-color;
-$prototype-separator-margin-top: 10 * $global-margin;
+$prototype-separator-margin-top: 6 * $global-margin;
 
 // 40. Prototype Shadow
 // --------------------
@@ -736,7 +736,7 @@ $responsive-embed-ratios: (
 $reveal-background: $white;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
-$reveal-padding: 10 * $global-padding;
+$reveal-padding: 6 * $global-padding;
 $reveal-border: 1px solid $medium-gray;
 $reveal-radius: $global-radius;
 $reveal-zindex: 1005;
@@ -766,7 +766,7 @@ $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;
 $switch-height-large: 2.5rem;
 $switch-radius: $global-radius;
-$switch-margin: 10 * $global-margin;
+$switch-margin: 6 * $global-margin;
 $switch-paddle-background: $white;
 $switch-paddle-offset: 0.25rem;
 $switch-paddle-radius: $global-radius;
@@ -809,13 +809,13 @@ $tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
 $tab-content-color: $body-font-color;
-$tab-content-padding: 10 * $global-padding;
+$tab-content-padding: 6 * $global-padding;
 
 // 52. Thumbnail
 // -------------
 
 $thumbnail-border: solid 4px $white;
-$thumbnail-margin-bottom: 10 * $global-margin;
+$thumbnail-margin-bottom: 6 * $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;

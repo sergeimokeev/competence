@@ -30,6 +30,6 @@ button.search-top__button {
 
 @include breakpoint(medium only) {
   .search-top {
-    margin: 10 * $global-margin 0 0;
+    margin: 6 * $global-margin 0 0;
   }
 }
