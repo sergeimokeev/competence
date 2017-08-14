@@ -6,6 +6,8 @@ head
     meta(name='author' content='Cetera Labs, http://www.cetera.ru/, создание сайтов, поддержка сайтов, продвижение сайтов')
     meta(name='cmsmagazine', content='f21b68cb09efe1a7161ca2caaacaf749')
     title Cetera Labs WireFrames
-    link(rel='stylesheet', href='css/style.css')
-    //-style
-        include ../../../../dist/css/style-inline.css
+    if minify
+        style
+            include ../../../../dist/css/style-inline.css
+    else
+        link(rel='stylesheet', href='css/style.css')

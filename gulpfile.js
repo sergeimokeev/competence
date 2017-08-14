@@ -31,7 +31,7 @@ var path = {
         html: 'src/pug/*.pug',
         js: 'src/js/*.js',
         jsLib: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/foundation-sites/dist/js/foundation.min.js', 'node_modules/slick-carousel/slick/slick.min.js'],
-        css: ['src/scss/style.scss'],//, 'src/scss/style-inline.scss'
+        css: ['src/scss/style.scss', 'src/scss/style-inline.scss'],
         images: 'src/images/**/*.*',
         i: 'src/i/**/*.*',
         fonts: 'src/fonts/**/*.*',
@@ -75,9 +75,9 @@ gulp.task('clean-js', function() {
 gulp.task('sass', ['clean-css'], function () {
     return gulp.src(path.src.css)
         .pipe(sass({
-                includePaths: sassPaths,
-                outputStyle: 'compressed'
-            })
+            includePaths: sassPaths,
+            outputStyle: 'compressed'
+        })
             .on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -86,15 +86,19 @@ gulp.task('sass', ['clean-css'], function () {
         .pipe(gulp.dest(path.dist.css));
 });
 
-gulp.task('pug', ['clean-html', 'sass'], function() {
+var pugFunc = function(minify) {
     return gulp.src(path.src.html)
         .pipe(plumber())
         .pipe(pug({
             pretty: true,
-            cache: true
+            cache: true,
+            locals: {minify: minify}
         }))
         .pipe(gulp.dest(path.dist.html));
-});
+};
+
+gulp.task('pug', ['clean-html', 'sass'], function () {pugFunc(false);});
+gulp.task('pugMinify', ['clean-html', 'sass'], function () {pugFunc(true)});
 
 gulp.task('images', ['clean-images'], function () {
     return gulp.src(path.src.images)
@@ -140,7 +144,7 @@ gulp.task('js-app-minify', ['clean-js'], function () {
         .pipe(gulp.dest(path.dist.js));
 });
 
-gulp.task('minify', ['sass', 'pug', 'images', 'i', 'fonts', 'js-lib', 'js-app-minify']);
+gulp.task('minify', ['sassInline', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-app-minify']);
 
 gulp.task('default', ['sass', 'pug', 'images', 'i', 'fonts', 'js-lib', 'js-app-init'], function () {
     gulp.watch([path.watch.css], ['sass']);
