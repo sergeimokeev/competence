@@ -2,6 +2,7 @@
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
     pug = require('gulp-pug'),
     autoprefixer = require('gulp-autoprefixer'),
     rimraf = require('gulp-rimraf'),
@@ -74,6 +75,7 @@ gulp.task('clean-js', function() {
 
 gulp.task('sass', ['clean-css'], function () {
     return gulp.src(path.src.css)
+        .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: sassPaths,
             outputStyle: 'compressed'
@@ -83,6 +85,7 @@ gulp.task('sass', ['clean-css'], function () {
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(path.dist.css));
 });
 
