@@ -77,7 +77,7 @@ gulp.task('clean-js', function() {
 var sassFunc = function (minify) {
     return gulp.src(path.src.css)
         .pipe(sourcemaps.init())
-        .pipe(header(minify ? '$minify: true;\n' : '$minify: false;\n'))
+        .pipe(header((minify ? '$minify: true;\n' : '$minify: false;\n')))
         .pipe(sass({
             includePaths: sassPaths,
             outputStyle: 'compressed'
