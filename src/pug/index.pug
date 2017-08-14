@@ -1,11 +1,12 @@
 doctype html
 html.no-js(lang='ru')
     include components/service/_head
-    body.padding-20
+    body.padding-vertical-20
         .grid-container
             .grid-x.grid-padding-x: .cell
                 h1 Cetera Labs Wireframes
-            .content
+        .content
+            .grid-container
                 .grid-x.grid-padding-x: .cell
                     ul.tabs#product-tabs-1(data-tabs, data-deep-link='true')
                         li.tabs-title.is-active
