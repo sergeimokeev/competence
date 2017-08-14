@@ -3,6 +3,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
+    header = require('gulp-header'),
     pug = require('gulp-pug'),
     autoprefixer = require('gulp-autoprefixer'),
     rimraf = require('gulp-rimraf'),
@@ -32,7 +33,7 @@ var path = {
         html: 'src/pug/*.pug',
         js: 'src/js/*.js',
         jsLib: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/foundation-sites/dist/js/foundation.min.js', 'node_modules/slick-carousel/slick/slick.min.js'],
-        css: ['src/scss/style.scss', 'src/scss/style-inline.scss'],
+        css: ['src/scss/style.scss'],
         images: 'src/images/**/*.*',
         i: 'src/i/**/*.*',
         fonts: 'src/fonts/**/*.*',
@@ -73,9 +74,10 @@ gulp.task('clean-js', function() {
     return gulp.src(path.dist.js, {read: false}).pipe(rimraf());
 });
 
-gulp.task('sass', ['clean-css'], function () {
+var sassFunc = function (minify) {
     return gulp.src(path.src.css)
         .pipe(sourcemaps.init())
+        .pipe(header(minify ? '$minify: true;\n' : '$minify: false;\n'))
         .pipe(sass({
             includePaths: sassPaths,
             outputStyle: 'compressed'
@@ -87,7 +89,10 @@ gulp.task('sass', ['clean-css'], function () {
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(path.dist.css));
-});
+};
+
+gulp.task('sass', ['clean-css'], function () {sassFunc(false)});
+gulp.task('sassMinify', ['clean-css'], function () {sassFunc(true)});
 
 var pugFunc = function(minify) {
     return gulp.src(path.src.html)
@@ -100,7 +105,7 @@ var pugFunc = function(minify) {
         .pipe(gulp.dest(path.dist.html));
 };
 
-gulp.task('pug', ['clean-html', 'sass'], function () {pugFunc(false);});
+gulp.task('pug', ['clean-html'], function () {pugFunc(false);});
 gulp.task('pugMinify', ['clean-html', 'sass'], function () {pugFunc(true)});
 
 gulp.task('images', ['clean-images'], function () {
@@ -147,7 +152,7 @@ gulp.task('js-app-minify', ['clean-js'], function () {
         .pipe(gulp.dest(path.dist.js));
 });
 
-gulp.task('minify', ['sass', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-app-minify']);
+gulp.task('minify', ['sassMinify', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-app-minify']);
 
 gulp.task('default', ['sass', 'pug', 'images', 'i', 'fonts', 'js-lib', 'js-app-init'], function () {
     gulp.watch([path.watch.css], ['sass']);

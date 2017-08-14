@@ -3,9 +3,17 @@
 // Все картинки и шрифты необходимо подключать с использованием этих двух переменных:
 $imagesPath: '../images' !default;
 $fontsPath: '../fonts' !default;
+
 $textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 1.25rem, xlarge: 1.5rem, xxlarge: 2rem) !default;
 
 $fa-font-path: $fontsPath;
+
+$minify: false !default;
+@if $minify {
+  $imagesPath: './images';
+  $fontsPath: './fonts';
+  $fa-font-path: $fontsPath;
+}
 
 @import "foundation-settings";
 
