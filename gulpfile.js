@@ -144,7 +144,7 @@ gulp.task('js-app-minify', ['clean-js'], function () {
         .pipe(gulp.dest(path.dist.js));
 });
 
-gulp.task('minify', ['sassInline', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-app-minify']);
+gulp.task('minify', ['sass', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-app-minify']);
 
 gulp.task('default', ['sass', 'pug', 'images', 'i', 'fonts', 'js-lib', 'js-app-init'], function () {
     gulp.watch([path.watch.css], ['sass']);
