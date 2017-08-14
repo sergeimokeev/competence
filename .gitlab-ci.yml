@@ -41,7 +41,7 @@ job_deploy_to_staging:
     name: staging
     url: http://wireframes.cetera.ru/$CI_PROJECT_NAME/
   script:
-  - rsync -avuz $CI_PROJECT_DIR/dist/ --chown=www-data:www-data vps10.cetera.ru:/var/www/cetera.ru/wireframes/$CI_PROJECT_NAME/
+  - rsync -avuz $CI_PROJECT_DIR/dist/ --chown=www-data:www-data vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/
   only:
   - master
   when: manual
