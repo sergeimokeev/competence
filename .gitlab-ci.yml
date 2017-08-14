@@ -44,4 +44,5 @@ job_deploy_to_staging:
   - rsync -avuz  --numeric-ids --chown=33:33 -e ssh $CI_PROJECT_DIR/dist/ vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/
   only:
   - master
-  when: manual
+  when: always
+#  when: manual
