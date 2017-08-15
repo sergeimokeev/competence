@@ -87,12 +87,12 @@ var sassFunc = function (minify) {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(sourcemaps.write('.'))
+        .pipe(sourcemaps.write('.', {sourceMappingURLPrefix: minify ? './css' : ''}))
         .pipe(gulp.dest(path.dist.css));
 };
 
-gulp.task('sass', ['clean-css'], function () {sassFunc(false)});
-gulp.task('sassMinify', ['clean-css'], function () {sassFunc(true)});
+gulp.task('sass', ['clean-css'], function () { return sassFunc(false); });
+gulp.task('sassMinify', ['clean-css'], function () { return sassFunc(true); });
 
 var pugFunc = function(minify) {
     return gulp.src(path.src.html)
@@ -105,8 +105,8 @@ var pugFunc = function(minify) {
         .pipe(gulp.dest(path.dist.html));
 };
 
-gulp.task('pug', ['clean-html'], function () {pugFunc(false);});
-gulp.task('pugMinify', ['clean-html', 'sass'], function () {pugFunc(true)});
+gulp.task('pug', ['clean-html'], function () { return pugFunc(false); });
+gulp.task('pugMinify', ['clean-html', 'sassMinify'], function () { return pugFunc(true); });
 
 gulp.task('images', ['clean-images'], function () {
     return gulp.src(path.src.images)
