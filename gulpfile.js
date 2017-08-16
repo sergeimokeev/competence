@@ -2,7 +2,6 @@
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
     header = require('gulp-header'),
     pug = require('gulp-pug'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -76,7 +75,6 @@ gulp.task('clean-js', function() {
 
 var sassFunc = function (minify) {
     return gulp.src(path.src.css)
-        .pipe(sourcemaps.init())
         .pipe(header((minify ? '$minify: true;\n' : '$minify: false;\n')))
         .pipe(sass({
             includePaths: sassPaths,
@@ -87,7 +85,6 @@ var sassFunc = function (minify) {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(sourcemaps.write('.', {sourceMappingURLPrefix: minify ? './css' : ''}))
         .pipe(gulp.dest(path.dist.css));
 };
 
