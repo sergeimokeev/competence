@@ -48,7 +48,7 @@ boilerplate_wireframe/
 
 ## Установка и сборка проекта
 
-Для работы с этим проектом необходимо предварительно установить [Git](https://git-scm.com) и [Node.js](https://nodejs.org).
+Для работы с этим проектом необходимо предварительно установить [Git](https://git-scm.com) и [Node.js](https://nodejs.org)**(устанавливаем LTS версию)**.
 
 Инструкция по установке для [WSL](https://ru.wikipedia.org/wiki/Windows_Subsystem_for_Linux) находится [тут](WSL.md).
 
