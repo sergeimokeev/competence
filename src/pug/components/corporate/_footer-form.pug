@@ -23,6 +23,10 @@
                         textarea(placeholder='Введите ваше сообщение')
                 .grid-x.grid-padding-x
                     .small-12.medium-8.medium-offset-4.cell
+                        input(type='checkbox' id='agreement' name='agreement')
+                        label(for='agreement') Соглашаюсь на #[a(href='' title='условия') обработку персональных данных]
+                .grid-x.grid-padding-x
+                    .small-12.medium-8.medium-offset-4.cell
                         button.radius.button(type='submit')
                             | Отправить сообщение &nbsp;
                             i.fa.fa-envelope-o.fa-lg
