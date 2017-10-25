@@ -12,7 +12,7 @@
       # Нижеследующая строчка положит в LAYOUTS все папки внутри working.
       - cd $CI_PROJECT_DIR/working/ && export LAYOUTS=(`ls -1 -d ./*/|perl -nE '$_ =~ s/^\.\/(.+)\/$\//$1/; chomp; say'`)
       # Если хочется указать вручную избранные папки, например folder1 и folder2, надо раскомментировать следующую строку и закомментировать строку выше.
-      # - export LAYOUTS=(folder1 folder2)
+       - export LAYOUTS=($CI_PROJECT_DIR)
 
     stages:
       - build
