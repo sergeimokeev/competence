@@ -10,6 +10,12 @@
         .small-12.large-9.cell.align-self-middle#menu
             .margin-bottom-6.hide-for-large
             ul.menu-base
-                each title in ['Сайт', 'Магазин', 'СМИ', 'Реклама', 'Мобильные', 'Обучение', 'Конверсия', 'Видеонаблюдение']
+                li.menu-base__item
+                    a.menu-base__link(href='#') Сайт
+                    ul.menu-base
+                        each title in ['Создание сайтов', 'Развитие сайтов', 'Техническая поддержка сайтов', 'Cetera CMS — управление сайтом', 'Fastsite — бесплатный конструктор сайтов', 'Портфолио', 'Исполнение 152-ФЗ «О персональных данных»', 'Посмотрите прототип', 'Вопросы и ответы']
+                            li.menu-base__item
+                                a.menu-base__link(href='#')= title
+                each title in ['Магазин', 'СМИ', 'Реклама', 'Мобильные', 'Обучение', 'Конверсия', 'Видеонаблюдение']
                     li.menu-base__item
                         a.menu-base__link(href='#')= title
