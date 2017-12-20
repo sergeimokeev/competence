@@ -274,17 +274,17 @@ $badge-font-size: 0.8rem;
 // 10. Breadcrumbs
 // ---------------
 
-$breadcrumbs-margin: $global-margin * 12 0;
+$breadcrumbs-margin: $global-margin * 12 0  $global-margin * 4 0;
 $breadcrumbs-item-font-size: rem-calc(12);
-$breadcrumbs-item-color: $primary-color;
+$breadcrumbs-item-color: get-color(dark-gray);
 $breadcrumbs-item-color-current: $black;
-$breadcrumbs-item-color-disabled: $medium-gray;
+$breadcrumbs-item-color-disabled: get-color(medium-gray);
 $breadcrumbs-item-margin: 0.75rem;
 $breadcrumbs-item-uppercase: true;
 $breadcrumbs-item-separator: true;
 $breadcrumbs-item-separator-item: '/';
 $breadcrumbs-item-separator-item-rtl: '\\';
-$breadcrumbs-item-separator-color: $medium-gray;
+$breadcrumbs-item-separator-color: get-color(medium-gray);
 
 // 11. Button
 // ----------
