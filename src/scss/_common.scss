@@ -9,3 +9,16 @@ a {
 table {
   margin-bottom: 6 * $global-margin;
 }
+
+h1, h2 {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    background: $warning-color;
+    height: 0.3rem;
+    width: 5rem;
+    left: 0;
+    bottom: -0.8rem;
+  }
+}

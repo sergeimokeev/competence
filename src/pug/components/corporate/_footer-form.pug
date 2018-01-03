@@ -1,4 +1,4 @@
-.content
+.padding-top-12.padding-bottom-6
     .grid-container: .grid-x.grid-padding-x: .cell
         h2 Мы на связи
     .grid-container: .grid-x.grid-padding-x
@@ -22,53 +22,50 @@
                     .small-12.medium-8.cell
                         textarea(placeholder='Введите ваше сообщение')
                 .grid-x.grid-padding-x
-                    .small-12.medium-8.medium-offset-4.cell
+                    .shrink.medium-offset-4.cell
                         input(type='checkbox' id='agreement' name='agreement')
+                    .auto.cell
                         label(for='agreement') Соглашаюсь на #[a(href='' title='условия') обработку персональных данных]
                 .grid-x.grid-padding-x
                     .small-12.medium-8.medium-offset-4.cell
-                        button.radius.button(type='submit')
+                        button.secondary.button(type='submit')
                             | Отправить сообщение &nbsp;
                             i.fa.fa-envelope-o.fa-lg
         .large-2.large-offset-1.small-6.cell.text-center
             .margin-bottom-12.hide-for-large
             .margin-bottom-6
-                img(src='./i/image.svg', alt='1', style='max-width: 150px')
+                img(src='./i/photo.svg', alt='1', style='max-width: 150px')
             h5.margin-bottom-2 Алена Ратникова
-            h6.margin-bottom-3
-                | Менеджер
-                br
-                | по продажам
+            .margin-bottom-3.text-size-small
+                strong Менеджер по продажам
             .margin-bottom-6
-                a(href='#', title='').fa-stack.fa-lg.text-vk
+                a(href='#', title='').fa-stack.fa-lg.text-tertiary
                     i.fa.fa-circle.fa-stack-2x
                     i.fa.fa-vk.fa-stack-1x.fa-inverse
                 | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-twi
+                a(href='#', title='').fa-stack.fa-lg.text-tertiary
                     i.fa.fa-circle.fa-stack-2x
                     i.fa.fa-twitter.fa-stack-1x.fa-inverse
                 | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-fb
+                a(href='#', title='').fa-stack.fa-lg.text-tertiary
                     i.fa.fa-circle.fa-stack-2x
                     i.fa.fa-facebook.fa-stack-1x.fa-inverse
         .large-2.small-6.cell.text-center
             .margin-bottom-12.hide-for-large
             .margin-bottom-6
-                img(src='./i/image.svg', alt='2', style='max-width: 150px')
+                img(src='./i/photo.svg', alt='2', style='max-width: 150px')
             h5.margin-bottom-2 Мария Свешникова
-            h6.margin-bottom-3
-                | Менеджер
-                br
-                | по маркетингу
+            .margin-bottom-3.text-size-small
+                strong Менеджер по маркетингу
             .margin-bottom-6
-                a(href='#', title='').fa-stack.fa-lg.text-vk
+                a(href='#', title='').fa-stack.fa-lg.text-tertiary
                     i.fa.fa-circle.fa-stack-2x
                     i.fa.fa-vk.fa-stack-1x.fa-inverse
                 | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-twi
+                a(href='#', title='').fa-stack.fa-lg.text-tertiary
                     i.fa.fa-circle.fa-stack-2x
                     i.fa.fa-twitter.fa-stack-1x.fa-inverse
                 | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-fb
+                a(href='#', title='').fa-stack.fa-lg.text-tertiary
                     i.fa.fa-circle.fa-stack-2x
                     i.fa.fa-facebook.fa-stack-1x.fa-inverse

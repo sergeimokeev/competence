@@ -29,6 +29,6 @@ label.rating__star {
 
 .rating__star:hover::before, .rating__star:hover ~ .rating__star::before,
 .rating:not(:hover) .rating__input:checked::before, .rating:not(:hover) .rating__input:checked ~ .rating__star::before {
-  color: #e3cf7a;
+  color: #EEB301;
   content: $fa-var-star;
 }

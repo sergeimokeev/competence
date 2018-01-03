@@ -1,10 +1,12 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
+
 // Все картинки и шрифты необходимо подключать с использованием этих двух переменных:
 $imagesPath: '../images' !default;
 $fontsPath: '../fonts' !default;
 
-$textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 1.25rem, xlarge: 1.5rem, xxlarge: 2rem) !default;
+$textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 1.1rem, xlarge: 1.25rem, xxlarge: 1.5rem) !default;
 
 $fa-font-path: $fontsPath;
 
@@ -21,6 +23,7 @@ $minify: false !default;
 @import "slick.scss";
 @import "foundation";
 @import "motion-ui";
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 @include foundation-everything(true, true);
 
 @import "common";
@@ -31,7 +34,6 @@ $minify: false !default;
 @import "carousel/carousel-services";
 @import "background";
 @import "checkbox-group";
-@import "content";
 @import "dd";
 @import "menu-base";
 @import "menu-top";

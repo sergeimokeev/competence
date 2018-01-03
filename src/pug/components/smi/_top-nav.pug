@@ -1,17 +1,56 @@
-.padding-top-4.padding-bottom-2.text-size-small.background-black
-    .grid-container: .grid-x.grid-padding-x: .cell
-        .padding-bottom-2.text-secondary.show-for-small-only(data-responsive-toggle='responsive-menu', data-hide-for='medium')
-            span.menu-icon(data-toggle)
-        #responsive-menu.padding-bottom-2
-            ul.menu-top
-                li.menu-top__item
-                    a.menu-top__link(href='#') Новости
-                li.menu-top__item
-                    a.menu-top__link(href='#') Дом
-                li.menu-top__item
-                    a.menu-top__link(href='#') Еда
-                li.menu-top__item
-                    a.menu-top__link(href='#') Музыка
-                li.menu-top__item
-                    a.menu-top__link(href='#') Дизайн
-            .clearfix
+.padding-top-4.padding-bottom-2.text-size-small.background-primary
+    .grid-container: .grid-x.grid-padding-x
+        .small-12.medium-6.large-4.cell.medium-text-right.medium-order-2
+            span.text-white.show-for-small-only(data-responsive-toggle='responsive-menu', data-hide-for='medium')
+                span.menu-icon(data-toggle)
+                | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            a(href='#', title='').fa-stack.text-tertiary
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-vk.fa-stack-1x.fa-inverse
+            | &nbsp;
+            a(href='#', title='').fa-stack.text-tertiary
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-twitter.fa-stack-1x.fa-inverse
+            | &nbsp;
+            a(href='#', title='').fa-stack.text-tertiary
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-facebook.fa-stack-1x.fa-inverse
+            | &nbsp;
+            a(href='#', title='').fa-stack.text-tertiary
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-odnoklassniki.fa-stack-1x.fa-inverse
+            | &nbsp;
+            a(href='#', title='').fa-stack.text-tertiary
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-instagram.fa-stack-1x.fa-inverse
+            | &nbsp;
+            a(href='#', title='').fa-stack.text-tertiary
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-google-plus.fa-stack-1x.fa-inverse
+            | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            a(href='#' title='' data-toggle='search').text-white: i.fa.fa-lg.fa-search
+        .small-12.medium-6.large-8.cell.medium-order-1
+            #responsive-menu.padding-bottom-2
+                ul.menu-top
+                    li.menu-top__item
+                        a.menu-top__link(href='#') Новости
+                    li.menu-top__item
+                        a.menu-top__link(href='#') Дом
+                    li.menu-top__item
+                        a.menu-top__link(href='#') Еда
+                    li.menu-top__item
+                        a.menu-top__link(href='#') Музыка
+                    li.menu-top__item
+                        a.menu-top__link(href='#') Спецпроекты
+                .clearfix
+
+.grid-container: .grid-x.grid-padding-x
+    .small-12.large-5.large-offset-7.cell
+        .dd(id='search' data-toggler='.dd_show')
+            .dd__content.padding-6.background-main
+                form(action='' method='post' data-abide='', novalidate='novalidate')
+                    .input-group
+                        input.input-group-field(type='text', placeholder='Поиск')
+                        .input-group-button
+                            button.button.primary(type='submit', name='Найти')
+                                i.fa.fa-search.fa-inverse

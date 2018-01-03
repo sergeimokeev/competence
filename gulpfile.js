@@ -31,7 +31,7 @@ var path = {
     src: {
         html: 'src/pug/*.pug',
         js: 'src/js/*.js',
-        jsLib: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/foundation-sites/dist/js/foundation.min.js', 'node_modules/slick-carousel/slick/slick.min.js'],
+        jsLib: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/foundation-sites/dist/js/foundation.min.js', 'node_modules/slick-carousel/slick/slick.min.js', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'],
         css: ['src/scss/style.scss'],
         images: 'src/images/**/*.*',
         i: 'src/i/**/*.*',

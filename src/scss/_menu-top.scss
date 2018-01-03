@@ -26,7 +26,10 @@
   @include disable-mouse-outline;
   display: block;
   padding: 0.5rem 0;
-  color: $secondary-color;
+  color: $white;
+  &:hover {
+    color: scale-color($white, $lightness: -15%);;
+  }
 }
 
 .menu-top__link_red {

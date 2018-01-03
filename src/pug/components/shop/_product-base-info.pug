@@ -51,11 +51,10 @@ br
             | &nbsp;&nbsp;
             span.label.warning Бонус <i>+45</i>
     .small-12.large-7.cell
-        .input-group
+        form(action='shop-cart.html' method='get').input-group
             input.input-group-field(type='number' value='1' min='1')
-            .input-group-field
-                a(href='shop-cart.html' title="Товар добавлен в корзину").button.margin-bottom-0
-                    | &nbsp;
+            .input-group-button
+                button(type='submit' title="Товар добавлен в корзину").button.secondary.margin-bottom-0
                     i.fa.fa-shopping-basket.fa-lg
                     | &nbsp;В корзину
                     | &nbsp;
@@ -77,10 +76,10 @@ br
         em.text-dark-gray &nbsp;оценок 25
         | &nbsp; &nbsp;
     .margin-bottom-6
-        a(href='#', title='')
+        a(href='#product-tab-comments', title='')
             i.fa.fa-lg.fa-comments
             | &nbsp;Отзывы&nbsp;
-            span.badge 10
+            span.badge.warning 10
         | &nbsp; &nbsp;
         a(href='shop-compare.html' title="Товар добавлен к сравнению.")
             i.fa.fa-lg.fa-balance-scale

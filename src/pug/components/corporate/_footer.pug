@@ -1,24 +1,73 @@
-.background-black.padding-top-8.padding-bottom-4
-    .grid-container: .grid-x.grid-padding-x: .cell
-        ul.menu-base
+.padding-top-12.padding-bottom-6.background-quaternary.text-white
+    .grid-container: .grid-x.grid-padding-x
+        .small-12.medium-6.large-3.medium-order-1.large-order-1.cell.margin-bottom-6
+            a(href='#')
+                img(src='./images/logo_white.svg', style='max-width: 10rem;', alt='logo')
+        nav.small-12.medium-6.large-3.medium-order-3.large-order-2.cell.margin-bottom-4
+            h6.margin-bottom-3 Навигация
             each title in ['Сайт', 'Магазин', 'Интернет-СМИ', 'Реклама', 'Мобильные', 'Обучение', 'Конверсия']
-                li.menu-base__item
-                    a.menu-base__link(href='#')= title
-    .grid-container: .grid-x.grid-padding-x: .cell
-        br
-        hr.margin-bottom-6
-    .grid-container: .grid-x.grid-padding-x.text-dark-gray
-        .small-12.medium-8.cell
-            .margin-bottom-6
-                | &copy;&nbsp;
-                a.text-light-gray(href='#') Cetera Labs
-                |, 2002–2016
+                .margin-bottom-2: a.text-tertiary(href='#'): strong= title
+        .small-12.medium-6.large-3.medium-order-2.large-order-3.cell.margin-bottom-3
+            h6.margin-bottom-3  Адрес офиса
+            p Проспект Ленина, дом 25, 6 этаж, офис 606 (Адрес для курьера)
+            h6.margin-bottom-3  Почтовый адрес
+            p ООО «Цетера Лабс» Куда: 150040, г.Ярославль, п/о 40, а/я 62
+        .small-12.medium-6.large-3.medium-order-4.large-order-4.cell.margin-bottom-3
+            h6.margin-bottom-3  Телефон
+            .margin-bottom-3
+                a.text-tertiary(href='tel:88007755293') 8 (800) 775-52-93
                 br
-                | Создание сайта &mdash;
-                a.text-light-gray(target='_blank', href='http://cetera.ru/') Cetera Labs
-                | &nbsp;&nbsp;&nbsp;&nbsp;
-                a.text-light-gray(target='_blank', href='http://www.cetera.ru/support/default.php?project=CCD&lang=ru&page=http://wireframes.cetera.ru/boilerplate/') Сообщить об ошибке
-        .small-12.medium-4.cell.text-center.medium-text-right
-            .margin-bottom-6
-                a(href='#')
-                    img(src='./i/image.svg', style='width: 300px; height: 50px; background: #8a8a8a', alt='logo')
+                | Новые Клиенты — нажмите «0»
+                br
+                | Текущие Клиенты — добавочные и мобильные телефоны проектных менеджеров
+            h6.margin-bottom-3  Email
+            .margin-bottom-3
+                a.text-tertiary(href='mailto:welcome@ceteralabs.ru' title='') welcome@ceteralabs.ru
+                br
+                | Для новых Клиентов
+            .margin-bottom-3
+                a.text-tertiary(href='mailto:support@ceteralabs.ru' title='') support@ceteralabs.ru
+                br
+                | Для текущих Клиентов
+            .margin-bottom-3
+                a.text-tertiary(href='mailto:hr@ceteralabs.ru' title='') hr@ceteralabs.ru
+                br
+                | Для кандидатов в коллеги
+    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small.margin-bottom-6
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-vk.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-twitter.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-facebook.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-odnoklassniki.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-instagram.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-google-plus.fa-stack-1x.fa-inverse
+
+    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small
+        | &nbsp;&nbsp;
+        | &copy;&nbsp;
+        a.text-tertiary(href='#') Cetera&nbsp;Labs
+        | ,&nbsp;2002–2018
+        | &nbsp;&nbsp; &nbsp;&nbsp;
+        | Создание&nbsp;сайта&nbsp;&mdash;&nbsp;
+        a.text-tertiary(target='_blank', href='http://cetera.ru/') Cetera&nbsp;Labs
+        | &nbsp;&nbsp; &nbsp;&nbsp;
+        a.text-tertiary(target='_blank', href='http://www.cetera.ru/support/default.php?project=CCD&lang=ru&page=http://wireframes.cetera.ru/boilerplate_wireframe/') Сообщить&nbsp;об&nbsp;ошибке
+        | &nbsp;&nbsp; &nbsp;&nbsp;
+        a.text-tertiary(target='_blank', href='#') Политика&nbsp;конфиденциальности
+        | &nbsp;&nbsp;

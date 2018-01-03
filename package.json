@@ -1,6 +1,6 @@
 {
   "name": "cetera-wireframe-boilerplate",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Шаблон прототипов на фреймворке Foundation в компании Cetera Labs.",
   "main": "gulpfile.js",
   "scripts": {
@@ -12,9 +12,10 @@
   "private": true,
   "dependencies": {
     "font-awesome": "~4.7.0",
+    "@fancyapps/fancybox": "~3.2.5",
     "foundation-sites": "~6.4.3",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-header": "^1.8.9",
     "gulp-imagemin": "^3.4.0",

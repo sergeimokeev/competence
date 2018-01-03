@@ -1,62 +1,33 @@
-.background-black.padding-top-8.padding-bottom-4.text-dark-gray
+.background-quaternary.padding-top-8.padding-bottom-4.text-white
     .grid-container: .grid-x.grid-padding-x
-        .small-12.medium-4.cell
-            .margin-bottom-6 &copy;&nbsp;
-                a(href='#').text-light-gray ООО «Интернет-Магазин»
-                | , 2017
+        .small-12.medium-6.large-3.cell.margin-bottom-6
+            a(href='#')
+                img(src='./images/logo_white.svg', style='max-width: 10rem;', alt='logo')
+
+        .small-6.medium-6.large-3.cell
+            h6.margin-bottom-3: a.text-white(href='#', title='') Магазин
+            nav.margin-bottom-6
+                .margin-bottom-2: a.text-tertiary(href='#'): strong О магазине
+                .margin-bottom-2: a.text-tertiary(href='#'): strong Партнёрам
+                .margin-bottom-2: a.text-tertiary(href='#'): strong Контакты
+
+        .small-6.medium-6.large-3.cell
+            h6.margin-bottom-3: a.text-white(href='#', title='') Покупателям
+            nav.margin-bottom-6
+                .margin-bottom-2: a.text-tertiary(href='#'): strong Доставка
+                .margin-bottom-2: a.text-tertiary(href='#'): strong Оплата
+                .margin-bottom-2: a.text-tertiary(href='#'): strong Возврат
+                .margin-bottom-2: a.text-tertiary(href='#'): strong Гарантия и сервис
+
+        .small-12.medium-6.large-3.cell
+            h6.margin-bottom-3 Контакты
             .margin-bottom-6
                 | 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
                 br
-                a.text-light-gray(href='tel:88000000000') 8 (800) 775-52-93
+                a.text-tertiary(href='tel:88007755293') 8 (800) 775-52-93
                 br
-                a.text-light-gray(href='mailto:welcome@cetera.ru') welcome@cetera.ru
-            .margin-bottom-6
-                a(href='#', title='').fa-stack.fa-lg.text-vk
-                    i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-vk.fa-stack-1x.fa-inverse
-                | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-twi
-                    i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-twitter.fa-stack-1x.fa-inverse
-                | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-fb
-                    i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-facebook.fa-stack-1x.fa-inverse
-                | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-ok
-                    i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-odnoklassniki.fa-stack-1x.fa-inverse
-                | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-insta
-                    i.fa.fa-circle.fa-stack-2x.fa-inverse
-                    i.fa.fa-instagram.fa-stack-1x
-                | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-gp
-                    i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-google-plus.fa-stack-1x.fa-inverse
-
-        .small-12.medium-2.cell
-            .margin-bottom-6: a.text-light-gray(href='#', title=''): strong Магазин
-            .margin-bottom-6
-                a.text-light-gray(href="#") О магазине
-                br
-                a.text-light-gray(href="#") Партнёрам
-                br
-                a.text-light-gray(href="#") Контакты
-
-        .small-12.medium-2.cell
-            .margin-bottom-6: a.text-light-gray(href='#', title=''): strong Покупателям
-            .margin-bottom-6
-                a.text-light-gray(href="#") Доставка
-                br
-                a.text-light-gray(href="#") Оплата
-                br
-                a.text-light-gray(href="#") Возврат
-                br
-                a.text-light-gray(href="#") Гарантия и сервис
-
-        .small-12.medium-4.large-3.large-offset-1.cell
-            .margin-bottom-6: strong Принимаем к оплате
+                a.text-tertiary(href='mailto:welcome@cetera.ru') welcome@cetera.ru
+            h6.margin-bottom-3 Принимаем к оплате
             .margin-bottom-6
                 img(src='./images/shop/visa.svg', style='height: 24px', alt='visa')
                 img(src='./images/shop/mc.svg', style='height: 24px', alt='mc')
@@ -65,9 +36,41 @@
                 img(src='./images/shop/ym.svg', style='height: 24px', alt='ym')
                 img(src='./images/shop/pp.svg', style='height: 24px', alt='pp')
 
-            hr.margin-bottom-6
-            .margin-bottom-6
-                a.text-light-gray(href='http://cetera.ru/', title='') Создание сайта&nbsp;&mdash;&nbsp;
-                | Cetera Labs
-                br
-                a.text-light-gray(href='http://www.cetera.ru/support/default.php?project=CCD&lang=ru&page=http://wireframes.cetera.ru/boilerplate/', title='') Сообщить об ошибке
+    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small.margin-bottom-6
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-vk.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-twitter.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-facebook.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-odnoklassniki.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-instagram.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-google-plus.fa-stack-1x.fa-inverse
+
+    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small
+        | &nbsp;&nbsp;
+        | &copy;&nbsp;
+        a.text-tertiary(href='#') Cetera&nbsp;Labs
+        | ,&nbsp;2002–2018
+        | &nbsp;&nbsp; &nbsp;&nbsp;
+        | Создание&nbsp;сайта&nbsp;&mdash;&nbsp;
+        a.text-tertiary(target='_blank', href='http://cetera.ru/') Cetera&nbsp;Labs
+        | &nbsp;&nbsp; &nbsp;&nbsp;
+        a.text-tertiary(target='_blank', href='http://www.cetera.ru/support/default.php?project=CCD&lang=ru&page=http://wireframes.cetera.ru/boilerplate_wireframe/') Сообщить&nbsp;об&nbsp;ошибке
+        | &nbsp;&nbsp; &nbsp;&nbsp;
+        a.text-tertiary(target='_blank', href='#') Политика&nbsp;конфиденциальности
+        | &nbsp;&nbsp;

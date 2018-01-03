@@ -1,18 +1,17 @@
 mixin newsTile(title, dataEq)
-    .cell
-        .callout
-            .clearfix(data-equalizer-watch=dataEq)
-                .margin-bottom-6
-                    img(src='./i/image.svg', alt='Новый сайт', style='background:#4dc7a0;width:100%;height:220px;')
-                h4.margin-bottom-3
-                    if title
-                        a(href='smi-article.html')= title
-                    else
-                        a(href='smi-article.html') Приняли на комплексное обслуживание новый сайт
-                .margin-bottom-3
-                    if block
-                        block
-                    else
-                        | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-            a(href='smi-article.html') Читать &nbsp;
-                i.fa.fa-long-arrow-right
+    .cell.margin-bottom-6
+        .clearfix(data-equalizer-watch=dataEq)
+            img.margin-bottom-3(src='./i/photo.svg', alt='Новый сайт')
+            h6.margin-bottom-1
+                if title
+                    a(href='smi-article.html')= title
+                else
+                    a(href='smi-article.html') Приняли на комплексное обслуживание новый сайт
+            .margin-bottom-3: a.text-dark-gray(href='#') Экономика
+            .margin-bottom-3
+                if block
+                    block
+                else
+                    | Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
+        a(href='smi-article.html') Читать &nbsp;
+            i.fa.fa-long-arrow-right

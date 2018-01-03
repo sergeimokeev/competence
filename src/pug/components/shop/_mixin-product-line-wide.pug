@@ -1,11 +1,11 @@
 mixin productLineWide(discount, onDemand, inCart, inFavourites)
     .grid-x.grid-padding-x
         .cell.medium-2.large-1.hide-for-small-only
-            .margin-bottom-6: img(src='./i/image.svg' alt='Товар')
+            .margin-bottom-6: img(src='./i/photo.svg' alt='Товар')
         .cell.medium-4.large-6
-            h5.margin-bottom-3
+            h6.margin-bottom-1
                 if discount
-                    span.label.success
+                    span.label.secondary
                         i.fa.fa-star-o
                         | &nbsp;Акция
                     | &nbsp;
@@ -18,7 +18,7 @@ mixin productLineWide(discount, onDemand, inCart, inFavourites)
                         if onDemand
                             span.text-dark-gray: em Нет в наличии&nbsp;
                         else
-                            strong.text-size-xlarge
+                            strong.text-size-xxlarge
                                 | 1&nbsp;250&nbsp;
                                 i.fa.fa-rub
                                 | &nbsp;&nbsp;

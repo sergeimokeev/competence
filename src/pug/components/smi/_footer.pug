@@ -1,91 +1,88 @@
-.background-black.padding-top-8.padding-bottom-4
-    .grid-container: .grid-x.grid-padding-x: .cell
-        .title-bar(data-responsive-toggle='footer-menu', data-hide-for='medium')
-            button.menu-icon(type='button', data-toggle)
-            .title-bar-title Рубрики
-        .margin-bottom-6
-            ul#footer-menu.menu-base
-                li.menu-base__item
-                    a.menu-base__link(href='#') Экономика
-                li.menu-base__item
-                    a.menu-base__link(href='#') Финансы
-                li.menu-base__item
-                    a.menu-base__link(href='#') ТЭК
-                li.menu-base__item
-                    a.menu-base__link(href='#') Интернет
-                li.menu-base__item
-                    a.menu-base__link(href='#') Промышленность
-                li.menu-base__item
-                    a.menu-base__link(href='#') Транспорт
-                li.menu-base__item
-                    a.menu-base__link(href='#') Наука
-                li.menu-base__item
-                    a.menu-base__link(href='#') ИТ и Медиа
-                li.menu-base__item
-                    a.menu-base__link(href='#') Потребительские рынки
-                li.menu-base__item
-                    a.menu-base__link(href='#') ВПК
-                li.menu-base__item
-                    a.menu-base__link(href='#') Бренды
-                li.menu-base__item
-                    a.menu-base__link(href='#') Спорт
-                li.menu-base__item
-                    a.menu-base__link(href='#') Видео
-                li.menu-base__item
-                    a.menu-base__link(href='#') Интервью
-                li.menu-base__item
-                    a.menu-base__link(href='#') Пресс-релизы
-                li.menu-base__item
-                    a.menu-base__link(href='#') Отставки и назначения
-                li.menu-base__item
-                    a.menu-base__link(href='#') Мнения
-        hr.margin-bottom-6
+.background-quaternary.padding-top-8.padding-bottom-4
     .grid-container: .grid-x.grid-padding-x
-        .small-12.medium-7.cell
+        .small-12.large-3.cell.margin-bottom-6
+            a(href='#')
+                img(src='./images/logo_white.svg', style='max-width: 10rem;', alt='logo')
+
+        .small-12.medium-6.large-4.cell
+            h6.margin-bottom-3.text-white Рубрики
+            nav.margin-bottom-6.grid-x.grid-padding-x
+                .small-6.cell
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Экономика
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Финансы
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong ТЭК
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Интернет
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Промышленность
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Транспорт
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Наука
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong ИТ и Медиа
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Потребительские рынки
+                .small-6.cell
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong ВПК
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Бренды
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Спорт
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Видео
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Интервью
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Пресс-релизы
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Отставки и назначения
+                    .margin-bottom-2: a.text-tertiary(href='#'): strong Мнения
+
+        .small-6.medium-3.large-2.cell
+            h6.margin-bottom-3: a.text-white(href='#', title='') Редакция
+            nav.margin-bottom-6
+                .margin-bottom-2: a.text-tertiary(href='#'): strong Реклама
+                .margin-bottom-2: a.text-tertiary(href='#'): strong Медиакит
+                .margin-bottom-2: a.text-tertiary(href='#'): strong Техподдержка
+                .margin-bottom-2: a.text-tertiary(href='#'): strong Спецпроекты
+
+        .small-6.medium-3.large-3.cell
+            h6.margin-bottom-3 Учредитель
+            .margin-bottom-6 ООО «Цетера Лабс»
+            h6.margin-bottom-3 Контакты
             .margin-bottom-6
-                ul.menu-base
-                    li.menu-base__item: a.menu-base__link(href="#") Редакция
-                    li.menu-base__item: a.menu-base__link(href="#") Реклама
-                    li.menu-base__item: a.menu-base__link(href="#") Медиакит
-                    li.menu-base__item: a.menu-base__link(href="#") Техподдержка
-                    li.menu-base__item: a.menu-base__link(href="#") Спецпроекты
-        .small-12.medium-5.cell.text-medium-gray
-            .margin-bottom-6
-                | &copy; Информационное агентство News Service, 2016 г.
-                | Учредитель: ООО «Интернет Новости». Адрес: 115280, Москва, ул. Московская, д. 1
-                | Свидетельство о регистрации СМИ Эл № ФФ07-12345 выдано федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) 08.23.2015
-    .grid-container: .grid-x.grid-padding-x: .cell
-        hr.margin-bottom-6
-    .grid-container: .grid-x.grid-padding-x
-        .small-12.medium-7.cell
-            .margin-bottom-6
-                img(src='./i/image.svg', style='width: 100px; height: 40px; background: #888', alt='counter')
-                | &#160;
-                img(src='./i/image.svg', style='width: 100px; height: 40px; background: #888', alt='counter')
-                | &#160;
-                img(src='./i/image.svg', style='width: 100px; height: 40px; background: #888', alt='counter')
-        .small-12.medium-5.cell.text-dark-gray
-            .margin-bottom-6
-                a(href='#', title='').fa-stack.fa-lg.text-vk
-                    i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-vk.fa-stack-1x.fa-inverse
-                | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-twi
-                    i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-twitter.fa-stack-1x.fa-inverse
-                | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-fb
-                    i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-facebook.fa-stack-1x.fa-inverse
-                | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-ok
-                    i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-odnoklassniki.fa-stack-1x.fa-inverse
-                | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-insta
-                    i.fa.fa-circle.fa-stack-2x.fa-inverse
-                    i.fa.fa-instagram.fa-stack-1x
-                | &nbsp;
-                a(href='#', title='').fa-stack.fa-lg.text-gp
-                    i.fa.fa-circle.fa-stack-2x
-                    i.fa.fa-google-plus.fa-stack-1x.fa-inverse
+                | 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
+                br
+                a.text-tertiary(href='tel:88007755293') 8 (800) 775-52-93
+                br
+                a.text-tertiary(href='mailto:welcome@cetera.ru') welcome@cetera.ru
+
+    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small.margin-bottom-6
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-vk.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-twitter.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-facebook.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-odnoklassniki.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-instagram.fa-stack-1x.fa-inverse
+        | &nbsp;
+        a(href='#', title='').fa-stack.fa-lg.text-tertiary
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-google-plus.fa-stack-1x.fa-inverse
+
+    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small
+        | &nbsp;&nbsp;
+        | &copy;&nbsp;
+        a.text-tertiary(href='#') Cetera&nbsp;Labs
+        | ,&nbsp;2002–2018
+        | &nbsp;&nbsp; &nbsp;&nbsp;
+        | Создание&nbsp;сайта&nbsp;&mdash;&nbsp;
+        a.text-tertiary(target='_blank', href='http://cetera.ru/') Cetera&nbsp;Labs
+        | &nbsp;&nbsp; &nbsp;&nbsp;
+        a.text-tertiary(target='_blank', href='http://www.cetera.ru/support/default.php?project=CCD&lang=ru&page=http://wireframes.cetera.ru/boilerplate_wireframe/') Сообщить&nbsp;об&nbsp;ошибке
+        | &nbsp;&nbsp; &nbsp;&nbsp;
+        a.text-tertiary(target='_blank', href='#') Политика&nbsp;конфиденциальности
+        | &nbsp;&nbsp;
+        br
+        |  Св-во о регистрации СМИ №00000 выдано 01 января 2018 г. Государственным комитетом Российской Федерации по печати

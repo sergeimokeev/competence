@@ -9,7 +9,7 @@ block article
     .grid-container: .grid-x.grid-padding-x
         .small-12.medium-7.large-8.cell
 
-            .content
+            .padding-top-12.padding-bottom-6
                 .margin-bottom-6.text-dark-gray Константин Александропольский, 12:20 16.02.2016
 
                 include components/common/_text
@@ -49,7 +49,7 @@ block article
 
             .grid-x.grid-padding-x: .cell: hr
 
-            .content
+            .padding-top-12.padding-bottom-6
                 h3.text-dark-gray Похожие новости
                 .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-3(data-equalizer='similar', data-equalize-by-row='true')
                     +newsTile(false, 'similar')
@@ -63,7 +63,7 @@ block article
                     include components/smi/_comments
 
         aside.medium-5.large-4.show-for-medium.cell
-            .content
+            .padding-top-12.padding-bottom-6
                 h2 Календарь материалов
                 include components/common/_calendar
                 br

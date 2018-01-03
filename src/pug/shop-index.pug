@@ -12,17 +12,17 @@ html.no-js(lang='ru')
 
         block page
             include components/shop/_carousel-main
-            .content
+            .padding-top-12.padding-bottom-6
                 .grid-container: .grid-x.grid-padding-x.small-up-2.medium-up-4.text-center
                     - var n = 1
                     while n < 5
                         .cell
-                            .margin-bottom-6: a(href='#'): img(src='./i/image.svg' alt='раздел' style='height: 200px; width: 100%; background: #36B6AD;')
+                            .margin-bottom-6: a(href='#'): img(src='./i/photo.svg' alt='раздел' style='width: 100%;')
                             h4: a(href='#') Раздел&nbsp;
                                 = n
                         - n++
             .grid-x.grid-padding-x: .cell: hr
-            .content
+            .padding-top-12.padding-bottom-6
                 .grid-container: .grid-x.grid-padding-x
                     .small-12.medium-8.cell
                         h2 Распродажа
@@ -39,7 +39,7 @@ html.no-js(lang='ru')
             .grid-container: .grid-x.grid-padding-x: .cell: hr
             include components/shop/_banners
             .grid-container: .grid-x.grid-padding-x: .cell: hr
-            .content
+            .padding-top-12.padding-bottom-6
                 .grid-container: .grid-x.grid-padding-x: .cell
                     h2 Рекомендуем
                 .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
@@ -49,18 +49,22 @@ html.no-js(lang='ru')
                     +productTile('Торцовочная пила Ryobi EMS254L', true)
                     +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
                     +productTile('Лобзик Metabo STEB 65 Quick', false)
-            .content(style='background-image: url("./i/image.svg"); background-color: #65318F; background-size: 100% 100%;')
-                .grid-container: .grid-x.grid-padding-x(style='height: 400px'): .cell.align-self-middle
-                    h2.text-white Тотальная распродажа
-                    p.text-white
-                        | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене.
-                        br
-                        | Часто — нулевая стоимость сайта до открытия.
-                    p.text-white
-                        a.button(href='#') Узнайте стоимость товаров &nbsp;<i class="fa fa-long-arrow-right"></i>
+            .background-primary.padding-vertical-20
+                .grid-container
+                    .grid-x.grid-padding-x
+                        .cell.medium-7.align-self-middle
+                            h2.text-white Тотальная распродажа
+                            p.text-white
+                                | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене.
+                                br
+                                | Часто — нулевая стоимость сайта до открытия.
+                            p
+                                a.button.secondary(href='#') Узнайте стоимость товаров &nbsp;<i class="fa fa-long-arrow-right"></i>
+                        .cell.medium-4.medium-offset-1.show-for-medium
+                            img(src='./i/photo.svg' style='width: 100%;')
             include components/shop/_brands
             .grid-container: .grid-x.grid-padding-x: .cell: hr
-            .content
+            .padding-top-12.padding-bottom-6
                 .grid-container: .grid-x.grid-padding-x
                     .small-12.medium-6.cell
                         h2 О магазине
@@ -76,7 +80,7 @@ html.no-js(lang='ru')
             .grid-container: .grid-x.grid-padding-x: .cell: hr
             include components/shop/_index-news
             .grid-container: .grid-x.grid-padding-x: .cell: hr
-            .content
+            .padding-top-12.padding-bottom-6
                 .grid-container: .grid-x.grid-padding-x: .cell
                     h2 Рассылка
                 .grid-container: .grid-x.grid-padding-x
@@ -84,7 +88,7 @@ html.no-js(lang='ru')
                         .input-group
                             input.input-group-field(type='email' placeholder='Введите ваш e-mail')
                             .input-group-button
-                                button.button(type='button')
+                                button.button.secondary(type='button')
                                     i.fa.fa-envelope-o
                                     = ' '
                                     | Подписаться

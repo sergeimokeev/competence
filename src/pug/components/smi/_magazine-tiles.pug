@@ -1,14 +1,11 @@
 //- magazineTile mixin START
 mixin magazineTile(title)
-    .cell
-        .callout.news-card
-            .margin-bottom-6
-                img(src='./i/image.svg', alt='Обложка журнала', style='background:#4da0c7;width:100%;height:220px;')
-            .margin-bottom-6
-                a(href='#')= title
+    .cell.margin-bottom-6
+        a(href='#'): img.margin-bottom-3(src='./i/photo.svg' alt='Обложка журнала')
+        a(href='#')= title
 //- magazineTile mixin END
 
-.content
+.padding-top-12.padding-bottom-6
     .grid-x.grid-padding-x
         .small-12.medium-8.cell
             h2 Выпуски журналов

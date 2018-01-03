@@ -1,34 +1,25 @@
-.x-carousel-main.carousel-main
-    .carousel-main__item(style='background-image: url("./i/image.svg"); background-color: #1ccacd; background-size: 100% 100%;')
+.x-carousel-main.carousel-main.background-main
+    .carousel-main__item
         .grid-container: .grid-x.grid-padding-x.carousel-main__content
-            .cell.align-self-middle
-                h2.text-white Ответ на любой вопрос по рекламе
-                .margin-bottom-6.text-white
-                    a.button(href='#')
-                        i.fa.fa-exclamation-circle.fa-lg
-                        | &nbsp; Закажите бесплатную консультацию в CeteraPromo прямо сейчас!
-    .carousel-main__item(style='background-image: url("./i/image.svg"); background-color: #0c75bc; background-size: 100% 100%;')
-        .grid-container: .grid-x.grid-padding-x.carousel-main__content
-            .cell.align-self-middle
-                h2.text-white Новые сайты на Fastsite с индивидуализацией
-                .margin-bottom-6.text-white
-                    a.text-white(href='#') Осенью 2015 запустили конструктор сайтов Fastsite. В конце 2015 на Fastsite вышло сразу несколько сайтов с индивидуализацией.
-                .margin-bottom-6.text-white
-                    a.button.success(href='#') Создать сайт бесплатно
-    .carousel-main__item(style='background-image: url("./i/image.svg"); background-color: #4dc7a0; background-size: 100% 100%;')
-        .grid-container: .grid-x.grid-padding-x.carousel-main__content
-            .cell.align-self-middle
-                h2.text-white Ответ на любой вопрос по рекламе
-                .margin-bottom-6
-                    a.text-white(href='#') Закажите бесплатную консультацию в CeteraPromo прямо сейчас!
-    .carousel-main__item(style='background-image: url("./i/image.svg"); background-color: #ca3034; background-size: 100% 100%;')
-        .grid-container: .grid-x.grid-padding-x.carousel-main__content
-            .cell.align-self-middle
-                h2.text-white Абонентское обслуживание
-                .margin-bottom-6.text-white
+            .cell.medium-4.show-for-medium.align-self-middle
+                img(src='./i/photo.svg' style='width: 100%;')
+            .cell.medium-7.medium-offset-1.align-self-middle.text-left
+                h2 Ответ на любой вопрос по рекламе
+                .margin-bottom-6.text-size-large
                     | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене.
                     br
                     | Часто — нулевая стоимость сайта до открытия.
-                .margin-bottom-6.text-white
-                    a.button(href='#') Узнайте стоимость сайта &nbsp;
-                        i.fa.fa-long-arrow-right
+                .margin-bottom-6
+                    a.button.secondary(href='#')
+                        i.fa.fa-exclamation-circle.fa-lg
+                        | &nbsp; Закажите бесплатную консультацию в Cetera прямо сейчас!
+    .carousel-main__item
+        .grid-container: .grid-x.grid-padding-x.carousel-main__content
+            .cell.medium-7.align-self-middle.text-left
+                h2 Новые сайты на Fastsite с индивидуализацией
+                .margin-bottom-6.text-size-large
+                    | Осенью 2015 запустили конструктор сайтов Fastsite. В конце 2015 на Fastsite вышло сразу несколько сайтов с индивидуализацией.
+                .margin-bottom-6
+                    a.button.secondary(href='#') Создать сайт бесплатно
+            .cell.medium-4.medium-offset-1.show-for-medium.align-self-middle
+                img(src='./i/photo.svg' style='width: 100%;')

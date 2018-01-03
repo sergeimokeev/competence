@@ -1,7 +1,7 @@
-.content
+.padding-top-12.padding-bottom-6
     .grid-container: .grid-x.grid-padding-x.small-up-2.medium-up-3.large-up-6
         each item, index in {"truck-with-right-arrow":"Бесплатная доставка от 1200 рублей", "globe":"Доставка по всей России", "working-hours":"Доставка от 3 до 10 дней", "lock":"Защищённый платёж", "item-return":"Бесплатный возврат в течение 30 дней", "clothes-measure":"Можно примерить перед оплатой"}
             .cell.text-center
                 .margin-bottom-2: svg(style='height: 70px; width:100%')
-                    use(xlink:href= '#' + index)
+                    use(xlink:href= '#' + index fill='#48626F')
                 .margin-bottom-6= item

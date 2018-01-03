@@ -25,7 +25,7 @@ button.search-top__button {
   background: $white;
   height: $search-height;
   width: $search-height;
-  color: map-get($foundation-palette, primary);
+  color: map-get($foundation-palette, secondary);
 }
 
 @include breakpoint(medium only) {

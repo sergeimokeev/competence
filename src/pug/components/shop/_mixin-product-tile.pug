@@ -1,11 +1,11 @@
 mixin productTile(title, discount)
     .cell
         .clearfix(data-equalizer-watch)
-            .margin-bottom-6
-                a(href='shop-product.html'): img(src='./i/image.svg' alt='товар' style='background:#e6e6e6;')
+            .margin-bottom-4
+                a(href='shop-product.html'): img(src='./i/photo.svg' alt='товар')
             .margin-bottom-3
                 if discount
-                    span.label.success
+                    span.label.secondary
                         i.fa.fa-star-o
                         | &nbsp;Акция
                     | &nbsp;

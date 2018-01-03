@@ -6,6 +6,7 @@
   text-transform: uppercase;
   position: relative;
   z-index: 100;
+  font-weight: 500;
 }
 
 .menu-base__item {
@@ -16,6 +17,7 @@
 
   & .menu-base {
     text-transform: none;
+    font-weight: 400;
     display: none;
     position: absolute;
     margin: rem-calc(-3 0 0) -1rem;
@@ -23,8 +25,8 @@
     top: 100%;
     left: 0;
     width: 15rem;
-    background: scale-color($primary-color, $lightness: 10%);
-    border-bottom: rem-calc(2) solid $white;
+    background: scale-color($main-color, $lightness: 50%);
+    border-bottom: rem-calc(2) solid $warning-color;
   }
 
   &:last-child .menu-base {
@@ -39,11 +41,13 @@
     & .menu-base__link {
       display: block;
       padding: 0.5rem 1rem;
+      color: $secondary-color;
       &:after {
         display: none;
       }
       &:hover {
-        background: $primary-color;
+        color: $secondary-color;
+        background: scale-color($main-color, $lightness: 10%);
       }
     }
   }
@@ -52,17 +56,17 @@
 .menu-base__link {
   @include disable-mouse-outline;
   display: block;
-  color: $white;
+  color: $secondary-color;
   position: relative;
 
   &:hover, &:focus {
-    color: $white;
+    color: $secondary-color;
   }
 
   &:after {
     content: ' ';
     display: block;
-    border-bottom: rem-calc(2) solid $white;
+    border-bottom: rem-calc(2) solid $warning-color;
     width: 0;
     position: absolute;
     left: 0;
