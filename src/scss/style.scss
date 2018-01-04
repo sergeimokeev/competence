@@ -23,7 +23,7 @@ $minify: false !default;
 @import "slick.scss";
 @import "foundation";
 @import "motion-ui";
-@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+@import "jquery.fancybox";
 @include foundation-everything(true, true);
 
 @import "common";

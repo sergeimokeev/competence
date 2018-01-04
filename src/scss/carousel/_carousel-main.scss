@@ -13,6 +13,14 @@
   }
 }
 
-.carousel-main__content {
-  height: rem-calc(400);
+@include breakpoint(medium up) {
+  .carousel-main__content {
+    min-height: rem-calc(300);
+  }
+}
+
+@include breakpoint(large up) {
+  .carousel-main__content {
+    min-height: rem-calc(400);
+  }
 }
