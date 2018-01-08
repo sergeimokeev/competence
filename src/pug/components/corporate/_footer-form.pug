@@ -2,36 +2,36 @@
     .grid-container: .grid-x.grid-padding-x: .cell
         h2 Мы на связи
     .grid-container: .grid-x.grid-padding-x
-        .small-12.large-7.cell
+        .small-24.large-14.cell
             form(method='post', data-abide='', novalidate='novalidate')
                 .grid-x.grid-padding-x
-                    .small-12.medium-4.cell
+                    .small-24.medium-8.cell
                         label Ваше имя
-                    .small-12.medium-8.cell
+                    .small-24.medium-16.cell
                         input(type='text', placeholder='Ваше имя', required='')
                         p.help-text Поле обязательно для заполнения
                 .grid-x.grid-padding-x
-                    .small-12.medium-4.cell
+                    .small-24.medium-8.cell
                         label Email
-                    .small-12.medium-8.cell
+                    .small-24.medium-16.cell
                         input(type='email', placeholder='username@address.com', required='')
                         p.help-text Введите ваш электронный адрес
                 .grid-x.grid-padding-x
-                    .small-12.medium-4.cell
+                    .small-24.medium-8.cell
                         label Чем мы можем помочь?
-                    .small-12.medium-8.cell
+                    .small-24.medium-16.cell
                         textarea(placeholder='Введите ваше сообщение')
                 .grid-x.grid-padding-x
-                    .shrink.medium-offset-4.cell
+                    .shrink.medium-offset-8.cell
                         input(type='checkbox' id='agreement' name='agreement')
                     .auto.cell
                         label(for='agreement') Соглашаюсь на #[a(href='' title='условия') обработку персональных данных]
                 .grid-x.grid-padding-x
-                    .small-12.medium-8.medium-offset-4.cell
+                    .small-24.medium-16.medium-offset-8.cell
                         button.secondary.button(type='submit')
                             | Отправить сообщение &nbsp;
                             i.fa.fa-envelope-o.fa-lg
-        .large-2.large-offset-1.small-6.cell.text-center
+        .large-4.large-offset-2.small-12.cell.text-center
             .margin-bottom-12.hide-for-large
             .margin-bottom-6
                 img(src='./i/photo.svg', alt='1', style='max-width: 150px')
@@ -50,7 +50,7 @@
                 a(href='#', title='').fa-stack.fa-lg.text-tertiary
                     i.fa.fa-circle.fa-stack-2x
                     i.fa.fa-facebook.fa-stack-1x.fa-inverse
-        .large-2.small-6.cell.text-center
+        .large-4.small-12.cell.text-center
             .margin-bottom-12.hide-for-large
             .margin-bottom-6
                 img(src='./i/photo.svg', alt='2', style='max-width: 150px')

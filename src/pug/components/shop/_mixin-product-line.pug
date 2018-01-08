@@ -1,10 +1,10 @@
 mixin productLine(discount, onDemand, inCart, inFavourites)
     .grid-x.grid-padding-x
-        .cell.small-4.medium-3
+        .cell.small-8.medium-6
             .margin-bottom-6: img(src='./i/photo.svg' alt='Товар')
-        .cell.small-8.medium-9
+        .cell.small-16.medium-18
             .grid-x.grid-padding-x
-                .cell.small-12.medium-7
+                .cell.small-24.medium-14
                     h5.margin-bottom-0
                         if discount
                             span.label.secondary
@@ -13,7 +13,7 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                             | &nbsp;
                         a(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
                     .margin-bottom-3: a.text-dark-gray.text-size-small(href='shop-catalog.html') Шуроповерты
-                .cell.small-12.medium-5.large-4.large-offset-1
+                .cell.small-24.medium-10.large-8.large-offset-2
                     if onDemand
                         .margin-bottom-6
                             span.text-dark-gray: em Нет в наличии&nbsp;
@@ -28,7 +28,7 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                                     | 1&nbsp;750&nbsp;
                                     i.fa.fa-rub
             .grid-x.grid-padding-x
-                .cell.small-12.medium-7.align-self-middle
+                .cell.small-24.medium-14.align-self-middle
                     ul.margin-bottom-3.hide-for-small-only
                         li Гарантия: 1 год
                         li Мощность: 1000W
@@ -48,7 +48,7 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                         a.text-dark-gray(href='shop-compare.html' title='')
                             i.fa.fa-balance-scale
                             | &nbsp;Сравнить
-                .cell.small-12.medium-5.large-4.large-offset-1.align-self-bottom
+                .cell.small-24.medium-10.large-8.large-offset-2.align-self-bottom
                     if onDemand
                         .margin-bottom-6
                             a(href='#' title='')

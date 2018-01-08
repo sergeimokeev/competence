@@ -1,12 +1,12 @@
 .padding-vertical-6
     .grid-container: .grid-x.grid-padding-x
-        .small-9.medium-3.large-2.cell.text-center.large-text-left
+        .small-18.medium-6.large-4.cell.text-center.large-text-left
             .margin-bottom-6
                 a(href='#' title='')
                     img(src='./images/logo.svg', style='max-width: 15rem;', alt='logo')
         .shrink.cell.text-center
             .margin-bottom-6.text-age-rating.stat: strong 18+
-        .small-12.medium-auto.cell.text.medium-text-right
+        .small-24.medium-auto.cell.text.medium-text-right
             a.text-size-xxlarge(data-open='region') Москва
             | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             i.fa.fa-thermometer-half
@@ -27,11 +27,11 @@
 .reveal.small#region(data-reveal)
     h3 Выберите ваш регион
     .grid-x
-        .small-6.cell
+        .small-12.cell
             h5.margin-bottom-2: a(href='#') Москва
             h5.margin-bottom-2: a(href='#') Санкт-Петербург
             h5.margin-bottom-2: a(href='#') Екатеринбург
-        .small-6.cell
+        .small-12.cell
             h5.margin-bottom-2: a(href='#') Новосибирск
             h5.margin-bottom-2: a(href='#') Владивосток
     button(class="close-button" data-close aria-label="Close Accessible Modal" type="button")
@@ -39,7 +39,7 @@
 
 .background-main.padding-vertical-3
     .grid-container: .grid-x.grid-padding-x
-        .small-12.cell
+        .small-24.cell
             .show-for-small-only(data-responsive-toggle='menu', data-hide-for='medium')
                 .text-secondary.text-size-xxlarge(data-toggle)
                     i.fa.fa-bars

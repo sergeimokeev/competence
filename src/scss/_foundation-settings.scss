@@ -146,7 +146,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'Ubuntu', 'Roboto', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$header-font-family: $body-font-family;
 $header-font-weight: 300;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -873,7 +873,7 @@ $topbar-unstack-breakpoint: medium;
 
 $xy-grid: true;
 $grid-container: $global-width;
-$grid-columns: 12;
+$grid-columns: 24;
 $grid-margin-gutters: (
   small: 1.5rem,
   medium: 1.5rem

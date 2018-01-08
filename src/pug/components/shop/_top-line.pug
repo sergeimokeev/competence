@@ -1,6 +1,6 @@
 .padding-top-4.padding-bottom-2.text-size-small.background-primary
     .grid-container: .grid-x.grid-padding-x
-        .small-12.medium-6.large-4.cell.medium-order-2
+        .small-24.medium-12.large-8.cell.medium-order-2
             .padding-bottom-2.text-left.medium-text-right
                 span.text-white.show-for-small-only(data-responsive-toggle='responsive-menu', data-hide-for='medium')
                     i.fa.fa-bars.fa-lg(data-toggle)
@@ -12,7 +12,7 @@
                         | Ярославская область
                         | &nbsp;
                         i.fa.fa-caret-down.fa-lg
-        .small-12.medium-6.large-8.cell.medium-order-1
+        .small-24.medium-12.large-16.cell.medium-order-1
             .padding-bottom-2#responsive-menu
                 ul.menu-top
                     each title in ['Доставка', 'Оплата', 'Контакты', 'Помощь']
@@ -20,7 +20,7 @@
                             a.menu-top__link(href='#')= title
 
 .grid-container: .grid-x.grid-padding-x
-    .cell.small-12.large-9.large-offset-3
+    .cell.small-24.large-18.large-offset-6
         .dd(id='location' data-toggler='.dd_show')
             .dd__content.callout
                 .grid-container: .grid-x.grid-padding-x.small-up-2.medium-up-4.large-up-4
