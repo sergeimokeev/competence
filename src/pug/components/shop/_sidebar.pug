@@ -1,7 +1,12 @@
-.margin-bottom-6.show-for-small-only(data-responsive-toggle='menu-left', data-hide-for='medium'): span.button.light-gray.expanded(data-toggle)
-    i.fa.fa-lg.fa-bars
-    | &nbsp;Навигация
-.padding-6.margin-bottom-6.radius.background-main#menu-left
+.margin-bottom-6.show-for-small-only
+    span.button-group.expanded
+        span.button.light-gray.expanded(data-toggle='menu-left')
+            i.fa.fa-lg.fa-bars
+            | &nbsp;Навигация
+        span.button.light-gray.expanded(data-toggle='filter-left')
+            i.fa.fa-lg.fa-filter
+            | &nbsp;Фильтр
+.hide-for-small-only.padding-6.margin-bottom-6.radius.background-main#menu-left(data-toggler='.hide-for-small-only')
     ul.menu.vertical
         li: a(href='#') Всё для сада
         li.active: a(href='#') Ручной инструмент
@@ -14,10 +19,7 @@
                 li: a(href='#') Краскопульты
         li: a(href='#') Силовая техника
 
-.margin-bottom-6.show-for-small-only(data-responsive-toggle='filter-left', data-hide-for='medium'): span.button.light-gray.expanded(data-toggle)
-    i.fa.fa-lg.fa-filter
-    | &nbsp;Фильтр
-div#filter-left
+.hide-for-small-only#filter-left(data-toggler='.hide-for-small-only')
     ul.accordion(data-accordion data-multi-expand='true' data-allow-all-closed='true')
         li.accordion-item.is-active(data-accordion-item)
             a.accordion-title(href='#'): strong Цена, руб
@@ -29,7 +31,7 @@ div#filter-left
                 .grid-x.grid-padding-x
                     .small-12.cell: input(type="number" id="sliderOutput1")
                     .small-12.cell: input(type="number" id="sliderOutput2")
-        li.accordion-item.is-active(data-accordion-item)
+        li.accordion-item(data-accordion-item)
             a.accordion-title(href='#'): strong Мощность, W
             .accordion-content(data-tab-content)
                 input#checkbox1(type='checkbox')
