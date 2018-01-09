@@ -1,5 +1,25 @@
 extends shop-regular
 
+mixin productTileForCompare(instock, incart)
+    .margin-bottom-6
+        a.text-dark-gray.no-wrap(href="#" title='')
+            i.fa.fa-lg.fa-times-circle-o
+            | &nbsp;Убрать
+    .margin-bottom-6: a(href="shop-product.html" title=''): img(src='./i/photo.svg' alt='Товар' style='height: 80px')
+    .margin-bottom-3: a(href='shop-product.html' title='') Керамогранит Kerama Marazzi Сенегал, 50,2 х 50,2 см, бежевый
+    .margin-bottom-3: strong
+        | 73&nbsp;250&nbsp;
+        i.fa.fa-rub
+    .margin-bottom-3
+        if instock
+            if incart
+                i.fa.fa-check &#160;
+                | В корзине
+            unless incart
+                a(href='shop-cart.html' title='').button.hollow Купить
+        unless instock
+            span.text-dark-gray Нет в наличии
+
 block content
     .grid-container: .grid-x.grid-padding-x: .cell
         h1 Сравнить товары
@@ -14,30 +34,12 @@ block content
                 | &nbsp; &nbsp;
                 a(href='#' title='') Все параметры
 
-            mixin productTileForCompare(instock, incart)
-                .margin-bottom-6
-                    a.text-dark-gray.no-wrap(href="#" title='')
-                        i.fa.fa-lg.fa-times-circle-o
-                        | &nbsp;Убрать
-                .margin-bottom-6: a(href="shop-product.html" title=''): img(src='./i/photo.svg' alt='Товар' style='height: 80px')
-                .margin-bottom-3: a(href='shop-product.html' title='') Керамогранит Kerama Marazzi Сенегал, 50,2 х 50,2 см, бежевый
-                .margin-bottom-3: strong
-                    | 73&nbsp;250&nbsp;
-                    i.fa.fa-rub
-                .margin-bottom-3
-                    if instock
-                        if incart
-                            i.fa.fa-check &#160;
-                            | В корзине
-                        unless incart
-                            a(href='shop-cart.html' title='').button.hollow Купить
-                    unless instock
-                        span.text-dark-gray Нет в наличии
-
             .table-scroll
                 table
                     tr(style="vertical-align:top;")
                         td
+                            a.no-wrap.text-dark-gray(href="#" title='')
+                                | #[i.fa.fa-lg.fa-times-circle] Очистить список
                         td
                             +productTileForCompare('instock')
                         td
