@@ -1,9 +1,9 @@
 mixin productTile(title, discount)
     .cell
-        .grid-x(data-equalizer-watch)
+        .grid-x.align-top
             .cell.small-5.medium-24.margin-bottom-4
                 a(href='shop-product.html'): img(src='./i/photo.svg' alt='товар')
-            .cell.small-18.medium-24.small-offset-1.large-offset-0.margin-bottom-3
+            .cell.small-18.medium-24.small-offset-1.large-offset-0.margin-bottom-3(data-equalizer-watch)
                 if discount
                     span.label.secondary
                         i.fa.fa-star-o
@@ -17,19 +17,19 @@ mixin productTile(title, discount)
                 br
                 a.text-dark-gray.text-size-small(href='shop-catalog.html') Шуроповерты
         hr.margin-bottom-3.show-for-medium
-        .margin-bottom-3
-            strong.text-size-large
-                | 1&nbsp;250&nbsp;
-                i.fa.fa-rub
-            if discount
-                | &nbsp;&nbsp;
-                del.text-dark-gray.text-size-small
-                    | 1&nbsp;750&nbsp;
+        .grid-x.grid-padding-x.margin-bottom-6
+            .cell.auto.medium-24.margin-bottom-3
+                strong.text-size-large
+                    | 1&nbsp;250&nbsp;
                     i.fa.fa-rub
-        .grid-x.margin-bottom-6
-            .small-10.cell
+                if discount
+                    | &nbsp; &nbsp;
+                    del.text-dark-gray.text-size-small
+                        | 1&nbsp;750&nbsp;
+                        i.fa.fa-rub
+            .cell.shrink.medium-10
                 a(href='shop-cart.html').button.small.primary.hollow.expanded.margin-bottom-0 Купить
-            .small-14.cell.text-right.align-self-middle
+            .cell.shrink.medium-14.text-right.align-self-middle
                 a.text-dark-gray(title='Запомнить' data-open="add-to-favourites-auth-popup")
                     i.fa.fa-heart-o.fa-lg
                 | &nbsp;&nbsp;&nbsp;
