@@ -14,7 +14,7 @@
             label.checkbox-group__label(for='color4' style='background-color: #deb887;') &nbsp;
 
 #no-size-popup.reveal.small(data-reveal)
-    h3 Этого цвета сейчас нет. Сообщить о появлении?
+    h4 Этого цвета сейчас нет. Сообщить о появлении?
     form.input-group.margin-bottom-1
         input.input-group-field(type='text' placeholder='На email')
         .input-group-button
@@ -35,25 +35,26 @@
             label.checkbox-group__label(for='size3') 41
             input.checkbox-group__item(type='radio' id='size4' name='size')
             label.checkbox-group__label(for='size4') 42
+            label.checkbox-group__label(data-toggle='no-size' style='background: linear-gradient(45deg, #fff 49%, red 49%, red 51%, #fff 51%) no-repeat;' data-open="no-size-popup") 43
             input.checkbox-group__item(type='radio' id='size5' name='size')
-            label.checkbox-group__label(for='size5') 43
-            label.checkbox-group__label(data-toggle='no-size' style='background: linear-gradient(45deg, #fff 49%, red 49%, red 51%, #fff 51%) no-repeat;' data-open="no-size-popup") 44
+            label.checkbox-group__label(for='size5') 44
         .margin-bottom-6
             a(href='#', title='') Таблица размеров
 
-.grid-x.grid-padding-x
-    .small-24.large-10.cell
-        .margin-bottom-6
-            span.stat
-                | 25 280&nbsp;
-                i.fa.fa-rub
-            br
-            del.text-dark-gray
-                | 27 150 &nbsp;
-                i.fa.fa-rub
-            | &nbsp;&nbsp;
-            span.label.warning Бонус <i>+45</i>
-    .small-24.large-14.cell
+.grid-x.grid-padding-x.margin-bottom-6
+    .cell.shrink
+        span.stat
+            | 25 280&nbsp;
+            i.fa.fa-rub
+    .cell.shrink
+        del.text-dark-gray
+            | 27 150 &nbsp;
+            i.fa.fa-rub
+        br
+        span.label.warning Бонус <i>+45</i>
+
+.grid-x.grid-padding-x.align-middle
+    .small-24.large-auto.cell
         form(action='shop-cart.html' method='get').input-group
             input.input-group-field(type='number' value='1' min='1')
             .input-group-button
@@ -61,6 +62,14 @@
                     i.fa.fa-shopping-basket.fa-lg
                     | &nbsp;В корзину
                     | &nbsp;
+    .small-24.large-shrink.cell.margin-bottom-6
+        a(href='shop-compare.html' title="Товар добавлен к сравнению.")
+            i.fa.fa-lg.fa-balance-scale
+            span.text-dark-gray &nbsp;К сравнению
+        | &nbsp; &nbsp;
+        a(data-open="add-to-favourites-auth-popup")
+            i.fa.fa-lg.fa-heart-o
+            span.text-dark-gray &nbsp;Запомнить
 
 
 .grid-x.grid-padding-x: .cell
@@ -78,16 +87,4 @@
             label.rating__star(for="rating1")
         em.text-dark-gray &nbsp;оценок 25
         | &nbsp; &nbsp;
-    .margin-bottom-6
-        a(href='#product-tab-comments', title='')
-            i.fa.fa-lg.fa-comments
-            | &nbsp;Отзывы&nbsp;
-            span.badge.warning 10
-        | &nbsp; &nbsp;
-        a(href='shop-compare.html' title="Товар добавлен к сравнению.")
-            i.fa.fa-lg.fa-balance-scale
-            | &nbsp;К сравнению
-        | &nbsp; &nbsp;
-        a(data-open="add-to-favourites-auth-popup")
-            i.fa.fa-lg.fa-heart-o
-            | &nbsp;Запомнить
+
