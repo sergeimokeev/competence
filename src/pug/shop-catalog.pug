@@ -5,36 +5,31 @@ block content
         h1 Каталог
     .padding-top-12.padding-bottom-6
         .grid-container: .grid-x.grid-padding-x
-            .cell.small-6.medium-8.large-6
-                a.button.light-gray.expanded(href='shop-compare.html')
-                    i.fa.fa-lg.fa-balance-scale
-                    span.hide-for-small-only &nbsp;Сравнить:
-                    | &nbsp;5
-            .cell.small-18.medium-auto.text-center.medium-text-left
-                .margin-bottom-6
-                    span.button-group
-                        a.button.light-gray(href='#')
-                            | Цена&nbsp;
-                            i.fa.fa-sort-amount-desc
-                        a.button.light-gray(href='#')
-                            | Цена&nbsp;
-                            i.fa.fa-sort-amount-asc
-                        a.button.light-gray(href='#')
-                            span.hide-for-small-only Новинки&nbsp;
-                            i.fa.fa-certificate.fa-lg.show-for-small-only
-                        a.button.light-gray(href='#')
-                            span.hide-for-small-only Популярные&nbsp;
-                            i.fa.fa-star.fa-lg.show-for-small-only
-            .cell.small-24.medium-shrink.medium-text-right.text-center
-                .margin-bottom-6.hide-for-small-only
-                    span.button-group
-                        a.button.light-gray(href='shop-catalog.html'): i.fa.fa-lg.fa-th
-                        a.button.light-gray(href='shop-catalog-lines.html'): i.fa.fa-lg.fa-th-list
-
-        .grid-container: .grid-x.grid-padding-x
             .cell.small-24.medium-8.large-6
                 include components/shop/_sidebar
             .cell.small-24.medium-16.large-18
+                .grid-x.grid-padding-x
+                    .cell.auto.medium-shrink
+                        button.button.hollow.secondary.expanded.dropdown.margin-bottom-6(data-toggle='sort-dropdown' data-position="bottom" data-alignment="left") По популярности
+                        #sort-dropdown.dropdown-pane(data-dropdown)
+                            ul.menu.vertical
+                                li: a(href='') Сначала новинки
+                                li: a(href='') Сначала дешёвые
+                                li: a(href='') Сначала дорогие
+                                li.active: a(href='') По популярности
+                                li: a(href='') По рейтингу
+                    .cell.show-for-medium.auto
+                    .cell.shrink
+                        a.button.light-gray.expanded(href='shop-compare.html')
+                            i.fa.fa-lg.fa-balance-scale.hide-for-medium-only
+                            span.hide-for-small-only &nbsp;Сравнить:
+                            | &nbsp;5
+                    .cell.small-24.medium-shrink
+                        .margin-bottom-6.hide-for-small-only
+                            span.button-group
+                                a.button.light-gray(href='shop-catalog.html'): i.fa.fa-lg.fa-th
+                                a.button.light-gray(href='shop-catalog-lines.html'): i.fa.fa-lg.fa-th-list
+
                 block products
                     .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-4.margin-bottom-12(data-equalizer data-equalize-by-row="true")
                         +productTile('Комби-перфоратор Metabo KHE 2650', false)
