@@ -13,10 +13,20 @@
             input.checkbox-group__item(type='radio' id='color4' name='color')
             label.checkbox-group__label(for='color4' style='background-color: #deb887;') &nbsp;
 
-.grid-x.grid-padding-x
+#no-size-popup.reveal.small(data-reveal)
+    h3 Этого цвета сейчас нет. Сообщить о появлении?
+    form.input-group.margin-bottom-1
+        input.input-group-field(type='text' placeholder='На email')
+        .input-group-button
+            button.button.margin-bottom-0(type='button') Сообщить
+
+    button.close-button(data-close aria-label="Закрыть")
+        span(aria-hidden="true") &times;
+
+.grid-x.grid-padding-x.margin-bottom-6
     .small-24.large-4.cell Размер:
     .cell.auto
-        .checkbox-group
+        .checkbox-group.margin-bottom-2
             input.checkbox-group__item(type='radio' id='size1' name='size')
             label.checkbox-group__label(for='size1') 39
             input.checkbox-group__item(type='radio' id='size2' name='size')
@@ -27,16 +37,9 @@
             label.checkbox-group__label(for='size4') 42
             input.checkbox-group__item(type='radio' id='size5' name='size')
             label.checkbox-group__label(for='size5') 43
-
-.grid-x.grid-padding-x
-    .large-20.large-offset-4.cell
+            label.checkbox-group__label(data-toggle='no-size' style='background: linear-gradient(45deg, #fff 49%, red 49%, red 51%, #fff 51%) no-repeat;' data-open="no-size-popup") 44
         .margin-bottom-6
             a(href='#', title='') Таблица размеров
-            br
-            span.text-dark-gray Нет нужного размера или цвета?
-            a.pseudo-link(href='#') &nbsp; Сообщим о появлении.
-
-br
 
 .grid-x.grid-padding-x
     .small-24.large-10.cell
