@@ -3,7 +3,7 @@ mixin productTile(title, discount)
         .grid-x.align-top
             .cell.small-5.medium-24.margin-bottom-4
                 a(href='shop-product.html'): img(src='./i/photo.svg' alt='товар')
-            .cell.small-18.medium-24.small-offset-1.large-offset-0.margin-bottom-3(data-equalizer-watch)
+            .cell.small-18.medium-24.small-offset-1.medium-offset-0.margin-bottom-3(data-equalizer-watch)
                 if discount
                     span.label.secondary
                         i.fa.fa-star-o
@@ -27,9 +27,9 @@ mixin productTile(title, discount)
                     del.text-dark-gray.text-size-small
                         | 1&nbsp;750&nbsp;
                         i.fa.fa-rub
-            .cell.shrink.medium-10
-                a(href='shop-cart.html').button.small.primary.hollow.expanded.margin-bottom-0 Купить
-            .cell.shrink.medium-14.text-right.align-self-middle
+            .cell.shrink.medium-auto
+                a(href='shop-cart.html').button.small.primary.hollow.margin-bottom-0 Купить
+            .cell.shrink.text-right.align-self-middle
                 a.text-dark-gray(title='Запомнить' data-open="add-to-favourites-auth-popup")
                     i.fa.fa-heart-o.fa-lg
                 | &nbsp;&nbsp;&nbsp;
