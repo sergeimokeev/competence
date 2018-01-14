@@ -1,13 +1,17 @@
 mixin readCommentTile(title)
     .margin-bottom-6
         .clearfix(data-equalizer-watch='readCommentTile')
-            img.margin-bottom-3(src='./i/photo.svg', alt='Статья')
-            h5.margin-bottom-3
-                if title
-                    a(href='#')= title
-                else
-                    a(href='#') Приняли на комплексное обслуживание новый сайт
-            block
+            .grid-x
+                .cell.small-5.medium-24.margin-bottom-3
+                    img(src='./i/photo.svg', alt='Статья')
+                .cell.small-18.medium-24.small-offset-1.medium-offset-0
+                    h5.margin-bottom-3
+                        if title
+                            a(href='#')= title
+                        else
+                            a(href='#') Приняли на комплексное обслуживание новый сайт
+                    block
+            .margin-bottom-3 Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
         a(href='#') Читать &nbsp;
             i.fa.fa-long-arrow-right
 
@@ -16,18 +20,16 @@ mixin readCommentTile(title)
         .small-24.medium-12.cell
             h2 Читают
             +readCommentTile()
-                .margin-bottom-6
+                .margin-bottom-3
                     i.fa.fa-eye &nbsp;
                     span.text-dark-gray Читают: 50
-                .margin-bottom-6 Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
 
         .small-24.medium-12.cell
             h2 Комментируют
             +readCommentTile('Разработаем несколько интернет-магазинов по продаже сантехники')
-                .margin-bottom-6
+                .margin-bottom-3
                     i.fa.fa-comments &nbsp;
                     span.text-dark-gray Комментариев: 50
-                .margin-bottom-6 Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
 
 
 

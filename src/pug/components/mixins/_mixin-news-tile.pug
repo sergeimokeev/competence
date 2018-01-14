@@ -1,13 +1,16 @@
 mixin newsTile(title, dataEq)
     .cell.margin-bottom-6
         .clearfix(data-equalizer-watch=dataEq)
-            img.margin-bottom-3(src='./i/photo.svg', alt='Новый сайт')
-            h6.margin-bottom-1
-                if title
-                    a(href='smi-article.html')= title
-                else
-                    a(href='smi-article.html') Приняли на комплексное обслуживание новый сайт
-            .margin-bottom-3: a.text-dark-gray(href='#') Экономика
+            .grid-x
+                .cell.small-5.medium-24.margin-bottom-3
+                    img(src='./i/photo.svg', alt='Новый сайт')
+                .cell.small-18.medium-24.small-offset-1.medium-offset-0.margin-bottom-3
+                    h6.margin-bottom-1
+                        if title
+                            a(href='smi-article.html')= title
+                        else
+                            a(href='smi-article.html') Приняли на комплексное обслуживание новый сайт
+                    a.text-dark-gray(href='#') Экономика
             .margin-bottom-3
                 if block
                     block

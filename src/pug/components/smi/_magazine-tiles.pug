@@ -1,9 +1,7 @@
-//- magazineTile mixin START
 mixin magazineTile(title)
     .cell.margin-bottom-6
-        a(href='#'): img.margin-bottom-3(src='./i/photo.svg' alt='Обложка журнала')
+        a(href='#'): img.margin-bottom-3(src='./i/image.svg' alt='Обложка журнала' style='width:100%;height:20rem;background:#e6e6e6;')
         a(href='#')= title
-//- magazineTile mixin END
 
 .padding-top-12.padding-bottom-6
     .grid-x.grid-padding-x
@@ -11,9 +9,10 @@ mixin magazineTile(title)
             h2 Выпуски журналов
         .small-24.medium-8.cell.medium-text-right
             a.button(href='#') Архив журналов &nbsp;<i class="fa fa-long-arrow-right"></i>
-    .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-3.margin-bottom-6
+    .grid-x.grid-padding-x.small-up-2.medium-up-2.large-up-4.margin-bottom-6
         +magazineTile('Название журнала №9 (54) 2015')
         +magazineTile('Название журнала №8 (53) 2015')
+        +magazineTile('Название журнала №7 (52) 2015')
         +magazineTile('Название журнала №7 (52) 2015')
     .grid-x.grid-padding-x: .cell.text-center
         a.button.hollow(href='#', title='') Подписка на бумажное издание
