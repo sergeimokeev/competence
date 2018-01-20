@@ -48,7 +48,7 @@ boilerplate_wireframe/
 
 ## Установка и сборка проекта
 
-Для работы с этим проектом необходимо предварительно установить [Git](https://git-scm.com) и [Node.js](https://nodejs.org)**(устанавливаем LTS версию)**.
+Для работы с этим проектом необходимо предварительно установить [Git](https://git-scm.com) и [Node.js](https://nodejs.org)**[(устанавливаем версию 7, потому что Foundation пока не работает на более новых версиях)](https://nodejs.org/en/download/releases/)**.
 
 Инструкция по установке для [WSL](https://ru.wikipedia.org/wiki/Windows_Subsystem_for_Linux) находится [тут](WSL.md).
 
