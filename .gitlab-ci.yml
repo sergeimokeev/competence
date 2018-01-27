@@ -22,7 +22,7 @@
       stage: build
       script:
       # здесь задается скрипт для сборки верстки
-      - cd $CI_PROJECT_DIR && npm install && npm run minify;  done
+      - cd $CI_PROJECT_DIR && npm install && npm run minify
       artifacts:
         paths:
         - "working/*/dist"
@@ -35,7 +35,7 @@
         url: http://wireframes.cetera.ru/$CI_PROJECT_NAME/
       script:
       - rsync -e ssh /dev/null root@vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/
-      - rsync -avuz  --numeric-ids --chown=33:33 -e ssh $CI_PROJECT_DIR/dist/ vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/; done
+      - rsync -avuz  --numeric-ids --chown=33:33 -e ssh $CI_PROJECT_DIR/dist/ vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/
       only:
       - master
       # always - сборка запускается автоматически при каждом коммите в master
