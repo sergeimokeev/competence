@@ -10,9 +10,9 @@
       - mkdir -p ~/.ssh
       - '[[ -f /.dockerenv ]] && echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts'
       # Нижеследующая строчка положит в LAYOUTS все папки внутри working.
-      #- cd $CI_PROJECT_DIR/working/ && export LAYOUTS=(`ls -1 -d ./*/|perl -nE '$_ =~ s/^\.\/(.+)\/$\//$1/; chomp; say'`)
+      - cd $CI_PROJECT_DIR/working/ && export LAYOUTS=(`ls -1 -d ./*/|perl -nE '$_ =~ s/^\.\/(.+)\/$\//$1/; chomp; say'`)
       # Если хочется указать вручную избранные папки, например folder1 и folder2, надо раскомментировать следующую строку и закомментировать строку выше.
-      #- export LAYOUTS=(folder1 folder2)
+      # - export LAYOUTS=(folder1 folder2)
 
     stages:
       - build
@@ -22,7 +22,7 @@
       stage: build
       script:
       # здесь задается скрипт для сборки верстки
-      - cd $CI_PROJECT_DIR && npm install && npm run minify;  done
+      - for item in ${LAYOUTS[*]}; do   cd $CI_PROJECT_DIR/working/$item && npm install && npm run minify;  done
       artifacts:
         paths:
         - "working/*/dist"
@@ -35,7 +35,7 @@
         url: http://wireframes.cetera.ru/$CI_PROJECT_NAME/
       script:
       - rsync -e ssh /dev/null root@vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/
-      - rsync -avuz  --numeric-ids --chown=33:33 -e ssh $CI_PROJECT_DIR/dist/ vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/; done
+      - for item in ${LAYOUTS[*]}; do  rsync -avuz  --numeric-ids --chown=33:33 -e ssh $CI_PROJECT_DIR/working/$item/dist/ vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/$item/; done
       only:
       - master
       # always - сборка запускается автоматически при каждом коммите в master
