@@ -25,7 +25,7 @@
       - cd $CI_PROJECT_DIR && npm install && npm run minify
       artifacts:
         paths:
-        - "working/dist"
+        - "dist"
         expire_in: 1 week
 
     job_deploy_to_staging:
