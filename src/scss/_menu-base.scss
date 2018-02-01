@@ -80,16 +80,21 @@
 }
 
 @include breakpoint(medium up) {
+  .menu-base {
+    text-align: center;
+  }
   .menu-base__item {
     display: inline-block;
   }
-
   .menu-base__link {
     display: inline-block;
   }
 }
 
 @include breakpoint(xlarge up) {
+  .menu-base {
+    text-align: left;
+  }
   .menu-base__item {
     &:hover > .menu-base {
       display: block;
