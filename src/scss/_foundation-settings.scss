@@ -155,19 +155,19 @@ $header-lineheight: 1.5;
 $header-margin-bottom: 6 * $global-margin;
 $header-styles: (
   small: (
-    'h1': ('font-size': 2.5rem, 'margin-bottom': 0, 'line-height': 1),
-    'h2': ('font-size': 2rem, 'line-height': 1.1),
-    'h3': ('font-size': 1.7rem, 'line-height': 1.2),
-    'h4': ('font-size': 1.5rem, 'line-height': 1.3),
-    'h5': ('font-size': 1.3rem, 'line-height': 1.4),
+    'h1': ('font-size': 2.2rem, 'margin-bottom': 0, 'line-height': 1),
+    'h2': ('font-size': 1.7rem, 'line-height': 1.1),
+    'h3': ('font-size': 1.5rem, 'line-height': 1.2),
+    'h4': ('font-size': 1.3rem, 'line-height': 1.3),
+    'h5': ('font-size': 1.2rem, 'line-height': 1.4),
     'h6': ('font-size': 1.1rem),
   ),
   medium: (
     'h1': ('font-size': 3rem, 'margin-bottom': 0, 'line-height': 1),
-    'h2': ('font-size': 2.75rem, 'line-height': 1.1),
-    'h3': ('font-size': 2.25rem, 'line-height': 1.2),
-    'h4': ('font-size': 2rem, 'line-height': 1.3),
-    'h5': ('font-size': 1.5rem, 'line-height': 1.4),
+    'h2': ('font-size': 2.2rem, 'line-height': 1.1),
+    'h3': ('font-size': 1.7rem, 'line-height': 1.2),
+    'h4': ('font-size': 1.5rem, 'line-height': 1.3),
+    'h5': ('font-size': 1.3rem, 'line-height': 1.4),
     'h6': ('font-size': 1.2rem),
   ),
 );
