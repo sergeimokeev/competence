@@ -1,0 +1,10 @@
+mixin eventTile(title, dataEq, light)
+    .cell.margin-bottom-6
+        .radius.padding-6(data-equalizer-watch=dataEq class=light ? 'background-white' : 'background-main')
+            .margin-bottom-1: strong 27.02.2017
+            h6.margin-bottom-6
+                a(href='#' title='')= title
+            .text-tertiary
+                i.fa.fa-map-marker
+                strong &nbsp;&nbsp;Москва,&nbsp;
+                | пр-кт Ленина, д. 1, 123
