@@ -81,13 +81,7 @@ $foundation-palette: (
   medium-gray: #cacaca,
   dark-gray: #8a8a8a,
   black: #444,
-  white: #fff,
-  fb: #3F619C,
-  vk: #3E709C,
-  twi: #2FA4CC,
-  ok: #FC6719,
-  insta: #000000,
-  gp: #DB4437
+  white: #fff
 );
 $main-color: map-get($foundation-palette, main);
 $secondary-color: map-get($foundation-palette, secondary);
