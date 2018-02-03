@@ -13,9 +13,27 @@
                 li.menu-base__item
                     a.menu-base__link(href='#') Сайт
                     ul.menu-base
-                        each title in ['Создание сайтов', 'Развитие сайтов', 'Техническая поддержка сайтов', 'Cetera CMS — управление сайтом', 'Fastsite — бесплатный конструктор сайтов', 'Портфолио', 'Исполнение 152-ФЗ «О персональных данных»', 'Посмотрите прототип', 'Вопросы и ответы']
+                        li.menu-base__item
+                            a.menu-base__link(href='#') Видеонаблюдение
+                            ul.menu-base
+                                each title in ['Создание сайтов', 'Развитие сайтов', 'Техническая поддержка сайтов', 'Cetera CMS — управление сайтом', 'Fastsite — бесплатный конструктор сайтов', 'Портфолио', 'Исполнение 152-ФЗ «О персональных данных»', 'Посмотрите прототип', 'Вопросы и ответы']
+                                    li.menu-base__item
+                                        a.menu-base__link(href='#')= title
+                        each title in ['Создание сайтов', 'Развитие сайтов', 'Техническая поддержка сайтов', 'Cetera CMS — управление сайтом']
                             li.menu-base__item
                                 a.menu-base__link(href='#')= title
-                each title in ['Магазин', 'СМИ', 'Реклама', 'Мобильные', 'Обучение', 'Конверсия', 'Видеонаблюдение']
+                each title in ['Магазин', 'СМИ', 'Реклама', 'Мобильные', 'Обучение', 'Конверсия']
                     li.menu-base__item
                         a.menu-base__link(href='#')= title
+                li.menu-base__item
+                    a.menu-base__link(href='#') Видеонаблюдение
+                    ul.menu-base
+                        li.menu-base__item
+                            a.menu-base__link(href='#') Видеонаблюдение
+                            ul.menu-base
+                                each title in ['Создание сайтов', 'Развитие сайтов', 'Техническая поддержка сайтов', 'Cetera CMS — управление сайтом', 'Fastsite — бесплатный конструктор сайтов']
+                                    li.menu-base__item
+                                        a.menu-base__link(href='#')= title
+                        each title in ['Создание сайтов', 'Развитие сайтов', 'Техническая поддержка сайтов', 'Cetera CMS — управление сайтом']
+                            li.menu-base__item
+                                a.menu-base__link(href='#')= title

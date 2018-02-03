@@ -27,11 +27,20 @@
     width: 15rem;
     background: scale-color($main-color, $lightness: 50%);
     border-bottom: rem-calc(2) solid $warning-color;
+
+    & .menu-base {
+      left: 100%;
+      top: 0;
+    }
   }
 
-  &:last-child .menu-base {
+  &:nth-last-of-type(-n+2) .menu-base {
     right: 0;
     left: auto;
+
+    & .menu-base {
+      right: 100%;
+    }
   }
 
   & .menu-base__item {
@@ -47,7 +56,7 @@
       }
       &:hover {
         color: $secondary-color;
-        background: scale-color($main-color, $lightness: 10%);
+        background: scale-color($main-color, $lightness: -5%);
       }
     }
   }
