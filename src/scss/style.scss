@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
+
 // Все картинки и шрифты необходимо подключать с использованием этих двух переменных:
 $imagesPath: '../images' !default;
 $fontsPath: '../fonts' !default;
