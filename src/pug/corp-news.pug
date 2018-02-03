@@ -1,0 +1,33 @@
+extends corp-index
+
+block page
+    include components/common/_breadcrumbs
+    block content
+        .grid-container: .grid-x.grid-padding-x: .cell
+            h1 Заголовок новости h1
+        .padding-top-12.padding-bottom-6
+            .grid-container: .grid-x.grid-padding-x
+                .cell.small-24.medium-14.large-16
+                    p: img(src="./i/photo.svg")
+                    p: strong.text-secondary 1 января 2018
+                    hr.margin-bottom-6
+                    include components/common/_text
+                .cell.small-24.medium-10.large-8
+                    each title in ['Приняли на комплексное обслуживание новый сайт', 'Разработаем несколько интернет-магазинов по продаже сантехники', 'Приняли на комплексное обслуживание новый сайт', 'Серверная защита', 'Приняли на комплексное обслуживание новый сайт', 'Разработаем несколько интернет-магазинов по продаже сантехники']
+                        .media-object.margin-bottom-6
+                            .media-object-section
+                                a(href="#"): img(src="./i/photo.svg" style="width: 5rem")
+                            .media-object-section.main-section.padding-0
+                                a(href="#")= title
+                        hr.margin-bottom-6
+                    .media-object.margin-bottom-6
+                        .media-object-section.main-section.padding-0
+                            a(href="#") Разработаем несколько интернет-магазинов по продаже сантехники
+                    hr.margin-bottom-6
+                    .media-object.margin-bottom-6
+                        .media-object-section
+                            a(href="#"): img(src="./i/photo.svg" style="width: 5rem")
+                        .media-object-section.main-section.padding-0
+                            a(href="#") Разработаем несколько интернет-магазинов по продаже сантехники
+                    hr.margin-bottom-6
+                    a(href="#").button.margin-bottom-6 Все новости &nbsp;<i class="fa fa-long-arrow-right"></i>
