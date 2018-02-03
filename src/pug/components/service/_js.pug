@@ -1,2 +1,6 @@
-script(src='js/lib.js' defer)
-script(src='js/app.js' defer)
+if minify
+    script(src='js/lib.js' defer)
+    script(src='js/app.js' defer)
+else
+    script(src='js/lib.js')
+    script(src='js/app.js')
