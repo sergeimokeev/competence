@@ -24,15 +24,31 @@ h1, h2 {
   }
 }
 
-.text-center h1, .text-center h2, h1.text-center, h2.text-center,
-.medium-text-center h1, .medium-text-center h2, h1.medium-text-center, h2.medium-text-center,
-.large-text-center h1, .large-text-center h2, h1.large-text-center, h2.large-text-center,
-.xlarge-text-center h1, .xlarge-text-center h2, h1.xlarge-text-center, h2.xlarge-text-center,
-.xxlarge-text-center h1, .xxlarge-text-center h2, h1.xxlarge-text-center, h2.xxlarge-text-center {
+@mixin position-center() {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.text-center h1, .text-center h2, h1.text-center, h2.text-center {
   &:after {
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+    @include position-center();
+  }
+}
+
+@include breakpoint(medium up) {
+  .medium-text-center h1, .medium-text-center h2, h1.medium-text-center, h2.medium-text-center {
+    &:after {
+      @include position-center();
+    }
+  }
+}
+
+@include breakpoint(large up) {
+  .large-text-center h1, .large-text-center h2, h1.large-text-center, h2.large-text-center {
+    &:after {
+      @include position-center();
+    }
   }
 }
