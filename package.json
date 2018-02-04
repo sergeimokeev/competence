@@ -1,6 +1,6 @@
 {
   "name": "cetera-wireframe-boilerplate",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Шаблон прототипов на фреймворке Foundation в компании Cetera Labs.",
   "main": "gulpfile.js",
   "scripts": {
