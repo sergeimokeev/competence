@@ -7,13 +7,16 @@
   -webkit-background-size: cover;
   background-size: cover;
   display: none;
-  padding: 2rem;
+  padding: 2rem 0;
   &:first-child {
     display: block;
   }
 }
 
 @include breakpoint(medium up) {
+  .carousel-main__item {
+    padding: 2rem 3rem;
+  }
   .carousel-main__content {
     min-height: rem-calc(300);
   }
