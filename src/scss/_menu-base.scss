@@ -34,7 +34,7 @@
     }
   }
 
-  &:nth-last-of-type(-n+2) .menu-base {
+  &:nth-child(n+5) .menu-base {
     right: 0;
     left: auto;
 
@@ -100,7 +100,7 @@
   }
 }
 
-@include breakpoint(xlarge up) {
+@include breakpoint(large up) {
   .menu-base {
     text-align: left;
   }
