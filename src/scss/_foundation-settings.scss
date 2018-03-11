@@ -69,11 +69,11 @@ $global-font-size: 14px;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #27bdb8,
-  secondary: #5F4B8B,
-  tertiary: scale-color(#48626F, $lightness: 50%),
+  primary: #27bab5,
+  secondary: #634f8e,
+  tertiary: scale-color(#47616e, $lightness: 50%),
   quaternary: #48626F,
-  success: scale-color(#28BDB8, $lightness: -15%),
+  success: scale-color(#27bab5, $lightness: -15%),
   warning: #EEB301,
   alert: #cc4b37,
   main: #FAFAFA,
