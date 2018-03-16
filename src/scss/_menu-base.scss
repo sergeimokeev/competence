@@ -23,13 +23,13 @@
     margin: rem-calc(-3 0 0) -1rem;
     padding: 0.5rem 0;
     top: 100%;
-    right: 0;
-    width: 15rem;
+    left: 0;
+    width: 13rem;
     background: scale-color($main-color, $lightness: 50%);
     border-bottom: rem-calc(2) solid $warning-color;
 
     & .menu-base {
-      right: 100%;
+      left: 100%;
       top: 0;
     }
   }
@@ -102,6 +102,9 @@
     &:hover > .menu-base__link:after {
       width: 100%;
     }
+    & .menu-base .menu-base__item:hover > .menu-base {
+      display: none;
+    }
   }
 }
 
@@ -110,6 +113,9 @@
     padding-right: rem-calc(30);
     &:last-child {
       padding-right: 0;
+    }
+    & .menu-base .menu-base__item:hover > .menu-base {
+      display: block;
     }
   }
 }
