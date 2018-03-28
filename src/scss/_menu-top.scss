@@ -37,8 +37,11 @@
 }
 
 @include breakpoint(medium up) {
+  .menu-top {
+    text-align: center;
+  }
   .menu-top__item {
-    float: left;
+    display: inline-block;
     vertical-align: middle;
     padding: 0 1rem;
     border-width: rem-calc(0 0 0 1);
@@ -58,5 +61,14 @@
   .menu-top__link {
     padding: 0;
     display: inline-block;
+  }
+}
+
+@include breakpoint(large up) {
+  .menu-top {
+    text-align: left;
+  }
+  .menu-top__item {
+    float: left;
   }
 }
