@@ -6,29 +6,40 @@
 
 label.rating__star {
   float: right;
-  font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   margin: 0;
-  font-size: 1.35rem;
+  position: relative;
 }
 
 .rating__star:hover {
   cursor: pointer;
 }
 
-.rating__star::before {
+.rating__solid {
+  display: block;
+  font-size: 1.35rem;
   color: #777;
-  content: $fa-var-star-o;
-  padding-right: 5px;
+  margin-right: 5px;
+  position: relative;
+}
+
+.rating__regular {
+  font-size: 1.35rem;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #EEB301;
 }
 
 .rating__input {
   display: none;
 }
 
-.rating__star:hover::before, .rating__star:hover ~ .rating__star::before,
-.rating:not(:hover) .rating__input:checked::before, .rating:not(:hover) .rating__input:checked ~ .rating__star::before {
-  color: #EEB301;
-  content: $fa-var-star;
+.rating__star:hover .rating__regular,
+.rating__star:hover ~ .rating__star .rating__regular,
+.rating:not(:hover) .rating__input:checked .rating__regular,
+.rating:not(:hover) .rating__input:checked ~ .rating__star .rating__regular {
+  display: block;
 }

@@ -15,7 +15,6 @@ var gulp = require('gulp'),
 var sassPaths = [
     './node_modules/foundation-sites/scss',
     './node_modules/motion-ui/src',
-    './node_modules/font-awesome/scss/',
     './node_modules/slick-carousel/slick/',
     './node_modules/@fancyapps/fancybox/dist/'
 ];
@@ -32,12 +31,22 @@ var path = {
     src: {
         html: 'src/pug/*.pug',
         js: 'src/js/*.js',
-        jsLib: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/foundation-sites/dist/js/foundation.min.js', 'node_modules/slick-carousel/slick/slick.min.js', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'],
+        jsLib: [
+            'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/foundation-sites/dist/js/foundation.min.js',
+            'node_modules/slick-carousel/slick/slick.min.js',
+            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'
+        ],
+        jsLibAwesome: [
+            'node_modules/@fortawesome/fontawesome/index.js',
+            'node_modules/@fortawesome/fontawesome-free-solid/index.js',
+            'node_modules/@fortawesome/fontawesome-free-regular/index.js',
+            'node_modules/@fortawesome/fontawesome-free-brands/index.js'
+        ],
         css: ['src/scss/style.scss'],
         images: 'src/images/**/*.*',
         i: 'src/i/**/*.*',
-        fonts: 'src/fonts/**/*.*',
-        awesome: 'node_modules/font-awesome/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*'
     },
     watch: {
         html: ['src/pug/**/*.pug'],
@@ -125,7 +134,7 @@ gulp.task('i', ['clean-i'], function() {
 });
 
 gulp.task('fonts', ['clean-fonts'], function() {
-    return gulp.src([path.src.fonts, path.src.awesome])
+    return gulp.src([path.src.fonts])
         .pipe(gulp.dest(path.dist.fonts));
 });
 
@@ -133,6 +142,13 @@ gulp.task('js-lib', ['clean-js'], function () {
     return gulp.src(path.src.jsLib)
         .pipe(uglify())
         .pipe(concat('lib.js'))
+        .pipe(gulp.dest(path.dist.js));
+});
+
+gulp.task('js-lib-awesome', ['clean-js'], function () {
+    return gulp.src(path.src.jsLibAwesome)
+        .pipe(uglify())
+        .pipe(concat('lib-awesome.js'))
         .pipe(gulp.dest(path.dist.js));
 });
 
@@ -152,9 +168,9 @@ gulp.task('js-app-minify', ['clean-js'], function () {
         .pipe(gulp.dest(path.dist.js));
 });
 
-gulp.task('minify', ['sassMinify', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-app-minify']);
+gulp.task('minify', ['sassMinify', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-lib-awesome', 'js-app-minify']);
 
-gulp.task('default', ['sass', 'pug', 'images', 'i', 'fonts', 'js-lib', 'js-app-init'], function () {
+gulp.task('default', ['sass', 'pug', 'images', 'i', 'fonts', 'js-lib', 'js-lib-awesome', 'js-app-init'], function () {
     gulp.watch([path.watch.css], ['sassWatch']);
     gulp.watch([path.watch.html], ['pugWatch']);
     gulp.watch([path.watch.images], ['images']);

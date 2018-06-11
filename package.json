@@ -11,7 +11,10 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "font-awesome": "~4.7.0",
+    "@fortawesome/fontawesome": "~1.1.8",
+    "@fortawesome/fontawesome-free-solid": "~5.0.13",
+    "@fortawesome/fontawesome-free-regular": "~5.0.13",
+    "@fortawesome/fontawesome-free-brands": "~5.0.13",
     "@fancyapps/fancybox": "~3.3.5",
     "foundation-sites": "~6.4.3",
     "gulp": "^3.9.1",
