@@ -12,7 +12,7 @@
   "private": true,
   "dependencies": {
     "font-awesome": "~4.7.0",
-    "@fancyapps/fancybox": "~3.3.3",
+    "@fancyapps/fancybox": "~3.3.5",
     "foundation-sites": "~6.4.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
@@ -21,7 +21,7 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "^1.2.0",
     "gulp-pug": "^4.0.1",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.2.3",
     "gulp-replace": "^0.6.1",
     "gulp-rimraf": "^0.2.2",
     "gulp-sass": "^4.0.1",
