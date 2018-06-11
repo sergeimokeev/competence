@@ -6,7 +6,7 @@ mixin productTile(title, discount)
             .cell.small-18.medium-24.small-offset-1.medium-offset-0.margin-bottom-3(data-equalizer-watch)
                 if discount
                     span.label.secondary
-                        i.fa.fa-star-o
+                        i.far.fa-star
                         | &nbsp;Акция
                     | &nbsp;
                 a(href='shop-product.html')
@@ -21,18 +21,18 @@ mixin productTile(title, discount)
             .cell.auto.medium-24.margin-bottom-3
                 strong.text-size-large
                     | 1&nbsp;250&nbsp;
-                    i.fa.fa-rub
+                    i.fas.fa-ruble-sign
                 if discount
                     | &nbsp; &nbsp;
                     del.text-dark-gray.text-size-small
                         | 1&nbsp;750&nbsp;
-                        i.fa.fa-rub
+                        i.fas.fa-ruble-sign
             .cell.shrink.medium-auto
                 a(href='shop-cart.html').button.small.primary.hollow.margin-bottom-0 Купить
             .cell.shrink.text-right.align-self-middle
                 a.text-dark-gray(title='Запомнить' data-open="add-to-favourites-auth-popup")
-                    i.fa.fa-heart-o.fa-lg
+                    i.far.fa-heart.fa-lg
                 | &nbsp;&nbsp;&nbsp;
                 a.text-dark-gray(title="Добавить к сравнению" href='shop-compare.html')
-                    i.fa.fa-balance-scale.fa-lg
+                    i.fas.fa-balance-scale.fa-lg
         hr.margin-bottom-6.show-for-small-only

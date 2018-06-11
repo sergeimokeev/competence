@@ -19,7 +19,10 @@ $minify: false !default;
 
 @import "foundation-settings";
 
-@import "font-awesome";
+@import "fontawesome";
+@import "fa-brands";
+@import "fa-solid";
+@import "fa-regular";
 @import "slick.scss";
 @import "foundation";
 @import "motion-ui";

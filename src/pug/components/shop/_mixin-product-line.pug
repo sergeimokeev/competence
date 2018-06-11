@@ -8,7 +8,7 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                     h5.margin-bottom-0
                         if discount
                             span.label.secondary
-                                i.fa.fa-star-o
+                                i.far.fa-star
                                 | &nbsp;Акция
                             | &nbsp;
                         a(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
@@ -21,12 +21,12 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                         .margin-bottom-6
                             strong.text-size-xxlarge
                                 | 1&nbsp;250&nbsp;
-                                i.fa.fa-rub
+                                i.fas.fa-ruble-sign
                             if discount
                                 br
                                 del.text-dark-gray
                                     | 1&nbsp;750&nbsp;
-                                    i.fa.fa-rub
+                                    i.fas.fa-ruble-sign
             .grid-x.grid-padding-x
                 .cell.small-24.medium-14.align-self-middle
                     ul.margin-bottom-3.hide-for-small-only
@@ -37,31 +37,31 @@ mixin productLine(discount, onDemand, inCart, inFavourites)
                     .margin-bottom-6
                         if !inFavourites
                             a.text-dark-gray(data-open="add-to-favourites-auth-popup")
-                                i.fa.fa-heart-o
+                                i.far.fa-heart
                                 | &nbsp;Запомнить
 
                         else
                             a.text-dark-gray(href='' title='Удалить из запомненных')
-                                i.fa.fa-heart
+                                i.fas.fa-heart
                                 | &nbsp;Запомнено
                         | &nbsp;&nbsp;
                         a.text-dark-gray(href='shop-compare.html' title='')
-                            i.fa.fa-balance-scale
+                            i.fas.fa-balance-scale
                             | &nbsp;Сравнить
                 .cell.small-24.medium-10.large-8.large-offset-2.align-self-bottom
                     if onDemand
                         .margin-bottom-6
                             a(href='#' title='')
-                                i.fa.fa-bell-o
+                                i.far.fa-bell
                                 | &nbsp;Заказать
                     else
                         .margin-bottom-6
                             if inCart
                                 a(href='shop-cart.html' title='')
                                     span.dark-gray
-                                        i.fa.fa-check.fa-lg
+                                        i.fas.fa-check.fa-lg
                                         | &nbsp;В корзине
                             else
                                 a(href='shop-cart.html' title='').button.hollow.margin-bottom-0
-                                    i.fa.fa-shopping-basket
+                                    i.fas.fa-shopping-basket
                                     | &nbsp;Купить
