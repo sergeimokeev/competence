@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 var sassPaths = [
     './node_modules/foundation-sites/scss',
     './node_modules/motion-ui/src',
-    './node_modules/@fortawesome/fontawesome-free-webfonts/scss/',
+    './node_modules/font-awesome/scss/',
     './node_modules/slick-carousel/slick/',
     './node_modules/@fancyapps/fancybox/dist/'
 ];
@@ -32,17 +32,12 @@ var path = {
     src: {
         html: 'src/pug/*.pug',
         js: 'src/js/*.js',
-        jsLib: [
-            'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/foundation-sites/dist/js/foundation.min.js',
-            'node_modules/slick-carousel/slick/slick.min.js',
-            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'
-        ],
+        jsLib: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/foundation-sites/dist/js/foundation.min.js', 'node_modules/slick-carousel/slick/slick.min.js', 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'],
         css: ['src/scss/style.scss'],
         images: 'src/images/**/*.*',
         i: 'src/i/**/*.*',
         fonts: 'src/fonts/**/*.*',
-        awesome: 'node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/*.*'
+        awesome: 'node_modules/font-awesome/fonts/**/*.*'
     },
     watch: {
         html: ['src/pug/**/*.pug'],

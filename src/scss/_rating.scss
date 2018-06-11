@@ -11,7 +11,6 @@ label.rating__star {
   font-weight: normal;
   margin: 0;
   font-size: 1.35rem;
-  @include fa-icon;
 }
 
 .rating__star:hover {
@@ -20,10 +19,8 @@ label.rating__star {
 
 .rating__star::before {
   color: #777;
+  content: $fa-var-star-o;
   padding-right: 5px;
-
-  @extend .far;
-  content: fa-content($fa-var-star);
 }
 
 .rating__input {
@@ -33,6 +30,5 @@ label.rating__star {
 .rating__star:hover::before, .rating__star:hover ~ .rating__star::before,
 .rating:not(:hover) .rating__input:checked::before, .rating:not(:hover) .rating__input:checked ~ .rating__star::before {
   color: #EEB301;
-
-  @extend .fas;
+  content: $fa-var-star;
 }
