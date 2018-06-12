@@ -153,12 +153,12 @@ gulp.task('js-app', jsApp);
 
 gulp.task('js-app-minify', ['clean-js'], function () {
     return gulp.src(path.src.js)
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(concat('app.js'))
         .pipe(gulp.dest(path.dist.js));
 });
 
-gulp.task('minify', ['sassMinify', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-app-minify']);
+gulp.task('minify', ['sassMinify', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-app-init']);
 
 gulp.task('default', ['sass', 'pug', 'images', 'i', 'fonts', 'js-lib', 'js-app-init'], function () {
     gulp.watch([path.watch.css], ['sassWatch']);
