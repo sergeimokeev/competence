@@ -19,8 +19,8 @@
             autoplayHoverPause: true,
             fade: true,
             swipeToSlide: true,
-            prevArrow: '<i class="slick-prev fa fa-angle-left fa-3x"> </i>',
-            nextArrow: '<i class="slick-next fa fa-angle-right fa-3x"> </i>'
+            prevArrow: '<span><i class="slick-prev fas fa-angle-left fa-4x"> </i></span>',
+            nextArrow: '<span><i class="slick-next fas fa-angle-right fa-4x"> </i></span>'
         });
 
         $(".x-carousel-services").slick({
