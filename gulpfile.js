@@ -153,7 +153,7 @@ gulp.task('js-app', jsApp);
 
 gulp.task('js-app-minify', ['clean-js'], function () {
     return gulp.src(path.src.js)
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(concat('app.js'))
         .pipe(gulp.dest(path.dist.js));
 });
