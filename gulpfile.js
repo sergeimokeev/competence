@@ -29,15 +29,13 @@ var path = {
         fonts: 'dist/fonts/'
     },
     src: {
-        html: 'src/pug/shop-product.pug',
+        html: 'src/pug/*.pug',
         js: 'src/js/*.js',
         jsLib: [
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/foundation-sites/dist/js/foundation.min.js',
             'node_modules/slick-carousel/slick/slick.min.js',
-            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'
-        ],
-        jsLibAwesome: [
+            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
             'node_modules/@fortawesome/fontawesome/index.js',
             'node_modules/@fortawesome/fontawesome-free-solid/index.js',
             'node_modules/@fortawesome/fontawesome-free-regular/index.js',
@@ -54,8 +52,7 @@ var path = {
         css: 'src/scss/**/*.scss',
         images: 'src/images/**/*.*',
         i: 'src/i/**/*.*',
-        fonts: 'src/fonts/**/*.*',
-        awesome: 'node_modules/font-awesome/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*'
     }
 };
 
@@ -145,13 +142,6 @@ gulp.task('js-lib', ['clean-js'], function () {
         .pipe(gulp.dest(path.dist.js));
 });
 
-gulp.task('js-lib-awesome', ['clean-js'], function () {
-    return gulp.src(path.src.jsLibAwesome)
-        //.pipe(uglify())
-        .pipe(concat('lib-awesome.js'))
-        .pipe(gulp.dest(path.dist.js));
-});
-
 var jsApp = function () {
     return gulp.src(path.src.js)
         .pipe(concat('app.js'))
@@ -168,9 +158,9 @@ gulp.task('js-app-minify', ['clean-js'], function () {
         .pipe(gulp.dest(path.dist.js));
 });
 
-gulp.task('minify', ['sassMinify', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-lib-awesome', 'js-app-minify']);
+gulp.task('minify', ['sassMinify', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-app-minify']);
 
-gulp.task('default', ['sass', 'pug', 'images', 'i', 'fonts', 'js-lib', 'js-lib-awesome', 'js-app-init'], function () {
+gulp.task('default', ['sass', 'pug', 'images', 'i', 'fonts', 'js-lib', 'js-app-init'], function () {
     gulp.watch([path.watch.css], ['sassWatch']);
     gulp.watch([path.watch.html], ['pugWatch']);
     gulp.watch([path.watch.images], ['images']);
