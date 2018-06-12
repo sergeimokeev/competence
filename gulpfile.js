@@ -29,7 +29,7 @@ var path = {
         fonts: 'dist/fonts/'
     },
     src: {
-        html: 'src/pug/*.pug',
+        html: 'src/pug/shop-product.pug',
         js: 'src/js/*.js',
         jsLib: [
             'node_modules/jquery/dist/jquery.min.js',
@@ -147,7 +147,7 @@ gulp.task('js-lib', ['clean-js'], function () {
 
 gulp.task('js-lib-awesome', ['clean-js'], function () {
     return gulp.src(path.src.jsLibAwesome)
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(concat('lib-awesome.js'))
         .pipe(gulp.dest(path.dist.js));
 });
