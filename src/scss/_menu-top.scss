@@ -4,6 +4,8 @@
   margin: 0;
   width: 100%;
   text-align: left;
+
+  @include clearfix;
 }
 
 .menu-top__hamburger {
