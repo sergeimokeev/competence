@@ -8,13 +8,6 @@ $fontsPath: '../fonts' !default;
 
 $textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 1.1rem, xlarge: 1.25rem, xxlarge: 1.5rem, xxxlarge: 2.5rem) !default;
 
-$minify: false !default;
-@if $minify {
-  $imagesPath: './images';
-  $fontsPath: './fonts';
-  $fa-font-path: $fontsPath;
-}
-
 @import "foundation-settings";
 
 @import "slick.scss";

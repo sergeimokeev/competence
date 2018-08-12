@@ -1,25 +1,26 @@
 'use strict';
 
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    header = require('gulp-header'),
-    pug = require('gulp-pug'),
-    autoprefixer = require('gulp-autoprefixer'),
-    rimraf = require('gulp-rimraf'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
-    plumber = require('gulp-plumber');
+const del = require('del');
+const path = require('path');
+const gulp = require('gulp');
+const gulpSass = require('gulp-sass');
+const gulpPug = require('gulp-pug');
+const gulpAutoprefixer = require('gulp-autoprefixer');
+const gulpConcat = require('gulp-concat');
+const gulpUglify = require('gulp-uglify');
+const gulpPlumber = require('gulp-plumber');
+const gulpImagemin = require('gulp-imagemin');
+const gulpNewer = require('gulp-newer');
+const imageminPngquant = require('imagemin-pngquant');
 
-var sassPaths = [
+const sassPaths = [
     './node_modules/foundation-sites/scss',
     './node_modules/motion-ui/src',
     './node_modules/slick-carousel/slick/',
     './node_modules/@fancyapps/fancybox/dist/'
 ];
 
-var path = {
+const paths = {
     dist: {
         html: 'dist/',
         js: 'dist/js/',
@@ -56,115 +57,87 @@ var path = {
     }
 };
 
-gulp.task('clean-css', function() {
-    return gulp.src(path.dist.css, {read: false}).pipe(rimraf());
-});
 
-gulp.task('clean-html', function() {
-    return gulp.src(path.dist.html + '*.html', {read: false}).pipe(rimraf());
-});
+let clean = () => del(paths.dist.html);
+let cleanCss = () => del(paths.dist.css);
+let cleanHtml = () => del(paths.dist.html + '*.html');
+let cleanI = () => del(paths.dist.i);
+let cleanFonts = () => del(paths.dist.fonts);
+let cleanJs = () => del(paths.dist.js);
 
-gulp.task('clean-images', function() {
-    return gulp.src(path.dist.images, {read: false}).pipe(rimraf());
-});
+let sass = () => gulp.src(paths.src.css)
+    .pipe(gulpPlumber())
+    .pipe(gulpSass({
+        includePaths: sassPaths,
+        outputStyle: 'compressed'
+    }))
+    .pipe(gulpAutoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(gulp.dest(paths.dist.css));
 
-gulp.task('clean-i', function() {
-    return gulp.src(path.dist.i, {read: false}).pipe(rimraf());
-});
+let pug = () => gulp.src(paths.src.html)
+    .pipe(gulpPlumber())
+    .pipe(gulpPug({
+        pretty: true,
+        cache: true
+    }))
+    .pipe(gulp.dest(paths.dist.html));
 
-gulp.task('clean-fonts', function() {
-    return gulp.src(path.dist.fonts, {read: false}).pipe(rimraf());
-});
+let images = () => gulp.src(paths.src.images, {allowEmpty: true})
+    .pipe(gulpNewer(paths.dist.images))
+    .pipe(gulpImagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [imageminPngquant()],
+        interlaced: true
+    }))
+    .pipe(gulp.dest(paths.dist.images));
 
-gulp.task('clean-js', function() {
-    return gulp.src(path.dist.js, {read: false}).pipe(rimraf());
-});
+let i = () => gulp.src(paths.src.i, {allowEmpty: true}).pipe(gulp.dest(paths.dist.i));
 
-var sassFunc = function (minify) {
-    return gulp.src(path.src.css)
-        .pipe(header((minify ? '$minify: true;\n' : '$minify: false;\n')))
-        .pipe(sass({
-            includePaths: sassPaths,
-            outputStyle: 'compressed'
-        })
-            .on('error', sass.logError))
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest(path.dist.css));
+let fonts = () => gulp.src(paths.src.fonts, {allowEmpty: true}).pipe(gulp.dest(paths.dist.fonts));
+
+let jsLib = () => gulp.src(paths.src.jsLib, {allowEmpty: true})
+    .pipe(gulpUglify())
+    .pipe(gulpConcat('lib.js'))
+    .pipe(gulp.dest(paths.dist.js));
+
+let jsApp = () => gulp.src(paths.src.js, {allowEmpty: true}).pipe(gulpConcat('app.js')).pipe(gulp.dest(paths.dist.js));
+
+let jsAppMinify = () => gulp.src(paths.src.js, {allowEmpty: true})
+    .pipe(gulpUglify())
+    .pipe(gulpConcat('app.js'))
+    .pipe(gulp.dest(paths.dist.js));
+
+let watch = () => {
+    gulp.watch(paths.watch.css, gulp.series(cleanCss, sass));
+    gulp.watch(paths.watch.html, gulp.series(cleanHtml, pug));
+    gulp.watch(paths.watch.i, gulp.series(cleanI, i));
+    gulp.watch(paths.watch.fonts, gulp.series(cleanFonts, fonts));
+    gulp.watch(paths.watch.js, gulp.series(cleanJs, jsApp));
+
+    let imagesWatcher = gulp.watch(paths.watch.images, images);
+    imagesWatcher.on('unlink', (unlinkPath) => {
+        let filePathFromSrc = path.relative(path.resolve('src/images'), unlinkPath);
+        let distFilePath = path.resolve('dist/images', filePathFromSrc);
+        del(distFilePath);
+        console.log("Delete file: " + distFilePath);
+    });
 };
 
-gulp.task('sass', ['clean-css'], function () { return sassFunc(false); });
-gulp.task('sassWatch', function () { return sassFunc(false); });
-gulp.task('sassMinify', ['clean-css'], function () { return sassFunc(true); });
+gulp.task('default',
+    gulp.series(
+        clean,
+        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsApp),
+        watch
+    )
+);
 
-var pugFunc = function(minify) {
-    return gulp.src(path.src.html)
-        .pipe(plumber())
-        .pipe(pug({
-            pretty: true,
-            cache: true,
-            locals: {minify: minify}
-        }))
-        .pipe(gulp.dest(path.dist.html));
-};
-
-gulp.task('pug', ['sass', 'clean-html'], function () { return pugFunc(false); });
-gulp.task('pugWatch', function () { return pugFunc(false); });
-gulp.task('pugMinify', ['clean-html', 'sassMinify'], function () { return pugFunc(true); });
-
-gulp.task('images', ['clean-images'], function () {
-    return gulp.src(path.src.images)
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
-            interlaced: true
-        }))
-        .pipe(gulp.dest(path.dist.images));
-});
-
-gulp.task('i', ['clean-i'], function() {
-    return gulp.src(path.src.i)
-        .pipe(gulp.dest(path.dist.i));
-});
-
-gulp.task('fonts', ['clean-fonts'], function() {
-    return gulp.src([path.src.fonts])
-        .pipe(gulp.dest(path.dist.fonts));
-});
-
-gulp.task('js-lib', ['clean-js'], function () {
-    return gulp.src(path.src.jsLib)
-        .pipe(uglify())
-        .pipe(concat('lib.js'))
-        .pipe(gulp.dest(path.dist.js));
-});
-
-var jsApp = function () {
-    return gulp.src(path.src.js)
-        .pipe(concat('app.js'))
-        .pipe(gulp.dest(path.dist.js));
-};
-
-gulp.task('js-app-init', ['clean-js'], jsApp);
-gulp.task('js-app', jsApp);
-
-gulp.task('js-app-minify', ['clean-js'], function () {
-    return gulp.src(path.src.js)
-        .pipe(uglify())
-        .pipe(concat('app.js'))
-        .pipe(gulp.dest(path.dist.js));
-});
-
-gulp.task('minify', ['sassMinify', 'pugMinify', 'images', 'i', 'fonts', 'js-lib', 'js-app-minify']);
-
-gulp.task('default', ['sass', 'pug', 'images', 'i', 'fonts', 'js-lib', 'js-app-init'], function () {
-    gulp.watch([path.watch.css], ['sassWatch']);
-    gulp.watch([path.watch.html], ['pugWatch']);
-    gulp.watch([path.watch.images], ['images']);
-    gulp.watch([path.watch.i], ['i']);
-    gulp.watch([path.watch.fonts], ['fonts']);
-    gulp.watch([path.watch.js], ['js-app']);
-});
+gulp.task('minify',
+    gulp.series(
+        clean,
+        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsAppMinify)
+    )
+);
