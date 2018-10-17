@@ -1,0 +1,9 @@
+.tabs {
+  &-title {
+    & > a {}
+  }
+
+  &-content {}
+
+  &-panel {}
+}
