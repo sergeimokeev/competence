@@ -1,0 +1,17 @@
+.contacts {
+  padding-top: rem-calc(14);
+  padding-bottom: rem-calc(7);
+  background: $primary-color;
+  font-size: rem-calc(13);
+
+  &__info {
+    padding-bottom: rem-calc(7);
+    text-align: right;
+  }
+  @include breakpoint(medium down) {
+    text-align: center;
+  }
+  @include breakpoint(small only) {
+    text-align: left;
+  }
+}
