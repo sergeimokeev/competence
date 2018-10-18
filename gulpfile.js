@@ -11,7 +11,10 @@ const gulpUglify = require('gulp-uglify');
 const gulpPlumber = require('gulp-plumber');
 const gulpImagemin = require('gulp-imagemin');
 const gulpNewer = require('gulp-newer');
+const gulpArgs = require('yargs').argv;
 const imageminPngquant = require('imagemin-pngquant');
+
+let nameChosenPage = gulpArgs.pg;
 
 const sassPaths = [
     './node_modules/foundation-sites/scss',
@@ -31,6 +34,7 @@ const paths = {
     },
     src: {
         html: 'src/pug/*.pug',
+        htmlCustom: 'src/pug/'+ nameChosenPage + '.pug',
         js: 'src/js/*.js',
         jsLib: [
             'node_modules/jquery/dist/jquery.min.js',
@@ -85,6 +89,14 @@ let pug = () => gulp.src(paths.src.html)
     }))
     .pipe(gulp.dest(paths.dist.html));
 
+let pugCustom = () => gulp.src(paths.src.htmlCustom)
+    .pipe(gulpPlumber())
+    .pipe(gulpPug({
+        pretty: true,
+        cache: true
+    }))
+    .pipe(gulp.dest(paths.dist.html));
+
 let images = () => gulp.src(paths.src.images, {allowEmpty: true})
     .pipe(gulpNewer(paths.dist.images))
     .pipe(gulpImagemin({
@@ -126,12 +138,34 @@ let watch = () => {
         console.log("Delete file: " + distFilePath);
     });
 };
+let watchCustom = () => {
+    gulp.watch(paths.watch.css, gulp.series(cleanCss, sass));
+    gulp.watch(paths.watch.html, gulp.series(cleanHtml, pugCustom));
+    gulp.watch(paths.watch.i, gulp.series(cleanI, i));
+    gulp.watch(paths.watch.fonts, gulp.series(cleanFonts, fonts));
+    gulp.watch(paths.watch.js, gulp.series(cleanJs, jsApp));
+
+    let imagesWatcher = gulp.watch(paths.watch.images, images);
+    imagesWatcher.on('unlink', (unlinkPath) => {
+        let filePathFromSrc = path.relative(path.resolve('src/images'), unlinkPath);
+        let distFilePath = path.resolve('dist/images', filePathFromSrc);
+        del(distFilePath);
+        console.log("Delete file: " + distFilePath);
+    });
+};
 
 gulp.task('default',
     gulp.series(
         clean,
         gulp.parallel(sass, pug, images, i, fonts, jsLib, jsApp),
         watch
+    )
+);
+gulp.task('custom',
+    gulp.series(
+        clean,
+        gulp.parallel(sass, pugCustom, images, i, fonts, jsLib, jsApp),
+        watchCustom
     )
 );
 
