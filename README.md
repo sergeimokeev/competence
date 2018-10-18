@@ -12,7 +12,7 @@
 * менеджер пакетов и внешних зависимостей - [npm](https://www.npmjs.com)
 * автоматические сборки - [Gulp](http://gulpjs.com)
 * препроцессор CSS - [Sass](http://sass-lang.com)
-* шаблонизатор HTML - [Pug(ex-Jade)](https://pugjs.org/) - _для работы с Pug в PhpStorm и WebStorm необходимо обновить программы до последних версий, удалить плагин Jade, если он был установлен, и установить плагин Pug._ 
+* шаблонизатор HTML - [Pug(ex-Jade)](https://pugjs.org/) - _для работы с Pug в PhpStorm и WebStorm необходимо обновить программы до последних версий, удалить плагин Jade, если он был установлен, и установить плагин Pug._
 * CSS-фреймворк - [Foundation](http://foundation.zurb.com)
 * динамика - [JQuery](http://jquery.com) и его плагины
 * набор иконок - [Font Awesome](http://fortawesome.github.io/Font-Awesome)
@@ -102,6 +102,11 @@ $ npm start
 Весь js попадает в папку *src/js/*. Все внешние js-библиотеки необходимо устанавливать через npm и файл package.json https://docs.npmjs.com/files/package.json.
 
 Все исходники css хранятся и редактируются в папке *src/scss/*.
+
+Для сборки отдельной страницы нужно установить gulp-cli глобально
+npm i -g gulp-cli
+а затем можно использовать команду (например для страницы corp-index)
+gulp custom --pg corp-index
 
 * * *
 
