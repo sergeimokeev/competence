@@ -1,0 +1,24 @@
+
+$global-lineheight: 1.5;
+$global-font-size: 14px;
+$global-width: rem-calc(1200);
+
+
+$body-background: $white;
+$body-font-color: $black;
+$body-font-family: $font-ubuntu;
+$body-antialiased: true;
+$global-margin: 0.25rem;
+$global-padding: 0.25rem;
+$global-position: 1rem;
+$global-weight-normal: normal;
+$global-weight-bold: 500;
+$global-radius: rem-calc(4);
+$global-menu-padding: 0.7rem 1rem;
+$global-menu-nested-margin: 1rem;
+$global-text-direction: ltr;
+$global-flexbox: true;
+$global-prototype-breakpoints: false;
+$global-button-cursor: auto;
+$global-color-pick-contrast-tolerance: 0;
+$print-transparent-backgrounds: true;

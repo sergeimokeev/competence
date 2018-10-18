@@ -1,0 +1,21 @@
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 960px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium large);
+
+$xy-grid: true;
+$grid-container: $global-width;
+$grid-columns: 24;
+$grid-margin-gutters: (
+  small: rem-calc(10),
+  medium: rem-calc(10)
+);
+$grid-padding-gutters: $grid-margin-gutters;
+$grid-container-padding: $grid-padding-gutters;
+$grid-container-max: $global-width;
+$xy-block-grid-max: 8;

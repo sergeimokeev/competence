@@ -1,79 +1,6 @@
-@import 'util/util';
 
-// 1. Global
-// ---------
 
-$global-font-size: 14px;
-$global-width: rem-calc(1200);
-$global-lineheight: 1.5;
-$foundation-palette: (
-  primary: #27bab5,
-  secondary: #634f8e,
-  tertiary: scale-color(#47616e, $lightness: 50%),
-  quaternary: #48626F,
-  success: scale-color(#27bab5, $lightness: -15%),
-  warning: #EEB301,
-  alert: #cc4b37,
-  main: #FAFAFA,
-  light-gray: #e6e6e6,
-  medium-gray: #cacaca,
-  dark-gray: #8a8a8a,
-  black: #444,
-  white: #fff
-);
-$main-color: map-get($foundation-palette, main);
-$secondary-color: map-get($foundation-palette, secondary);
-$light-gray: map-get($foundation-palette, light-gray);
-$medium-gray: map-get($foundation-palette, medium-gray);
-$dark-gray: map-get($foundation-palette, dark-gray);
-$black: map-get($foundation-palette, black);
-$white: map-get($foundation-palette, white);
-$body-background: $white;
-$body-font-color: $black;
-$body-font-family: 'Ubuntu', 'Roboto', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$body-antialiased: true;
-$global-margin: 0.25rem;
-$global-padding: 0.25rem;
-$global-position: 1rem;
-$global-weight-normal: normal;
-$global-weight-bold: 500;
-$global-radius: rem-calc(4);
-$global-menu-padding: 0.7rem 1rem;
-$global-menu-nested-margin: 1rem;
-$global-text-direction: ltr;
-$global-flexbox: true;
-$global-prototype-breakpoints: false;
-$global-button-cursor: auto;
-$global-color-pick-contrast-tolerance: 0;
-$print-transparent-backgrounds: true;
 
-@include add-foundation-colors;
-
-// 2. Breakpoints
-// --------------
-
-$breakpoints: (
-  small: 0,
-  medium: 640px,
-  large: 960px,
-  xlarge: 1200px,
-  xxlarge: 1440px,
-);
-$print-breakpoint: large;
-$breakpoint-classes: (small medium large);
-
-// 3. The Grid
-// -----------
-
-$grid-row-width: $global-width;
-$grid-column-count: 12;
-$grid-column-gutter: (
-  small: 1.5rem,
-  medium: 1.5rem,
-);
-$grid-column-align-edge: true;
-$grid-column-alias: 'columns';
-$block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
@@ -144,6 +71,8 @@ $keystroke-padding: rem-calc(2 4 0);
 $keystroke-radius: $global-radius;
 $abbr-underline: 1px dotted $black;
 
+
+
 // 5. Typography Helpers
 // ---------------------
 
@@ -167,61 +96,8 @@ $input-error-color: get-color(alert);
 $input-error-font-size: rem-calc(12);
 $input-error-font-weight: $global-weight-bold;
 
-// 7. Accordion
-// ------------
 
-$accordion-background: $main-color;
-$accordion-plusminus: true;
-$accordion-title-font-size: rem-calc(12);
-$accordion-item-color: $primary-color;
-$accordion-item-background-hover: $main-color;
-$accordion-item-padding: 1.25rem 1rem;
-$accordion-content-background: $white;
-$accordion-content-border: 1px solid $main-color;
-$accordion-content-color: $body-font-color;
-$accordion-content-padding: 1rem;
 
-// 8. Accordion Menu
-// -----------------
-
-$accordionmenu-padding: $global-menu-padding;
-$accordionmenu-nested-margin: $global-menu-nested-margin;
-$accordionmenu-submenu-padding: $accordionmenu-padding;
-$accordionmenu-arrows: true;
-$accordionmenu-arrow-color: $primary-color;
-$accordionmenu-item-background: null;
-$accordionmenu-border: null;
-$accordionmenu-submenu-toggle-background: null;
-$accordion-submenu-toggle-border: $accordionmenu-border;
-$accordionmenu-submenu-toggle-width: 40px;
-$accordionmenu-submenu-toggle-height: $accordionmenu-submenu-toggle-width;
-$accordionmenu-arrow-size: 6px;
-
-// 9. Badge
-// --------
-
-$badge-background: $primary-color;
-$badge-color: $white;
-$badge-color-alt: $black;
-$badge-palette: $foundation-palette;
-$badge-padding: 0.3em;
-$badge-minwidth: 2.1em;
-$badge-font-size: 0.8rem;
-
-// 10. Breadcrumbs
-// ---------------
-
-$breadcrumbs-margin: $global-margin * 12 0  $global-margin * 6 0;
-$breadcrumbs-item-font-size: rem-calc(12);
-$breadcrumbs-item-color: $secondary-color;
-$breadcrumbs-item-color-current: $black;
-$breadcrumbs-item-color-disabled: get-color(medium-gray);
-$breadcrumbs-item-margin: 0.75rem;
-$breadcrumbs-item-uppercase: true;
-$breadcrumbs-item-separator: true;
-$breadcrumbs-item-separator-item: '/';
-$breadcrumbs-item-separator-item-rtl: '\\';
-$breadcrumbs-item-separator-color: get-color(medium-gray);
 
 // 11. Button
 // ----------
@@ -784,80 +660,3 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
-
-// 56. Xy Grid
-// -----------
-
-$xy-grid: true;
-$grid-container: $global-width;
-$grid-columns: 24;
-$grid-margin-gutters: (
-  small: 1.5rem,
-  medium: 1.5rem
-);
-$grid-padding-gutters: $grid-margin-gutters;
-$grid-container-padding: $grid-padding-gutters;
-$grid-container-max: $global-width;
-$xy-block-grid-max: 8;
-
-//  Foundation for Sites Settings
-//  -----------------------------
-//
-//  Table of Contents:
-//
-//   1. Global
-//   2. Breakpoints
-//   3. The Grid
-//   4. Base Typography
-//   5. Typography Helpers
-//   6. Abide
-//   7. Accordion
-//   8. Accordion Menu
-//   9. Badge
-//  10. Breadcrumbs
-//  11. Button
-//  12. Button Group
-//  13. Callout
-//  14. Card
-//  15. Close Button
-//  16. Drilldown
-//  17. Dropdown
-//  18. Dropdown Menu
-//  19. Flexbox Utilities
-//  20. Forms
-//  21. Label
-//  22. Media Object
-//  23. Menu
-//  24. Meter
-//  25. Off-canvas
-//  26. Orbit
-//  27. Pagination
-//  28. Progress Bar
-//  29. Prototype Arrow
-//  30. Prototype Border-Box
-//  31. Prototype Border-None
-//  32. Prototype Bordered
-//  33. Prototype Display
-//  34. Prototype Font-Styling
-//  35. Prototype List-Style-Type
-//  36. Prototype Overflow
-//  37. Prototype Position
-//  38. Prototype Rounded
-//  39. Prototype Separator
-//  40. Prototype Shadow
-//  41. Prototype Sizing
-//  42. Prototype Spacing
-//  43. Prototype Text-Decoration
-//  44. Prototype Text-Transformation
-//  45. Prototype Text-Utilities
-//  46. Responsive Embed
-//  47. Reveal
-//  48. Slider
-//  49. Switch
-//  50. Table
-//  51. Tabs
-//  52. Thumbnail
-//  53. Title Bar
-//  54. Tooltip
-//  55. Top Bar
-//  56. Xy Grid

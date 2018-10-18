@@ -1,0 +1,25 @@
+@import 'util/util';
+
+$foundation-palette: (
+  primary: #27bab5,
+  secondary: #634f8e,
+  tertiary: scale-color(#47616e, $lightness: 50%),
+  quaternary: #48626F,
+  success: scale-color(#27bab5, $lightness: -15%),
+  warning: #EEB301,
+  alert: #cc4b37,
+  main: #FAFAFA,
+  light-gray: #e6e6e6,
+  medium-gray: #cacaca,
+  dark-gray: #8a8a8a,
+  black: #444,
+  white: #fff
+);
+$main-color: map-get($foundation-palette, main);
+$secondary-color: map-get($foundation-palette, secondary);
+$light-gray: map-get($foundation-palette, light-gray);
+$medium-gray: map-get($foundation-palette, medium-gray);
+$dark-gray: map-get($foundation-palette, dark-gray);
+$black: map-get($foundation-palette, black);
+$white: map-get($foundation-palette, white);
+@include add-foundation-colors;

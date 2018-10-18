@@ -10,8 +10,10 @@ table {
   margin-bottom: 6 * $global-margin;
 }
 
-h1, h2 {
+h1,
+h2 {
   position: relative;
+
   &:after {
     content: '';
     position: absolute;
@@ -23,7 +25,6 @@ h1, h2 {
     bottom: -0.5rem;
   }
 }
-
 @mixin position-center() {
   margin-left: auto;
   margin-right: auto;
@@ -31,27 +32,38 @@ h1, h2 {
   right: 0;
 }
 
-.text-center h1, .text-center h2, h1.text-center, h2.text-center {
+.large-text-center h1,
+.large-text-center h2,
+h1.large-text-center,
+h2.large-text-center {
   &:after {
     @include position-center();
   }
 }
+@include breakpoint(medium down) {
+  .medium-text-center h1,
+  .medium-text-center h2,
+  h1.medium-text-center,
+  h2.medium-text-center {
+    &:after {
+      @include position-center();
+    }
+  }
+}
+@include breakpoint(small only) {
 
-@include breakpoint(medium up) {
-  .medium-text-center h1, .medium-text-center h2, h1.medium-text-center, h2.medium-text-center {
+
+  .text-center h1,
+  .text-center h2,
+  h1.text-center,
+  h2.text-center {
     &:after {
       @include position-center();
     }
   }
 }
 
-@include breakpoint(large up) {
-  .large-text-center h1, .large-text-center h2, h1.large-text-center, h2.large-text-center {
-    &:after {
-      @include position-center();
-    }
-  }
-}
+
 
 .fa-layers {
   vertical-align: middle;
