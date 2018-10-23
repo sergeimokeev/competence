@@ -1,3 +1,9 @@
 .responsive-embed {
   margin-bottom: rem-calc(16);
+  padding-bottom: 56.25%;
+
+  iframe {
+    width: 100%;
+    border: rem-calc(0);
+  }
 }
