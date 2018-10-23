@@ -1,3 +1,18 @@
 .button {
-  
+  padding: rem-calc(11);
+  margin-bottom: rem-calc(21);
+  font-size: rem-calc(13);
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: scale-color($primary-color, $lightness: -15%);
+  }
+  &.hollow {
+    &:hover,&:focus,&:active{
+      background: $primary-color;
+      border-color: $primary-color;
+      color: $white;
+    }
+  }
 }

@@ -32,9 +32,11 @@ ul {
   line-height: 1.5;
   margin-bottom: rem-calc(21);
 }
+
 blockquote {
   border-left: rem-calc(2) solid $primary-color;
 }
+
 blockquote,
 blockquote p {
   padding: rem-calc(0 14);
@@ -67,5 +69,29 @@ tbody {
   tr:nth-child(even) {
     background: $sky;
     border-bottom: rem-calc(0);
+  }
+}
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea {
+  box-shadow: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    box-shadow: none;
   }
 }
