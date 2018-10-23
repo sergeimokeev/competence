@@ -7,7 +7,6 @@ $textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 
 
 @import "fonts";
 @import "color";
-@import "global";
 
 @import "grid";
 @import "abide";
@@ -22,6 +21,8 @@ $textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 
 @import "dropdown";
 @import "dropdown-menu";
 @import "media-object";
+@import "off-canvas";
+@import "orbit";
 @import "foundation-settings";
 
 @import "slick.scss";
@@ -30,7 +31,9 @@ $textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 
 @import "fancybox";
 @include foundation-everything(true, true);
 
-
+@import "fa-layers";
+@import "pagination";
+@import "progress";
 @import "label";
 @import "callout";
 @import "responsive-embed";
