@@ -8,62 +8,40 @@ a {
 
 table {
   margin-bottom: 6 * $global-margin;
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: rem-calc(4);
 }
 
-h1,
-h2 {
-  position: relative;
+tfoot,
+thead {
+  background: $sky;
+  border: rem-calc(1) solid $sky;
 
-  &:after {
-    content: '';
-    position: absolute;
-    background: $warning-color;
-    height: rem-calc(3);
-    width: 5rem;
-    left: 0;
-    right: 0;
-    bottom: -0.5rem;
+  td,
+  th {
+    font-weight: 500;
   }
-}
-@mixin position-center() {
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
 
-.large-text-center h1,
-.large-text-center h2,
-h1.large-text-center,
-h2.large-text-center {
-  &:after {
-    @include position-center();
-  }
-}
-@include breakpoint(medium down) {
-  .medium-text-center h1,
-  .medium-text-center h2,
-  h1.medium-text-center,
-  h2.medium-text-center {
-    &:after {
-      @include position-center();
-    }
-  }
-}
-@include breakpoint(small only) {
-
-
-  .text-center h1,
-  .text-center h2,
-  h1.text-center,
-  h2.text-center {
-    &:after {
-      @include position-center();
-    }
+  tr {
+    background: transparent;
   }
 }
 
+tbody {
+  background: $white;
+  border: rem-calc(1) solid $sky;
 
+  td,
+  th {
+    padding: rem-calc(8 10);
+  }
+
+  tr:nth-child(even) {
+    background: $sky;
+    border-bottom: rem-calc(0);
+  }
+}
 
 .fa-layers {
   vertical-align: middle;

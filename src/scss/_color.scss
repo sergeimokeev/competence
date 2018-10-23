@@ -8,7 +8,8 @@ $foundation-palette: (
   success: scale-color(#27bab5, $lightness: -15%),
   warning: #EEB301,
   alert: #cc4b37,
-  main: #FAFAFA,
+  main: #fafafa,
+  sky: #f2f2f2,
   light-gray: #e6e6e6,
   medium-gray: #cacaca,
   dark-gray: #8a8a8a,
@@ -22,4 +23,5 @@ $medium-gray: map-get($foundation-palette, medium-gray);
 $dark-gray: map-get($foundation-palette, dark-gray);
 $black: map-get($foundation-palette, black);
 $white: map-get($foundation-palette, white);
+$sky: map-get($foundation-palette, sky);
 @include add-foundation-colors;

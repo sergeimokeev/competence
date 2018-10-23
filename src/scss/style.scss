@@ -21,6 +21,15 @@ $textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 
 @import "jquery.fancybox";
 @include foundation-everything(true, true);
 
+@import "responsive-embed";
+@import "reveal";
+@import "thumbnail";
+@import "switch";
+@import "slider";
+@import "title-bar";
+@import "top-bar";
+@import "tooltip";
+@import "typography";
 @import "common";
 @import "slick/slick-theme";
 
@@ -41,4 +50,5 @@ $textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 
 @import "tabs";
 @import "badge";
 @import "breadcrumbs";
+@import "button";
 @import "contacts";

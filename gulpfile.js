@@ -12,6 +12,8 @@ const gulpPlumber = require('gulp-plumber');
 const gulpImagemin = require('gulp-imagemin');
 const gulpNewer = require('gulp-newer');
 const gulpArgs = require('yargs').argv;
+const gulpBrowserSync = require('browser-sync');
+const gulpWait = require('gulp-wait2');
 const imageminPngquant = require('imagemin-pngquant');
 
 let nameChosenPage = gulpArgs.pg;
@@ -105,7 +107,11 @@ let images = () => gulp.src(paths.src.images, {allowEmpty: true})
         use: [imageminPngquant()],
         interlaced: true
     }))
-    .pipe(gulp.dest(paths.dist.images));
+    .pipe(gulp.dest(paths.dist.images))
+    .pipe(gulpWait(100))
+    .pipe(gulpBrowserSync.reload({
+     stream: true
+   }));
 
 let i = () => gulp.src(paths.src.i, {allowEmpty: true}).pipe(gulp.dest(paths.dist.i));
 
@@ -116,12 +122,19 @@ let jsLib = () => gulp.src(paths.src.jsLib, {allowEmpty: true})
     .pipe(gulpConcat('lib.js'))
     .pipe(gulp.dest(paths.dist.js));
 
-let jsApp = () => gulp.src(paths.src.js, {allowEmpty: true}).pipe(gulpConcat('app.js')).pipe(gulp.dest(paths.dist.js));
+let jsApp = () => gulp.src(paths.src.js, {allowEmpty: true}).pipe(gulpConcat('app.js'))
+.pipe(gulp.dest(paths.dist.js));
 
 let jsAppMinify = () => gulp.src(paths.src.js, {allowEmpty: true})
     .pipe(gulpUglify())
     .pipe(gulpConcat('app.js'))
     .pipe(gulp.dest(paths.dist.js));
+
+let reloadBrowser = () => gulp.src(paths.src.js, {allowEmpty: false})
+.pipe(gulpWait(100))
+    .pipe(gulpBrowserSync.reload({
+     stream: true
+    }));
 
 let watch = () => {
     gulp.watch(paths.watch.css, gulp.series(cleanCss, sass));
@@ -139,11 +152,11 @@ let watch = () => {
     });
 };
 let watchCustom = () => {
-    gulp.watch(paths.watch.css, gulp.series(cleanCss, sass));
-    gulp.watch(paths.watch.html, gulp.series(cleanHtml, pugCustom));
-    gulp.watch(paths.watch.i, gulp.series(cleanI, i));
-    gulp.watch(paths.watch.fonts, gulp.series(cleanFonts, fonts));
-    gulp.watch(paths.watch.js, gulp.series(cleanJs, jsApp));
+    gulp.watch(paths.watch.css, gulp.series(cleanCss, sass,reloadBrowser));
+    gulp.watch(paths.watch.html, gulp.series(cleanHtml, pugCustom,reloadBrowser));
+    gulp.watch(paths.watch.i, gulp.series(cleanI, i,reloadBrowser));
+    gulp.watch(paths.watch.fonts, gulp.series(cleanFonts, fonts),reloadBrowser);
+    gulp.watch(paths.watch.js, gulp.series(cleanJs, jsApp),reloadBrowser);
 
     let imagesWatcher = gulp.watch(paths.watch.images, images);
     imagesWatcher.on('unlink', (unlinkPath) => {
@@ -153,6 +166,12 @@ let watchCustom = () => {
         console.log("Delete file: " + distFilePath);
     });
 };
+let browserSync = () =>
+  gulpBrowserSync.init({
+        server: {
+            baseDir: "dist"
+        }
+    });
 
 gulp.task('default',
     gulp.series(
@@ -164,8 +183,8 @@ gulp.task('default',
 gulp.task('custom',
     gulp.series(
         clean,
-        gulp.parallel(sass, pugCustom, images, i, fonts, jsLib, jsApp),
-        watchCustom
+        gulp.parallel(sass, pugCustom, images, i, fonts, jsLib, jsApp, browserSync,watchCustom),
+watchCustom
     )
 );
 
