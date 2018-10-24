@@ -1,0 +1,10 @@
+.promo {
+  background: $primary-color;
+  padding-top: rem-calc(70);
+  color: $white;
+  padding-bottom: rem-calc(70);
+
+  &__img {
+    width: 100%;
+  }
+}
