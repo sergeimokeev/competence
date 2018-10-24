@@ -7,11 +7,10 @@
         /**
          * Разные карусели
          */
-        $(".x-carousel-main").slick({
+        $(".carousel-main").slick({
             infinite: true,
             dots: false,
             arrows: true,
-            slidesPerRow: 1,
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
@@ -27,7 +26,6 @@
             infinite: true,
             dots: true,
             arrows: false,
-            slidesPerRow: 1,
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
@@ -38,7 +36,6 @@
         $(".x-carousel-news").slick({
             infinite: true,
             arrows: false,
-            slidesPerRow: 1,
             slidesToShow: 1,
             slidesToScroll: 1,
             fade: true,
@@ -67,11 +64,11 @@
                 var className = $toggler.data('toggler-hover-dd');
                 if (e.type == 'mouseenter' && !$toggler.hasClass(className))
                 {
-                    $toggler.addClass(className)
+                    $toggler.addClass(className);
                 }
                 if (e.type == 'mouseleave' && $toggler.hasClass(className))
                 {
-                    toggleLeaveTimer = setTimeout(function () {$toggler.removeClass(className)}, 300);
+                    toggleLeaveTimer = setTimeout(function () {$toggler.removeClass(className);}, 300);
                 }
             }
         });
@@ -82,7 +79,7 @@
             var className = $toggler.data('toggler-hover-dd');
             if ($toggler.hasClass(className))
             {
-                toggleLeaveTimer = setTimeout(function () {$toggler.removeClass(className)}, 300);
+                toggleLeaveTimer = setTimeout(function () {$toggler.removeClass(className);}, 300);
             }
         });
 

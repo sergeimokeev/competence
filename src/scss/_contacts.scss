@@ -1,8 +1,42 @@
 .contacts {
-  padding-top: rem-calc(14);
+  padding-top: rem-calc(13);
   padding-bottom: rem-calc(7);
   background: $primary-color;
   font-size: rem-calc(13);
+
+  &__icon {
+    margin-right: rem-calc(4);
+    font-size: rem-calc(17);
+    line-height: 0.75rem;
+  }
+&__search {
+  color: $white;
+  font-weight: 500;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $medium-gray;
+  }
+}
+  &__link {
+    color: $white;
+    font-weight: 500;
+    margin-right: rem-calc(10);
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $medium-gray;
+    }
+  }
+
+  &__menu {
+    color: $white;
+    cursor: pointer;
+    display: none;
+    margin-right: rem-calc(10);
+  }
 
   &__cab {
     padding-bottom: rem-calc(7);
@@ -20,6 +54,14 @@
     }
   }
   @include breakpoint(small only) {
+    &__icon {
+      display: none;
+    }
+
+    &__menu {
+      display: inline-block;
+    }
+
     &__info {
       text-align: left;
     }

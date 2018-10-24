@@ -2,33 +2,28 @@
   .grid-container: .grid-x.grid-padding-x
     .small-24.large-9.cell.medium-order-2
       .contacts__info
-        span.text-white.hide-for-medium(data-responsive-toggle='responsive-menu', data-hide-for='medium')
+        span.contacts__menu(data-responsive-toggle='responsive-menu', data-hide-for='medium')
           span(data-toggle): i.fas.fa-bars.fa-lg
-          | &nbsp;&nbsp;&nbsp;
-        a(href='tel:+71234567890').text-white
-          strong
-            i.fas.fa-phone.fa-lg.hide-for-small-only
-            | &nbsp; +7 123 456-78-90
-        | &nbsp;&nbsp;&nbsp;
-        a(href='mailto:support@cetera.ru').text-white
-          strong
-            i.far.fa-envelope.fa-lg.hide-for-small-only
-            | &nbsp; support@cetera.ru
-        | &nbsp;&nbsp;&nbsp;&nbsp;
-        a(href='#' title='' data-toggle='search').text-white: i.fas.fa-lg.fa-search
+        a(href='tel:+71234567890').contacts__link
+          i.fas.fa-phone.contacts__icon
+          | +7 123 456-78-90
+        a(href='mailto:support@cetera.ru').contacts__link
+          i.far.fa-envelope.contacts__icon
+          | support@cetera.ru
+        a(href='#' title='' data-toggle='search').contacts__search: i.fas.fa-lg.fa-search
     .small-24.large-15.cell.medium-order-1
-      .contact__cab#responsive-menu
+      .contacts__cab#responsive-menu
         ul.menu-top
           each title in ['Контакты', 'Узнайте цены', 'Личный кабинет']
             li.menu-top__item
               a.menu-top__link(href='#')= title
-        .clearfix
+  
 
 .grid-container: .grid-x.grid-padding-x
   .small-24.large-10.large-offset-14.cell
     .dd(id='search' data-toggler='.dd_show')
-      .dd__content.padding-6.background-main
-        form(action='' method='post' data-abide='', novalidate='novalidate')
+      .dd__content.dd__content_new
+        form(action='#' method='post' data-abide='', novalidate='novalidate')
           .input-group
             input.input-group-field(type='text', placeholder='Поиск')
             .input-group-button

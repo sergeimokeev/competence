@@ -129,8 +129,7 @@ let jsAppMinify = () => gulp.src(paths.src.js, {allowEmpty: true})
     .pipe(gulpConcat('app.js'))
     .pipe(gulp.dest(paths.dist.js));
 
-let reloadBrowser = () => gulp.src(paths.src.js, {allowEmpty: false})
-.pipe(gulpWait(100))
+let reloadBrowser = () => gulp.src(paths.src.js, {allowEmpty: true}).pipe(gulpWait(100))
     .pipe(gulpBrowserSync.reload({
      stream: true
     }));
@@ -140,7 +139,7 @@ let watch = () => {
     gulp.watch(paths.watch.html, gulp.series(cleanHtml, pug));
     gulp.watch(paths.watch.i, gulp.series(cleanI, i));
     gulp.watch(paths.watch.fonts, gulp.series(cleanFonts, fonts));
-    gulp.watch(paths.watch.js, gulp.series(cleanJs, jsApp));
+    gulp.watch(paths.watch.js, gulp.series(cleanJs,jsLib,jsApp));
 
     let imagesWatcher = gulp.watch(paths.watch.images, images);
     imagesWatcher.on('unlink', (unlinkPath) => {
@@ -154,8 +153,8 @@ let watchCustom = () => {
     gulp.watch(paths.watch.css, gulp.series(cleanCss, sass,reloadBrowser));
     gulp.watch(paths.watch.html, gulp.series(cleanHtml, pugCustom,reloadBrowser));
     gulp.watch(paths.watch.i, gulp.series(cleanI, i,reloadBrowser));
-    gulp.watch(paths.watch.fonts, gulp.series(cleanFonts, fonts),reloadBrowser);
-    gulp.watch(paths.watch.js, gulp.series(cleanJs, jsApp),reloadBrowser);
+    gulp.watch(paths.watch.fonts, gulp.series(cleanFonts, fonts,reloadBrowser));
+    gulp.watch(paths.watch.js, gulp.series(cleanJs, jsLib,jsApp,reloadBrowser));
 
     let imagesWatcher = gulp.watch(paths.watch.images, images);
     imagesWatcher.on('unlink', (unlinkPath) => {
@@ -183,7 +182,7 @@ gulp.task('custom',
     gulp.series(
         clean,
         gulp.parallel(sass, pugCustom, images, i, fonts, jsLib, jsApp, browserSync,watchCustom),
-watchCustom
+        watchCustom
     )
 );
 
