@@ -76,22 +76,14 @@ h2 {
   right: 0;
 }
 
-.large-text-center h1,
-.large-text-center h2,
 h1.large-text-center,
-h2.large-text-center {
+h1.medium-text-center,
+h1.text-center,
+h2.large-text-center,
+h2.medium-text-center,
+h2.text-center {
   &:after {
     @include position-center();
-  }
-}
-@include breakpoint(medium down) {
-  .medium-text-center h1,
-  .medium-text-center h2,
-  h1.medium-text-center,
-  h2.medium-text-center {
-    &:after {
-      @include position-center();
-    }
   }
 }
 @include breakpoint(small only) {
@@ -123,14 +115,5 @@ h2.large-text-center {
   .h6,
   h6 {
     font-size: 1.1rem;
-  }
-
-  .text-center h1,
-  .text-center h2,
-  h1.text-center,
-  h2.text-center {
-    &:after {
-      @include position-center();
-    }
   }
 }
