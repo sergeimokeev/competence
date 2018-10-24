@@ -4,14 +4,24 @@
   background: $primary-color;
   font-size: rem-calc(13);
 
+  &__cab {
+    padding-bottom: rem-calc(7);
+  }
+
   &__info {
     padding-bottom: rem-calc(7);
     text-align: right;
   }
   @include breakpoint(medium down) {
     text-align: center;
+
+    &__info {
+      text-align: center;
+    }
   }
   @include breakpoint(small only) {
-    text-align: left;
+    &__info {
+      text-align: left;
+    }
   }
 }
