@@ -24,4 +24,5 @@ $dark-gray: map-get($foundation-palette, dark-gray);
 $black: map-get($foundation-palette, black);
 $white: map-get($foundation-palette, white);
 $sky: map-get($foundation-palette, sky);
+$tertiary: map-get($foundation-palette, tertiary);
 @include add-foundation-colors;
