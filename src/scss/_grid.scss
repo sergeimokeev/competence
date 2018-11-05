@@ -27,9 +27,10 @@ $breakpoints: (
   large: 960px,
   xlarge: 1200px,
   xxlarge: 1440px,
+  xxxlarge: 1920px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge);
 
 $xy-grid: true;
 $grid-container: $global-width;

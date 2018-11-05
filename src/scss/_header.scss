@@ -1,7 +1,7 @@
 .header {
   background: $main-color;
   padding: rem-calc(35 0);
-
+  
   &__hamb {
     display: none;
     font-size: rem-calc(28);
@@ -14,6 +14,7 @@
     align-self: center;
     text-align: left;
   }
+
 
   &__logo {
     max-width: rem-calc(210);

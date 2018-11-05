@@ -1,9 +1,9 @@
 .services {
   padding: rem-calc(42 21 21);
   text-align: center;
-  margin-bottom: rem-calc(21);
   background: $main-color;
   border-radius: $global-radius;
+  @include margin-level(bottom,red);
 
   &__title {
     margin-bottom: rem-calc(10);
