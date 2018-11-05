@@ -4,11 +4,11 @@
 
   &__photo {
     align-self: center;
-
-
   }
+
   &__img {
     width: 100%;
+    @include margin-level(bottom,red);
   }
 
   &__item {
@@ -23,10 +23,12 @@
       display: block;
     }
   }
-&__text {
-  font-size: rem-calc(15);
-  margin-bottom: rem-calc(21);
-}
+
+  &__text {
+    font-size: rem-calc(15);
+    margin-bottom: rem-calc(21);
+  }
+
   &__content {
     min-height: rem-calc(400);
   }
