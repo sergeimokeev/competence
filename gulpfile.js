@@ -174,7 +174,7 @@ let browserSync = () =>
 gulp.task('default',
     gulp.series(
         clean,
-        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsApp,browserSync),
+        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsApp,browserSync,watch),
         watch
     )
 );
