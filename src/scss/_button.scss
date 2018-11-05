@@ -10,6 +10,10 @@
   }
 
   &_hollow {
+    background: none;
+    border: rem-calc(1) solid $primary-color;
+    color: $primary-color;
+
     &:active,
     &:focus,
     &:hover {

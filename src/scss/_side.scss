@@ -1,0 +1,6 @@
+.side {
+  padding: rem-calc(21);
+  border-radius: $global-radius;
+  background: $main-color;
+  @include margin-level(bottom,red);
+}

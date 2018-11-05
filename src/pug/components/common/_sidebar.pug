@@ -1,9 +1,9 @@
-.margin-bottom-6.show-for-small-only(data-responsive-toggle='menu-left', data-hide-for='medium')
-    span.button.light-gray.expanded(data-toggle)
-        i.fas.fa-lg.fa-bars
-        | &nbsp;Навигация
-.padding-6.margin-bottom-6.radius.background-main#menu-left
-    ul.menu.vertical
-        li.active: a(href='#' title='') Главная
-        each title in ['О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация']
-            li: a(href='#' title='')= title
+.show-for-small-only(data-responsive-toggle='menu-left', data-hide-for='medium')
+  .button.expanded(data-toggle)
+    i.fas.fa-lg.fa-bars.picture
+    | Навигация
+.side#menu-left
+  ul.partners
+    li.partners__item: a(href='#' title='').partners__link.partners__link_active Главная
+    each title in ['О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация']
+      li.partners__item: a(href='#' title='').partners__link= title
