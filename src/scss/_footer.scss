@@ -1,0 +1,72 @@
+.footer {
+  padding-top: rem-calc(48);
+  padding-bottom: rem-calc(24);
+  color: $white;
+  background: $quaternary;
+
+  &__bottom {
+    font-size: rem-calc(13);
+    text-align: center;
+  }
+
+  &__soc {
+    @include margin-level(bottom,red);
+    font-size: rem-calc(26);
+    text-align: center;
+  }
+
+  &__link {
+    font-weight: 500;
+    display: block;
+    margin-bottom: rem-calc(7);
+    color: $tertiary;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__client {
+    @include margin-level(bottom,blue);
+  }
+
+  &__cetera {
+    margin-right: rem-calc(18);
+  }
+
+  &__tel {
+    color: $tertiary;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__labs {
+    margin-right: rem-calc(18);
+    color: $tertiary;
+    display: inline-block;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__nav {
+    margin-bottom: rem-calc(12);
+  }
+
+  &__logo {
+    width: rem-calc(140);
+  }
+
+  &__block {
+    @include margin-level(bottom,red);
+  }
+}

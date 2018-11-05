@@ -1,73 +1,63 @@
-.padding-top-12.padding-bottom-6.background-quaternary.text-white
-    .grid-container: .grid-x.grid-padding-x
-        .small-24.medium-12.large-6.medium-order-1.large-order-1.cell.margin-bottom-6
-            a(href='#')
-                img(src='./images/logo_white.svg', style='max-width: 10rem;', alt='logo')
-        nav.small-24.medium-12.large-6.medium-order-3.large-order-2.cell.margin-bottom-4
-            h6.margin-bottom-3 Навигация
-            each title in ['Сайт', 'Магазин', 'Интернет-СМИ', 'Реклама', 'Мобильные', 'Обучение', 'Конверсия']
-                .margin-bottom-2: a.text-tertiary(href='#'): strong= title
-        .small-24.medium-12.large-6.medium-order-2.large-order-3.cell.margin-bottom-3
-            h6.margin-bottom-3  Адрес офиса
-            p Проспект Ленина, дом 25, 6 этаж, офис 606 (Адрес для курьера)
-            h6.margin-bottom-3  Почтовый адрес
-            p ООО «Цетера Лабс» Куда: 150040, г.Ярославль, п/о 40, а/я 62
-        .small-24.medium-12.large-6.medium-order-4.large-order-4.cell.margin-bottom-3
-            h6.margin-bottom-3  Телефон
-            .margin-bottom-3
-                a.text-tertiary(href='tel:88007755293') 8 (800) 775-52-93
-                br
-                | Новые клиенты — нажмите «0»
-                br
-                | Текущие клиенты — добавочные и мобильные телефоны проектных менеджеров
-            h6.margin-bottom-3  Email
-            .margin-bottom-3
-                a.text-tertiary(href='mailto:welcome@ceteralabs.ru' title='') welcome@ceteralabs.ru
-                br
-                | Для новых клиентов
-            .margin-bottom-3
-                a.text-tertiary(href='mailto:support@ceteralabs.ru' title='') support@ceteralabs.ru
-                br
-                | Для текущих клиентов
-            .margin-bottom-3
-                a.text-tertiary(href='mailto:hr@ceteralabs.ru' title='') hr@ceteralabs.ru
-                br
-                | Для кандидатов в коллеги
-    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small.margin-bottom-6
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-vk.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-twitter.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-facebook-f.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-odnoklassniki.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-instagram.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-google-plus-g.fa-inverse(data-fa-transform="shrink-6")
+footer.footer
+  .grid-container: .grid-x.grid-padding-x
+    .small-24.medium-12.large-6.medium-order-1.large-order-1.cell.footer__block
+      a(href='#')
+        img(src='./images/logo_white.svg',  alt='logo').footer__logo
+    nav.small-24.medium-12.large-6.medium-order-3.large-order-2.cell.footer__nav
+      h6 Навигация
+      each title in ['Сайт', 'Магазин', 'Интернет-СМИ', 'Реклама', 'Мобильные', 'Обучение', 'Конверсия']
+        a.footer__link(href='#')= title
+    .small-24.medium-12.large-6.medium-order-2.large-order-3.cell.footer__nav
+      h6 Адрес офиса
+      p Проспект Ленина, дом 25, 6 этаж, офис 606 (Адрес для курьера)
+      h6 Почтовый адрес
+      p ООО «Цетера Лабс» Куда: 150040, г.Ярославль, п/о 40, а/я 62
+    .small-24.medium-12.large-6.medium-order-4.large-order-4.cell.footer__nav
+      h6 Телефон
+      .footer__client
+        a.footer__tel(href='tel:88007755293') 8 (800) 775-52-93
+        div Новые клиенты — нажмите «0»
+        div Текущие клиенты — добавочные и мобильные телефоны проектных менеджеров
+      h6 Email
+      .footer__client
+        a.footer__tel(href='mailto:welcome@ceteralabs.ru' title='') welcome@ceteralabs.ru
+        div Для новых клиентов
+      .margin-bottom-3
+        a.footer__tel(href='mailto:support@ceteralabs.ru' title='') support@ceteralabs.ru
+        div Для текущих клиентов
+      .margin-bottom-3
+        a.footer__tel(href='mailto:hr@ceteralabs.ru' title='') hr@ceteralabs.ru
+        div Для кандидатов в коллеги
+  .grid-container: .grid-x.grid-padding-x: .cell.footer__soc
+    a(href='#', title='').fa-layers.fa-fw.soc.soc_vk
+      i.fas.fa-circle(data-fa-transform="grow-3")
+      i.fab.fa-vk.fa-inverse(data-fa-transform="shrink-6")
+    
+    a(href='#', title='').fa-layers.fa-fw.soc.soc_twi
+      i.fas.fa-circle(data-fa-transform="grow-3")
+      i.fab.fa-twitter.fa-inverse(data-fa-transform="shrink-6")
 
-    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small
-        | &nbsp;&nbsp;
-        | &copy;&nbsp;
-        a.text-tertiary(href='#') Cetera&nbsp;Labs
-        | ,&nbsp;2002–2018
-        | &nbsp;&nbsp; &nbsp;&nbsp;
-        | Создание&nbsp;сайта&nbsp;&mdash;&nbsp;
-        a.text-tertiary(target='_blank', href='http://cetera.ru/') Cetera&nbsp;Labs
-        | &nbsp;&nbsp; &nbsp;&nbsp;
-        a.text-tertiary(target='_blank', href='http://www.cetera.ru/support/default.php?project=CCD&lang=ru&page=http://wireframes.cetera.ru/boilerplate_wireframe/') Сообщить&nbsp;об&nbsp;ошибке
-        | &nbsp;&nbsp; &nbsp;&nbsp;
-        a.text-tertiary(target='_blank', href='#') Политика&nbsp;конфиденциальности
-        | &nbsp;&nbsp;
+    a(href='#', title='').fa-layers.fa-fw.soc.soc_fb
+      i.fas.fa-circle(data-fa-transform="grow-3")
+      i.fab.fa-facebook-f.fa-inverse(data-fa-transform="shrink-6")
+
+    a(href='#', title='').fa-layers.fa-fw.soc.soc_ok
+      i.fas.fa-circle(data-fa-transform="grow-3")
+      i.fab.fa-odnoklassniki.fa-inverse(data-fa-transform="shrink-6")
+
+    a(href='#', title='').fa-layers.fa-fw.soc.soc_insta
+      i.fas.fa-circle(data-fa-transform="grow-3")
+      i.fab.fa-instagram.fa-inverse(data-fa-transform="shrink-6")
+  
+    a(href='#', title='').fa-layers.fa-fw.soc.soc_gp
+      i.fas.fa-circle(data-fa-transform="grow-3")
+      i.fab.fa-google-plus-g.fa-inverse(data-fa-transform="shrink-6")
+
+  .grid-container: .grid-x.grid-padding-x: .cell.footer__bottom
+    | &copy;&nbsp;
+    a.footer__tel(href='#') Cetera&nbsp;Labs
+    span.footer__cetera ,&nbsp;2002–2018
+    | Создание&nbsp;сайта&nbsp;&mdash;&nbsp;
+    a.footer__labs(target='_blank', href='http://cetera.ru/') Cetera&nbsp;Labs
+    a.footer__labs(target='_blank', href='http://www.cetera.ru/support/default.php?project=CCD&lang=ru&page=http://wireframes.cetera.ru/boilerplate_wireframe/') Сообщить&nbsp;об&nbsp;ошибке
+    a.footer__tel(target='_blank', href='#') Политика&nbsp;конфиденциальности

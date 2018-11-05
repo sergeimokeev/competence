@@ -8,11 +8,19 @@
   &:hover {
     background: scale-color($primary-color, $lightness: -15%);
   }
-  &.hollow {
-    &:hover,&:focus,&:active{
+
+  &_hollow {
+    &:active,
+    &:focus,
+    &:hover {
       background: $primary-color;
       border-color: $primary-color;
       color: $white;
     }
+  }
+
+  &_secondary {
+    background: $secondary-color;
+    color: $white;
   }
 }

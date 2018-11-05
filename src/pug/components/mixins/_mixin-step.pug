@@ -1,0 +1,5 @@
+mixin step(text)
+  -var id =  Math.ceil(Math.random() * 1000);
+  .step
+    input.step__input(type="checkbox" id=id)
+    label.step__label(for=id) !{text}
