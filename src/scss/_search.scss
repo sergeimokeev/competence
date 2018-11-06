@@ -25,6 +25,17 @@ $search-height: $global-lineheight * rem-calc($global-font-size) + 2 * $search-i
     &:hover {
       border: 0;
     }
+
+    &_border {
+      border: rem-calc(1) solid $medium-gray;
+      border-right: rem-calc(0);
+
+      &:focus,
+      &:hover {
+        border: rem-calc(1) solid $black;
+        border-right: rem-calc(0);
+      }
+    }
   }
 
   &__cont {

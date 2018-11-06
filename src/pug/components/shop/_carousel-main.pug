@@ -1,23 +1,23 @@
-.x-carousel-main.carousel-main.background-main
-    .carousel-main__item
-        .grid-container: .grid-x.grid-padding-x.carousel-main__content
-            .cell.medium-8.show-for-medium.align-self-middle
-                img(src='./i/photo.svg' style='width: 100%;')
-            .cell.medium-14.medium-offset-2.align-self-middle.text-left
-                h2 Ответ на любой вопрос по рекламе
-                .margin-bottom-6.text-size-large
-                    | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене.
-                    br
-                    | Часто — нулевая стоимость сайта до открытия.
-                a.button.secondary(href='#')
-                    i.fas.fa-exclamation-circle.fa-lg
-                    | &nbsp; Закажите бесплатную консультацию в Cetera прямо сейчас!
-    .carousel-main__item
-        .grid-container: .grid-x.grid-padding-x.carousel-main__content
-            .cell.medium-14.align-self-middle.text-left
-                h2 Новые сайты на Fastsite с индивидуализацией
-                .margin-bottom-6.text-size-large
-                    | Осенью 2015 запустили конструктор сайтов Fastsite. В конце 2015 на Fastsite вышло сразу несколько сайтов с индивидуализацией.
-                a.button.secondary(href='#') Создать сайт бесплатно
-            .cell.medium-8.medium-offset-2.show-for-medium.align-self-middle
-                img(src='./i/photo.svg' style='width: 100%;')
+.carousel-main
+  .carousel-main__item
+    .grid-container: .grid-x.grid-padding-x.carousel-main__content
+      .cell.medium-8.carousel-main__photo
+        img(src='./i/photo.svg' alt="" ).carousel-main__img
+      .cell.medium-14.medium-offset-2.align-self-middle.text-left
+        h2 Ответ на любой вопрос по рекламе
+        .carousel-main__text
+          | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене.
+          br
+          | Часто — нулевая стоимость сайта до открытия.
+        a.button.button_secondary(href='#')
+          i.fas.fa-exclamation-circle.fa-lg.picture
+          | Закажите бесплатную консультацию в Cetera прямо сейчас!
+  .carousel-main__item
+    .grid-container: .grid-x.grid-padding-x.carousel-main__content
+      .cell.medium-14.align-self-middle.text-left
+        h2 Новые сайты на Fastsite с индивидуализацией
+        .carousel-main__text
+          | Осенью 2015 запустили конструктор сайтов Fastsite. В конце 2015 на Fastsite вышло сразу несколько сайтов с индивидуализацией.
+        a.button.button_secondary(href='#') Создать сайт бесплатно
+      .cell.medium-8.medium-offset-2.carousel-main__photo
+        img(src='./i/photo.svg' alt="" ).carousel-main__img

@@ -1,3 +1,11 @@
 .sect {
   @include margin-level(bottom,red);
+
+  &_main {
+    background: $main-color;
+  }
+
+  &__date {
+    color: $medium-gray;
+  }
 }

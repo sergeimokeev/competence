@@ -9,6 +9,22 @@
     background: scale-color($primary-color, $lightness: -15%);
   }
 
+  &_prod {
+    font-size: rem-calc(11);
+    margin-bottom: rem-calc(0);
+    background: none;
+    border: rem-calc(1) solid $primary-color;
+    color: $primary-color;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: $primary-color;
+      border-color: $primary-color;
+      color: $white;
+    }
+  }
+
   &_large {
     font-size: rem-calc(18);
   }

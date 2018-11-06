@@ -1,0 +1,45 @@
+.prod {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+  &__info {
+    @include margin-level(bottom,red);
+  }
+
+  &__favor {
+    color: $dark-gray;
+    margin-right: rem-calc(10);
+  }
+
+  &__price {
+    font-size: rem-calc(15);
+    font-weight: 500;
+    margin-right: rem-calc(4);
+  }
+
+  &__old {
+    font-size: rem-calc(13);
+    color: $dark-gray;
+  }
+
+  &__cat {
+    display: block;
+    font-size: rem-calc(13);
+    color: $dark-gray;
+  }
+
+  &__rub {
+    margin-bottom: rem-calc(10);
+  }
+
+  &__title {}
+
+  &__main {
+    padding-bottom: rem-calc(10);
+  }
+
+  &__img {
+    margin-bottom: rem-calc(14);
+  }
+}

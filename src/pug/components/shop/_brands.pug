@@ -1,13 +1,13 @@
-.padding-top-12.padding-bottom-6
-    .grid-container: .grid-x.grid-padding-x
-        .small-24.medium-16.cell
-            h2 Бренды
-        .small-24.medium-8.cell.medium-text-right
-            a.button.hollow(href='#') Все Бренды &nbsp;
-                i.fas.fa-long-arrow-alt-right
-    .grid-container: .grid-x.grid-padding-x.small-up-2.medium-up-4.large-up-8
-        - var n = 0
-        while n < 8
-            .cell
-                img.margin-bottom-6(src='./i/photo.svg' style='width:100%' alt=n)
-            - n++
+.info
+  .grid-container: .grid-x.grid-padding-x
+    .small-24.medium-16.cell
+      h2 Бренды
+    .small-24.medium-8.cell.medium-text-right
+      a.button.button_hollow(href='#') Все Бренды
+        i.fas.fa-long-arrow-alt-right.canv
+  .grid-container: .grid-x.grid-padding-x.small-up-2.medium-up-4.large-up-8
+    - var n = 0
+    while n < 8
+      .cell
+        img.sect(src='./i/photo.svg' alt=n)
+      - n++
