@@ -59,6 +59,7 @@ $textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 
 @import "text";
 @import "text-size";
 @import "accordion";
+@import "postfix";
 @import "tabs";
 @import "badge";
 @import "breadcrumbs";
@@ -88,3 +89,5 @@ $textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 
 @import "date";
 @import "object";
 @import "map";
+@import "way";
+@import "error";
