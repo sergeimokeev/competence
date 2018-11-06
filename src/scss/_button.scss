@@ -9,6 +9,24 @@
     background: scale-color($primary-color, $lightness: -15%);
   }
 
+  &_large {
+    font-size: rem-calc(18);
+  }
+
+  &_expanded {
+    display: block;
+    width: 100%;
+    padding-left: rem-calc(7);
+    padding-right: rem-calc(7);
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &_light-gray {
+    background: $light-gray;
+    color: $black;
+  }
+
   &_hollow {
     background: none;
     border: rem-calc(1) solid $primary-color;

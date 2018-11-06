@@ -1,0 +1,8 @@
+.map {
+  @include margin-level(bottom,orange);
+  iframe {
+    height: rem-calc(350);
+    width: 100%;
+    border: rem-calc(0);
+  }
+}

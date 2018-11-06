@@ -1,3 +1,8 @@
 .hr {
-margin-bottom: 6*$global-margin;
+  @include margin-level(bottom,red);
+
+  &_high {
+    @include margin-level(bottom,orange);
+    @include margin-level(top,orange);
+  }
 }

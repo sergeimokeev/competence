@@ -1,4 +1,12 @@
 .callout {
-  margin-bottom: 6 * $global-margin;
+  @include margin-level(bottom,red);
   padding: 6 * $global-padding;
+
+  &_alert {
+    background-color: #f7e4e1;
+  }
+
+  &_success {
+    background-color: #d7f7f6;
+  }
 }

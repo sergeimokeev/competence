@@ -1,28 +1,28 @@
 extends corp-regular
 include components/mixins/_mixin-event-tile
 block content
+  .grid-container: .grid-x.grid-padding-x: .cell
+    h1 События
+  .info
     .grid-container: .grid-x.grid-padding-x: .cell
-        h1 События
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x: .cell
-            a.button(href='#') Предстоящие
-            = ' '
-            a.button.light-gray(href='#') Прошедшие
-            .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-4(data-equalizer='events', data-equalize-by-row='true')
-                +eventTile('Приняли на комплексное обслуживание новый сайт', 'events')
-                +eventTile('Подписан договор с компанией ООО «Ценнер-Водоприбор Лтд» на SEO продвижение сайта', 'events')
-                +eventTile('Приняли на комплексное обслуживание новый сайт', 'events')
-                +eventTile('Подписан договор с компанией ООО «Ценнер-Водоприбор Лтд» на SEO продвижение сайта', 'events')
-                +eventTile('Подписан договор на разработку сайта с РПК «Престо»', 'events')
-                +eventTile('Cetera подписали договор с компанией «ТЕЛЕПЛАСТ» на разработку корпоративного сайта', 'events')
-                +eventTile('Подписан договор на разработку сайта с РПК «Престо»', 'events')
-                +eventTile('Cetera подписали договор с компанией «ТЕЛЕПЛАСТ» на разработку корпоративного сайта', 'events')
-                +eventTile('Приняли на комплексное обслуживание новый сайт', 'events')
-                +eventTile('Подписан договор с компанией ООО «Ценнер-Водоприбор Лтд» на SEO продвижение сайта', 'events')
-                +eventTile('Приняли на комплексное обслуживание новый сайт', 'events')
-                +eventTile('Подписан договор с компанией ООО «Ценнер-Водоприбор Лтд» на SEO продвижение сайта', 'events')
-                +eventTile('Подписан договор на разработку сайта с РПК «Престо»', 'events')
-                +eventTile('Cetera подписали договор с компанией «ТЕЛЕПЛАСТ» на разработку корпоративного сайта', 'events')
-                +eventTile('Подписан договор на разработку сайта с РПК «Престо»', 'events')
-                +eventTile('Cetera подписали договор с компанией «ТЕЛЕПЛАСТ» на разработку корпоративного сайта', 'events')
-            include components/common/_pagination
+      a.button(href='#') Предстоящие
+      = ' '
+      a.button.button_light-gray(href='#') Прошедшие
+      .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-4(data-equalizer='events', data-equalize-by-row='true')
+        +eventTile('Приняли на комплексное обслуживание новый сайт', 'events')
+        +eventTile('Подписан договор с компанией ООО «Ценнер-Водоприбор Лтд» на SEO продвижение сайта', 'events')
+        +eventTile('Приняли на комплексное обслуживание новый сайт', 'events')
+        +eventTile('Подписан договор с компанией ООО «Ценнер-Водоприбор Лтд» на SEO продвижение сайта', 'events')
+        +eventTile('Подписан договор на разработку сайта с РПК «Престо»', 'events')
+        +eventTile('Cetera подписали договор с компанией «ТЕЛЕПЛАСТ» на разработку корпоративного сайта', 'events')
+        +eventTile('Подписан договор на разработку сайта с РПК «Престо»', 'events')
+        +eventTile('Cetera подписали договор с компанией «ТЕЛЕПЛАСТ» на разработку корпоративного сайта', 'events')
+        +eventTile('Приняли на комплексное обслуживание новый сайт', 'events')
+        +eventTile('Подписан договор с компанией ООО «Ценнер-Водоприбор Лтд» на SEO продвижение сайта', 'events')
+        +eventTile('Приняли на комплексное обслуживание новый сайт', 'events')
+        +eventTile('Подписан договор с компанией ООО «Ценнер-Водоприбор Лтд» на SEO продвижение сайта', 'events')
+        +eventTile('Подписан договор на разработку сайта с РПК «Престо»', 'events')
+        +eventTile('Cetera подписали договор с компанией «ТЕЛЕПЛАСТ» на разработку корпоративного сайта', 'events')
+        +eventTile('Подписан договор на разработку сайта с РПК «Престо»', 'events')
+        +eventTile('Cetera подписали договор с компанией «ТЕЛЕПЛАСТ» на разработку корпоративного сайта', 'events')
+      include components/common/_pagination

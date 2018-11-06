@@ -1,6 +1,7 @@
 .pagination {
-  margin-bottom: 6 * $global-margin;
+  @include margin-level(bottom,red);
+
   .current {
-    background: $secondary-color;;
+    background: $secondary-color;
   }
 }
