@@ -20,7 +20,7 @@ let nameChosenPage = gulpArgs.pg;
 
 const sassPaths = [
     './node_modules/foundation-sites/scss',
-    './node_modules/motion-ui/src',
+    './node_modules/motion-ui',
     './node_modules/slick-carousel/slick/'
 ];
 

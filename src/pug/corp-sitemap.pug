@@ -1,11 +1,11 @@
 extends corp-index
 
 block page
-    include components/common/_breadcrumbs
-    block content
-        .grid-container: .grid-x.grid-padding-x: .cell
-            h1 Карта сайта
-        .padding-top-12.padding-bottom-6
-            .grid-container: .grid-x.grid-padding-x
-                .cell.small-24.medium-16.large-12.end
-                    include components/corporate/_sitemap
+  include components/common/_breadcrumbs
+  block content
+    .grid-container: .grid-x.grid-padding-x: .cell
+      h1 Карта сайта
+    .info
+      .grid-container: .grid-x.grid-padding-x
+        .cell.small-24.medium-16.large-12
+          include components/corporate/_sitemap
