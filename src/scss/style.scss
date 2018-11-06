@@ -54,7 +54,7 @@ $textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 
 @import "menu-top";
 @import "menu";
 @import "rating";
-@import "search-top";
+@import "search";
 @import "sticky-footer";
 @import "text";
 @import "text-size";
@@ -91,3 +91,6 @@ $textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 
 @import "map";
 @import "way";
 @import "error";
+@import "reg";
+@import "brand";
+@import "sect";

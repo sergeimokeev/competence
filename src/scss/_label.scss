@@ -1,3 +1,6 @@
 .label {
-
+  &_success {
+    color: $white;
+    background: $success-color;
+  }
 }

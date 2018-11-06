@@ -1,101 +1,101 @@
 doctype html
 html.no-js(lang='ru')
-    include components/service/_head
-    body
-        include components/shop/_top-line
-        include components/shop/_header
-        include components/shop/_menu-line
+  include components/service/_head
+  body
+    include components/shop/_top-line
+    include components/shop/_header
+    include components/shop/_menu-line
 
-        include components/shop/_mixin-product-tile
-        include components/shop/_mixin-product-line
-        include components/shop/_add-to-favourites-auth-popup
+    include components/shop/_mixin-product-tile
+    include components/shop/_mixin-product-line
+    include components/shop/_add-to-favourites-auth-popup
 
-        block page
-            include components/shop/_carousel-main
-            .padding-top-12.padding-bottom-6
-                .grid-container: .grid-x.grid-padding-x.small-up-2.medium-up-4.text-center
-                    - var n = 1
-                    while n < 5
-                        .cell
-                            .margin-bottom-6: a(href='#'): img(src='./i/photo.svg' alt='раздел' style='width: 100%;')
-                            h5: a(href='#') Раздел&nbsp;
-                                = n
-                        - n++
-            .grid-x.grid-padding-x: .cell: hr
-            .padding-top-12.padding-bottom-6
-                .grid-container: .grid-x.grid-padding-x
-                    .small-24.medium-16.cell
-                        h2 Распродажа
-                    .small-24.medium-8.cell.medium-text-right
-                        a.button.hollow(href='#') Все товары с распродажей &nbsp;
-                            i.fas.fa-long-arrow-alt-right
-                .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
-                    +productTile('Комби-перфоратор Metabo KHE 2650', true)
-                    +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', true)
-                    +productTile('Лобзик Metabo STEB 65 Quick', true)
-                    +productTile('Торцовочная пила Ryobi EMS254L', true)
-                    +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', true)
-                    +productTile('Лобзик Metabo STEB 65 Quick', true)
-            .grid-container: .grid-x.grid-padding-x: .cell: hr
-            include components/shop/_banners
-            .grid-container: .grid-x.grid-padding-x: .cell: hr
-            .padding-top-12.padding-bottom-6
-                .grid-container: .grid-x.grid-padding-x: .cell
-                    h2 Рекомендуем
-                .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
-                    +productTile('Комби-перфоратор Metabo KHE 2650', false)
-                    +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
-                    +productTile('Лобзик Metabo STEB 65 Quick', false)
-                    +productTile('Торцовочная пила Ryobi EMS254L', true)
-                    +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
-                    +productTile('Лобзик Metabo STEB 65 Quick', false)
-            .background-primary.padding-vertical-20
-                .grid-container
-                    .grid-x.grid-padding-x
-                        .cell.medium-14.align-self-middle
-                            h2.text-white Тотальная распродажа
-                            p.text-white
-                                | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене.
-                                br
-                                | Часто — нулевая стоимость сайта до открытия.
-                            p
-                                a.button.secondary(href='#') Узнайте стоимость товаров &nbsp;<i class="fas fa-long-arrow-alt-right"></i>
-                        .cell.medium-8.medium-offset-2.show-for-medium
-                            img(src='./i/photo.svg' style='width: 100%;')
-            include components/shop/_brands
-            .grid-container: .grid-x.grid-padding-x: .cell: hr
-            .padding-top-12.padding-bottom-6
-                .grid-container: .grid-x.grid-padding-x
-                    .small-24.medium-12.cell
-                        h2 О магазине
-                        p Изоморфизм из группы (G, ∗) в себя называется автоморфизмом этой группы. Так как изоморфизм f : G → G  биективен.
-                        p Автоморфизм всегда отображает нейтральный элемент в себя. Образ класса сопряжённости всегда является классом сопряжённости (тем же самым или другим). Образ элемента имеет тот же порядок, что и сам элемент.
-                        p Композиция двух автоморфизмов снова является автоморфизмом, и эта операция с множеством всех автоморфизмов группы G, обозначаемая Aut(G), образует группу, группу автоморфизмов G.
-                    .small-24.medium-12.cell
-                        h2 Контакты
-                        p 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
-                        p: strong: a(href='tel:88007755293') 8 (800) 775-52-93
-                        p: strong: a(href='mailto:welcome@cetera.ru') welcome@cetera.ru
+    block page
+      include components/shop/_carousel-main
+      .padding-top-12.padding-bottom-6
+        .grid-container: .grid-x.grid-padding-x.small-up-2.medium-up-4.text-center
+          - var n = 1
+          while n < 5
+            .cell
+              .margin-bottom-6: a(href='#'): img(src='./i/photo.svg' alt='раздел' style='width: 100%;')
+              h5: a(href='#') Раздел&nbsp;
+                = n
+            - n++
+      .grid-x.grid-padding-x: .cell: hr
+      .padding-top-12.padding-bottom-6
+        .grid-container: .grid-x.grid-padding-x
+          .small-24.medium-16.cell
+            h2 Распродажа
+          .small-24.medium-8.cell.medium-text-right
+            a.button.hollow(href='#') Все товары с распродажей &nbsp;
+              i.fas.fa-long-arrow-alt-right
+        .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
+          +productTile('Комби-перфоратор Metabo KHE 2650', true)
+          +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', true)
+          +productTile('Лобзик Metabo STEB 65 Quick', true)
+          +productTile('Торцовочная пила Ryobi EMS254L', true)
+          +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', true)
+          +productTile('Лобзик Metabo STEB 65 Quick', true)
+      .grid-container: .grid-x.grid-padding-x: .cell: hr
+      include components/shop/_banners
+      .grid-container: .grid-x.grid-padding-x: .cell: hr
+      .padding-top-12.padding-bottom-6
+        .grid-container: .grid-x.grid-padding-x: .cell
+          h2 Рекомендуем
+        .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
+          +productTile('Комби-перфоратор Metabo KHE 2650', false)
+          +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
+          +productTile('Лобзик Metabo STEB 65 Quick', false)
+          +productTile('Торцовочная пила Ryobi EMS254L', true)
+          +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
+          +productTile('Лобзик Metabo STEB 65 Quick', false)
+      .background-primary.padding-vertical-20
+        .grid-container
+          .grid-x.grid-padding-x
+            .cell.medium-14.align-self-middle
+              h2.text-white Тотальная распродажа
+              p.text-white
+                | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене.
+                br
+                | Часто — нулевая стоимость сайта до открытия.
+              p
+                a.button.secondary(href='#') Узнайте стоимость товаров &nbsp;<i class="fas fa-long-arrow-alt-right"></i>
+            .cell.medium-8.medium-offset-2.show-for-medium
+              img(src='./i/photo.svg' style='width: 100%;')
+      include components/shop/_brands
+      .grid-container: .grid-x.grid-padding-x: .cell: hr
+      .padding-top-12.padding-bottom-6
+        .grid-container: .grid-x.grid-padding-x
+          .small-24.medium-12.cell
+            h2 О магазине
+            p Изоморфизм из группы (G, ∗) в себя называется автоморфизмом этой группы. Так как изоморфизм f : G → G  биективен.
+            p Автоморфизм всегда отображает нейтральный элемент в себя. Образ класса сопряжённости всегда является классом сопряжённости (тем же самым или другим). Образ элемента имеет тот же порядок, что и сам элемент.
+            p Композиция двух автоморфизмов снова является автоморфизмом, и эта операция с множеством всех автоморфизмов группы G, обозначаемая Aut(G), образует группу, группу автоморфизмов G.
+          .small-24.medium-12.cell
+            h2 Контакты
+            p 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
+            p: strong: a(href='tel:88007755293') 8 (800) 775-52-93
+            p: strong: a(href='mailto:welcome@cetera.ru') welcome@cetera.ru
 
-            .grid-container: .grid-x.grid-padding-x: .cell: hr
-            include components/shop/_index-news
-            .grid-container: .grid-x.grid-padding-x: .cell: hr
-            .padding-top-12.padding-bottom-6
-                .grid-container: .grid-x.grid-padding-x: .cell
-                    h2 Рассылка
-                .grid-container: .grid-x.grid-padding-x
-                    .cell.small-24.medium-16.large-12.end
-                        .input-group
-                            input.input-group-field(type='email' placeholder='Введите ваш e-mail')
-                            .input-group-button
-                                button.button.secondary(type='button')
-                                    i.far.fa-envelope
-                                    = ' '
-                                    | Подписаться
+      .grid-container: .grid-x.grid-padding-x: .cell: hr
+      include components/shop/_index-news
+      .grid-container: .grid-x.grid-padding-x: .cell: hr
+      .padding-top-12.padding-bottom-6
+        .grid-container: .grid-x.grid-padding-x: .cell
+          h2 Рассылка
+        .grid-container: .grid-x.grid-padding-x
+          .cell.small-24.medium-16.large-12.end
+            .input-group
+              input.input-group-field(type='email' placeholder='Введите ваш e-mail')
+              .input-group-button
+                button.button.secondary(type='button')
+                  i.far.fa-envelope
+                  = ' '
+                  | Подписаться
 
 
-        .grid-container: .grid-x.grid-padding-x: .cell: hr
-        include ../images/shop/ecommerce-icons.svg
-        include components/shop/_benefits
-        include components/shop/_footer
-        include components/service/_js
+    .grid-container: .grid-x.grid-padding-x: .cell: hr
+    include ../images/shop/ecommerce-icons.svg
+    include components/shop/_benefits
+    include components/shop/_footer
+    include components/service/_js

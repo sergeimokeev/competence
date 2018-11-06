@@ -1,85 +1,18 @@
-.background-light-gray.padding-vertical-6
-    .grid-container: .grid-x.grid-padding-x
-        .small-24.large-16.cell#menu
-            ul.menu-base
-                - n = 0
-                each title in ['Новинки', 'Бренды', 'Одежда', 'Обувь', 'Аксессуары']
-                    li.menu-base__item
-                        a.menu-base__link(href='shop-catalog.html' data-toggle-hover-dd='menu_item_' + n)= title
-                    - n++
-                li.menu-base__item
-                    a.menu-base__link(href='#')
-                        strong Распродажа %
-            .margin-bottom-6.show-for-small-only
-        .small-24.large-8.cell
-            form.search-top.input-group(action='shop-search.html' method='get')
-                input.search-top__input.input-group-field(type='text', value='' placeholder='Введите поисковый запрос')
-                .input-group-button
-                    button.search-top__button: i.fas.fa-search(type='submit')
+.brand
+  .grid-container: .grid-x.grid-padding-x
+    .small-24.large-16.cell#menu
+      ul.cat.cat_top
+        - n = 0
+        each title in ['Новинки', 'Бренды', 'Одежда', 'Обувь', 'Аксессуары']
+          li.cat__item
+            a.cat__link(href='shop-catalog.html' data-toggle-hover-dd='menu_item_' + n)= title
+          - n++
+        li.cat__item
+          a.cat__link(href='#') Распродажа %
+    .small-24.large-8.cell
+      form.search(action='shop-search.html' method='get')
+        input.search__input(type='text', value='' placeholder='Введите поисковый запрос')
+        .search__cont
+          button.search__button: i.fas.fa-search(type='submit')
 
-.dd.hide-for-small-only#menu_item_0(data-toggler-hover-dd='dd_show')
-    .dd__content.callout
-        .grid-container: .grid-x.grid-padding-x
-            .small-12.medium-8.large-6.cell
-                h5 Одежда
-                ul
-                    each title in ['Все категории', 'Платья', 'Пальто', 'Пуховики', 'Куртки', 'Парки', 'Юбки', 'Брюки', 'Блузы и рубашки', 'Деним', 'Свитеры и трикотаж', 'Комбинезоны', 'Топы', 'Нижнее белье', 'Распродажа']
-                        li
-                            a(href='#' title='')= title
-            .small-12.medium-8.large-6.cell
-                h5 Актуально
-                ul
-                    each title in ['Классика гардероба', 'Одежда для фитнеса', 'Новый сезон', 'Бизнес-класс', 'Выход в свет', 'Бестселлеры', 'Рукав-колокол', 'Миниатюрные сумки', 'Бархат', 'Вечерние образы', 'Пуховики']
-                        li
-                            a(href='#' title='')= title
-            .small-24.medium-8.large-offset-4.cell
-                .margin-bottom-6: img(src='./i/photo.svg' alt='1')
-                span.label.success
-                    i.far.fa-star
-                    | &nbsp;Акция
-                | &nbsp;
-                a(href='shop-product.html' title='') Торцовочная пила Ryobi EMS254L
-.dd.hide-for-small-only#menu_item_1(data-toggler-hover-dd='dd_show')
-    .dd__content.callout
-        .grid-container: .grid-x.grid-padding-x
-            .small-12.medium-8.large-6.cell
-                h5 Одежда Одежда
-                ul
-                    each title in ['Все категории', 'Платья', 'Пальто', 'Пуховики', 'Куртки', 'Парки', 'Юбки', 'Брюки', 'Блузы и рубашки', 'Деним', 'Свитеры и трикотаж', 'Комбинезоны', 'Топы', 'Нижнее белье', 'Распродажа']
-                        li
-                            a(href='#' title='')= title
-            .small-12.medium-8.large-6.cell
-                h5 Актуально
-                ul
-                    each title in ['Классика гардероба', 'Одежда для фитнеса', 'Новый сезон', 'Бизнес-класс', 'Выход в свет', 'Бестселлеры', 'Рукав-колокол', 'Миниатюрные сумки', 'Бархат', 'Вечерние образы', 'Пуховики']
-                        li
-                            a(href='#')= title
-            .small-24.medium-8.large-offset-4.cell
-                .margin-bottom-6: img(src='./i/photo.svg' alt='2')
-                span.label.success
-                    i.far.fa-star
-                    | &nbsp;Акция
-                | &nbsp;
-                a(href='shop-product.html') Торцовочная пила Ryobi EMS254L
-.dd.hide-for-small-only#menu_item_2(data-toggler-hover-dd='dd_show')
-    .dd__content.callout
-        .grid-container: .grid-x.grid-padding-x
-            .small-12.medium-8.large-6.cell
-                h5 Одежда
-                ul
-                    each title in ['Все категории', 'Платья', 'Пальто', 'Пуховики', 'Куртки', 'Парки', 'Юбки', 'Брюки', 'Блузы и рубашки', 'Деним', 'Свитеры и трикотаж', 'Комбинезоны', 'Топы', 'Нижнее белье', 'Распродажа']
-                        li
-                            a(href='#')= title
-            .small-12.medium-8.large-6.cell
-                h5 Актуально Актуально
-                ul
-                    each title in ['Классика гардероба', 'Одежда для фитнеса', 'Новый сезон', 'Бизнес-класс', 'Выход в свет', 'Бестселлеры', 'Рукав-колокол', 'Миниатюрные сумки', 'Бархат', 'Вечерние образы', 'Пуховики']
-                        li
-                            a(href='#')= title
-            .small-24.medium-8.large-offset-4.cell
-                .margin-bottom-6: img(src='./i/photo.svg' alt='3')
-                span.label.success
-                    i.far.fa-star
-                    | &nbsp;Акция
-                | &nbsp;
-                a(href='shop-product.html') Торцовочная пила Ryobi EMS254L
+include _dd
