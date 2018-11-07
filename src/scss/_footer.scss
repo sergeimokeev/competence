@@ -4,13 +4,28 @@
   color: $white;
   background: $quaternary;
 
+  &__shop {
+    color: $white;
+    display: block;
+    font-weight: 300;
+    margin-bottom: rem-calc(8);
+    line-height: 1.5;
+    font-size: rem-calc(17);
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $light-gray;
+    }
+  }
+
   &__bottom {
     font-size: rem-calc(13);
     text-align: center;
   }
 
   &__soc {
-    @include margin-level(bottom,red);
+    margin-bottom: rem-calc(21);
     font-size: rem-calc(26);
     text-align: center;
   }
@@ -19,6 +34,26 @@
     font-weight: 500;
     display: block;
     margin-bottom: rem-calc(7);
+    color: $tertiary;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__info {
+    margin-bottom: rem-calc(21);
+  }
+
+  &__pay {
+    height: rem-calc(24);
+  }
+
+  &__call {
+    font-weight: 500;
+    display: block;
     color: $tertiary;
 
     &:active,

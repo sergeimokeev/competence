@@ -40,7 +40,8 @@
     &__block {
       text-align: center;
     }
-
+  }
+  @include breakpoint(medium down) {
     &__info {
       margin-bottom: rem-calc(10);
       text-align: center;

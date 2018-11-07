@@ -8,7 +8,9 @@
   &:hover {
     background: scale-color($primary-color, $lightness: -15%);
   }
-
+&_input {
+  border-radius:  0 $global-radius  $global-radius 0;
+}
   &_prod {
     font-size: rem-calc(11);
     margin-bottom: rem-calc(0);

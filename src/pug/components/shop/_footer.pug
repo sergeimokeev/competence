@@ -1,76 +1,40 @@
-.background-quaternary.padding-top-8.padding-bottom-4.text-white
-    .grid-container: .grid-x.grid-padding-x
-        .small-24.medium-12.large-6.cell.margin-bottom-6
-            a(href='#')
-                img(src='./images/logo_white.svg', style='max-width: 10rem;', alt='logo')
+footer.footer
+  .grid-container: .grid-x.grid-padding-x
+    .small-24.medium-12.large-6.cell.footer__block
+      a(href='#')
+        img(src='./images/logo_white.svg' alt='logo').footer__logo
 
-        .small-12.medium-12.large-6.cell
-            h6.margin-bottom-3: a.text-white(href='#', title='') Магазин
-            nav.margin-bottom-6
-                .margin-bottom-2: a.text-tertiary(href='#'): strong О магазине
-                .margin-bottom-2: a.text-tertiary(href='#'): strong Партнёрам
-                .margin-bottom-2: a.text-tertiary(href='#'): strong Контакты
+    .small-12.medium-12.large-6.cell
+      a(href='#', title='').footer__shop Магазин
+      nav.footer__nav
+        a.footer__link(href='#') О магазине
+        a.footer__link(href='#') Партнёрам
+        a.footer__link(href='#') Контакты
 
-        .small-12.medium-12.large-6.cell
-            h6.margin-bottom-3: a.text-white(href='#', title='') Покупателям
-            nav.margin-bottom-6
-                .margin-bottom-2: a.text-tertiary(href='#'): strong Доставка
-                .margin-bottom-2: a.text-tertiary(href='#'): strong Оплата
-                .margin-bottom-2: a.text-tertiary(href='#'): strong Возврат
-                .margin-bottom-2: a.text-tertiary(href='#'): strong Гарантия и сервис
+    .small-12.medium-12.large-6.cell
+      h6.margin-bottom-3: a.text-white(href='#', title='') Покупателям
+      nav.footer__nav
+        a.footer__link(href='#') Доставка
+        a.footer__link(href='#') Оплата
+        a.footer__link(href='#') Возврат
+        a.footer__link(href='#') Гарантия и сервис
 
-        .small-24.medium-12.large-6.cell
-            h6.margin-bottom-3 Контакты
-            .margin-bottom-6
-                | 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
-                br
-                a.text-tertiary(href='tel:88007755293') 8 (800) 775-52-93
-                br
-                a.text-tertiary(href='mailto:welcome@cetera.ru') welcome@cetera.ru
-            h6.margin-bottom-3 Принимаем к оплате
-            .margin-bottom-6
-                img(src='./images/shop/visa.svg', style='height: 24px', alt='visa')
-                img(src='./images/shop/mc.svg', style='height: 24px', alt='mc')
-                img(src='./images/shop/ms.svg', style='height: 24px', alt='sber')
-                img(src='./images/shop/qiwi.svg', style='height: 24px', alt='qiwi')
-                img(src='./images/shop/ym.svg', style='height: 24px', alt='ym')
-                img(src='./images/shop/pp.svg', style='height: 24px', alt='pp')
+    .small-24.medium-12.large-6.cell
+      h6 Контакты
+      .sect
+        | 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
+        a.footer__call(href='tel:88007755293') 8 (800) 775-52-93
+        a.footer__call(href='mailto:welcome@cetera.ru') welcome@cetera.ru
+      h6 Принимаем к оплате
+      .footer__info
+        img(src='./images/shop/visa.svg', alt='visa').footer__pay
+        img(src='./images/shop/mc.svg', alt='mc').footer__pay
+        img(src='./images/shop/ms.svg', alt='sber').footer__pay
+        img(src='./images/shop/qiwi.svg', alt='qiwi').footer__pay
+        img(src='./images/shop/ym.svg', alt='ym').footer__pay
+        img(src='./images/shop/pp.svg', alt='pp').footer__pay
 
-    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small.margin-bottom-6
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-vk.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-twitter.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-facebook-f.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-odnoklassniki.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-instagram.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-google-plus-g.fa-inverse(data-fa-transform="shrink-6")
+  .grid-container: .grid-x.grid-padding-x: .cell.footer__soc
+    include ../common/_soc
 
-    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small
-        | &nbsp;&nbsp;
-        | &copy;&nbsp;
-        a.text-tertiary(href='#') Cetera&nbsp;Labs
-        | ,&nbsp;2002–2018
-        | &nbsp;&nbsp; &nbsp;&nbsp;
-        | Создание&nbsp;сайта&nbsp;&mdash;&nbsp;
-        a.text-tertiary(target='_blank', href='http://cetera.ru/') Cetera&nbsp;Labs
-        | &nbsp;&nbsp; &nbsp;&nbsp;
-        a.text-tertiary(target='_blank', href='http://www.cetera.ru/support/default.php?project=CCD&lang=ru&page=http://wireframes.cetera.ru/boilerplate_wireframe/') Сообщить&nbsp;об&nbsp;ошибке
-        | &nbsp;&nbsp; &nbsp;&nbsp;
-        a.text-tertiary(target='_blank', href='#') Политика&nbsp;конфиденциальности
-        | &nbsp;&nbsp;
+  include ../common/_footer-info
