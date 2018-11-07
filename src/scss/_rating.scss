@@ -2,41 +2,36 @@
   display: inline-block;
   vertical-align: middle;
   @include clearfix;
+  margin-right: rem-calc(4);
+  .rating__star {
+    float: right;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__solid {
+    display: block;
+    font-size: 1.35rem;
+    color: #777;
+    margin-right: 5px;
+    position: relative;
+  }
+  &__regular {
+    font-size: 1.35rem;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #EEB301;
+  }
+  &__input {
+    display:none;
+  }
 }
-
-label.rating__star {
-  float: right;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  position: relative;
-}
-
-.rating__star:hover {
-  cursor: pointer;
-}
-
-.rating__solid {
-  display: block;
-  font-size: 1.35rem;
-  color: #777;
-  margin-right: 5px;
-  position: relative;
-}
-
-.rating__regular {
-  font-size: 1.35rem;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #EEB301;
-}
-
-.rating__input {
-  display: none;
-}
-
 .rating__star:hover .rating__regular,
 .rating__star:hover ~ .rating__star .rating__regular,
 .rating:not(:hover) .rating__input:checked .rating__regular,

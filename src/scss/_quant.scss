@@ -1,0 +1,29 @@
+.quant {
+  position: relative;
+
+  &__input {
+    border: rem-calc(1) solid $medium-gray;
+    border-radius: rem-calc(4 0 0 4);
+    padding-right: rem-calc(23);
+    height: rem-calc(41);
+  }
+
+  &__minus,
+  &__plus {
+    width: 0;
+    height: 0;
+    border-left: rem-calc(6) solid transparent;
+    border-right: rem-calc(6) solid transparent;
+    border-bottom: rem-calc(6) solid $black;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    right: rem-calc(6);
+    top: rem-calc(7);
+  }
+
+  &__minus {
+    top: rem-calc(24);
+    transform: rotate(180deg);
+  }
+}

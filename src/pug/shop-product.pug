@@ -1,83 +1,83 @@
 extends shop-regular
 
 block content
-    .grid-container: .grid-x.grid-padding-x: .cell
-        h1 Принтер лазерный HP LaserJet Pro M477fnw (CF377A#ACB)
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x
-            .small-24.medium-12.cell.medium-order-2
-                .margin-bottom-6
-                    span.label.secondary
-                        i.far.fa-star
-                        | &nbsp;Акция
-                    span.text-dark-gray &nbsp; Артикул 123456
-                include components/shop/_product-base-info
-                hr.margin-bottom-6
-                include components/shop/_product-stock-delivery-info
-                hr.margin-bottom-6
-                include components/shop/_product-share-links
+  .grid-container: .grid-x.grid-padding-x: .cell
+    h1 Принтер лазерный HP LaserJet Pro M477fnw (CF377A#ACB)
+  .info
+    .grid-container.shipment: .grid-x.grid-padding-x
+      .small-24.medium-12.cell.medium-order-2
+        .shipment__sect
+          span.label.label_action
+            i.far.fa-star.picture
+            | Акция
+          span.shipment__art Артикул 123456
+        include components/shop/_product-base-info
+        hr.hr
+        include components/shop/_product-stock-delivery-info
+        hr.hr
+        include components/shop/_product-share-links
 
-            .small-24.medium-12.cell.medium-order-1
-                include components/shop/_product-images
-    .grid-container: .grid-x.grid-padding-x: .cell: hr
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x: .cell
-            ul.tabs#product-tabs-1(data-responsive-accordion-tabs="accordion medium-tabs" data-deep-link="true" data-update-history="false")
-                li.tabs-title.is-active
-                    a(href='#product-tab-description' title='') Описание
-                li.tabs-title
-                    a(href='#product-tab-spec' title='') Характеристики товара
-                li.tabs-title
-                    a(href='#product-tab-files' title='') Дополнительные материалы
-                li.tabs-title
-                    a(href='#product-tab-comments' title='')
-                        i.fas.fa-comments
-                        | &nbsp;Отзывы&nbsp;(10)
-
-            .tabs-content(data-tabs-content="product-tabs-1")
-                .tabs-panel.is-active#product-tab-description
-                    include components/shop/_product-tab-description
-                .tabs-panel#product-tab-spec
-                    include components/shop/_product-tab-spec
-                .tabs-panel#product-tab-files
-                    include components/shop/_product-tab-files
-                .tabs-panel#product-tab-comments
-                    include components/shop/_product-tab-comments
+      .small-24.medium-12.cell.medium-order-1
+        include components/shop/_product-images
+  .grid-container: .grid-x.grid-padding-x: .cell: hr
+  .info
     .grid-container: .grid-x.grid-padding-x: .cell
-        hr.margin-top-6
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x: .cell
-            ul.tabs#product-tabs-2(data-responsive-accordion-tabs="accordion medium-tabs" data-deep-link="true" data-update-history="false")
-                li.tabs-title.is-active
-                    a(href='#product-tab-consumables-original' title='') Расходные материалы
-                li.tabs-title
-                    a(href='#product-tab-accessories' title='') Аксессуары
+      ul.tabs#product-tabs-1(data-responsive-accordion-tabs="accordion medium-tabs" data-deep-link="true" data-update-history="false")
+        li.tabs-title.is-active
+          a(href='#product-tab-description' title='') Описание
+        li.tabs-title
+          a(href='#product-tab-spec' title='') Характеристики товара
+        li.tabs-title
+          a(href='#product-tab-files' title='') Дополнительные материалы
+        li.tabs-title
+          a(href='#product-tab-comments' title='')
+            i.fas.fa-comments
+            | &nbsp;Отзывы&nbsp;(10)
 
-            .tabs-content(data-tabs-content="product-tabs-2")
-                .tabs-panel.is-active#product-tab-consumables-original
-                    include components/shop/_product-tab-consumables
-                .tabs-panel#product-tab-accessories
-                    include components/shop/_product-tab-accessories
+      .tabs-content(data-tabs-content="product-tabs-1")
+        .tabs-panel.is-active#product-tab-description
+          include components/shop/_product-tab-description
+        .tabs-panel#product-tab-spec
+          include components/shop/_product-tab-spec
+        .tabs-panel#product-tab-files
+          include components/shop/_product-tab-files
+        .tabs-panel#product-tab-comments
+          include components/shop/_product-tab-comments
+  .grid-container: .grid-x.grid-padding-x: .cell
+    hr.margin-top-6
+  .info
     .grid-container: .grid-x.grid-padding-x: .cell
-        hr.margin-top-6
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x: .cell
-            h2 Похожие товары
-        .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
-            +productTile('Комби-перфоратор Metabo KHE 2650', false)
-            +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
-            +productTile('Лобзик Metabo STEB 65 Quick', false)
-            +productTile('Торцовочная пила Ryobi EMS254L', true)
-            +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
-            +productTile('Лобзик Metabo STEB 65 Quick', false)
-    .grid-container: .grid-x.grid-padding-x: .cell: hr
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x: .cell
-            h2 Вы смотрели
-        .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
-            +productTile('Комби-перфоратор Metabo KHE 2650', false)
-            +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
-            +productTile('Лобзик Metabo STEB 65 Quick', false)
-            +productTile('Торцовочная пила Ryobi EMS254L', true)
-            +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
-            +productTile('Лобзик Metabo STEB 65 Quick', false)
+      ul.tabs#product-tabs-2(data-responsive-accordion-tabs="accordion medium-tabs" data-deep-link="true" data-update-history="false")
+        li.tabs-title.is-active
+          a(href='#product-tab-consumables-original' title='') Расходные материалы
+        li.tabs-title
+          a(href='#product-tab-accessories' title='') Аксессуары
+
+      .tabs-content(data-tabs-content="product-tabs-2")
+        .tabs-panel.is-active#product-tab-consumables-original
+          include components/shop/_product-tab-consumables
+        .tabs-panel#product-tab-accessories
+          include components/shop/_product-tab-accessories
+  .grid-container: .grid-x.grid-padding-x: .cell
+    hr.margin-top-6
+  .info
+    .grid-container: .grid-x.grid-padding-x: .cell
+      h2 Похожие товары
+    .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
+      +productTile('Комби-перфоратор Metabo KHE 2650', false)
+      +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
+      +productTile('Лобзик Metabo STEB 65 Quick', false)
+      +productTile('Торцовочная пила Ryobi EMS254L', true)
+      +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
+      +productTile('Лобзик Metabo STEB 65 Quick', false)
+  .grid-container: .grid-x.grid-padding-x: .cell: hr
+  .info
+    .grid-container: .grid-x.grid-padding-x: .cell
+      h2 Вы смотрели
+    .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-6(data-equalizer data-equalize-by-row="true")
+      +productTile('Комби-перфоратор Metabo KHE 2650', false)
+      +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
+      +productTile('Лобзик Metabo STEB 65 Quick', false)
+      +productTile('Торцовочная пила Ryobi EMS254L', true)
+      +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
+      +productTile('Лобзик Metabo STEB 65 Quick', false)

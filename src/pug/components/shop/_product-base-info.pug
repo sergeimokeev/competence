@@ -1,99 +1,80 @@
-.margin-bottom-6  А4, 600×600 dpi, 27/27 стр в мин., ADF, Duplex, USB, Ethernet
+.shipment__sect  А4, 600×600 dpi, 27/27 стр в мин., ADF, Duplex, USB, Ethernet
 
-.grid-x.grid-padding-x
-    .small-24.large-4.cell Цвет:
-    .cell.auto
-        .checkbox-group
-            input.checkbox-group__item(type='radio' id='color1' name='color')
-            label.checkbox-group__label(for='color1' style='background-color: #eee;') &nbsp;
-            input.checkbox-group__item(type='radio' id='color2' name='color')
-            label.checkbox-group__label(for='color2' style='background-color: #ca3034;') &nbsp;
-            input.checkbox-group__item(type='radio' id='color3' name='color')
-            label.checkbox-group__label(for='color3' style='background-color: #578b93;') &nbsp;
-            input.checkbox-group__item(type='radio' id='color4' name='color')
-            label.checkbox-group__label(for='color4' style='background-color: #deb887;') &nbsp;
+.grid-x.grid-padding-x.shipment__sect
+  .small-24.large-4.cell Цвет:
+  .cell.auto
+    .checkbox-group
+      +checkbox-group('color','#eee')
+      +checkbox-group('color','#ca3034')
+      +checkbox-group('color','#578b93')
+      +checkbox-group('color','#deb887')
 
-#no-size-popup.reveal.small(data-reveal)
-    h4 Этого цвета сейчас нет. Сообщить о появлении?
-    form.input-group.margin-bottom-1
-        input.input-group-field(type='text' placeholder='На email')
-        .input-group-button
-            button.button.margin-bottom-0(type='button') Сообщить
+.grid-x.grid-padding-x.shipment__sect
+  .small-24.large-4.cell Размер:
+  .cell.auto
+    .checkbox-group
+      input.checkbox-group__item(type='radio' id='size1' name='size')
+      label.checkbox-group__label(for='size1') 39
+      input.checkbox-group__item(type='radio' id='size2' name='size')
+      label.checkbox-group__label(for='size2') 40
+      input.checkbox-group__item(type='radio' id='size3' name='size')
+      label.checkbox-group__label(for='size3') 41
+      input.checkbox-group__item(type='radio' id='size4' name='size')
+      label.checkbox-group__label(for='size4') 42
+      label.checkbox-group__label(data-toggle='no-size' style='background: linear-gradient(45deg, #fff 49%, red 49%, red 51%, #fff 51%) no-repeat;' data-open="no-size-popup") 43
+      input.checkbox-group__item(type='radio' id='size5' name='size')
+      label.checkbox-group__label(for='size5') 44
+    .shipment__sect
+      a(href='#', title='') Таблица размеров
 
-    button.close-button(data-close aria-label="Закрыть")
-        span(aria-hidden="true") &times;
-
-.grid-x.grid-padding-x.margin-bottom-6
-    .small-24.large-4.cell Размер:
-    .cell.auto
-        .checkbox-group.margin-bottom-2
-            input.checkbox-group__item(type='radio' id='size1' name='size')
-            label.checkbox-group__label(for='size1') 39
-            input.checkbox-group__item(type='radio' id='size2' name='size')
-            label.checkbox-group__label(for='size2') 40
-            input.checkbox-group__item(type='radio' id='size3' name='size')
-            label.checkbox-group__label(for='size3') 41
-            input.checkbox-group__item(type='radio' id='size4' name='size')
-            label.checkbox-group__label(for='size4') 42
-            label.checkbox-group__label(data-toggle='no-size' style='background: linear-gradient(45deg, #fff 49%, red 49%, red 51%, #fff 51%) no-repeat;' data-open="no-size-popup") 43
-            input.checkbox-group__item(type='radio' id='size5' name='size')
-            label.checkbox-group__label(for='size5') 44
-        .margin-bottom-6
-            a(href='#', title='') Таблица размеров
-
-.grid-x.grid-padding-x.margin-bottom-6
-    .cell.shrink
-        span.text-size-xxxlarge
-            | 25 280&nbsp;
-            i.fas.fa-ruble-sign
-    .cell.shrink
-        del.text-dark-gray
-            | 27 150 &nbsp;
-            i.fas.fa-ruble-sign
-        br
-        span.label.warning Бонус <i>+45</i>
+.grid-x.grid-padding-x.shipment__sect
+  .cell.shrink
+    span.shipment__price
+      | 25 280&nbsp;
+      i.fas.fa-ruble-sign
+  .cell.shrink
+    .shipment__old
+      | 27 150 &nbsp;
+      i.fas.fa-ruble-sign
+    .label.label_warning Бонус <i>+45</i>
 
 .grid-x.grid-padding-x.align-middle
-    .small-24.large-auto.cell
-        form(action='shop-cart.html' method='get').input-group
-            input.input-group-field(type='number' value='1' min='1')
-            .input-group-button
-                button(type='submit' title="Товар добавлен в корзину").button.secondary.margin-bottom-0
-                    i.fas.fa-shopping-basket.fa-lg
-                    | &nbsp;В корзину
-                    | &nbsp;
-    .small-24.large-shrink.cell.margin-bottom-6
-        a(href='shop-compare.html' title="Товар добавлен к сравнению.")
-            i.fas.fa-lg.fa-balance-scale
-            span.text-dark-gray &nbsp;К сравнению
-        | &nbsp; &nbsp;
-        a(data-open="add-to-favourites-auth-popup")
-            i.far.fa-heart.fa-lg
-            span.text-dark-gray &nbsp;Запомнить
+  .small-24.large-auto.cell
+    form(action='shop-cart.html' method='get').search
+      include ../common/_input
+      .search__cont
+        button(type='submit' title="Товар добавлен в корзину").button.button_secondary.button_input
+          i.fas.fa-shopping-basket.picture.fa-lg
+          | В корзину
+  .small-24.large-shrink.cell.shipment__sect
+    a(href='shop-compare.html' title="Товар добавлен к сравнению.").shipment__compare
+      i.fas.fa-lg.fa-balance-scale.picture
+      span.shipment__text К сравнению
+    a(data-open="add-to-favourites-auth-popup").shipment__compare
+      i.far.fa-heart.fa-lg.picture
+      span.shipment__text Запомнить
 
 
-.grid-x.grid-padding-x: .cell
-    .margin-bottom-3
-        span.rating
-            input.rating__input#rating5(type="radio" name="rating")
-            label.rating__star(for="rating5")
-                i.far.fa-star.rating__solid
-                i.fas.fa-star.rating__regular
-            input.rating__input#rating4(type="radio" name="rating")
-            label.rating__star(for="rating4")
-                i.far.fa-star.rating__solid
-                i.fas.fa-star.rating__regular
-            input.rating__input#rating3(type="radio" name="rating")
-            label.rating__star(for="rating3")
-                i.far.fa-star.rating__solid
-                i.fas.fa-star.rating__regular
-            input.rating__input#rating2(type="radio" name="rating")
-            label.rating__star(for="rating2")
-                i.far.fa-star.rating__solid
-                i.fas.fa-star.rating__regular
-            input.rating__input#rating1(type="radio" name="rating")
-            label.rating__star(for="rating1")
-                i.far.fa-star.rating__solid
-                i.fas.fa-star.rating__regular
-        em.text-dark-gray &nbsp;оценок 25
-        | &nbsp; &nbsp;
+.grid-x.grid-padding-x: .cell.shipment__rect
+  span.rating
+    input.rating__input#rating5(type="radio" name="rating")
+    label.rating__star(for="rating5")
+      i.far.fa-star.rating__solid
+      i.fas.fa-star.rating__regular
+    input.rating__input#rating4(type="radio" name="rating")
+    label.rating__star(for="rating4")
+      i.far.fa-star.rating__solid
+      i.fas.fa-star.rating__regular
+    input.rating__input#rating3(type="radio" name="rating")
+    label.rating__star(for="rating3")
+      i.far.fa-star.rating__solid
+      i.fas.fa-star.rating__regular
+    input.rating__input#rating2(type="radio" name="rating")
+    label.rating__star(for="rating2")
+      i.far.fa-star.rating__solid
+      i.fas.fa-star.rating__regular
+    input.rating__input#rating1(type="radio" name="rating")
+    label.rating__star(for="rating1")
+      i.far.fa-star.rating__solid
+      i.fas.fa-star.rating__regular
+  span.shipment__mark оценок 25

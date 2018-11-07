@@ -6,9 +6,11 @@ html.no-js(lang='ru')
     include components/shop/_header
     include components/shop/_menu-line
 
+    include components/mixins/_mixin-checkbox-group
     include components/mixins/_mixin-product-tile
     include components/mixins/_mixin-product-line
     include components/mixins/_mixin-product-line-wide
+    include components/shop/_reveal-no-color
     include components/shop/_add-to-favourites-auth-popup
 
     block page
@@ -86,7 +88,7 @@ html.no-js(lang='ru')
           h2 Рассылка
         .grid-container: .grid-x.grid-padding-x
           .cell.small-24.medium-16.large-12
-            .input-group.search
+            .search
               input.search__input.search__input_border(type='email' placeholder='Введите ваш e-mail')
               .search__cont
                 button.button.button_secondary.button_input(type='button')

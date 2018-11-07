@@ -4,6 +4,23 @@ $(document).foundation();
 (function($) {
   "use strict";
   $(function() {
+    //begin of .quant input activity
+    $('.quant__plus').click(function() {
+      var $input = $(this).closest('.quant').find('.quant__input');
+      var currentNum = Math.max(+$input.val(), 0);
+      currentNum++;
+      $input.val(currentNum);
+    });
+    $('.quant__minus').click(function() {
+      var $input = $(this).closest('.quant').find('.quant__input');
+      var currentNum = Math.max(+$input.val(), 0);
+      if (currentNum < 2) {
+        return;
+      }
+      currentNum--;
+      $input.val(currentNum);
+    });
+    //end of .quant input activity
     //begin of close .dd__content when click outside
     $(document).mouseup(function(e) {
       var div = $("#location,[data-toggle='location']");

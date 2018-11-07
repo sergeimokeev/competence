@@ -1,0 +1,36 @@
+.shipment {
+  &__sect {
+    margin-bottom: rem-calc(21);
+  }
+
+  &__art {
+    color: $dark-gray;
+  }
+
+  &__rect {
+    margin-bottom: rem-calc(11);
+  }
+
+  &__mark {
+    font-style: italic;
+    color: $dark-gray;
+  }
+
+  &__old {
+    color: $dark-gray;
+    display: block;
+    text-decoration: line-through;
+  }
+
+  &__compare {
+    margin-right: rem-calc(8);
+  }
+
+  &__text {
+    color: $dark-gray;
+  }
+
+  &__price {
+    font-size: rem-calc(35);
+  }
+}

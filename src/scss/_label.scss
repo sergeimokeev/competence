@@ -8,6 +8,10 @@
     color: $white;
     background: $secondary-color;
   }
+  &_warning {
+    color: $black;
+    background: $warning-color;
+  }
 
   &_action {
     margin-right: rem-calc(4);

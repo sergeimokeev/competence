@@ -1,0 +1,4 @@
+mixin checkbox-group(name,background)
+  -var id =  Math.ceil(Math.random() * 1000);
+  input.checkbox-group__item(type='radio' id=id name=name)
+  label.checkbox-group__label(for=id style='background-color: ' + background + ';')
