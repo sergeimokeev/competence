@@ -1,4 +1,6 @@
-
 .reveal {
-  padding:6 * $global-padding;
+  padding: rem-calc(21);
+  &__anon {
+    color: $dark-gray;
+  }
 }

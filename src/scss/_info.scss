@@ -1,4 +1,8 @@
 .info {
   padding-top: rem-calc(42);
   padding-bottom: rem-calc(21);
+
+  &_down {
+    padding-bottom: rem-calc(42);
+  }
 }

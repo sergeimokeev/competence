@@ -1,24 +1,20 @@
 .grid-x.grid-padding-x
-    .small-24.medium-12.cell
-        .margin-bottom-6
-            b Наличие:
-            br
-            | Магазин —
-            span.text-success &#160; много
-            br
-            | Склад 1 —
-            span.text-medium-gray &#160; нет
-            br
-            | Склад 2 —
-            span.text-alert &#160; мало
-    .small-24.medium-12.cell
-        .margin-bottom-6
-            | #[i.fas.fa-truck] #[b Доставка]:
-            br
-            | Самовывоз — 17.03.2016
-            br
-            | Москва и МО — 18.03.2016 (Бесплатно)
-            br
-            | Россия — 23.03.2016 (от 500 руб)
-            br
-            a(href='#' title='') Тарифы и условия доставки
+  .small-24.medium-12.cell
+    .shipment__sect
+      b Наличие:
+      div
+        | Магазин —
+        span.shipment__num много
+      div
+        | Склад 1 —
+        span.shipment__no нет
+      div
+        | Склад 2 —
+        span.shipment__low мало
+  .small-24.medium-12.cell
+    .shipment__sect
+      | #[i.fas.fa-truck] #[b Доставка]:
+      div Самовывоз — 17.03.2016
+      div Москва и МО — 18.03.2016 (Бесплатно)
+      div Россия — 23.03.2016 (от 500 руб)
+      div: a(href='#' title='') Тарифы и условия доставки

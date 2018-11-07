@@ -1,43 +1,44 @@
-#add-product-comment.reveal(data-reveal)
-    h2 Добавить свой отзыв
+#add-product-comment.reveal(data-reveal data-deep-link="true")
+  h2 Добавить свой отзыв
 
-    form
-        label Представьтесь
-            span.text-dark-gray &#160; или автор комментария будет «аноним»
-        input(type='text')
+  form
+    label 
+      span.picture Представьтесь
+      span.reveal__anon или автор комментария будет «аноним»
+    input(type='text')
 
-        label Ваш email
-            span.text-dark-gray &#160; если хотите узнавать о новых комментариях к этому товару
-        input(type='email')
+    label
+      span.picture Ваш email
+      span.reveal__anon если хотите узнавать о новых комментариях к этому товару
+    input(type='email')
 
-        label Ваша оценка товара
-        .margin-bottom-6
-            span.rating
-                input.rating__input#rating15(type="radio" name="rating")
-                label.rating__star(for="rating15")
-                    i.far.fa-star.rating__solid
-                    i.fas.fa-star.rating__regular
-                input.rating__input#rating14(type="radio" name="rating")
-                label.rating__star(for="rating14")
-                    i.far.fa-star.rating__solid
-                    i.fas.fa-star.rating__regular
-                input.rating__input#rating13(type="radio" name="rating")
-                label.rating__star(for="rating13")
-                    i.far.fa-star.rating__solid
-                    i.fas.fa-star.rating__regular
-                input.rating__input#rating12(type="radio" name="rating")
-                label.rating__star(for="rating12")
-                    i.far.fa-star.rating__solid
-                    i.fas.fa-star.rating__regular
-                input.rating__input#rating11(type="radio" name="rating")
-                label.rating__star(for="rating11")
-                    i.far.fa-star.rating__solid
-                    i.fas.fa-star.rating__regular
+    label Ваша оценка товара
+    .sect
+      span.rating
+        input.rating__input#rating15(type="radio" name="rating")
+        label.rating__star(for="rating15")
+          i.far.fa-star.rating__solid
+          i.fas.fa-star.rating__regular
+        input.rating__input#rating14(type="radio" name="rating")
+        label.rating__star(for="rating14")
+          i.far.fa-star.rating__solid
+          i.fas.fa-star.rating__regular
+        input.rating__input#rating13(type="radio" name="rating")
+        label.rating__star(for="rating13")
+          i.far.fa-star.rating__solid
+          i.fas.fa-star.rating__regular
+        input.rating__input#rating12(type="radio" name="rating")
+        label.rating__star(for="rating12")
+          i.far.fa-star.rating__solid
+          i.fas.fa-star.rating__regular
+        input.rating__input#rating11(type="radio" name="rating")
+        label.rating__star(for="rating11")
+          i.far.fa-star.rating__solid
+          i.fas.fa-star.rating__regular
 
-        label Текст отзыва *
-        textarea(rows='3')
+    label Текст отзыва *
+    textarea(rows='3')
 
-        button.button.secondary Отправить отзыв
+    button.button.button_secondary Отправить отзыв
 
-    button.close-button(data-close aria-label="Закрыть")
-        span(aria-hidden="true") &times;
+  include ../common/_close

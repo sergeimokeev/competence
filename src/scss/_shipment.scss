@@ -3,8 +3,35 @@
     margin-bottom: rem-calc(21);
   }
 
+  &__tell {
+    margin-right: rem-calc(8);
+
+    font-size: rem-calc(14);
+  }
+
+  &__soc {
+    
+    font-size: rem-calc(28);
+    margin-bottom: rem-calc(21);
+  }
+
   &__art {
     color: $dark-gray;
+  }
+
+  &__no {
+    color: $medium-gray;
+    margin-left: rem-calc(4);
+  }
+
+  &__num {
+    color: $success-color;
+    margin-left: rem-calc(4);
+  }
+
+  &__low {
+    color: $alert-color;
+    margin-left: rem-calc(4);
   }
 
   &__rect {

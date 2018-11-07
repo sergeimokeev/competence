@@ -1,6 +1,8 @@
 .tabs {
   &-title {
-    & > a {}
+    & > a {
+      outline: none;
+    }
   }
 
   &-content {}
