@@ -1,87 +1,64 @@
-.margin-bottom-6.show-for-small-only
-    span.button-group.expanded
-        span.button.light-gray.expanded(data-toggle='menu-left')
-            i.fas.fa-lg.fa-bars
-            | &nbsp;Навигация
-        span.button.light-gray.expanded(data-toggle='filter-left')
-            i.fas.fa-lg.fa-filter
-            | &nbsp;Фильтр
-.hide-for-small-only.padding-6.margin-bottom-6.radius.background-main#menu-left(data-toggler='.hide-for-small-only')
-    ul.menu.vertical
-        li: a(href='#') Всё для сада
-        li.active: a(href='#') Ручной инструмент
-        li: a(href='#') Расходные материалы
-        li
-            a(href='#') Инструменты
-            ul.menu.vertical.nested
-                li: a(href='#') Аккумуляторный инструмент
-                li: a(href='#') Гайковёрты
-                li: a(href='#') Краскопульты
-        li: a(href='#') Силовая техника
+.sect.show-for-small-only
+  span.button-group.expanded
+    span.button.button_light-gray.button_expanded(data-toggle='menu-left')
+      i.fas.fa-lg.fa-bars.picture
+      | Навигация
+    span.button.button_light-gray.button_expanded(data-toggle='filter-left')
+      i.fas.fa-lg.fa-filter.picture
+      | Фильтр
+.side#menu-left(data-toggler='.hide-for-small-only')
+  ul.partners
+    li.partners__item: a(href='#').partners__link Всё для сада
+    li.partners__item: a(href='#').partners__link.partners__link_active Ручной инструмент
+    li.partners__item: a(href='#').partners__link Расходные материалы
+    li.partners__item
+      a(href='#').partners__link Инструменты
+      ul.partners
+        li.partners__item: a(href='#').partners__link Аккумуляторный инструмент
+        li.partners__item: a(href='#').partners__link Гайковёрты
+        li.partners__item: a(href='#').partners__link Краскопульты
+    li.partners__item: a(href='#').partners__link Силовая техника
 
 .hide-for-small-only#filter-left(data-toggler='.hide-for-small-only')
-    ul.accordion(data-accordion data-multi-expand='true' data-allow-all-closed='true')
-        li.accordion-item.is-active(data-accordion-item)
-            a.accordion-title(href='#'): strong Цена, руб
-            .accordion-content(data-tab-content)
-                .slider(data-slider data-start="0" data-end="1000" data-initial-start="200" data-initial-end="800" data-binding="true")
-                    span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1")
-                    span.slider-fill(data-slider-fill)
-                    span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2")
-                .grid-x.grid-padding-x
-                    .small-12.cell: input(type="number" id="sliderOutput1")
-                    .small-12.cell: input(type="number" id="sliderOutput2")
-        li.accordion-item(data-accordion-item)
-            a.accordion-title(href='#'): strong Мощность, W
-            .accordion-content(data-tab-content)
-                input#checkbox1(type='checkbox')
-                label(for='checkbox1') до 100
-                br
-                input#checkbox2(type='checkbox')
-                label(for='checkbox2') 100-500
-                br
-                input#checkbox3(type='checkbox')
-                label(for='checkbox3') 500-2000
-                br
-                input#checkbox4(type='checkbox')
-                label(for='checkbox4') больше 2000
-        li.accordion-item(data-accordion-item)
-            a.accordion-title(href='#'): strong Цвет
-            .accordion-content(data-tab-content)
-                input#checkbox5(type='checkbox')
-                label(for='checkbox5') Красный
-                br
-                input#checkbox6(type='checkbox')
-                label(for='checkbox6') Синий
-                br
-                input#checkbox7(type='checkbox')
-                label(for='checkbox7') Зеленый
-                br
-                input#checkbox8(type='checkbox')
-                label(for='checkbox8') Белый
-                br
-                input#checkbox9(type='checkbox')
-                label(for='checkbox9') Черный
-        li.accordion-item(data-accordion-item)
-            a.accordion-title(href='#'): strong Бренд
-            .accordion-content(data-tab-content)
-                input#checkbox10(type='checkbox')
-                label(for='checkbox10') Красный
-                br
-                input#checkbox11(type='checkbox')
-                label(for='checkbox11') Синий
-                br
-                input#checkbox12(type='checkbox')
-                label(for='checkbox12') Зеленый
-                br
-                input#checkbox13(type='checkbox')
-                label(for='checkbox13') Белый
-                br
-                input#checkbox14(type='checkbox')
-                label(for='checkbox14') Черный
-    button.button.primary.expanded
-        i.fas.fa-filter.fa-lg
-        | &nbsp;Подобрать
-    button.button.light-gray.expanded
-        i.fas.fa-ban.fa-lg
-        | &nbsp;Сбросить фильтр
+  ul.accordion(data-accordion data-multi-expand='true' data-allow-all-closed='true')
+    li.accordion-item.is-active(data-accordion-item)
+      a.accordion-title(href='#') Цена, руб
+      .accordion-content(data-tab-content)
+        .slider(data-slider data-start="0" data-end="1000" data-initial-start="200" data-initial-end="800" data-binding="true")
+          span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1")
+          span.slider-fill(data-slider-fill)
+          span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2")
+        .grid-x.grid-padding-x
+          .small-12.cell: input(type="number" id="sliderOutput1")
+          .small-12.cell: input(type="number" id="sliderOutput2")
+    li.accordion-item(data-accordion-item)
+      a.accordion-title(href='#') Мощность, W
+      .accordion-content(data-tab-content)
+        +step('до 100')
+        +step('100-500')
+        +step('500-2000')
+        +step('больше 2000')
+    
+    li.accordion-item(data-accordion-item)
+      a.accordion-title(href='#') Цвет
+      .accordion-content(data-tab-content)
+        +step('Красный')
+        +step('Синий')
+        +step('Зеленый')
+        +step('Белый')
+        +step('Черный')
+    
+    li.accordion-item(data-accordion-item)
+      a.accordion-title(href='#') Бренд
+      .accordion-content(data-tab-content)
+        +step('Красный')
+        +step('Синий')
+        +step('Зеленый')
+        +step('Белый')
+        +step('Черный')
+  button.button.button_expanded
+    i.fas.fa-filter.fa-lg.picture
+    | Подобрать
+  button.button.button_light-gray.button_expanded
+    i.fas.fa-ban.fa-lg.picture
+    | Сбросить фильтр

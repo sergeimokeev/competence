@@ -10,7 +10,9 @@
   list-style: none;
   position: relative;
   display: flex;
-
+.partners {
+  margin-left: rem-calc(20);
+}
   &__item {}
   &__link {
     display: block;

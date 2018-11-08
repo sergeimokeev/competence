@@ -2,7 +2,9 @@
   &-menu {}
 
   &-content {}
-
+&-title {
+  font-weight: 500;
+}
   &-item {
     &:last-child {
       & > a {

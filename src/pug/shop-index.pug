@@ -7,6 +7,7 @@ html.no-js(lang='ru')
     include components/shop/_menu-line
 
     include components/mixins/_mixin-checkbox-group
+    include components/mixins/_mixin-step
     include components/mixins/_mixin-product-tile
     include components/mixins/_mixin-product-line
     include components/mixins/_mixin-product-line-wide
@@ -32,26 +33,14 @@ html.no-js(lang='ru')
           .small-24.medium-10.large-8.cell.medium-text-right
             a.button.button_hollow(href='#') Все товары с распродажей
               i.fas.fa-long-arrow-alt-right.canv
-        .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-4.xlarge-up-6(data-equalizer data-equalize-by-row="true")
-          +productTile('Комби-перфоратор Metabo KHE 2650', true)
-          +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', true)
-          +productTile('Лобзик Metabo STEB 65 Quick', true)
-          +productTile('Торцовочная пила Ryobi EMS254L', true)
-          +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', true)
-          +productTile('Лобзик Metabo STEB 65 Quick', true)
+        include components/common/_line-products
       .grid-container: .grid-x.grid-padding-x: .cell: hr
       include components/shop/_banners
       .grid-container: .grid-x.grid-padding-x: .cell: hr
       .info
         .grid-container: .grid-x.grid-padding-x: .cell
           h2 Рекомендуем
-        .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-4.xlarge-up-6(data-equalizer data-equalize-by-row="true")
-          +productTile('Комби-перфоратор Metabo KHE 2650', false)
-          +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
-          +productTile('Лобзик Metabo STEB 65 Quick', false)
-          +productTile('Торцовочная пила Ryobi EMS254L', true)
-          +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
-          +productTile('Лобзик Metabo STEB 65 Quick', false)
+        include components/common/_line-products
       .promo
         .grid-container
           .grid-x.grid-padding-x
