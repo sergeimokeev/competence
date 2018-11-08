@@ -1,3 +1,47 @@
 .duct {
-  
+  &__img {
+    margin-bottom: rem-calc(21);
+  }
+
+  &__old {
+    text-decoration: line-through;
+    color: $dark-gray;
+  }
+
+  &__favor {
+    color: $dark-gray;
+    margin-right: rem-calc(8);
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: rem-calc(21);
+  }
+
+  &__no {
+    font-style: italic;
+    color: $dark-gray;
+  }
+
+  &__info {
+    margin-bottom: rem-calc(21);
+  }
+
+  &__cat {
+    margin-bottom: rem-calc(10);
+    display: block;
+    color: $dark-gray;
+    font-size: rem-calc(13);
+    font-weight: 400;
+  }
+  @include breakpoint(medium down) {
+    &__old {
+      margin-bottom: rem-calc(10);
+    }
+  }
+  @include breakpoint(small only) {
+    &__cat {
+      display: none;
+    }
+  }
 }
