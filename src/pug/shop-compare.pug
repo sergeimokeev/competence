@@ -1,80 +1,59 @@
 extends shop-regular
 
-mixin productTileForCompare(instock, incart)
-    .margin-bottom-6
-        a.text-dark-gray.no-wrap(href="#" title='')
-            i.far.fa-lg.fa-times-circle
-            | &nbsp;Убрать
-    .margin-bottom-6: a(href="shop-product.html" title=''): img(src='./i/photo.svg' alt='Товар' style='height: 80px')
-    .margin-bottom-3: a(href='shop-product.html' title='') Керамогранит Kerama Marazzi Сенегал, 50,2 х 50,2 см, бежевый
-    .margin-bottom-3: strong
-        | 73&nbsp;250&nbsp;
-        i.fas.fa-ruble-sign
-    .margin-bottom-3
-        if instock
-            if incart
-                i.fas.fa-check &#160;
-                | В корзине
-            unless incart
-                a(href='shop-cart.html' title='').button.hollow Купить
-        unless instock
-            span.text-dark-gray Нет в наличии
+
 
 block content
+  .grid-container: .grid-x.grid-padding-x: .cell
+    h1 Сравнить товары
+  .info
     .grid-container: .grid-x.grid-padding-x: .cell
-        h1 Сравнить товары
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x: .cell
-            .margin-bottom-6
-                span.text-dark-gray Показать:
-                | &nbsp; &nbsp;
-                strong Только отличия
-                | &nbsp; &nbsp;
-                a(href='#' title='') Основные параметры
-                | &nbsp; &nbsp;
-                a(href='#' title='') Все параметры
+      .sect
+        span.distinction.distinction_grey Показать:
+        strong.distinction Только отличия
+        a(href='#' title='').distinction Основные параметры
+        a(href='#' title='') Все параметры
 
-            .table-scroll
-                table
-                    tr(style="vertical-align:top;")
-                        td
-                            a.no-wrap.text-dark-gray(href="#" title='')
-                                | #[i.fas.fa-lg.fa-times-circle] Очистить список
-                        td
-                            +productTileForCompare('instock')
-                        td
-                            +productTileForCompare
-                        td
-                            +productTileForCompare('instock','incart')
-                        td
-                            +productTileForCompare
-                        td
-                            +productTileForCompare
-                    tr
-                        th.text-user-small Вес
-                        td 25кг
-                        td 35кг
-                        td 30кг
-                        td 31кг
-                        td 27,5кг
-                    tr
-                        th.text-user-small Мощность
-                        td 0,25-160
-                        td 0,30-180
-                        td 0,25-155
-                        td 0,30-180
-                        td 0,30-170
-                    tr
-                        th.text-user-small Передаточное отношение
-                        td 4,8:1
-                        td 4,7:1
-                        td 4,8:1
-                        td 4,6:1
-                        td 4,8:1
-                    tr
-                        th.text-user-small Количество подшипников
-                        td 1шт
-                        td 1+1шт
-                        td —
-                        td 1шт
-                        td —
+      .table-scroll
+        table.comp
+          tr.comp__tr
+            td
+              a.comp__clear(href="#" title='')
+                | #[i.fas.fa-lg.fa-times-circle] Очистить список
+            td
+              +productTileForCompare('instock')
+            td
+              +productTileForCompare
+            td
+              +productTileForCompare('instock','incart')
+            td
+              +productTileForCompare
+            td
+              +productTileForCompare
+          tr
+            th.comp__small Вес
+            td 25кг
+            td 35кг
+            td 30кг
+            td 31кг
+            td 27,5кг
+          tr
+            th.comp__small Мощность
+            td 0,25-160
+            td 0,30-180
+            td 0,25-155
+            td 0,30-180
+            td 0,30-170
+          tr
+            th.comp__small Передаточное отношение
+            td 4,8:1
+            td 4,7:1
+            td 4,8:1
+            td 4,6:1
+            td 4,8:1
+          tr
+            th.comp__small Количество подшипников
+            td 1шт
+            td 1+1шт
+            td —
+            td 1шт
+            td —

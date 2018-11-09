@@ -1,59 +1,54 @@
 extends shop-regular
 
 block content
-    .grid-container: .grid-x.grid-padding-x: .cell
-        h1 Персональный раздел
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x
-            .cell.small-24.medium-8.large-6
-                .margin-bottom-6.show-for-small-only(data-responsive-toggle='menu-left', data-hide-for='medium'): span.button.light-gray.expanded(data-toggle)
-                    i.fas.fa-lg.fa-bars
-                    | &nbsp;Навигация
-                .padding-6.margin-bottom-6.radius.background-main#menu-left
-                    ul.menu.vertical
-                        li: a(href='shop-user-personal.html' title='') Регистрационные данные
-                        li.active: a(href='shop-user-edit.html' title='') Изменить данные о себе
-                        li: a(href='shop-cart.html' title='') Корзина
-                        li: a(href='shop-orders.html' title='') Список заказов
-                        li: a(href='shop-wishlist.html' title='') Любимые товары
-                        li: a(href='shop-user-personal.html' title='') Изменить подписку
+  .grid-container: .grid-x.grid-padding-x: .cell
+    h1 Персональный раздел
+  .info
+    .grid-container: .grid-x.grid-padding-x
+      .cell.small-24.medium-8.large-6
+        .show-for-small-only(data-responsive-toggle='menu-left', data-hide-for='medium'): .button.button_light-gray.button_expanded(data-toggle)
+          i.fas.fa-lg.fa-bars.picture
+          | Навигация
+        .side#menu-left
+          ul.partners
+            li.partners__item: a.partners__link(href='shop-user-personal.html' title='') Регистрационные данные
+            li.partners__item: a.partners__link.partners__link_active(href='shop-user-edit.html' title='') Изменить данные о себе
+            li.partners__item: a.partners__link(href='shop-cart.html' title='') Корзина
+            li.partners__item: a.partners__link(href='shop-orders.html' title='') Список заказов
+            li.partners__item: a.partners__link(href='shop-wishlist.html' title='') Любимые товары
+            li.partners__item: a.partners__link(href='shop-user-personal.html' title='') Изменить подписку
 
-            .cell.small-24.medium-16.large-18
-                block personal
-                    .callout.text-center
-                        .margin-bottom-6.lead
-                            = 'Ваш '
-                            a(href='#' title='') заказ №123 от 30.06.2016
-                            = ' подтверждён'
+      .cell.small-24.medium-16.large-18.enter
+        block personal
+          .callout.text-center
+            .sect.lead
+              = 'Ваш '
+              a(href='#' title='') заказ №123 от 30.06.2016
+              = ' подтверждён'
 
-                        a.button(href='#' title='') Оплатить заказ
+            a.button(href='#' title='') Оплатить заказ
 
-                    h2 Регистрационные данные
-                    p
-                        span.text-dark-gray Электронная почта:&nbsp;
-                        | user@email.com
-                    p
-                        span.text-dark-gray Логин:&nbsp;
-                        | user
-                    p
-                        span.text-dark-gray Имя:&nbsp;
-                        | user
-                    p
-                        span.text-dark-gray Фамилия:&nbsp;
-                        | user
+          h2 Регистрационные данные
+          p
+            span.enter__name Электронная почта:&nbsp;
+            | user@email.com
+          p
+            span.enter__name Логин:&nbsp;
+            | user
+          p
+            span.enter__name Имя:&nbsp;
+            | user
+          p
+            span.enter__name Фамилия:&nbsp;
+            | user
 
-                    hr
-                    br
+          hr.hr
 
-                    h2 Получать на электронную почту
-                    form
-                        label
-                            input(type='checkbox' checked required disabled)
-                            | Информацию о заказах
-                        label
-                            input(type='checkbox')
-                            | Сообщения о наших акциях
-                        label
-                            input(type='checkbox')
-                            | Сообщения про обновления ассортимента
-                        button.button Сохранить
+          h2 Получать на электронную почту
+          form
+
+            +step('Информацию о заказах',true)
+            +step('Сообщения о наших акциях')
+            +step('Сообщения про обновления ассортимента')
+
+            button.button Сохранить

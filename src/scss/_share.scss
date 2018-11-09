@@ -7,6 +7,9 @@
     font-size: rem-calc(14);
     margin-right: rem-calc(8);
   }
+  &__enter {  font-size: rem-calc(14);
+    margin-right: rem-calc(8);
+  }
   @include breakpoint(medium down) {
     &__text {
       display: none;

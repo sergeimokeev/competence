@@ -1,59 +1,51 @@
 extends shop-regular
 
 block content
-    .grid-container: .grid-x.grid-padding-x: .cell
-        h1 Регистрация
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x.align-center
-            .cell.small-24.medium-16.large-12
-                .success.callout
-                    h5 Вы были успешно зарегистрированы!
-                    p На вашу электронную почту отправлено письмо с подтверждением.
-                .alert.callout
-                    h5 При регистрации произошли следующие ошибки:
-                    ul
-                        li не заполнено поле Email
-                        li пароль и его подтверждение не совпадают
-                        li введен неверный код
-                form(action='shop-user-personal.html')
-                    label
-                        | Имя
-                        input(type='text')
-                    label
-                        | Фамилия
-                        input(type='text')
-                    label
-                        | Логин*
-                        input(type='text')
-                    label
-                        | Пароль*
-                        input(type='password')
-                    p.help-text Пароль должен быть не менее 6 символов длиной
-                    label
-                        | Подтверждение пароля*
-                        input(type='password')
-                    label
-                        | Электронная почта*
-                        input(type='email')
-                    .grid-x.grid-padding-x
-                        .cell.small-14.medium-16
-                            label
-                                | Введите код*
-                                input(type='password')
-                        .cell.small-10.medium-8
-                            img(src='./i/image.svg' alt='Капча' style='width:100%;height:64px;')
-                    .grid-x.grid-padding-x
-                        .cell.shrink.padding-top-1
-                            input#checkbox1(type='checkbox')
-                        .cell.auto
-                            label(for='checkbox1')
-                                | Я ознакомлен и принимаю условия &nbsp;
-                                a(href='shop-regular.html' title='') Соглашения об использовании сайта
-                                |, в том числе в части обработки и использования моих персональных данных
-                    br
-                    button.button
-                        | Регистрация &nbsp;
-                        i.fas.fa-user-plus.fa-lg
-                p * - Обязательные поля
-                p
-                    a(href='shop-user-login.html' title='') Авторизация
+  .grid-container: .grid-x.grid-padding-x: .cell
+    h1 Регистрация
+  .info
+    .grid-container: .grid-x.grid-padding-x.align-center
+      .cell.small-24.medium-16.large-12
+        .callout.callout_success
+          h5 Вы были успешно зарегистрированы!
+          p На вашу электронную почту отправлено письмо с подтверждением.
+        .callout.callout_alert
+          h5 При регистрации произошли следующие ошибки:
+          ul
+            li не заполнено поле Email
+            li пароль и его подтверждение не совпадают
+            li введен неверный код
+        form(action='shop-user-personal.html')
+          label
+            | Имя
+            input(type='text')
+          label
+            | Фамилия
+            input(type='text')
+          label
+            | Логин*
+            input(type='text')
+          label
+            | Пароль*
+            input(type='password')
+          p.help-text Пароль должен быть не менее 6 символов длиной
+          label
+            | Подтверждение пароля*
+            input(type='password')
+          label
+            | Электронная почта*
+            input(type='email')
+          .grid-x.grid-padding-x
+            .cell.small-14.medium-16
+              label
+                | Введите код*
+                input(type='password')
+            .cell.small-10.medium-8.capt
+              img(src='./i/image.svg' alt='Капча' ).capt__img
+          +step('Я ознакомлен и принимаю условия &nbsp;<a href="shop-regular.html" title="">Соглашения об использовании сайта</a>, в том числе в части обработки и использования моих персональных данных')
+          button.button
+            | Регистрация
+            i.fas.fa-user-plus.fa-lg.canv
+        p * - Обязательные поля
+        p
+          a(href='shop-user-login.html' title='') Авторизация

@@ -1,24 +1,24 @@
 extends shop-regular
 
 block content
-    .grid-container: .grid-x.grid-padding-x: .cell
-        h1 Восстановление пароля
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x.align-center
-            .cell.small-24.medium-16.large-12
-                p
-                    |Если вы забыли пароль, введите логин или E-Mail.
-                    br
-                    | Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.
-                form(action='shop-user-login.html')
-                    label
-                        | Введите либо ваш логин
-                        input(type='text')
-                    label
-                        | Либо ваш email
-                        input(type='email')
-                    button.button
-                        | Выслать контрольную строку &nbsp;
-                        i.far.fa-envelope.fa-lg
-                p
-                    a(href='shop-user-login.html', title='') Авторизация
+  .grid-container: .grid-x.grid-padding-x: .cell
+    h1 Восстановление пароля
+  .info
+    .grid-container: .grid-x.grid-padding-x.align-center
+      .cell.small-24.medium-16.large-12
+        p
+          | Если вы забыли пароль, введите логин или E-Mail.
+          br
+          | Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.
+        form(action='shop-user-login.html')
+          label
+            | Введите либо ваш логин
+            input(type='text')
+          label
+            | Либо ваш email
+            input(type='email')
+          button.button
+            | Выслать контрольную строку
+            i.far.fa-envelope.fa-lg.canv
+        p
+          a(href='shop-user-login.html', title='') Авторизация

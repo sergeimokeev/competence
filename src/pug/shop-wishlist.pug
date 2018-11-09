@@ -1,26 +1,26 @@
 extends shop-regular
 
 block content
+  .grid-container: .grid-x.grid-padding-x: .cell
+    h1 Любимые товары
+  .info
     .grid-container: .grid-x.grid-padding-x: .cell
-        h1 Любимые товары
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x: .cell
-            .margin-bottom-12
-                +productLine(false, 'onDemand', false, 'inFavourites')
-                hr.margin-bottom-6
-                +productLine(false, false, 'inCart', 'inFavourites')
-                hr.margin-bottom-6
-                +productLine('discount', false, false, 'inFavourites')
-                hr.margin-bottom-6
-                +productLine(false, 'onDemand', false, 'inFavourites')
-                hr.margin-bottom-6
-                +productLine(false, false, 'inCart', 'inFavourites')
-                hr.margin-bottom-6
-                +productLine('discount', false, false, 'inFavourites')
-                hr.margin-bottom-6
-                +productLine(false, 'onDemand', false, 'inFavourites')
-                hr.margin-bottom-6
-                +productLine(false, false, 'inCart', 'inFavourites')
-                hr.margin-bottom-6
-                +productLine('discount', false, false, 'inFavourites')
-            include components/common/_pagination
+      +productLine(false, 'onDemand', false, 'inFavourites')
+      hr.hr
+      +productLine(false, false, 'inCart', 'inFavourites')
+      hr.hr
+      +productLine('discount', false, false, 'inFavourites')
+      hr.hr
+      +productLine(false, 'onDemand', false, 'inFavourites')
+      hr.hr
+      +productLine(false, false, 'inCart', 'inFavourites')
+      hr.hr
+      +productLine('discount', false, false, 'inFavourites')
+      hr.hr
+      +productLine(false, 'onDemand', false, 'inFavourites')
+      hr.hr
+      +productLine(false, false, 'inCart', 'inFavourites')
+      hr.hr
+      +productLine('discount', false, false, 'inFavourites')
+      .info  
+        include components/common/_pagination
