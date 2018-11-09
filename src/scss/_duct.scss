@@ -3,9 +3,19 @@
     margin-bottom: rem-calc(21);
   }
 
+  &__title {
+    font-size: rem-calc(16);
+    margin-bottom: rem-calc(10);
+    display: block;
+  }
+
   &__old {
     text-decoration: line-through;
     color: $dark-gray;
+  }
+
+  &__cost {
+    font-size: rem-calc(14);
   }
 
   &__favor {
@@ -22,6 +32,10 @@
   &__price {
     font-weight: 500;
     font-size: rem-calc(21);
+
+    &_cost {
+      font-size: rem-calc(14);
+    }
   }
 
   &__no {
@@ -45,6 +59,7 @@
       margin-right: rem-calc(8);
       display: inline-block;
     }
+
     &__old {
       margin-bottom: rem-calc(10);
     }

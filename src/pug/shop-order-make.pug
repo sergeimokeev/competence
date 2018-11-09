@@ -1,214 +1,172 @@
 extends shop-regular
 
 block content
-    .grid-container: .grid-x.grid-padding-x: .cell
-        h1 Оформление заказа
-    .padding-top-12.padding-bottom-6
-        .grid-container: .grid-x.grid-padding-x
-            .cell.small-24.medium-16.large-18#order-container
-                .callout
-                    h2 Товары в заказе
-                    .grid-x.grid-padding-x
-                        .cell.small-6.medium-4.large-2
-                            img.margin-bottom-6(src='./i/photo.svg' alt='товар')
-                        .cell.small-18.medium-10.large-12
-                            h6: a.text-dark(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
-                        .cell.small-24.medium-10.large-10
-                            .grid-x.grid-padding-x
-                                .cell.small-12.medium-14.large-8
-                                    .margin-bottom-6
-                                        strong
-                                            | 25 280&nbsp;
-                                            i.fas.fa-ruble-sign
-                                        br
-                                        del.text-dark-gray
-                                            | 27 150 &nbsp;
-                                            i.fas.fa-ruble-sign
-                                .cell.small-12.medium-10.large-6 1 шт
-                                .cell.small-24.large-10
-                                    .margin-bottom-6
-                                        span.text-size-xxlarge
-                                            | 25 280&nbsp;
-                                            i.fas.fa-ruble-sign
-                    hr.margin-bottom-6
-                    .grid-x.grid-padding-x
-                        .cell.small-6.medium-4.large-2
-                            img.margin-bottom-6(src='./i/photo.svg' alt='товар')
-                        .cell.small-18.medium-10.large-12
-                            h6: a.text-dark(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
-                        .cell.small-24.medium-10.large-10
-                            .grid-x.grid-padding-x
-                                .cell.small-12.medium-14.large-8
-                                    .margin-bottom-6
-                                        strong
-                                            | 25 280&nbsp;
-                                            i.fas.fa-ruble-sign
-                                        br
-                                        del.text-dark-gray
-                                            | 27 150 &nbsp;
-                                            i.fas.fa-ruble-sign
-                                .cell.small-12.medium-10.large-6 1 шт
-                                .cell.small-24.large-10
-                                    .margin-bottom-6
-                                        span.text-size-xxlarge
-                                            | 25 280&nbsp;
-                                            i.fas.fa-ruble-sign
-                .callout
-                    h2 Регион доставки
-                    fieldset
-                        legend: strong Тип плательщика
-                        input#type1(type='radio' name='type')
-                        label(for='type1') Физическое лицо
-                        input#type2(type='radio' name='type')
-                        label(for='type2') Юридическое лицо
-                    label
-                        strong
-                            span.text-primary *&nbsp;
-                            | Местоположение
-                        input(type='text')
-                    p.help-text Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
-                    label
-                        strong
-                            span.text-primary *&nbsp;
-                            | Индекс
-                        input(type='text')
-                .callout
-                    h2 Доставка
-                    .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-4(data-equalizer data-equalize-by-row="true")
-                        .cell
-                            label.callout(data-equalizer-watch)
-                                input(type='radio' name='delivery')
-                                i.fas.fa-lg.fa-car.text-dark-gray
-                                = ' '
-                                span.label
-                                    | 0
-                                    = ' '
-                                    i.fas.fa-ruble-sign
-                                br
-                                | Самовывоз
-                        .cell
-                            label.callout(data-equalizer-watch)
-                                input(type='radio' name='delivery')
-                                i.fas.fa-lg.fa-truck.text-dark-gray
-                                = ' '
-                                span.label
-                                    | 500
-                                    = ' '
-                                    i.fas.fa-ruble-sign
-                                br
-                                | Доставка курьером
-                    hr.margin-bottom-6
-                    .grid-x.grid-padding-x
-                        .cell.small-24.medium-24.large-12.end
-                            .input-group
-                                input.input-group-field(type='text' placeholder='Применить купон')
-                                .input-group-button
-                                    button.button(type='button')
-                                        i.fas.fa-calculator
-                                        = ' '
-                                        | Пересчитать
-                .callout
-                    h2 Оплата
-                    .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-4(data-equalizer data-equalize-by-row="true")
-                        .cell
-                            label.callout(data-equalizer-watch)
-                                input(type='radio' name='payment')
-                                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                                br
-                                | Наличными
-                        .cell
-                            label.callout(data-equalizer-watch)
-                                input(type='radio' name='payment')
-                                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                                br
-                                | Банковские карты
-                        .cell
-                            label.callout(data-equalizer-watch)
-                                input(type='radio' name='payment')
-                                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                                br
-                                | Квитанция Сбербанка
-                        .cell
-                            label.callout(data-equalizer-watch)
-                                input(type='radio' name='payment')
-                                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                                br
-                                | Терминалы
-                        .cell
-                            label.callout(data-equalizer-watch)
-                                input(type='radio' name='payment')
-                                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                                br
-                                | Яндекс.Деньги
-                        .cell
-                            label.callout(data-equalizer-watch)
-                                input(type='radio' name='payment')
-                                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                                br
-                                | Наложенный платеж
-                .callout
-                    h2 Покупатель
-                    label
-                        strong
-                            span.text-primary *&nbsp;
-                            | ФИО
-                        input(type='text')
-                    label
-                        strong
-                            span.text-primary *&nbsp;
-                            | E-Mail
-                        input(type='text')
-                    label
-                        strong
-                            span.text-primary *&nbsp;
-                            | Телефон
-                        input(type='text')
-                    label
-                        strong
-                            span.text-primary *&nbsp;
-                            | Адрес доставки
-                        input(type='text')
-                    label
-                        strong
-                            span.text-primary *&nbsp;
-                            | Комментарий к заказу
-                        textarea
-            .cell.small-24.medium-8.large-6
-                div(data-sticky-container)
-                    .sticky.callout(data-sticky data-anchor="order-container" data-sticky-on="medium" style="width: 100%")
-                        .grid-x.grid-padding-x
-                            .cell.small-10: strong Товаров на
-                            .cell.small-14.text-right: strong
-                                | 500
-                                = ' '
-                                i.fas.fa-ruble-sign
-                        br
-                        hr.margin-bottom-6
-                        .grid-x.grid-padding-x
-                            .cell.small-10 НДС
-                            .cell.small-14.text-right
-                                | 90
-                                = ' '
-                                i.fas.fa-ruble-sign
-                            .cell.small-24: small: em 18%, включен в цену
-                        br
-                        hr.margin-bottom-6
-                        .grid-x.grid-padding-x
-                            .cell.small-10 Доставка
-                            .cell.small-14.text-right
-                                | 500
-                                = ' '
-                                i.fas.fa-ruble-sign
-                        br
-                        hr.margin-bottom-6
-                        .grid-x.grid-padding-x
-                            .cell.small-10: strong Итого
-                            .cell.small-14.text-right.text-size-xxlarge
-                                | 1000
-                                = ' '
-                                i.fas.fa-ruble-sign
-            .cell.small-24.medium-16.large-18.end.text-right
-                a.button(href='shop-order-confirmation.html')
-                    i.far.fa-credit-card
+  .grid-container: .grid-x.grid-padding-x: .cell
+    h1 Оформление заказа
+  .info
+    .grid-container: .grid-x.grid-padding-x
+      .cell.small-24.medium-16.large-18#order-container
+        .callout
+          h2 Товары в заказе
+          include components/shop/_duct
+          hr.hr
+          include components/shop/_duct
+          
+        .callout
+          h2 Регион доставки
+          fieldset
+            .info__type Тип плательщика
+            .info__dib: +radio('Физическое лицо','type')
+            .info__dib: +radio('Юридическое лицо','type')
+          
+          label
+            strong
+              span.text-primary *&nbsp;
+              | Местоположение
+            input(type='text')
+          p.help-text Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
+          label
+            strong
+              span.text-primary *&nbsp;
+              | Индекс
+            input(type='text')
+        .callout
+          h2 Доставка
+          .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-4(data-equalizer data-equalize-by-row="true")
+            .cell
+              label.callout(data-equalizer-watch)
+                input(type='radio' name='delivery')
+                i.fas.fa-lg.fa-car.info__dark
+                = ' '
+                span.label
+                  | 0
+                  = ' '
+                  i.fas.fa-ruble-sign
+                br
+                | Самовывоз
+            .cell
+              label.callout(data-equalizer-watch)
+                input(type='radio' name='delivery')
+                i.fas.fa-lg.fa-truck.info__dark
+                = ' '
+                span.label
+                  | 500
+                  = ' '
+                  i.fas.fa-ruble-sign
+                br
+                | Доставка курьером
+          hr.hr
+          .grid-x.grid-padding-x
+            .cell.small-24.medium-24.large-12.end
+              .input-group
+                input.input-group-field(type='text' placeholder='Применить купон')
+                .input-group-button
+                  button.button(type='button')
+                    i.fas.fa-calculator
                     = ' '
-                    | Оформить заказ
+                    | Пересчитать
+        .callout
+          h2 Оплата
+          .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-4(data-equalizer data-equalize-by-row="true")
+            .cell
+              label.callout(data-equalizer-watch)
+                input(type='radio' name='payment')
+                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
+                br
+                | Наличными
+            .cell
+              label.callout(data-equalizer-watch)
+                input(type='radio' name='payment')
+                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
+                br
+                | Банковские карты
+            .cell
+              label.callout(data-equalizer-watch)
+                input(type='radio' name='payment')
+                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
+                br
+                | Квитанция Сбербанка
+            .cell
+              label.callout(data-equalizer-watch)
+                input(type='radio' name='payment')
+                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
+                br
+                | Терминалы
+            .cell
+              label.callout(data-equalizer-watch)
+                input(type='radio' name='payment')
+                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
+                br
+                | Яндекс.Деньги
+            .cell
+              label.callout(data-equalizer-watch)
+                input(type='radio' name='payment')
+                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
+                br
+                | Наложенный платеж
+        .callout
+          h2 Покупатель
+          label
+            strong
+              span.text-primary *&nbsp;
+              | ФИО
+            input(type='text')
+          label
+            strong
+              span.text-primary *&nbsp;
+              | E-Mail
+            input(type='text')
+          label
+            strong
+              span.text-primary *&nbsp;
+              | Телефон
+            input(type='text')
+          label
+            strong
+              span.text-primary *&nbsp;
+              | Адрес доставки
+            input(type='text')
+          label
+            strong
+              span.text-primary *&nbsp;
+              | Комментарий к заказу
+            textarea
+      .cell.small-24.medium-8.large-6
+        div(data-sticky-container)
+          .sticky.callout(data-sticky data-anchor="order-container" data-sticky-on="medium" style="width: 100%")
+            .grid-x.grid-padding-x
+              .cell.small-10: strong Товаров на
+              .cell.small-14.text-right: strong
+                | 500
+                = ' '
+                i.fas.fa-ruble-sign
+            br
+            hr.hr
+            .grid-x.grid-padding-x
+              .cell.small-10 НДС
+              .cell.small-14.text-right
+                | 90
+                = ' '
+                i.fas.fa-ruble-sign
+              .cell.small-24: small: em 18%, включен в цену
+            br
+            hr.hr
+            .grid-x.grid-padding-x
+              .cell.small-10 Доставка
+              .cell.small-14.text-right
+                | 500
+                = ' '
+                i.fas.fa-ruble-sign
+            br
+            hr.hr
+            .grid-x.grid-padding-x
+              .cell.small-10: strong Итого
+              .cell.small-14.text-right.text-size-xxlarge
+                | 1000
+                = ' '
+                i.fas.fa-ruble-sign
+      .cell.small-24.medium-16.large-18.end.text-right
+        a.button(href='shop-order-confirmation.html')
+          i.far.fa-credit-card
+          = ' '
+          | Оформить заказ

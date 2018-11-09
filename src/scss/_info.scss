@@ -5,4 +5,18 @@
   &_down {
     padding-bottom: rem-calc(42);
   }
+
+  &__dark {
+    color: $dark-gray;
+  }
+
+  &__dib {
+    display: inline-block;
+    margin-right: rem-calc(8);
+  }
+
+  &__type {
+    margin-bottom: rem-calc(8);
+    font-weight: 500;
+  }
 }

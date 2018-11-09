@@ -1,0 +1,5 @@
+mixin radio(text,name)
+  -var id =  Math.ceil(Math.random() * 1000);
+  .rad
+    input.rad__input(type="radio" name=name id=id )
+    label.rad__label(for=id) !{text}
