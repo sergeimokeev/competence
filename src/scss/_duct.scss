@@ -13,6 +13,12 @@
     margin-right: rem-calc(8);
   }
 
+  &__small {
+    font-size: rem-calc(11);
+    display: block;
+    margin-bottom: rem-calc(3);
+  }
+
   &__price {
     font-weight: 500;
     font-size: rem-calc(21);
@@ -35,6 +41,10 @@
     font-weight: 400;
   }
   @include breakpoint(medium down) {
+    &__small {
+      margin-right: rem-calc(8);
+      display: inline-block;
+    }
     &__old {
       margin-bottom: rem-calc(10);
     }
