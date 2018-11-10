@@ -1,74 +1,33 @@
 extends shop-user-personal
 
 block personal
-    h2 Заказ #4 от 11.03.2016 на сумму 6 388 руб
+  h2 Заказ #4 от 11.03.2016 на сумму 6 388 руб
 
-    h3 Информация о покупателе
-    p
-        | Физ. лицо
-        br
-        | Иванов Иван Иванович
-        br
-        | i.ivanov@mail.com
-        br
-        | +7 900 456-87-98
+  h3 Информация о покупателе
+  p
+    | Физ. лицо
+    br
+    | Иванов Иван Иванович
+    br
+    | i.ivanov@mail.com
+    br
+    | +7 900 456-87-98
 
-    h3 Адрес доставки
-    p: strong Россия, Московская область, г. Москва, ул. Уличная, д. 11, кв. 42
+  h3 Адрес доставки
+  p: strong Россия, Московская область, г. Москва, ул. Уличная, д. 11, кв. 42
 
-    h3 Способ доставки
-    p: strong Самовывоз
+  h3 Способ доставки
+  p: strong Самовывоз
 
-    h3 Способ оплаты
-    p: strong Наличными
+  h3 Способ оплаты
+  p: strong Наличными
 
-    h3 Состав заказа
-    .grid-x.grid-padding-x
-        .cell.small-6.medium-4.large-2
-            img.margin-bottom-6(src='./i/photo.svg' alt='Товар')
-        .cell.small-18.medium-10.large-12
-            h6: a.text-dark(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
-        .cell.small-24.medium-10.large-10
-            .grid-x.grid-padding-x
-                .cell.small-12.medium-14.large-8
-                    .margin-bottom-6
-                        strong
-                            | 25 280&nbsp;
-                            i.fas.fa-ruble-sign
-                        br
-                        del.text-dark-gray
-                            | 27 150 &nbsp;
-                            i.fas.fa-ruble-sign
-                .cell.small-12.medium-10.large-6 1 шт
-                .cell.small-24.large-10
-                    .margin-bottom-6
-                        span.text-size-xxlarge
-                            | 25 280&nbsp;
-                            i.fas.fa-ruble-sign
-    hr.margin-bottom-6
-    .grid-x.grid-padding-x
-        .cell.small-6.medium-4.large-2
-            img.margin-bottom-6(src='./i/photo.svg' alt='Товар')
-        .cell.small-18.medium-10.large-12
-            h6: a.text-dark(href='shop-product.html') Картридж совместимый SuperFine (SF-CN048AE) 951XL Magenta
-        .cell.small-24.medium-10.large-10
-            .grid-x.grid-padding-x
-                .cell.small-12.medium-14.large-8
-                    .margin-bottom-6
-                        strong
-                            | 25 280&nbsp;
-                            i.fas.fa-ruble-sign
-                        br
-                        del.text-dark-gray
-                            | 27 150 &nbsp;
-                            i.fas.fa-ruble-sign
-                .cell.small-12.medium-10.large-6 1 шт
-                .cell.small-24.large-10
-                    .margin-bottom-6
-                        span.text-size-xxlarge
-                            | 25 280&nbsp;
-                            i.fas.fa-ruble-sign
-    .margin-bottom-6.lead ИТОГО: &nbsp;
-        strong 6 388
-            = ' '
-            i.fas.fa-ruble-sign
+  h3 Состав заказа
+  include components/shop/_duct
+  hr.hr
+  include components/shop/_duct
+  
+  .margin-bottom-6.lead ИТОГО: &nbsp;
+    strong 6 388
+      = ' '
+      i.fas.fa-ruble-sign

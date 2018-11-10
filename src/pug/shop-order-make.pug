@@ -36,137 +36,96 @@ block content
             .cell
               label.callout(data-equalizer-watch)
                 input(type='radio' name='delivery')
-                i.fas.fa-lg.fa-car.info__dark
+                i.fas.fa-lg.fa-car.callout__dark
                 = ' '
                 span.label
                   | 0
                   = ' '
                   i.fas.fa-ruble-sign
-                br
-                | Самовывоз
+                span.callout__block Самовывоз
             .cell
               label.callout(data-equalizer-watch)
                 input(type='radio' name='delivery')
-                i.fas.fa-lg.fa-truck.info__dark
+                i.fas.fa-lg.fa-truck.callout__dark
                 = ' '
                 span.label
                   | 500
                   = ' '
                   i.fas.fa-ruble-sign
-                br
-                | Доставка курьером
+                span.callout__block Доставка курьером
           hr.hr
           .grid-x.grid-padding-x
             .cell.small-24.medium-24.large-12.end
-              .input-group
-                input.input-group-field(type='text' placeholder='Применить купон')
-                .input-group-button
-                  button.button(type='button')
-                    i.fas.fa-calculator
-                    = ' '
+              .search
+                input.search__input.search__input_border(type='text' placeholder='Применить купон')
+                .search__cont
+                  button.button.button_input(type='button')
+                    i.fas.fa-calculator.picture
                     | Пересчитать
         .callout
           h2 Оплата
           .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-4(data-equalizer data-equalize-by-row="true")
             .cell
-              label.callout(data-equalizer-watch)
+              label.callout(data-equalizer-watch).callout_light-gray
                 input(type='radio' name='payment')
-                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                br
-                | Наличными
+                i.far.fa-lg.fa-money-bill-alt
+                span.callout__block
+                  | Наличными
             .cell
-              label.callout(data-equalizer-watch)
+              label.callout(data-equalizer-watch).callout_light-gray
                 input(type='radio' name='payment')
-                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                br
-                | Банковские карты
+                img(src='./images/shop/visa-dark.svg' alt='иконка' ).callout__icon
+                span.callout__block
+                  | Банковские карты
             .cell
-              label.callout(data-equalizer-watch)
+              label.callout(data-equalizer-watch).callout_light-gray
                 input(type='radio' name='payment')
-                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                br
-                | Квитанция Сбербанка
+                img(src='./images/sber.svg' alt='иконка' ).callout__icon
+                span.callout__block
+                  | Квитанция Сбербанка
             .cell
-              label.callout(data-equalizer-watch)
+              label.callout(data-equalizer-watch).callout_light-gray
                 input(type='radio' name='payment')
-                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                br
-                | Терминалы
+                i.fa.fa-lg.fa-terminal
+                span.callout__block
+                  | Терминалы
             .cell
-              label.callout(data-equalizer-watch)
+              label.callout(data-equalizer-watch).callout_light-gray
                 input(type='radio' name='payment')
-                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                br
-                | Яндекс.Деньги
+                img(src='./images/shop/ym.svg' alt='иконка' ).callout__icon
+                span.callout__block
+                  | Яндекс.Деньги
             .cell
-              label.callout(data-equalizer-watch)
+              label.callout(data-equalizer-watch).callout_light-gray
                 input(type='radio' name='payment')
-                img(src='./i/image.svg' alt='иконка' style='width:40px;height:25px;background:#36B6AD;')
-                br
-                | Наложенный платеж
+                i.fa.fa-university.fa-lg
+                span.callout__block
+                  | Наложенный платеж
         .callout
           h2 Покупатель
-          label
-            strong
-              span.text-primary *&nbsp;
-              | ФИО
+          label.info__label
+            span.info__primary *&nbsp;
+            | ФИО
             input(type='text')
-          label
-            strong
-              span.text-primary *&nbsp;
-              | E-Mail
+          label.info__label
+            span.info__primary *&nbsp;
+            | E-Mail
             input(type='text')
-          label
-            strong
-              span.text-primary *&nbsp;
-              | Телефон
+          label.info__label
+            span.info__primary *&nbsp;
+            | Телефон
             input(type='text')
-          label
-            strong
-              span.text-primary *&nbsp;
-              | Адрес доставки
+          label.info__label
+            span.info__primary *&nbsp;
+            | Адрес доставки
             input(type='text')
-          label
-            strong
-              span.text-primary *&nbsp;
-              | Комментарий к заказу
+          label.info__label
+            span.info__primary *&nbsp;
+            | Комментарий к заказу
             textarea
       .cell.small-24.medium-8.large-6
-        div(data-sticky-container)
-          .sticky.callout(data-sticky data-anchor="order-container" data-sticky-on="medium" style="width: 100%")
-            .grid-x.grid-padding-x
-              .cell.small-10: strong Товаров на
-              .cell.small-14.text-right: strong
-                | 500
-                = ' '
-                i.fas.fa-ruble-sign
-            br
-            hr.hr
-            .grid-x.grid-padding-x
-              .cell.small-10 НДС
-              .cell.small-14.text-right
-                | 90
-                = ' '
-                i.fas.fa-ruble-sign
-              .cell.small-24: small: em 18%, включен в цену
-            br
-            hr.hr
-            .grid-x.grid-padding-x
-              .cell.small-10 Доставка
-              .cell.small-14.text-right
-                | 500
-                = ' '
-                i.fas.fa-ruble-sign
-            br
-            hr.hr
-            .grid-x.grid-padding-x
-              .cell.small-10: strong Итого
-              .cell.small-14.text-right.text-size-xxlarge
-                | 1000
-                = ' '
-                i.fas.fa-ruble-sign
-      .cell.small-24.medium-16.large-18.end.text-right
+        include components/shop/_info-sticky
+      .cell.small-24.medium-16.large-18.text-right
         a.button(href='shop-order-confirmation.html')
-          i.far.fa-credit-card
-          = ' '
+          i.far.fa-credit-card.picture
           | Оформить заказ
