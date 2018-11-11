@@ -106,6 +106,6 @@ $ npm start
 Для сборки отдельной страницы нужно установить gulp-cli глобально
 npm i -g gulp-cli
 а затем можно использовать команду (например для страницы corp-index)
-gulp custom --pg shop-product
+gulp default --pg shop-product
 
 Для автоматического обновления страницы нужно открыть ее в браузере по адресу http://localhost:3000/shop-product.html (пример для страницы shop-product.html).

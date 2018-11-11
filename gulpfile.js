@@ -16,7 +16,7 @@ const gulpBrowserSync = require('browser-sync');
 const gulpWait = require('gulp-wait2');
 const imageminPngquant = require('imagemin-pngquant');
 
-let nameChosenPage = gulpArgs.pg;
+let nameChosenPage = gulpArgs.pg || '*';
 
 const sassPaths = [
     './node_modules/foundation-sites/scss',
@@ -34,8 +34,7 @@ const paths = {
         fonts: 'dist/fonts/'
     },
     src: {
-        html: 'src/pug/*.pug',
-        htmlCustom: 'src/pug/'+ nameChosenPage + '.pug',
+        html: 'src/pug/' + nameChosenPage + '.pug',
         js: 'src/js/*.js',
         jsLib: [
             'node_modules/jquery/dist/jquery.min.js',
@@ -90,14 +89,6 @@ let pug = () => gulp.src(paths.src.html)
     }))
     .pipe(gulp.dest(paths.dist.html));
 
-let pugCustom = () => gulp.src(paths.src.htmlCustom)
-    .pipe(gulpPlumber())
-    .pipe(gulpPug({
-        pretty: true,
-        cache: true
-    }))
-    .pipe(gulp.dest(paths.dist.html));
-
 let images = () => gulp.src(paths.src.images, {allowEmpty: true})
     .pipe(gulpNewer(paths.dist.images))
     .pipe(gulpImagemin({
@@ -109,8 +100,8 @@ let images = () => gulp.src(paths.src.images, {allowEmpty: true})
     .pipe(gulp.dest(paths.dist.images))
     .pipe(gulpWait(100))
     .pipe(gulpBrowserSync.reload({
-     stream: true
-   }));
+        stream: true
+    }));
 
 let i = () => gulp.src(paths.src.i, {allowEmpty: true}).pipe(gulp.dest(paths.dist.i));
 
@@ -122,7 +113,7 @@ let jsLib = () => gulp.src(paths.src.jsLib, {allowEmpty: true})
     .pipe(gulp.dest(paths.dist.js));
 
 let jsApp = () => gulp.src(paths.src.js, {allowEmpty: true}).pipe(gulpConcat('app.js'))
-.pipe(gulp.dest(paths.dist.js));
+    .pipe(gulp.dest(paths.dist.js));
 
 let jsAppMinify = () => gulp.src(paths.src.js, {allowEmpty: true})
     .pipe(gulpUglify())
@@ -131,30 +122,15 @@ let jsAppMinify = () => gulp.src(paths.src.js, {allowEmpty: true})
 
 let reloadBrowser = () => gulp.src(paths.src.js, {allowEmpty: true}).pipe(gulpWait(100))
     .pipe(gulpBrowserSync.reload({
-     stream: true
+        stream: true
     }));
 
-    let watch = () => {
-        gulp.watch(paths.watch.css, gulp.series(cleanCss, sass,reloadBrowser));
-        gulp.watch(paths.watch.html, gulp.series(cleanHtml, pug,reloadBrowser));
-        gulp.watch(paths.watch.i, gulp.series(cleanI, i,reloadBrowser));
-        gulp.watch(paths.watch.fonts, gulp.series(cleanFonts, fonts,reloadBrowser));
-        gulp.watch(paths.watch.js, gulp.series(cleanJs, jsLib,jsApp,reloadBrowser));
-
-        let imagesWatcher = gulp.watch(paths.watch.images, images);
-        imagesWatcher.on('unlink', (unlinkPath) => {
-            let filePathFromSrc = path.relative(path.resolve('src/images'), unlinkPath);
-            let distFilePath = path.resolve('dist/images', filePathFromSrc);
-            del(distFilePath);
-            console.log("Delete file: " + distFilePath);
-        });
-    };
-let watchCustom = () => {
-    gulp.watch(paths.watch.css, gulp.series(cleanCss, sass,reloadBrowser));
-    gulp.watch(paths.watch.html, gulp.series(cleanHtml, pugCustom,reloadBrowser));
-    gulp.watch(paths.watch.i, gulp.series(cleanI, i,reloadBrowser));
-    gulp.watch(paths.watch.fonts, gulp.series(cleanFonts, fonts,reloadBrowser));
-    gulp.watch(paths.watch.js, gulp.series(cleanJs, jsLib,jsApp,reloadBrowser));
+let watch = () => {
+    gulp.watch(paths.watch.css, gulp.series(cleanCss, sass, reloadBrowser));
+    gulp.watch(paths.watch.html, gulp.series(cleanHtml, pug, reloadBrowser));
+    gulp.watch(paths.watch.i, gulp.series(cleanI, i, reloadBrowser));
+    gulp.watch(paths.watch.fonts, gulp.series(cleanFonts, fonts, reloadBrowser));
+    gulp.watch(paths.watch.js, gulp.series(cleanJs, jsLib, jsApp, reloadBrowser));
 
     let imagesWatcher = gulp.watch(paths.watch.images, images);
     imagesWatcher.on('unlink', (unlinkPath) => {
@@ -164,8 +140,9 @@ let watchCustom = () => {
         console.log("Delete file: " + distFilePath);
     });
 };
+
 let browserSync = () =>
-  gulpBrowserSync.init({
+    gulpBrowserSync.init({
         server: {
             baseDir: "dist"
         }
@@ -174,15 +151,8 @@ let browserSync = () =>
 gulp.task('default',
     gulp.series(
         clean,
-        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsApp,browserSync,watch),
+        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsApp, browserSync, watch),
         watch
-    )
-);
-gulp.task('custom',
-    gulp.series(
-        clean,
-        gulp.parallel(sass, pugCustom, images, i, fonts, jsLib, jsApp, browserSync,watchCustom),
-        watchCustom
     )
 );
 
