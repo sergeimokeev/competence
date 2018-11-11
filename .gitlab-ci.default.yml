@@ -1,44 +1,15 @@
-    # $CI_PROJECT_DIR - название проекта в GIT. Это переменная gitlab. Не меняйте её.
-    # $CI_PROJECT_NAME - название проекта в GIT. Это переменная gitlab. Не меняйте её.
-    # $LAYOUTS - это массив имен папок внутри каталога working, для которых мы собираем верстку и выкладываем в wireframes
-    before_script:
-      - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-      - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
-      - 'which perl || (apt-get update -y && apt-get install perl -y)'
-      - eval $(ssh-agent -s)
-      - ssh-add <(echo "$DEPLOY_KEY")
-      - mkdir -p ~/.ssh
-      - '[[ -f /.dockerenv ]] && echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts'
-      # Нижеследующая строчка положит в LAYOUTS все папки внутри working.
-      - cd $CI_PROJECT_DIR/working/ && export LAYOUTS=(`ls -1 -d ./*/|perl -nE '$_ =~ s/^\.\/(.+)\/$\//$1/; chomp; say'`)
-      # Если хочется указать вручную избранные папки, например folder1 и folder2, надо раскомментировать следующую строку и закомментировать строку выше.
-      # - export LAYOUTS=(folder1 folder2)
+include:
+  - 'https://gitlab.cetera.ru/boilerplate/ci/raw/master/before_script.yml'
+  - 'https://gitlab.cetera.ru/boilerplate/ci/raw/master/stages.yml'
+  - 'https://gitlab.cetera.ru/boilerplate/ci/raw/master/.build_assets.yml'
+  - 'https://gitlab.cetera.ru/boilerplate/ci/raw/master/.deploy_assets_to_staging.yml'
+  - 'https://gitlab.cetera.ru/boilerplate/ci/raw/master/.deploy_code_to_server.yml'
 
-    stages:
-      - build
-      - deploy
+.build_assets:
+  extends: .build_assets
 
-    minify:
-      stage: build
-      script:
-      # здесь задается скрипт для сборки верстки
-      - for item in ${LAYOUTS[*]}; do   cd $CI_PROJECT_DIR/working/$item && npm install && npm run minify;  done
-      artifacts:
-        paths:
-        - "working/*/dist"
-        expire_in: 1 week
+.deploy_assets_to_staging:
+  extends: .deploy_assets_to_staging
 
-    job_deploy_to_staging:
-      stage: deploy
-      environment:
-        name: staging
-        url: http://wireframes.cetera.ru/$CI_PROJECT_NAME/
-      script:
-      - rsync -e ssh /dev/null root@vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/
-      - for item in ${LAYOUTS[*]}; do  rsync -avuz  --numeric-ids --chown=33:33 -e ssh $CI_PROJECT_DIR/working/$item/dist/ vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/$item/; done
-      only:
-      - master
-      # always - сборка запускается автоматически при каждом коммите в master
-      # manual - надо будет руками запустить сборку, нажав на кнопку в интерфейсе gitlab'а на странице pipelines
-      when: always # always | manual
-
+.deploy_code_to_server:
+  extends: .deploy_code_to_server
