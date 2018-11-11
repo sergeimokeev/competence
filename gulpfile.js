@@ -6,6 +6,7 @@ const gulp = require('gulp');
 const gulpSass = require('gulp-sass');
 const gulpPug = require('gulp-pug');
 const gulpAutoprefixer = require('gulp-autoprefixer');
+const gulpBabel = require('gulp-babel');
 const gulpConcat = require('gulp-concat');
 const gulpUglify = require('gulp-uglify');
 const gulpPlumber = require('gulp-plumber');
@@ -112,10 +113,15 @@ let jsLib = () => gulp.src(paths.src.jsLib, {allowEmpty: true})
     .pipe(gulpConcat('lib.js'))
     .pipe(gulp.dest(paths.dist.js));
 
-let jsApp = () => gulp.src(paths.src.js, {allowEmpty: true}).pipe(gulpConcat('app.js'))
+let jsApp = () => gulp.src(paths.src.js, {allowEmpty: true})
+    .pipe(gulpBabel())
+    .pipe(gulpConcat('app.js'))
     .pipe(gulp.dest(paths.dist.js));
 
 let jsAppMinify = () => gulp.src(paths.src.js, {allowEmpty: true})
+    .pipe(gulpBabel({
+        presets: ['@babel/env']
+    }))
     .pipe(gulpUglify())
     .pipe(gulpConcat('app.js'))
     .pipe(gulp.dest(paths.dist.js));
