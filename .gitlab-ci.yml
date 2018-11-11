@@ -37,7 +37,8 @@
       - rsync -e ssh /dev/null root@vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/
       - rsync -avuz  --numeric-ids --chown=33:33 -e ssh $CI_PROJECT_DIR/dist/ vps10.cetera.ru::wireframe/$CI_PROJECT_NAME/
       only:
-      - master
+        refs:
+          - master
       # always - сборка запускается автоматически при каждом коммите в master
       # manual - надо будет руками запустить сборку, нажав на кнопку в интерфейсе gitlab'а на странице pipelines
       when: always # always | manual
