@@ -2,7 +2,7 @@
 
 ## Источник
 
-**gitlab.cetera.ru:boilerplate_wireframe**
+**gitlab.cetera.ru:boilerplate/wireframe**
 
 Актуальная версия исходников лежит в ветке *master*, код в которой мы используем для создания прототипов и дизайнов под конкретный проект. В ветке *beta* и любых подобных ведется доработка прототипа. Не стоит ничего добавлять в ветку *master* без ведома Дениса Сахарова <d.sakharov@ceteralabs.com>.
 
@@ -109,11 +109,3 @@ npm i -g gulp-cli
 gulp custom --pg shop-product
 
 Для автоматического обновления страницы нужно открыть ее в браузере по адресу http://localhost:3000/shop-product.html (пример для страницы shop-product.html).
-
-* * *
-
-Вопросы и предложения: <d.sakharov@ceteralabs.com> и <v.ukhov@ceteralabs.com>
-
-Автор: Денис Сахаров <d.sakharov@ceteralabs.com>
-
-&copy; Cetera Labs http://cetera.ru/
