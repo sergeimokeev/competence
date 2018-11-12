@@ -54,11 +54,11 @@ boilerplate_wireframe/
 
 #### Извлеките содержимое репозитория
 ```sh
-$ git clone git@gitlab.cetera.ru:boilerplate_wireframe
+$ git clone git@gitlab.cetera.ru:boilerplate/wireframe
 ```
 #### Перейдите во вновь созданную папку
 ```sh
-$ cd boilerplate_wireframe/
+$ cd wireframe/
 ```
 #### Установите внешние зависимости
 ```sh
