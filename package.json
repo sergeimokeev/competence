@@ -21,7 +21,7 @@
     "@fortawesome/fontawesome-free-solid": "~5.0.13",
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
-    "foundation-sites": "~6.5.0-rc.2",
+    "foundation-sites": "~6.5.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
