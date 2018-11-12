@@ -19,13 +19,4 @@
               a.menu-top__link(href='#')= title
   
 
-.grid-container: .grid-x.grid-padding-x
-  .small-24.large-10.large-offset-14.cell
-    .dd(id='search' data-toggler='.dd_show')
-      .dd__content.dd__content_new
-        form(action='#' method='post' data-abide='', novalidate='novalidate')
-          .input-group
-            input.input-group-field(type='text', placeholder='Поиск')
-            .input-group-button
-              button.button.primary(type='submit', name='Найти')
-                i.fas.fa-search.fa-inverse
+include ../common/_search-input

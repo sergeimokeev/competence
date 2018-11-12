@@ -1,66 +1,51 @@
-.padding-vertical-6
-    .grid-container: .grid-x.grid-padding-x
-        .small-18.medium-6.large-4.cell.text-center.large-text-left
-            .margin-bottom-6
-                a(href='#' title='')
-                    img(src='./images/logo.svg', style='max-width: 15rem;', alt='logo')
-        .shrink.cell.text-center
-            .margin-bottom-6.text-age-rating.text-size-xxlarge: strong 18+
-        .small-24.medium-auto.cell.text.medium-text-right
-            a.text-size-xxlarge(data-open='region') Москва
-            | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            i.fas.fa-thermometer-half
-            | &nbsp;-1&deg;C, снег
-            br
-            | Курс ЦБ на 30.12:
-            | &nbsp;
-            span.text-alert
-                i.fas.fa-dollar-sign
-                | &nbsp;77.05&nbsp;
-                i.fas.fa-long-arrow-alt-down
-            | &nbsp;
-            span.text-success
-                i.fas.fa-euro-sign
-                | &nbsp;88.20&nbsp;
-                i.fas.fa-long-arrow-alt-up
+header.header
+  .grid-container: .grid-x.grid-padding-x
+    .cell.small-15.large-10.medium-12.header__info
+      a(href='#' title='')
+        img(src='./images/logo.svg',  alt='logo').header__logo.header__logo_mini
+      span.header__age 18+
+    .show-for-small-only.small-9.cell
+      div(data-responsive-toggle='menu', data-hide-for='medium').rubric__tgl
+        div(data-toggle)
+          i.fas.fa-bars
+          .rubric__menu Меню  
+    .small-24.large-auto.medium-12.cell.text-center.medium-text-right
+      a.header__reg(data-open='region') Москва
+      
+      i.fas.fa-thermometer-half.picture
+      | -1&deg;C, снег
+      div
+        span.picture Курс ЦБ на 30.12:
+        span.header__alert
+          i.fas.fa-dollar-sign.picture
+          span 77.05
+          i.fas.fa-long-arrow-alt-down.canv
+        span.header__success
+          i.fas.fa-euro-sign.picture
+          span 88.20
+          i.fas.fa-long-arrow-alt-up.canv
 
-.reveal.small#region(data-reveal)
-    h3 Выберите ваш регион
-    .grid-x
-        .small-12.cell
-            h5.margin-bottom-2: a(href='#') Москва
-            h5.margin-bottom-2: a(href='#') Санкт-Петербург
-            h5.margin-bottom-2: a(href='#') Екатеринбург
-        .small-12.cell
-            h5.margin-bottom-2: a(href='#') Новосибирск
-            h5.margin-bottom-2: a(href='#') Владивосток
-    button(class="close-button" data-close aria-label="Close Accessible Modal" type="button")
-        span(aria-hidden="true") &times;
+include _reveal-reg
 
-.background-main.padding-vertical-3
-    .grid-container: .grid-x.grid-padding-x
-        .small-24.cell
-            .show-for-small-only(data-responsive-toggle='menu', data-hide-for='medium')
-                .text-secondary.text-size-xxlarge(data-toggle)
-                    i.fas.fa-bars
-                    strong &nbsp;Меню
-            div#menu
-                .margin-bottom-6.show-for-small-only
-                ul.menu-base
-                    li.menu-base__item: a.menu-base__link(href='#') Экономика
-                    li.menu-base__item: a.menu-base__link(href='#') Финансы
-                    li.menu-base__item: a.menu-base__link(href='#') ТЭК
-                    li.menu-base__item: a.menu-base__link(href='#') Интернет
-                    li.menu-base__item: a.menu-base__link(href='#') Промышленность
-                    li.menu-base__item: a.menu-base__link(href='#') Транспорт
-                    li.menu-base__item: a.menu-base__link(href='#') Наука
-                    li.menu-base__item: a.menu-base__link(href='#') ИТ и Медиа
-                    li.menu-base__item: a.menu-base__link(href='#') Потребительские рынки
-                    li.menu-base__item: a.menu-base__link(href='#') ВПК
-                    li.menu-base__item: a.menu-base__link(href='#') Бренды
-                    li.menu-base__item: a.menu-base__link(href='#') Спорт
-                    li.menu-base__item: a.menu-base__link(href='#') Видео
-                    li.menu-base__item: a.menu-base__link(href='#') Интервью
-                    li.menu-base__item: a.menu-base__link(href='#') Пресс-релизы
-                    li.menu-base__item: a.menu-base__link(href='#') Отставки и назначения
-                    li.menu-base__item: a.menu-base__link(href='#') Мнения
+.rubric
+  .grid-container: .grid-x.grid-padding-x
+    .cell
+      div#menu
+        ul.cat
+          li.cat__item: a.cat__link(href='#') Экономика
+          li.cat__item: a.cat__link(href='#') Финансы
+          li.cat__item: a.cat__link(href='#') ТЭК
+          li.cat__item: a.cat__link(href='#') Интернет
+          li.cat__item: a.cat__link(href='#') Промышленность
+          li.cat__item: a.cat__link(href='#') Транспорт
+          li.cat__item: a.cat__link(href='#') Наука
+          li.cat__item: a.cat__link(href='#') ИТ и Медиа
+          li.cat__item: a.cat__link(href='#') Потребительские рынки
+          li.cat__item: a.cat__link(href='#') ВПК
+          li.cat__item: a.cat__link(href='#') Бренды
+          li.cat__item: a.cat__link(href='#') Спорт
+          li.cat__item: a.cat__link(href='#') Видео
+          li.cat__item: a.cat__link(href='#') Интервью
+          li.cat__item: a.cat__link(href='#') Пресс-релизы
+          li.cat__item: a.cat__link(href='#') Отставки и назначения
+          li.cat__item: a.cat__link(href='#') Мнения

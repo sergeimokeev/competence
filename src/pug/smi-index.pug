@@ -1,34 +1,33 @@
 doctype html
 html.no-js(lang='ru')
-    include components/service/_head
-    body
-        include components/smi/_top-nav
-        include components/smi/_header
+  include components/service/_head
+  body
+    include components/smi/_top-nav
+    include components/smi/_header
 
-        block article
+    block article
 
-        block page
-            include components/smi/_news-top-slider
-            .grid-container: .grid-x.grid-padding-x: .cell: hr
-            .grid-container: .grid-x.grid-padding-x
-                //main
-                .small-24.medium-16.cell
-                    include components/smi/_articles-tiles
-                    .grid-x.grid-padding-x: .cell: hr
-                    include components/common/_video-tiles
-                    .grid-x.grid-padding-x: .cell: hr
-                    include components/common/_photo-tiles
-                    .grid-x.grid-padding-x: .cell: hr
-                    include components/smi/_magazine-tiles
-                    .grid-x.grid-padding-x: .cell: hr
-                    include components/smi/_now-read-comment
-                    .grid-x.grid-padding-x: .cell: hr
-                    include components/smi/_news-sharing
-                    .grid-x.grid-padding-x: .cell: hr
-                    include components/common/_social-widgets
-                    .grid-x.grid-padding-x: .cell: hr
-                aside.medium-8.show-for-medium.cell
-                    include components/smi/_aside-index
+    block page
+      include components/smi/_news-top-slider
+      .grid-container: .grid-x.grid-padding-x: .cell: hr
+      .grid-container: .grid-x.grid-padding-x
+        .small-24.medium-16.cell
+          include components/smi/_articles-tiles
+          .grid-x.grid-padding-x: .cell: hr
+          include components/common/_video-tiles
+          .grid-x.grid-padding-x: .cell: hr
+          include components/common/_photo-tiles
+          .grid-x.grid-padding-x: .cell: hr
+          include components/smi/_magazine-tiles
+          .grid-x.grid-padding-x: .cell: hr
+          include components/smi/_now-read-comment
+          .grid-x.grid-padding-x: .cell: hr
+          include components/smi/_news-sharing
+          .grid-x.grid-padding-x: .cell: hr
+          include components/common/_social-widgets
+          .grid-x.grid-padding-x: .cell: hr
+        aside.medium-8.show-for-medium.cell
+          include components/smi/_aside-index
 
-        include components/smi/_footer
-        include components/service/_js
+    include components/smi/_footer
+    include components/service/_js

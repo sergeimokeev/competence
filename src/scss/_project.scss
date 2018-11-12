@@ -1,9 +1,21 @@
 .project {
   margin-bottom: rem-calc(21);
+
   &__img {
     margin-bottom: rem-calc(10);
   }
+
   &__title {
     margin-bottom: rem-calc(10);
+  }
+
+  &__text {
+    margin-bottom: rem-calc(10);
+  }
+
+  &__cat {
+    display: block;
+    color: $dark-gray;
+    margin-bottom: rem-calc(5);
   }
 }

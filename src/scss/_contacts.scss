@@ -9,16 +9,24 @@
     font-size: rem-calc(17);
     line-height: 0.75rem;
   }
-&__search {
-  color: $white;
-  font-weight: 500;
 
-  &:active,
-  &:focus,
-  &:hover {
-    color: $medium-gray;
+  &__search {
+    color: $white;
+    font-weight: 500;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $medium-gray;
+    }
   }
-}
+
+  &__block {
+    line-height: 1;
+    font-size: rem-calc(22);
+    margin-right: rem-calc(8);
+  }
+
   &__link {
     color: $white;
     font-weight: 500;

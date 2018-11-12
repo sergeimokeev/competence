@@ -57,7 +57,7 @@ $(document).foundation();
             autoplayHoverPause: true
         });
 
-        $(".x-carousel-news").slick({
+        $(".carousel-news").slick({
             infinite: true,
             arrows: false,
             slidesToShow: 1,
@@ -68,11 +68,11 @@ $(document).foundation();
             autoplaySpeed: 7000,
             autoplayHoverPause: true
         });
-        $('.x-carousel-news-link').on('click', function(e) {
+        $('.carousel-news-anchor').on('click', function(e) {
             e.preventDefault();
             const $this = $(this),
-                index = $this.closest('.x-carousel-news-links').find('.x-carousel-news-link').index($this);
-            $('.x-carousel-news').slick('slickGoTo', index);
+                index = $this.closest('.carousel-news-links').find('.carousel-news-anchor').index($this);
+            $('.carousel-news').slick('slickGoTo', index);
         });
 
         /** Показ любого блока по наведению на другой */

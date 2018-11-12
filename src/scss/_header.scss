@@ -2,6 +2,29 @@
   background: $main-color;
   padding: rem-calc(35 0);
 
+  &__age {
+    font-size: rem-calc(21);
+    font-weight: 500;
+    padding-top: rem-calc(10);
+    margin-left: rem-calc(10);
+    display: inline-block;
+    margin-bottom: rem-calc(20);
+  }
+
+  &__alert {
+    color: $alert-color;
+    margin-right: rem-calc(4);
+  }
+
+  &__success {
+    color: $success-color;
+  }
+
+  &__reg {
+    margin-right: rem-calc(12);
+    font-size: rem-calc(21);
+  }
+
   &__hamb {
     display: none;
     font-size: rem-calc(28);
@@ -50,6 +73,22 @@
   @include breakpoint(small only) {
     &__span {
       display: none;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__age {
+      padding-top: rem-calc(0);
+      font-size: rem-calc(16);
+    }
+
+    &__logo {
+      &_mini {
+        width: rem-calc(150);
+      }
     }
 
     &__hamb {

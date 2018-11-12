@@ -14,6 +14,16 @@
     background-color: #d7f7f6;
   }
 
+  &_light-gray {
+    background-color: #e6e6e6;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__donate {
+    color: $medium-gray;
+  }
+
   &__dark {
     color: $dark-gray;
   }
