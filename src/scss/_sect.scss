@@ -1,6 +1,10 @@
 .sect {
   @include margin-level(bottom,red);
 
+  &_big {
+    font-size: rem-calc(18);
+  }
+
   &_main {
     background: $main-color;
   }

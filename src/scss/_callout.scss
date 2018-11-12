@@ -23,6 +23,11 @@
     font-size: rem-calc(11);
   }
 
+  &__quest {
+    color: $dark-gray;
+    margin-left: rem-calc(4);
+  }
+
   &__sum {
     font-size: rem-calc(21);
   }
@@ -38,6 +43,7 @@
   &__strong {
     font-weight: 500;
   }
+
   &__bill {
     margin-bottom: rem-calc(21);
     font-weight: 500;
