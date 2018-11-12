@@ -6,9 +6,16 @@
   }
 
   &__title {
-    margin-bottom: rem-calc(10);
+    margin-bottom: rem-calc(10);display: block;
   }
-
+  &__views {
+    color: $dark-gray;
+    margin-left: rem-calc(8);
+    margin-right: rem-calc(16);
+  }
+&__icon {
+  color: $dark-gray;
+}
   &__text {
     margin-bottom: rem-calc(10);
   }
