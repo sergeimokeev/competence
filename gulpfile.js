@@ -114,7 +114,9 @@ let jsLib = () => gulp.src(paths.src.jsLib, {allowEmpty: true})
     .pipe(gulp.dest(paths.dist.js));
 
 let jsApp = () => gulp.src(paths.src.js, {allowEmpty: true})
-    .pipe(gulpBabel())
+    .pipe(gulpBabel({
+        presets: ['@babel/env']
+    }))
     .pipe(gulpConcat('app.js'))
     .pipe(gulp.dest(paths.dist.js));
 
