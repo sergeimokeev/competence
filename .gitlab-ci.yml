@@ -8,8 +8,6 @@
       - eval $(ssh-agent -s)
       - ssh-add <(echo "$DEPLOY_KEY")
       - mkdir -p ~/.ssh
-      - df -h
-      - echo $NPM_CONFIG_CACHE
       - '[[ -f /.dockerenv ]] && echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts'
       # Нижеследующая строчка положит в LAYOUTS все папки внутри working.
       #- cd $CI_PROJECT_DIR/working/ && export LAYOUTS=(`ls -1 -d ./*/|perl -nE '$_ =~ s/^\.\/(.+)\/$\//$1/; chomp; say'`)
