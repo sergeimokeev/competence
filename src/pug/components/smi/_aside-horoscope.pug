@@ -1,13 +1,9 @@
-.callout
-    h3
-        a.text-dark-gray(href='#', title='') Гороскопы
++callout
+  h3
+    a.callout__dark(href='#', title='') Гороскопы
+  +user
+    span.user__title Рыбы — вы сможете извлечь из событий этого дня очень…
+    a(href='#') Читать
+      i.fas.fa-long-arrow-alt-right.canv
 
-    .media-object
-        .media-object-section.show-for-large
-            img(src='./i/image.svg', alt='Знак зодиака Рыбы', style='background:#abcdef;width:45px;height:45px;')
-        .media-object-section
-            .margin-bottom-6 Рыбы — вы сможете извлечь из событий этого дня очень…
-                a(href='#') Читать &nbsp;
-                    i.fas.fa-long-arrow-alt-right
-
-    a.button.hollow.expanded(href='#', title='') Другие гороскопы
+  +button('Другие гороскопы','button_hollow button_expanded')

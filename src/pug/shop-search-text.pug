@@ -1,10 +1,9 @@
 extends shop-index
 
 block page
-  include components/common/_breadcrumbs
+  +breadcrumbs
   block content
     .grid-container: .grid-x.grid-padding-x: .cell
       h1 Поиск
-    .info
-      .grid-container: .grid-x.grid-padding-x: .cell
-        include components/common/_search
+    .info.grid-container: .grid-x.grid-padding-x: .cell
+      include components/common/_search

@@ -1,18 +1,8 @@
 .brand
   .grid-container: .grid-x.grid-padding-x
-    .small-24.large-16.cell#menu
-      ul.cat.cat_top
-        - n = 0
-        each title in ['Новинки', 'Бренды', 'Одежда', 'Обувь', 'Аксессуары']
-          li.cat__item
-            a.cat__link(href='shop-catalog.html' data-toggle-hover-dd='menu_item_' + n)= title
-          - n++
-        li.cat__item
-          a.cat__link(href='#') Распродажа %
-    .small-24.large-8.cell
-      form.search(action='shop-search.html' method='get')
-        input.search__input(type='text', value='' placeholder='Введите поисковый запрос')
-        .search__cont
-          button.search__button(type='submit'): i.fas.fa-search
+    .large-16.cell#menu
+      +cat('special-menu')
+    .large-8.cell
+      +search
 
 include _dd

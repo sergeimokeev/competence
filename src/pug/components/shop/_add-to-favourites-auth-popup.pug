@@ -3,12 +3,11 @@
         .show-for-medium.medium-12.cell
             img(src='./i/photo.svg' alt='изображение')
 
-        .small-24.medium-12.text-center.cell
+        .medium-12.text-center.cell
             h3 Товар добавлен в список любимых товаров!
             p Чтобы сохранить список, вам нужно:
-            a(href='login.html', title='').button.expanded.secondary Войти
+            +button('Войти','button_secondary button_expanded','login.html')
+      
             p или
-            a(href='login.html', title='').button.expanded.secondary Зарегистрироваться
-
-    button.close-button(data-close aria-label="Закрыть")
-        span(aria-hidden="true") &times;
+            +button('Зарегистрироваться','button_secondary button_expanded','login.html')
+    +close-button

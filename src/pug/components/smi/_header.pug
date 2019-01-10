@@ -5,11 +5,8 @@ header.header
         img(src='./images/logo.svg',  alt='logo').header__logo.header__logo_mini
       span.header__age 18+
     .show-for-small-only.small-9.cell
-      div(data-responsive-toggle='menu', data-hide-for='medium').rubric__tgl
-        div(data-toggle)
-          i.fas.fa-bars
-          .rubric__menu Меню  
-    .small-24.large-auto.medium-12.cell.text-center.medium-text-right
+      +rubric('menu') 
+    .large-auto.medium-12.cell.text-center.medium-text-right
       a.header__reg(data-open='region') Москва
       
       i.fas.fa-thermometer-half.picture
@@ -31,21 +28,5 @@ include _reveal-reg
   .grid-container: .grid-x.grid-padding-x
     .cell
       div#menu
-        ul.cat
-          li.cat__item: a.cat__link(href='#') Экономика
-          li.cat__item: a.cat__link(href='#') Финансы
-          li.cat__item: a.cat__link(href='#') ТЭК
-          li.cat__item: a.cat__link(href='#') Интернет
-          li.cat__item: a.cat__link(href='#') Промышленность
-          li.cat__item: a.cat__link(href='#') Транспорт
-          li.cat__item: a.cat__link(href='#') Наука
-          li.cat__item: a.cat__link(href='#') ИТ и Медиа
-          li.cat__item: a.cat__link(href='#') Потребительские рынки
-          li.cat__item: a.cat__link(href='#') ВПК
-          li.cat__item: a.cat__link(href='#') Бренды
-          li.cat__item: a.cat__link(href='#') Спорт
-          li.cat__item: a.cat__link(href='#') Видео
-          li.cat__item: a.cat__link(href='#') Интервью
-          li.cat__item: a.cat__link(href='#') Пресс-релизы
-          li.cat__item: a.cat__link(href='#') Отставки и назначения
-          li.cat__item: a.cat__link(href='#') Мнения
+        +cat(['Экономика','Финансы','ТЭК','Интернет','Промышленность','Транспорт','Наука','ИТ и Медиа','Потребительские рынки','ВПК','Бренды','Спорт','Видео','Интервью','Пресс-релизы','Отставки и назначения','Мнения'])
+      

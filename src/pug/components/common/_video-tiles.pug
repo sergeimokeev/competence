@@ -1,20 +1,9 @@
-.info
-  .grid-x.grid-padding-x
-    .small-24.medium-16.cell
-      h2 Видео
-    .small-24.medium-8.cell.medium-text-right
-      a.button(href='#') Всё видео<i class="fas fa-long-arrow-alt-right canv"></i>
+.grid-x.grid-padding-x
+  .medium-16.cell
+    h2 Видео
+  .medium-8.cell.medium-text-right
+    +button('Всё видео<i class="fas fa-long-arrow-alt-right canv"></i>')
 
-  .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-3
-    each item in [1, 2, 3, 4, 5, 6]
-      .cell.project
-        .grid-x
-          .cell.small-5.medium-24
-            img.project__img(src='./i/video.svg' alt='Видео')
-          .cell.small-18.medium-24.small-offset-1.medium-offset-0
-            a(href='#' title='').project__title Приняли на комплексное обслуживание новый сайт компании&nbsp;
-              = item
-            i.far.fa-eye.project__icon
-            span.project__views 128
-            i.far.fa-clock.project__icon
-            span.project__views 3:33
+.grid-x.grid-padding-x.medium-up-2.large-up-3
+  each item in [1, 2, 3, 4, 5, 6]
+    +project('video')

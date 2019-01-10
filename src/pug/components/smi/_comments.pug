@@ -1,28 +1,21 @@
-include ../mixins/_mixin-comment-author
+h3.callout__dark Комментарии (3)
 
-h3.text-dark-gray Комментарии (3)
++user
+.sect Приходите, будет весело =) В программе мероприятия запланированы сюрпризы, о которых вы вряд ли догадываетесь
+hr
 
-+commentAuthor
-.margin-bottom-6 Приходите, будет весело =) В программе мероприятия запланированы сюрпризы, о которых вы вряд ли догадываетесь
-hr.margin-bottom-6
++user
+.sect Обязательно придём!!!
+hr
 
-+commentAuthor
-.margin-bottom-6 Обязательно придём!!!
-hr.margin-bottom-6
-
-+commentAuthor
-.margin-bottom-6 Приходите, будет весело =) В программе мероприятия запланированы сюрпризы, о которых вы вряд ли догадываетесь
-hr.margin-bottom-12
++user
+.sect Приходите, будет весело =) В программе мероприятия запланированы сюрпризы, о которых вы вряд ли догадываетесь
+hr
 
 h3 Добавить комментарий
-form(action='' method='post', data-abide='', novalidate='novalidate')
-    .grid-x.grid-padding-x: .cell
-        input(type='text', placeholder='Представьтесь *', required='')
-        p.help-text Ваше имя для комментария
-    .grid-x.grid-padding-x: .cell
-        input(type='email', placeholder='Ваша электронная почта', required='')
-    .grid-x.grid-padding-x: .cell
-        textarea(placeholder='Текст комментария')
-    .grid-x.grid-padding-x: .cell
-        button.button(type='submit') Отправить сообщение &nbsp;
-            i.far.fa-envelope.fa-lg
+form(action='#' method='post', data-abide='', novalidate='novalidate')
+  input(type='text', placeholder='Представьтесь *', required='')
+  p.help-text Ваше имя для комментария
+  input(type='email', placeholder='Ваша электронная почта', required='')
+  textarea(placeholder='Текст комментария')
+  +button('Отправить сообщение<i class="far fa-envelope fa-lg canv"></i>')

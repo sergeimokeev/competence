@@ -1,0 +1,32 @@
+mixin prod(title, discount)
+  .cell
+    .grid-x.prod
+      .cell.small-5.medium-24.prod__img
+        a(href='shop-product.html'): img(src='./i/photo.svg' alt='товар')
+      .cell.small-18.medium-24.small-offset-1.medium-offset-0.prod__main(data-equalizer-watch)
+        if discount
+          +label('<i class="far fa-star picture"></i>Акция','label_action')
+        div: a(href='shop-product.html')
+          if title
+            = title
+          else
+            | Название товара
+        a.prod__cat(href='shop-catalog.html') Шуроповерты
+    hr.show-for-medium
+    .grid-x.grid-padding-x.prod__info
+      .cell.auto.medium-24.prod__rub
+        span.prod__price
+          | 1&nbsp;250&nbsp;
+          i.fas.fa-ruble-sign
+        if discount
+          del.prod__old
+            | 1&nbsp;750&nbsp;
+            i.fas.fa-ruble-sign
+      .cell.shrink.medium-auto
+        +button('Купить','button_prod','shop-cart.html')
+      .cell.shrink.text-right.align-self-middle
+        a.prod__favor(title='Запомнить' data-open="add-to-favourites-auth-popup")
+          i.far.fa-heart.fa-lg
+        a.prod__favor(title="Добавить к сравнению" href='shop-compare.html')
+          i.fas.fa-balance-scale.fa-lg
+    hr.show-for-small-only

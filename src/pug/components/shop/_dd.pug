@@ -1,5 +1,5 @@
-.dd.hide-for-small-only#menu_item_0(data-toggler-hover-dd='dd_show')
-  .dd__content.callout
++dd('menu_item_0','','hide-for-small-only','dd_show')
+  +callout('callout_dd')
     .grid-container: .grid-x.grid-padding-x
       .small-12.medium-8.large-6.cell
         h5 Одежда
@@ -13,14 +13,12 @@
           each title in ['Классика гардероба', 'Одежда для фитнеса', 'Новый сезон', 'Бизнес-класс', 'Выход в свет', 'Бестселлеры', 'Рукав-колокол', 'Миниатюрные сумки', 'Бархат', 'Вечерние образы', 'Пуховики']
             li
               a(href='#' title='')= title
-      .small-24.medium-8.large-offset-4.cell
+      .medium-8.large-offset-4.cell
         .sect: img(src='./i/photo.svg' alt='1')
-        span.label.label_success
-          i.far.fa-star.picture
-          | Акция
+        +label('<i class="far fa-star picture"></i>Акция','label_action')
         a(href='shop-product.html' title='').canv Торцовочная пила Ryobi EMS254L
-.dd.hide-for-small-only#menu_item_1(data-toggler-hover-dd='dd_show')
-  .dd__content.callout
++dd('menu_item_1','','hide-for-small-only','dd_show')
+  +callout('callout_dd')
     .grid-container: .grid-x.grid-padding-x
       .small-12.medium-8.large-6.cell
         h5 Одежда Одежда
@@ -34,16 +32,14 @@
           each title in ['Классика гардероба', 'Одежда для фитнеса', 'Новый сезон', 'Бизнес-класс', 'Выход в свет', 'Бестселлеры', 'Рукав-колокол', 'Миниатюрные сумки', 'Бархат', 'Вечерние образы', 'Пуховики']
             li
               a(href='#')= title
-      .small-24.medium-8.large-offset-4.cell
+      .medium-8.large-offset-4.cell
         .sect: img(src='./i/photo.svg' alt='2')
-        span.label.label_success
-          i.far.fa-star.picture
-          | Акция
+        +label('<i class="far fa-star picture"></i>Акция','label_success')
+
         a(href='shop-product.html' title='').canv Торцовочная пила Ryobi EMS254L
 
-
-.dd.hide-for-small-only#menu_item_2(data-toggler-hover-dd='dd_show')
-  .dd__content.callout
++dd('menu_item_2','','hide-for-small-only','dd_show')
+  +callout('callout_dd')
     .grid-container: .grid-x.grid-padding-x
       .small-12.medium-8.large-6.cell
         h5 Одежда
@@ -57,9 +53,7 @@
           each title in ['Классика гардероба', 'Одежда для фитнеса', 'Новый сезон', 'Бизнес-класс', 'Выход в свет', 'Бестселлеры', 'Рукав-колокол', 'Миниатюрные сумки', 'Бархат', 'Вечерние образы', 'Пуховики']
             li
               a(href='#')= title
-      .small-24.medium-8.large-offset-4.cell
+      .medium-8.large-offset-4.cell
         .sect: img(src='./i/photo.svg' alt='3')
-        span.lspan.label.label_success
-          i.far.fa-star.picture
-          | Акция
+        +label('<i class="far fa-star picture"></i>Акция','label_success')
         a(href='shop-product.html' title='').canv Торцовочная пила Ryobi EMS254L

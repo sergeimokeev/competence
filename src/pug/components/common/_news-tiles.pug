@@ -1,49 +1,15 @@
-.info
-  .grid-container: .grid-x.grid-padding-x
-    .small-24.medium-16.cell
-      h2 Новости компании
-    .small-24.medium-8.cell.medium-text-right
-      a.button(href='#') Все новости <i class="fas fa-long-arrow-alt-right canv"></i>
-  .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-3
-    .cell.news
-      .grid-x
-        .cell.small-5.medium-24
-          img.news__img(src='./i/photo.svg' alt='Новый сайт')
-        .cell.small-18.medium-24.small-offset-1.medium-offset-0
-          h5.news__title: a(href='#') Приняли на комплексное обслуживание новый сайт
-      .show-for-medium Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-    .cell.news
-      .grid-x
-        .cell.small-5.medium-24
-          img.news__img(src='./i/photo.svg' alt='Новый сайт')
-        .cell.small-18.medium-24.small-offset-1.medium-offset-0
-          h5.news__title: a(href='#') Приняли на комплексное обслуживание новый сайт
-      .show-for-medium Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-    .cell.news
-      .grid-x
-        .cell.small-5.medium-24
-          img.news__img(src='./i/photo.svg' alt='Новый сайт')
-        .cell.small-18.medium-24.small-offset-1.medium-offset-0
-          h5.news__title: a(href='#') Приняли на комплексное обслуживание новый сайт
-      .show-for-medium Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-    .cell.news
-      .grid-x
-        .cell.small-5.medium-24
-          img.news__img(src='./i/photo.svg' alt='Новый сайт')
-        .cell.small-18.medium-24.small-offset-1.medium-offset-0
-          h5.news__title: a(href='#') Разработаем несколько интернет-магазинов по продаже сантехники.
-      .show-for-medium Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-    .cell.news
-      .grid-x
-        .cell.small-5.medium-24
-          img.news__img(src='./i/photo.svg' alt='Новый сайт')
-        .cell.small-18.medium-24.small-offset-1.medium-offset-0
-          h5.news__title: a(href='#') Приняли на комплексное обслуживание новый сайт
-      .show-for-medium Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
-    .cell.news
-      .grid-x
-        .cell.small-5.medium-24
-          img.news__img(src='./i/photo.svg' alt='Новый сайт')
-        .cell.small-18.medium-24.small-offset-1.medium-offset-0
-          h5.news__title: a(href='#') Приняли на комплексное обслуживание новый сайт
-      .show-for-medium Приняли на комплексное обслуживание компанию «СантехОпт». Разработаем несколько интернет-магазинов по продаже сантехники. Проект будет развиваться по методологии «Быстрый старт».
+.grid-container: .grid-x.grid-padding-x
+  .medium-16.cell
+    h2 Новости компании
+  .medium-8.cell.medium-text-right
+    +button('Все новости<i class="fas fa-long-arrow-alt-right canv"></i>')
+.grid-container.info: .grid-x.grid-padding-x.medium-up-2.large-up-3
+  +news('Разработаем несколько интернет-магазинов по продаже сантехники.')
+  +news
+  +news
+    | Приняли на комплексное обслуживание компанию «СантехОпт».
+  +news('Разработаем несколько интернет-магазинов по продаже сантехники.')
+  +news
+  +news
+    | Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
+  

@@ -1,13 +1,14 @@
 extends corp-index
 
 block page
-  include components/common/_breadcrumbs
+  +breadcrumbs
   block content
     .grid-container: .grid-x.grid-padding-x: .cell
       h1 Заголовок страницы h1
-    .info
-      .grid-container: .grid-x.grid-padding-x
-        .cell.small-24.medium-10.large-8.medium-order-2
-          include components/common/_sidebar
-        .cell.small-24.medium-14.large-16.medium-order-1
-          include components/common/_text
+    
+    .grid-container.info: .grid-x.grid-padding-x
+      .cell.medium-10.large-8.medium-order-2
+        +side
+          +partners(['О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация', 'О портале', 'Условия пользования', 'Реклама на портале', 'Партнёры', 'Контактная информация'])
+      .cell.medium-14.large-16.medium-order-1
+        include components/common/_text

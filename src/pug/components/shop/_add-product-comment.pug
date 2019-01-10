@@ -14,31 +14,10 @@
 
     label Ваша оценка товара
     .sect
-      span.rating
-        input.rating__input#rating15(type="radio" name="rating")
-        label.rating__star(for="rating15")
-          i.far.fa-star.rating__solid
-          i.fas.fa-star.rating__regular
-        input.rating__input#rating14(type="radio" name="rating")
-        label.rating__star(for="rating14")
-          i.far.fa-star.rating__solid
-          i.fas.fa-star.rating__regular
-        input.rating__input#rating13(type="radio" name="rating")
-        label.rating__star(for="rating13")
-          i.far.fa-star.rating__solid
-          i.fas.fa-star.rating__regular
-        input.rating__input#rating12(type="radio" name="rating")
-        label.rating__star(for="rating12")
-          i.far.fa-star.rating__solid
-          i.fas.fa-star.rating__regular
-        input.rating__input#rating11(type="radio" name="rating")
-        label.rating__star(for="rating11")
-          i.far.fa-star.rating__solid
-          i.fas.fa-star.rating__regular
+      +rating
 
     label Текст отзыва *
     textarea(rows='3')
+    +button('Отправить отзыв','button_secondary')
 
-    button.button.button_secondary Отправить отзыв
-
-  include ../common/_close
+  +close-button

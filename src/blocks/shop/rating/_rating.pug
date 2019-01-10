@@ -1,0 +1,9 @@
+mixin rating()
+  -var nameRandom =  Math.ceil(Math.random() * 1000);
+  span.rating
+    each title in [5,4,3,2,1]
+      -var id =  Math.ceil(Math.random() * 1000);
+      input.rating__input(id="rating" + id type="radio" name="rating" + nameRandom)
+      label.rating__star(for="rating" + id)
+        i.far.fa-star.rating__solid
+        i.fas.fa-star.rating__regular

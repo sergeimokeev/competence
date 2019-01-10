@@ -1,81 +1,46 @@
 extends smi-index
 
 block article
-    include components/mixins/_mixin-news-tile
+  +breadcrumbs
 
-    include components/common/_breadcrumbs
+  .grid-container: .grid-x.grid-padding-x: .cell: h1 Заголовок новости с длинным названием
+  .grid-container: .grid-x.grid-padding-x
+    .medium-14.large-16.cell
+      .info
+        .sect.sect_dark Константин Александропольский, 12:20 16.02.2016
+        include components/common/_text
+        +callout
+          h4 Ещё по этой теме
+          ul
+            li: a(href='#', title='') УЕФА может исключить футболиста «Локомотива» за майку
+            li: a(href='#', title='') Источник: ФСБ и ФНС провели операцию по зачистке алкогольного рынка
+            li: a(href='#', title='') Пол Маккартни не прошел фейс-контроль на вечеринку после «Грэмми»
 
-    .grid-container: .grid-x.grid-padding-x: .cell: h1 Заголовок новости с длинным названием
-    .grid-container: .grid-x.grid-padding-x
-        .small-24.medium-14.large-16.cell
+      .grid-x.grid-padding-x: .cell: hr
 
-            .padding-top-12.padding-bottom-6
-                .margin-bottom-6.text-dark-gray Константин Александропольский, 12:20 16.02.2016
+      .info
+        h3 Похожие новости
+        .grid-x.grid-padding-x.medium-up-2.large-up-3(data-equalizer='similar', data-equalize-by-row='true')
+          +news(false, 'similar')
+          +news('Разработаем несколько интернет-магазинов по продаже сантехники', 'similar')
+            | Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
+          +news(false, 'similar')
+        include components/smi/_aside-subscribe
+        +callout
+          include components/smi/_comments
 
-                include components/common/_text
-
-                .callout.text-center
-                    span.show-for-large.text-medium-gray Поделиться в соц. сетях: &#160;
-                    a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-                        i.fas.fa-circle(data-fa-transform="grow-3")
-                        i.fab.fa-vk.fa-inverse(data-fa-transform="shrink-6")
-                    | &nbsp;
-                    a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-                        i.fas.fa-circle(data-fa-transform="grow-3")
-                        i.fab.fa-twitter.fa-inverse(data-fa-transform="shrink-6")
-                    | &nbsp;
-                    a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-                        i.fas.fa-circle(data-fa-transform="grow-3")
-                        i.fab.fa-facebook-f.fa-inverse(data-fa-transform="shrink-6")
-                    | &nbsp;
-                    a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-                        i.fas.fa-circle(data-fa-transform="grow-3")
-                        i.fab.fa-odnoklassniki.fa-inverse(data-fa-transform="shrink-6")
-                    | &nbsp;
-                    a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-                        i.fas.fa-circle(data-fa-transform="grow-3")
-                        i.fab.fa-instagram.fa-inverse(data-fa-transform="shrink-6")
-                    | &nbsp;
-                    a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-                        i.fas.fa-circle(data-fa-transform="grow-3")
-                        i.fab.fa-google-plus-g.fa-inverse(data-fa-transform="shrink-6")
-
-                .callout
-                    h4 Ещё по этой теме
-                    ul
-                        li: a(href='#', title='') УЕФА может исключить футболиста «Локомотива» за майку
-                        li: a(href='#', title='') Источник: ФСБ и ФНС провели операцию по зачистке алкогольного рынка
-                        li: a(href='#', title='') Пол Маккартни не прошел фейс-контроль на вечеринку после «Грэмми»
-
-            .grid-x.grid-padding-x: .cell: hr
-
-            .padding-top-12.padding-bottom-6
-                h3.text-dark-gray Похожие новости
-                .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-3(data-equalizer='similar', data-equalize-by-row='true')
-                    +newsTile(false, 'similar')
-                    +newsTile('Разработаем несколько интернет-магазинов по продаже сантехники', 'similar')
-                        | Приняли на комплексное обслуживание компанию «СантехОпт». Проект будет развиваться по методологии «Быстрый старт».
-                    +newsTile(false, 'similar')
-
-                include components/smi/_aside-subscribe
-
-                .callout
-                    include components/smi/_comments
-
-        aside.medium-10.large-8.show-for-medium.cell
-            .padding-top-12.padding-bottom-6
-                h2 Календарь материалов
-                include components/common/_calendar
-                br
-
-                h2 Другие новости
-
-                .callout
-                    -var n = 1
-                    while n < 11
-                        h5.margin-bottom-2: a(href='', title='')=  'Достаточно длинный заголовок другой новости ' + n++
-                        .margin-bottom-6.text-medium-gray 17 февраля, 10:59 &#160;
-                        if n < 11
-                            hr.margin-bottom-6
-
-    .grid-container: .grid-x.grid-padding-x: .cell: hr
+    aside.medium-10.large-8.show-for-medium.cell
+      .info
+        h2 Календарь материалов
+        .table-scroll
+          +calendar
+      .sect
+        h2 Другие новости
+        +callout
+          -var n = 1
+          while n < 11
+            h5: a(href='', title='')=  'Достаточно длинный заголовок другой новости ' + n++
+            .callout__info: .callout__dark 17 февраля, 10:59
+            if n < 11
+              hr
+  .grid-container: .grid-x.grid-padding-x: .cell: hr

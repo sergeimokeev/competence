@@ -1,78 +1,47 @@
 extends shop-regular
 
-
-
 block content
   .grid-container: .grid-x.grid-padding-x: .cell
     h1 Ваши вопросы
-  .info
-    .grid-container: .grid-x.grid-padding-x
-      aside.small-24.medium-8.large-6.cell
-        .show-for-small-only(data-responsive-toggle='menu-left', data-hide-for='medium')
-          .button.expanded(data-toggle)
+  .info.grid-container: .grid-x.grid-padding-x
+    aside.medium-8.large-6.cell
+      .show-for-small-only(data-responsive-toggle='menu-left', data-hide-for='medium')
+        +button
+          .button.button_expanded(data-toggle)
             i.fas.fa-lg.fa-bars.picture
             | Навигация
-        .side#menu-left
-          ul.partners
-            li.partners__item
-              a(href='#').partners__link Частые вопросы
-            li.partners__item
-              a(href='#').partners__link Оплата
-            li.partners__item
-              a(href='#').partners__link Доставка
-            li.partners__item
-              a(href='#').partners__link Условия возврата
+      .side#menu-left
+        ul.partners
+          li.partners__item
+            a(href='#').partners__link Частые вопросы
+          li.partners__item
+            a(href='#').partners__link Оплата
+          li.partners__item
+            a(href='#').partners__link Доставка
+          li.partners__item
+            a(href='#').partners__link Условия возврата
 
-      .small-24.medium-16.large-18.cell
-        ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true")
-          li.accordion-item(data-accordion-item)
-            a.accordion-title(href="#") Почему я не могу загрузить конфигурацию программы клиента Mobile VPN with SSL из Firebox? [WSM/Fireware XTM v11.x]
-            div.accordion-content(data-tab-content)
-              include components/common/_faq
-          li.accordion-item(data-accordion-item)
-            a.accordion-title(href="#") Как настроить WatchGuard Mobile VPN для Windows Mobile? [WSM/Fireware XTM v11.x]
-            div.accordion-content(data-tab-content)
-              include components/common/_faq
-          li.accordion-item(data-accordion-item)
-            a.accordion-title(href="#") Установка и настройка ПО клиента Mobile VPN with IPSec для конечных пользователей?
-            div.accordion-content(data-tab-content)
-              include components/common/_faq
-          li.accordion-item(data-accordion-item)
-            a.accordion-title(href="#") Какие права необходимы на компьютере для запуска клиента Mobile VPN with SSL?
-            div.accordion-content(data-tab-content)
-              include components/common/_faq
-          li.accordion-item(data-accordion-item)
-            a.accordion-title(href="#") Есть ли версия клиента Mobile VPN for IPSec для Mac OS X? [WSM/Fireware XTM v11.x]
-            div.accordion-content(data-tab-content)
-              include components/common/_faq
-          li.accordion-item(data-accordion-item)
-            a.accordion-title(href="#") Настройка Mobile VPN with IPSec для работы с Firebox, у которого динамический внешний IP адрес?
-            div.accordion-content(data-tab-content)
-              include components/common/_faq
-          li.accordion-item(data-accordion-item)
-            a.accordion-title(href="#") Что такое группы Diffie-Hellman и чем они отличаются друг от друга?
-            div.accordion-content(data-tab-content)
-              include components/common/_faq
+    .medium-16.large-18.cell
+      +accordion
 
   .grid-container: .grid-x.grid-padding-x: .cell
     hr
-  .info
-    .grid-container: .grid-x.grid-padding-x: .cell
-      h2.text-center
-        span.picture Нет нужного ответа?
-        span.quest Задайте свой вопрос
-    .grid-container: .grid-x.grid-padding-x.align-center
-      .small-24.medium-18.large-14.cell
-        .callout
-          form
-            label Представьтесь
-            input(type='text')
+  .grid-container: .grid-x.grid-padding-x: .cell
+    h2.text-center
+      span.picture Нет нужного ответа?
+      span.sect.sect_date Задайте свой вопрос
+  .grid-container.info: .grid-x.grid-padding-x.align-center
+    .medium-18.large-14.cell
+      +callout
+        form
+          label Представьтесь
+          input(type='text')
 
-            label Ваш email *
-              span.callout__quest для ответа вам на вопрос
-            input(type='email')
+          label Ваш email *
+            span.callout__quest для ответа вам на вопрос
+          input(type='email')
 
-            label Текст вопроса *
-            textarea(rows='3')
-
-            button.button Отправить вопрос
+          label Текст вопроса *
+          textarea(rows='3')
+          +button('Отправить вопрос')
+        

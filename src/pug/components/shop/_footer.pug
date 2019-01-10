@@ -1,6 +1,6 @@
 footer.footer
   .grid-container: .grid-x.grid-padding-x
-    .small-24.medium-12.large-6.cell.footer__block
+    .medium-12.large-6.cell.footer__block
       a(href='#')
         img(src='./images/logo_white.svg' alt='logo').footer__logo
 
@@ -12,21 +12,21 @@ footer.footer
         a.footer__link(href='#') Контакты
 
     .small-12.medium-12.large-6.cell
-      h6.margin-bottom-3: a.text-white(href='#', title='') Покупателям
+      a(href='#', title='').footer__shop Покупателям
       nav.footer__nav
         a.footer__link(href='#') Доставка
         a.footer__link(href='#') Оплата
         a.footer__link(href='#') Возврат
         a.footer__link(href='#') Гарантия и сервис
 
-    .small-24.medium-12.large-6.cell
+    .medium-12.large-6.cell
       h6 Контакты
-      .sect
+      .footer__nav
         | 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
-        a.footer__call(href='tel:88007755293') 8 (800) 775-52-93
-        a.footer__call(href='mailto:welcome@cetera.ru') welcome@cetera.ru
+        div: a.footer__link(href='tel:88007755293') 8 (800) 775-52-93
+        div: a.footer__link(href='mailto:welcome@cetera.ru') welcome@cetera.ru
       h6 Принимаем к оплате
-      .footer__info
+      .footer__nav
         img(src='./images/shop/visa.svg', alt='visa').footer__pay
         img(src='./images/shop/mc.svg', alt='mc').footer__pay
         img(src='./images/shop/ms.svg', alt='sber').footer__pay

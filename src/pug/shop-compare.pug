@@ -1,59 +1,13 @@
 extends shop-regular
 
-
-
 block content
   .grid-container: .grid-x.grid-padding-x: .cell
     h1 Сравнить товары
-  .info
-    .grid-container: .grid-x.grid-padding-x: .cell
-      .sect
-        span.distinction.distinction_grey Показать:
-        strong.distinction Только отличия
-        a(href='#' title='').distinction Основные параметры
-        a(href='#' title='') Все параметры
-
-      .table-scroll
-        table.comp
-          tr.comp__tr
-            td
-              a.comp__clear(href="#" title='')
-                | #[i.fas.fa-lg.fa-times-circle] Очистить список
-            td
-              +productTileForCompare('instock')
-            td
-              +productTileForCompare
-            td
-              +productTileForCompare('instock','incart')
-            td
-              +productTileForCompare
-            td
-              +productTileForCompare
-          tr
-            th.comp__small Вес
-            td 25кг
-            td 35кг
-            td 30кг
-            td 31кг
-            td 27,5кг
-          tr
-            th.comp__small Мощность
-            td 0,25-160
-            td 0,30-180
-            td 0,25-155
-            td 0,30-180
-            td 0,30-170
-          tr
-            th.comp__small Передаточное отношение
-            td 4,8:1
-            td 4,7:1
-            td 4,8:1
-            td 4,6:1
-            td 4,8:1
-          tr
-            th.comp__small Количество подшипников
-            td 1шт
-            td 1+1шт
-            td —
-            td 1шт
-            td —
+  .info.grid-container: .grid-x.grid-padding-x: .cell
+    .info
+      span.sect.sect_link Показать:
+      strong.sect.sect_link Только отличия
+      a(href="#").sect.sect_link  Основные параметры
+      a(href="#")  Все параметры
+    .table-scroll
+      +comp

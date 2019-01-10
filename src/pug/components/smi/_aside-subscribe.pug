@@ -1,12 +1,13 @@
-.callout
-    h3.text-dark-gray Подписка
-        a.float-right(href='#', title='')
-            i.fas.fa-rss-square &nbsp;
-            | RSS
-
-    form(action='' method='post', data-abide='', novalidate='novalidate')
-        input(type='email', placeholder='Ваша эл. почта', required='')
-        button.button.expanded(type='submit') Подписаться &nbsp;
-            i.far.fa-envelope.fa-lg
-    .margin-bottom-6.text-center
-        a.text-dark-gray(href='#', title='') Как отписаться?
++callout
+  .grid-x.grid-padding-x
+    .cell.large-12
+      h3.callout__dark Подписка
+    .cell.large-12.text-left.large-text-right
+      a(href='#', title='').callout__rss
+        i.fas.fa-rss-square.picture
+        | RSS
+  form(action='#' method='post', data-abide='', novalidate='novalidate')
+    input(type='email', placeholder='Ваша эл. почта', required='')
+    +button('Подписаться<i class="far fa-envelope fa-lg canv"></i>','button_expanded')
+  .callout__info.text-center
+    a.callout__dark(href='#', title='') Как отписаться?

@@ -1,0 +1,13 @@
+.tabs {
+  
+  &-title {
+    & > a {
+      padding: rem-calc(16);
+      outline: none;
+    }
+  }
+
+  &-content {}
+
+  &-panel {}
+}

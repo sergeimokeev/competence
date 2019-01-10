@@ -3,24 +3,23 @@ extends shop-regular
 block content
   .grid-container: .grid-x.grid-padding-x: .cell
     h1 Любимые товары
-  .info
-    .grid-container: .grid-x.grid-padding-x: .cell
-      +productLine(false, 'onDemand', false, 'inFavourites')
-      hr.hr
-      +productLine(false, false, 'inCart', 'inFavourites')
-      hr.hr
-      +productLine('discount', false, false, 'inFavourites')
-      hr.hr
-      +productLine(false, 'onDemand', false, 'inFavourites')
-      hr.hr
-      +productLine(false, false, 'inCart', 'inFavourites')
-      hr.hr
-      +productLine('discount', false, false, 'inFavourites')
-      hr.hr
-      +productLine(false, 'onDemand', false, 'inFavourites')
-      hr.hr
-      +productLine(false, false, 'inCart', 'inFavourites')
-      hr.hr
-      +productLine('discount', false, false, 'inFavourites')
-      .info  
-        include components/common/_pagination
+  .grid-container: .grid-x.grid-padding-x: .cell
+    +commodity(false, 'onDemand', false, 'inFavourites')
+    hr
+    +commodity(false, false, 'inCart', 'inFavourites')
+    hr
+    +commodity('discount', false, false, 'inFavourites')
+    hr
+    +commodity(false, 'onDemand', false, 'inFavourites')
+    hr
+    +commodity(false, false, 'inCart', 'inFavourites')
+    hr
+    +commodity('discount', false, false, 'inFavourites')
+    hr
+    +commodity(false, 'onDemand', false, 'inFavourites')
+    hr
+    +commodity(false, false, 'inCart', 'inFavourites')
+    hr
+    +commodity('discount', false, false, 'inFavourites')
+  .info.grid-container 
+    +pagination

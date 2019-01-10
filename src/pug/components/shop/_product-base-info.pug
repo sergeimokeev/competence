@@ -1,33 +1,18 @@
-.shipment__sect  А4, 600×600 dpi, 27/27 стр в мин., ADF, Duplex, USB, Ethernet
+include ../../../blocks/shop/checkbox-group/_checkbox-group
+.sect  А4, 600×600 dpi, 27/27 стр в мин., ADF, Duplex, USB, Ethernet
 
-.grid-x.grid-padding-x.shipment__sect
-  .small-24.large-4.cell Цвет:
+.grid-x.grid-padding-x.sect
+  .large-4.cell Цвет:
   .cell.auto
-    .checkbox-group
-      +checkbox-group('color','#eee')
-      +checkbox-group('color','#ca3034')
-      +checkbox-group('color','#578b93')
-      +checkbox-group('color','#deb887')
+    +checkbox-group('clr',['#eee','#ca3034','#578b93','#deb887'])
 
-.grid-x.grid-padding-x.shipment__sect
-  .small-24.large-4.cell Размер:
+.grid-x.grid-padding-x.sect
+  .large-4.cell Размер:
   .cell.auto
-    .checkbox-group
-      input.checkbox-group__item(type='radio' id='size1' name='size')
-      label.checkbox-group__label(for='size1') 39
-      input.checkbox-group__item(type='radio' id='size2' name='size')
-      label.checkbox-group__label(for='size2') 40
-      input.checkbox-group__item(type='radio' id='size3' name='size')
-      label.checkbox-group__label(for='size3') 41
-      input.checkbox-group__item(type='radio' id='size4' name='size')
-      label.checkbox-group__label(for='size4') 42
-      label.checkbox-group__label(data-toggle='no-size' style='background: linear-gradient(45deg, #fff 49%, red 49%, red 51%, #fff 51%) no-repeat;' data-open="no-size-popup") 43
-      input.checkbox-group__item(type='radio' id='size5' name='size')
-      label.checkbox-group__label(for='size5') 44
-    .shipment__sect
+    +checkbox-group('size',false,['39','40','41','42','43','44',])
+    .sect
       a(href='#', title='') Таблица размеров
-
-.grid-x.grid-padding-x.shipment__sect
+.grid-x.grid-padding-x.sect
   .cell.shrink
     span.shipment__price
       | 25 280&nbsp;
@@ -36,17 +21,15 @@
     .shipment__old
       | 27 150 &nbsp;
       i.fas.fa-ruble-sign
-    .label.label_warning Бонус <i>+45</i>
-
+    div:  +label('Бонус <i>+45</i>','label_warning')
 .grid-x.grid-padding-x.align-middle
-  .small-24.large-auto.cell
+  .large-auto.cell
     form(action='shop-cart.html' method='get').search
-      include ../common/_input
+      +quant
       .search__cont
-        button(type='submit' title="Товар добавлен в корзину").button.button_secondary.button_input
-          i.fas.fa-shopping-basket.picture.fa-lg
-          | В корзину
-  .small-24.large-shrink.cell.shipment__sect
+        +button('<i class="fas fa-shopping-basket picture"></i>В корзину','button_input')
+          
+  .large-shrink.cell.sect
     a(href='shop-compare.html' title="Товар добавлен к сравнению.").shipment__compare
       i.fas.fa-lg.fa-balance-scale.picture
       span.shipment__text К сравнению
@@ -54,27 +37,6 @@
       i.far.fa-heart.fa-lg.picture
       span.shipment__text Запомнить
 
-
-.grid-x.grid-padding-x: .cell.shipment__rect
-  span.rating
-    input.rating__input#rating5(type="radio" name="rating")
-    label.rating__star(for="rating5")
-      i.far.fa-star.rating__solid
-      i.fas.fa-star.rating__regular
-    input.rating__input#rating4(type="radio" name="rating")
-    label.rating__star(for="rating4")
-      i.far.fa-star.rating__solid
-      i.fas.fa-star.rating__regular
-    input.rating__input#rating3(type="radio" name="rating")
-    label.rating__star(for="rating3")
-      i.far.fa-star.rating__solid
-      i.fas.fa-star.rating__regular
-    input.rating__input#rating2(type="radio" name="rating")
-    label.rating__star(for="rating2")
-      i.far.fa-star.rating__solid
-      i.fas.fa-star.rating__regular
-    input.rating__input#rating1(type="radio" name="rating")
-    label.rating__star(for="rating1")
-      i.far.fa-star.rating__solid
-      i.fas.fa-star.rating__regular
+.grid-x.grid-padding-x: .cell.sect.sect_rect
+  +rating
   span.shipment__mark оценок 25

@@ -1,28 +1,10 @@
-.callout
-    h3
-        a.text-dark-gray(href='', title='') Консультации
-
-    h5.margin-bottom-3
-        a(href='#', title='') Полиция
-    .margin-bottom-3 Ваше обращение зарегистрировано в книге учёта обращений граждан отдела №2 УМВД России по городу…
-    .margin-bottom-6
-        a(href='#') Прочитать &nbsp;
-            i.fas.fa-long-arrow-alt-right
-    hr.margin-bottom-6
-
-    h5.margin-bottom-3
-        a(href='#', title='') Прокуратура
-    .margin-bottom-3 В летнее время действительно обостряются проблемы охраны территорий, на которых расположены садовые…
-    .margin-bottom-6
-        a(href='#') Прочитать &nbsp;
-            i.fas.fa-long-arrow-alt-right
-    hr.margin-bottom-6
-
-    h5.margin-bottom-3
-        a(href='#', title='') ГИБДД
-    .margin-bottom-3 Горизонтальная дорожная разметка на пересечении Карла Маркса и Краснознамённой нанесена в соответствии…
-    .margin-bottom-6
-        a(href='#') Прочитать &nbsp;
-            i.fas.fa-long-arrow-alt-right
-
-    a.button.hollow.expanded(href='', title='') Все консультации
+include ../../../blocks/smi/advice/_advice
++callout
+  h3
+    a(href='', title='') Консультации
+  +advice('Полиция')
+  hr
+  +advice('Прокуратура')
+  hr
+  +advice('ГИБДД')
+  +button('Все консультации','button_hollow button_expanded')

@@ -1,23 +1,11 @@
-.info
-  .grid-container: .grid-x.grid-padding-x.small-up-1.medium-up-3(data-equalizer='services' data-equalize-on='medium')
-    .cell
-      .services(data-equalizer-watch='services')
-        .services__block
-          img(src='./i/photo.svg' alt='Сверхскорость').services__img
-        h4.services__title Сверхскорость
-        .services__block
-          | Используем готовую к установке Cetera CMS. Откроем первую версию сайта в течение 3 дней. Привлечем клиентов сразу.
-    .cell
-      .services(data-equalizer-watch='services')
-        .services__block
-          img(src='./i/photo.svg' alt='Отличное качество').services__img
-        h4.services__title Отличное качество
-        .services__block
-          | Откроем сайт в индивидуальном дизайне. Напишем тексты. Используем совместимые технологии. Обеспечим исполнение стандартов.
-    .cell
-      .services(data-equalizer-watch='services')
-        .services__block
-          img(src='./i/photo.svg' alt='Равная цена').services__img
-        h4.services__title Равная цена
-        .services__block
-          | Окажем услуги за одинаковую абонентскую плату на всех этапах сотрудничества. Откроем первую версию сайта еще до первого платежа. Откроем первую версию сайта еще до первого платежа.
+.grid-container: .grid-x.grid-padding-x.medium-up-3(data-equalizer='services' data-equalize-on='medium')
+  .cell
+    +services('Сверхскорость','services')
+  .cell
+    +services('Отличное качество','services')
+      | Откроем сайт в индивидуальном дизайне. Напишем тексты. Используем совместимые технологии. Обеспечим исполнение стандартов.
+  .cell
+    +services('Равная цена','services')
+      | Окажем услуги за одинаковую абонентскую плату на всех этапах сотрудничества. Откроем первую версию сайта еще до первого платежа. Откроем первую версию сайта еще до первого платежа.
+    
+          

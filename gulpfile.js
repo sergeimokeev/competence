@@ -13,6 +13,7 @@ const gulpPlumber = require('gulp-plumber');
 const gulpImagemin = require('gulp-imagemin');
 const gulpNewer = require('gulp-newer');
 const gulpArgs = require('yargs').argv;
+const gulpSassGlob = require('gulp-sass-glob');
 const gulpBrowserSync = require('browser-sync');
 const gulpWait = require('gulp-wait2');
 const imageminPngquant = require('imagemin-pngquant');
@@ -24,7 +25,6 @@ const sassPaths = [
     './node_modules/motion-ui',
     './node_modules/slick-carousel/slick/'
 ];
-
 const paths = {
     dist: {
         html: 'dist/',
@@ -53,9 +53,9 @@ const paths = {
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
-        html: ['src/pug/**/*.pug'],
+        html: ['src/pug/**/*.pug','src/blocks/**/*.pug'],
         js: ['src/js/**/*.js'],
-        css: 'src/scss/**/*.scss',
+        css:['src/scss/**/*.scss','src/blocks/**/*.scss'],
         images: 'src/images/**/*.*',
         i: 'src/i/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -72,6 +72,7 @@ let cleanJs = () => del(paths.dist.js);
 
 let sass = () => gulp.src(paths.src.css)
     .pipe(gulpPlumber())
+    .pipe(gulpSassGlob())
     .pipe(gulpSass({
         includePaths: sassPaths,
         outputStyle: 'compressed'
@@ -159,8 +160,8 @@ let browserSync = () =>
 gulp.task('default',
     gulp.series(
         clean,
-        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsApp, browserSync, watch),
-        watch
+        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsApp),
+        gulp.parallel(watch,browserSync)
     )
 );
 

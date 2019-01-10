@@ -2,22 +2,53 @@ doctype html
 html.no-js(lang='ru')
   include components/service/_head
   body
+    include ../blocks/foundation/callout/_callout
+    include ../blocks/foundation/label/_label
+    include ../blocks/foundation/pagination/_pagination
+    include ../blocks/foundation/accordion/_accordion
+    include ../blocks/foundation/button/_button
+    include ../blocks/foundation/slider/_slider
+    include ../blocks/foundation/close-button/_close-button
+    include ../blocks/foundation/breadcrumbs/_breadcrumbs
+    include ../blocks/foundation/badge/_badge
+    
+    include ../blocks/general/side/_side
+    include ../blocks/general/step/_step
+    include ../blocks/general/contacts/_contacts
+    include ../blocks/general/cat/_cat
+    include ../blocks/general/dd/_dd
+    include ../blocks/general/share/_share
+    include ../blocks/general/art/_art
+    include ../blocks/general/partners/_partners
+    include ../blocks/general/promo/_promo
+    include ../blocks/general/carousel-main/_carousel-main
+    
+    include ../blocks/shop/reg/_reg
+    include ../blocks/shop/quant/_quant
+    include ../blocks/shop/rating/_rating
+    include ../blocks/shop/capt/_capt
+    include ../blocks/shop/comp/_comp
+    include ../blocks/shop/growth/_growth
+    include ../blocks/shop/tile/_tile
+    include ../blocks/shop/commodity/_commodity
+    include ../blocks/shop/mark/_mark
+    include ../blocks/shop/offspring/_offspring
+    include ../blocks/shop/duct/_duct
+    include ../blocks/shop/prod/_prod
+    include ../blocks/shop/search/_search
+    include ../blocks/shop/radio/_radio
+    include ../blocks/shop/menu-top/_menu-top
+    
+    
     include components/shop/_top-line
     include components/shop/_header
     include components/shop/_menu-line
 
-    include components/mixins/_mixin-product-tile-for-compare
-    include components/mixins/_mixin-checkbox-group
-    include components/mixins/_mixin-step
-    include components/mixins/_mixin-radio
-    include components/mixins/_mixin-product-tile
-    include components/mixins/_mixin-product-line
-    include components/mixins/_mixin-product-line-wide
     include components/shop/_reveal-no-color
     include components/shop/_add-to-favourites-auth-popup
 
     block page
-      include components/shop/_carousel-main
+      +carousel-main
       .info
         .grid-container: .grid-x.grid-padding-x.small-up-2.medium-up-4.text-center
           - var n = 1
@@ -30,42 +61,29 @@ html.no-js(lang='ru')
       .grid-x.grid-padding-x: .cell: hr.hr
       .info
         .grid-container: .grid-x.grid-padding-x
-          .small-24.medium-14.large-16.cell
+          .medium-14.large-16.cell
             h2 Распродажа
-          .small-24.medium-10.large-8.cell.medium-text-right
-            a.button.button_hollow(href='#') Все товары с распродажей
-              i.fas.fa-long-arrow-alt-right.canv
+          .medium-10.large-8.cell.medium-text-right
+            +button('Все товары с распродажей<i class="fas fa-long-arrow-alt-right canv"></i>','button_hollow')
         include components/common/_line-products
-      .grid-container: .grid-x.grid-padding-x: .cell: hr
+      .grid-container: .grid-x.grid-padding-x: .cell: hr.hr
       include components/shop/_banners
-      .grid-container: .grid-x.grid-padding-x: .cell: hr
+      .grid-container: .grid-x.grid-padding-x: .cell: hr.hr
       .info
         .grid-container: .grid-x.grid-padding-x: .cell
           h2 Рекомендуем
         include components/common/_line-products
-      .promo
-        .grid-container
-          .grid-x.grid-padding-x
-            .cell.medium-14.align-self-middle
-              h2 Тотальная распродажа
-              p
-                | Удобный для клиентов формат обслуживания. Все услуги — по единой фиксированной цене.
-                br
-                | Часто — нулевая стоимость сайта до открытия.
-              p
-                a.button.button_secondary(href='#') Узнайте стоимость товаров<i class="fas fa-long-arrow-alt-right canv"></i>
-            .cell.medium-8.medium-offset-2.show-for-medium
-              img(src='./i/photo.svg' alt="photo")
+      +promo('Тотальная распродажа','Узнайте стоимость товаров')
       include components/shop/_brands
       .grid-container: .grid-x.grid-padding-x: .cell: hr
       .info
         .grid-container: .grid-x.grid-padding-x
-          .small-24.medium-12.cell
+          .medium-12.cell
             h2 О магазине
             p Изоморфизм из группы (G, ∗) в себя называется автоморфизмом этой группы. Так как изоморфизм f : G → G  биективен.
             p Автоморфизм всегда отображает нейтральный элемент в себя. Образ класса сопряжённости всегда является классом сопряжённости (тем же самым или другим). Образ элемента имеет тот же порядок, что и сам элемент.
             p Композиция двух автоморфизмов снова является автоморфизмом, и эта операция с множеством всех автоморфизмов группы G, обозначаемая Aut(G), образует группу, группу автоморфизмов G.
-          .small-24.medium-12.cell
+          .medium-12.cell
             h2 Контакты
             p 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
             p: strong: a(href='tel:88007755293') 8 (800) 775-52-93
@@ -74,20 +92,15 @@ html.no-js(lang='ru')
       .grid-container: .grid-x.grid-padding-x: .cell: hr
       include components/shop/_index-news
       .grid-container: .grid-x.grid-padding-x: .cell: hr
-      .info
-        .grid-container: .grid-x.grid-padding-x: .cell
-          h2 Рассылка
-        .grid-container: .grid-x.grid-padding-x
-          .cell.small-24.medium-16.large-12
-            .search
-              input.search__input.search__input_border(type='email' placeholder='Введите ваш e-mail')
-              .search__cont
-                button.button.button_secondary.button_input(type='button')
-                  i.far.fa-envelope.picture
-                  | Подписаться
+      .grid-container: .grid-x.grid-padding-x: .cell
+        h2 Рассылка
+      .grid-container.info: .grid-x.grid-padding-x
+        .cell.medium-16.large-12
+          +search('Введите ваш e-mail',true)
+            .search__cont
+              +button('<i class="far fa-envelope picture"></i>Подписаться','button_input')
 
-
-    .grid-container: .grid-x.grid-padding-x: .cell: hr
+    .grid-container: .grid-x.grid-padding-x: .cell: hr.hr
     include ../images/shop/ecommerce-icons.svg
     include components/shop/_benefits
     include components/shop/_footer

@@ -1,46 +1,9 @@
-.info
-  .grid-container: .grid-x.grid-padding-x: .cell
-    h2 Мы на связи
-  .grid-container: .grid-x.grid-padding-x(data-equalizer data-equalize-by-row="true")
-    .small-24.large-14.cell
-      form(method='post', data-abide='', novalidate='novalidate' ).assist
-        .grid-x.grid-padding-x
-          .small-24.medium-8.cell
-            label Ваше имя
-          .small-24.medium-16.cell
-            input(type='text', placeholder='Ваше имя', required='')
-            p.help-text Поле обязательно для заполнения
-        .grid-x.grid-padding-x
-          .small-24.medium-8.cell
-            label Email
-          .small-24.medium-16.cell
-            input(type='email', placeholder='username@address.com', required='')
-            p.help-text Введите ваш электронный адрес
-        .grid-x.grid-padding-x
-          .small-24.medium-8.cell
-            label Чем мы можем помочь?
-          .small-24.medium-16.cell
-            textarea(placeholder='Введите ваше сообщение')
-        .grid-x.grid-padding-x.assist__block
-          .medium-16.medium-offset-8.cell
-            +step('Соглашаюсь на <a href="" title="условия">обработку персональных данных</a>')
-
-        .grid-x.grid-padding-x
-          .small-24.medium-16.medium-offset-8.cell
-            button.button.button_secondary(type='submit')
-              | Отправить сообщение
-              i.far.fa-envelope.fa-lg.canv
-    .large-4.large-offset-2.small-12.cell.manager
-      .manager__block
-        img(src='./i/photo.svg', alt='1').manager__img
-      h5(data-equalizer-watch) Алена Ратникова 
-      .manager__text Менеджер по продажам
-      .manager__block
-        include _soc
-    .large-4.small-12.cell.manager
-      .manager__block
-        img(src='./i/photo.svg', alt='2').manager__img
-      h5(data-equalizer-watch) Мария Свешникова
-      .manager__text Менеджер по маркетингу
-      .manager__block
-        include _soc
+.grid-container: .grid-x.grid-padding-x: .cell
+  h2 Мы на связи
+.grid-container.info: .grid-x.grid-padding-x(data-equalizer data-equalize-by-row="true")
+  .large-14.cell
+    +assist
+  .large-4.large-offset-2.small-12.cell
+    +manager()
+  .large-4.small-12.cell
+    +manager('Мария Свешникова','Менеджер по маркетингу')

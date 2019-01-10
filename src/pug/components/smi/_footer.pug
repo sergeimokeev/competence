@@ -1,88 +1,51 @@
-.background-quaternary.padding-top-8.padding-bottom-4
-    .grid-container: .grid-x.grid-padding-x
-        .small-24.large-6.cell.margin-bottom-6
-            a(href='#')
-                img(src='./images/logo_white.svg', style='max-width: 10rem;', alt='logo')
+footer.footer
+  .grid-container: .grid-x.grid-padding-x
+    .large-6.cell.footer__block
+      a(href='#')
+        img(src='./images/logo_white.svg',  alt='logo').footer__logo
 
-        .small-24.medium-12.large-8.cell
-            h6.margin-bottom-3.text-white Рубрики
-            nav.margin-bottom-6.grid-x.grid-padding-x
-                .small-12.cell
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Экономика
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Финансы
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong ТЭК
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Интернет
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Промышленность
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Транспорт
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Наука
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong ИТ и Медиа
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Потребительские рынки
-                .small-12.cell
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong ВПК
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Бренды
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Спорт
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Видео
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Интервью
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Пресс-релизы
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Отставки и назначения
-                    .margin-bottom-2: a.text-tertiary(href='#'): strong Мнения
+    .medium-12.large-8.cell
+      h6 Рубрики
+      nav.footer__nav.grid-x.grid-padding-x
+        .small-12.cell
+          a.footer__link(href='#') Экономика
+          a.footer__link(href='#') Финансы
+          a.footer__link(href='#') ТЭК
+          a.footer__link(href='#') Интернет
+          a.footer__link(href='#') Промышленность
+          a.footer__link(href='#') Транспорт
+          a.footer__link(href='#') Наука
+          a.footer__link(href='#') ИТ и Медиа
+          a.footer__link(href='#') Потребительские рынки
+        .small-12.cell
+          a.footer__link(href='#') ВПК
+          a.footer__link(href='#') Бренды
+          a.footer__link(href='#') Спорт
+          a.footer__link(href='#') Видео
+          a.footer__link(href='#') Интервью
+          a.footer__link(href='#') Пресс-релизы
+          a.footer__link(href='#') Отставки и назначения
+          a.footer__link(href='#') Мнения
 
-        .small-12.medium-6.large-4.cell
-            h6.margin-bottom-3: a.text-white(href='#', title='') Редакция
-            nav.margin-bottom-6
-                .margin-bottom-2: a.text-tertiary(href='#'): strong Реклама
-                .margin-bottom-2: a.text-tertiary(href='#'): strong Медиакит
-                .margin-bottom-2: a.text-tertiary(href='#'): strong Техподдержка
-                .margin-bottom-2: a.text-tertiary(href='#'): strong Спецпроекты
+    .small-12.medium-6.large-4.cell
+      a(href='#', title='').footer__head Редакция
+      nav.footer__nav
+        a.footer__link(href='#') Реклама
+        a.footer__link(href='#') Медиакит
+        a.footer__link(href='#') Техподдержка
+        a.footer__link(href='#') Спецпроекты
 
-        .small-12.medium-6.large-6.cell
-            h6.margin-bottom-3 Учредитель
-            .margin-bottom-6 ООО «Цетера Лабс»
-            h6.margin-bottom-3 Контакты
-            .margin-bottom-6
-                | 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
-                br
-                a.text-tertiary(href='tel:88007755293') 8 (800) 775-52-93
-                br
-                a.text-tertiary(href='mailto:welcome@cetera.ru') welcome@cetera.ru
+    .small-12.medium-6.large-6.cell
+      h6 Учредитель
+      .sect ООО «Цетера Лабс»
+      h6 Контакты
+      div 150040, Ярославль, проспект Ленина 25, этаж 6, офис 606
+      div: a.footer__link(href='tel:88007755293') 8 (800) 775-52-93
+      .sect
+        a.footer__link(href='mailto:welcome@cetera.ru') welcome@cetera.ru
 
-    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small.margin-bottom-6
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-vk.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-twitter.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-facebook-f.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-odnoklassniki.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-instagram.fa-inverse(data-fa-transform="shrink-6")
-        | &nbsp;
-        a(href='#', title='').fa-layers.fa-2x.fa-fw.text-tertiary
-            i.fas.fa-circle(data-fa-transform="grow-3")
-            i.fab.fa-google-plus-g.fa-inverse(data-fa-transform="shrink-6")
+  .grid-container: .grid-x.grid-padding-x: .cell.footer__soc
+    include ../common/_soc
 
-    .grid-container: .grid-x.grid-padding-x: .cell.text-center.text-size-small
-        | &nbsp;&nbsp;
-        | &copy;&nbsp;
-        a.text-tertiary(href='#') Cetera&nbsp;Labs
-        | ,&nbsp;2002–2018
-        | &nbsp;&nbsp; &nbsp;&nbsp;
-        | Создание&nbsp;сайта&nbsp;&mdash;&nbsp;
-        a.text-tertiary(target='_blank', href='http://cetera.ru/') Cetera&nbsp;Labs
-        | &nbsp;&nbsp; &nbsp;&nbsp;
-        a.text-tertiary(target='_blank', href='http://www.cetera.ru/support/default.php?project=CCD&lang=ru&page=http://wireframes.cetera.ru/boilerplate_wireframe/') Сообщить&nbsp;об&nbsp;ошибке
-        | &nbsp;&nbsp; &nbsp;&nbsp;
-        a.text-tertiary(target='_blank', href='#') Политика&nbsp;конфиденциальности
-        | &nbsp;&nbsp;
-        br
-        |  Св-во о регистрации СМИ №00000 выдано 01 января 2018 г. Государственным комитетом Российской Федерации по печати
+  include ../common/_footer-info
+  .grid-container: .grid-x.grid-padding-x: .cell.text-center Св-во о регистрации СМИ №00000 выдано 01 января 2018 г. Государственным комитетом Российской Федерации по печати

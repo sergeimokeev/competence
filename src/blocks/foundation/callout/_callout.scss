@@ -1,0 +1,126 @@
+.callout {
+  @include margin-level(bottom,red);
+  padding: 6 * $global-padding;
+
+  &_st {
+    width: 100%;
+  }
+
+  &_alert {
+    background-color: #f7e4e1;
+  }
+&_dd {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+  &_success {
+    background-color: #d7f7f6;
+  }
+
+  &_light-gray {
+    background-color: $light-gray;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__unit {
+    color: $light-gray;
+    display: inline-block;
+    margin-right: rem-calc(8);
+  }
+
+  &__tag {
+    display: inline-block;
+    color: $dark-gray;
+    margin-right: rem-calc(8);
+  }
+
+  &__link {
+    display: inline-block;
+    margin-right: rem-calc(8);
+  }
+
+  &__rss {
+    font-size: rem-calc(24);
+    display: block;
+    margin-bottom: rem-calc(20);
+  }
+
+  &__donate {
+    color: $medium-gray;
+  }
+
+  &__see {
+    margin-left: rem-calc(4);
+    color: $dark-gray;
+  }
+
+  &__date {
+    margin-bottom: rem-calc(21);
+    color: $success-color;
+  }
+
+  &__bill {
+    margin-bottom: rem-calc(21);
+    width: 100%;
+    height: rem-calc(154);
+    background: $dark-gray;
+  }
+
+  &__report {
+    margin-bottom: rem-calc(20);
+    width: 100%;
+    height: rem-calc(140);
+    background: $dark-gray;
+  }
+
+  &__label {
+    margin-bottom: rem-calc(10);
+  }
+
+  &__dark {
+    color: $dark-gray;
+  }
+
+  &__include {
+    font-style: italic;
+    font-size: rem-calc(11);
+  }
+
+  &__quest {
+    color: $dark-gray;
+    margin-left: rem-calc(4);
+  }
+
+  &__sum {
+    font-size: rem-calc(21);
+  }
+
+  &__watch {
+    display: inline-block;
+    margin-right: rem-calc(4);
+  }
+
+  &__info {
+    margin-bottom: rem-calc(20);
+  }
+
+  &__icon {
+    max-height: rem-calc(20);
+  }
+
+  &__strong {
+    font-weight: $global-weight-bold;
+  }
+
+  &__bill {
+    margin-bottom: rem-calc(21);
+    font-weight: $global-weight-bold;
+  }
+
+  &__block {
+    display: block;
+  }
+}

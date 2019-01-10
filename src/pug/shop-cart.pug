@@ -3,37 +3,33 @@ extends shop-regular
 block content
   .grid-container: .grid-x.grid-padding-x: .cell
     h1 Корзина
-  .info
-    .grid-container: .grid-x.grid-padding-x: .cell
-      .sect
-        a.button(href='#').picture Готовые к заказу
-        a.button.button_light-gray.picture(href='#') Отложенные
-        a.button.button_hollow(href='#') Очистить корзину
+  .info.grid-container: .grid-x.grid-padding-x: .cell
+    .sect
+      +button('Готовые к заказу','picture')
+      +button('Отложенные','button_light-gray picture')
+      +button('Очистить корзину','button_hollow')
 
-      include components/common/_cart-prod
-      include components/common/_cart-prod
-      include components/common/_cart-prod
+    +offspring
+    +offspring('Картридж совместимый SuperFine')
+    +offspring
 
-      .grid-x.grid-padding-x
-        .cell.small-24.medium-12.large-8
-          .input-group.search
-            input.search__input.search__input_border(type='text' placeholder='№ купона на скидку')
-            .search__cont
-              button.button.button_input(type='button')
-                i.fas.fa-calculator.picture
-                | Пересчитать
-        .cell.small-24.medium-12.large-16.medium-text-right
-          div
-            | Товаров на: 398.31&#160;
+    .grid-x.grid-padding-x
+      .cell.medium-12.large-8
+        +search('№ купона на скидку',true)
+          +button('<i class="fas fa-calculator picture"></i>Пересчитать','button_input')
+            
+    
+      .cell.medium-12.large-16.medium-text-right
+        div
+          | Товаров на: 398.31&#160;
+          i.fas.fa-ruble-sign
+        div
+          | НДС: 71.69&#160;
+          i.fas.fa-ruble-sign
+        .sect
+          strong Итого: 470&#160;
             i.fas.fa-ruble-sign
-          div
-            | НДС: 71.69&#160;
-            i.fas.fa-ruble-sign
-          .sect
-            strong Итого: 470&#160;
-              i.fas.fa-ruble-sign
-      hr.hr
-      .sect.text-right
-        a.button(href='shop-order-make.html')
-          i.far.fa-credit-card.picture
-          | Оформить заказ
+    hr
+    .text-right
+      +button('<i class="far fa-credit-card picture"></i>Оформить заказ','','shop-order-make.html')
+        

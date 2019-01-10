@@ -2,25 +2,22 @@ extends shop-regular
 
 block content
   .grid-container: .grid-x.grid-padding-x: .cell
-    h1 Принтер лазерный HP LaserJet Pro M477fnw (CF377A#ACB)
-  .info
-    .grid-container.shipment: .grid-x.grid-padding-x
-      .small-24.medium-12.cell.medium-order-2
-        .shipment__sect
-          span.label.label_action
-            i.far.fa-star.picture
-            | Акция
-          span.shipment__art Артикул 123456
-        include components/shop/_product-base-info
-        hr.hr
-        include components/shop/_product-stock-delivery-info
-        hr.hr
-        include components/shop/_product-share-links
+    h1 Принтер лазерный HP LaserJet Pro M477fnw (CF13A#ACB)
+  .info.grid-container.shipment: .grid-x.grid-padding-x
+    .medium-12.cell.medium-order-2
+      .sect
+        +label('<i class="far fa-star picture"></i>Акция','label_action')
+        span.shipment__art Артикул 123456
+      include components/shop/_product-base-info
+      hr
+      include components/shop/_product-stock-delivery-info
+      hr
+      include components/shop/_product-share-links
 
-      .small-24.medium-12.cell.medium-order-1
-        include components/shop/_product-images
-  .grid-container: .grid-x.grid-padding-x: .cell: hr
-  .info.info_down
+    .medium-12.cell.medium-order-1
+      include components/shop/_product-images
+  .grid-container: .grid-x.grid-padding-x: .cell: hr.hr
+  .info
     .grid-container: .grid-x.grid-padding-x: .cell
       ul.tabs#product-tabs-1(data-responsive-accordion-tabs="accordion medium-tabs" data-deep-link="true" data-update-history="false")
         li.tabs-title.is-active
@@ -45,7 +42,7 @@ block content
           include components/shop/_product-tab-comments
   .grid-container: .grid-x.grid-padding-x: .cell
     hr
-  .info.info_down
+  .info
     .grid-container: .grid-x.grid-padding-x: .cell
       ul.tabs#product-tabs-2(data-responsive-accordion-tabs="accordion medium-tabs" data-deep-link="true" data-update-history="false")
         li.tabs-title.is-active

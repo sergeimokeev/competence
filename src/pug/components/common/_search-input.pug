@@ -1,10 +1,9 @@
 .grid-container: .grid-x.grid-padding-x
-  .small-24.large-10.large-offset-14.cell
-    .dd(id='search' data-toggler='.dd_show')
-      .dd__content.dd__content_new
+  .large-10.large-offset-14.cell
+    +dd('search','.dd_show')
+      .dd__content
         form(action='#' method='post' data-abide='', novalidate='novalidate')
           .input-group
             input.input-group-field(type='text', placeholder='Поиск')
             .input-group-button
-              button.button(type='submit', name='Найти')
-                i.fas.fa-search.fa-inverse
+              +button('<i class="fas fa-search fa-inverse"></i>')

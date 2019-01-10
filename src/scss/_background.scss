@@ -1,6 +1,0 @@
-@each $name, $color in $foundation-palette {
-  .background-#{$name} {
-    background: $color;
-    color: color-pick-contrast($color, ($white, $black));
-  }
-}

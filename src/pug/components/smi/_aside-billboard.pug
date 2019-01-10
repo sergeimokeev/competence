@@ -1,11 +1,10 @@
-.callout
-    h3
-        a.text-dark-gray(href='#', title='') Афиша
++callout
+  h3
+    a.callout__dark(href='#', title='') Афиша
+  .callout__label
+    +label('Кино')
+  a(href="#"): img.callout__bill(src='./i/image.svg', alt='Изображение события')
+  div Название этого события в этом блоке афиши
+  .callout__date 13.04.2016 19:00
 
-    .margin-bottom-3: span.label Кино
-    img.margin-bottom-6(src='./i/image.svg', alt='Изображение события', style='background:#999;width:100%;height:11rem;')
-    .margin-bottom-6 Название этого события в этом блоке афиши
-        br
-        span.text-success 13.04.2016 19:00
-
-    a.button.hollow.expanded(href='#', title='') Вся афиша
+  +button('Вся афиша','button_hollow button_expanded')

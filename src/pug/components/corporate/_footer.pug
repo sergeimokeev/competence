@@ -1,32 +1,32 @@
 footer.footer
   .grid-container: .grid-x.grid-padding-x
-    .small-24.medium-12.large-6.medium-order-1.large-order-1.cell.footer__block
+    .medium-12.large-6.medium-order-1.large-order-1.cell.footer__block
       a(href='#')
         img(src='./images/logo_white.svg',  alt='logo').footer__logo
-    nav.small-24.medium-12.large-6.medium-order-3.large-order-2.cell.footer__nav
+    nav.medium-12.large-6.medium-order-3.large-order-2.cell.footer__nav
       h6 Навигация
       each title in ['Сайт', 'Магазин', 'Интернет-СМИ', 'Реклама', 'Мобильные', 'Обучение', 'Конверсия']
         a.footer__link(href='#')= title
-    .small-24.medium-12.large-6.medium-order-2.large-order-3.cell.footer__nav
+    .medium-12.large-6.medium-order-2.large-order-3.cell.footer__nav
       h6 Адрес офиса
       p Проспект Ленина, дом 25, 6 этаж, офис 606 (Адрес для курьера)
       h6 Почтовый адрес
       p ООО «Цетера Лабс» Куда: 150040, г.Ярославль, п/о 40, а/я 62
-    .small-24.medium-12.large-6.medium-order-4.large-order-4.cell.footer__nav
+    .medium-12.large-6.medium-order-4.large-order-4.cell.footer__nav
       h6 Телефон
-      .footer__client
-        a.footer__tel(href='tel:88007755293') 8 (800) 775-52-93
+      div
+        a.footer__link(href='tel:88007755293') 8 (800) 775-52-93
         div Новые клиенты — нажмите «0»
         div Текущие клиенты — добавочные и мобильные телефоны проектных менеджеров
       h6 Email
-      .footer__client
-        a.footer__tel(href='mailto:welcome@ceteralabs.ru' title='') welcome@ceteralabs.ru
+      div
+        a.footer__link(href='mailto:welcome@ceteralabs.ru' title='') welcome@ceteralabs.ru
         div Для новых клиентов
-      .margin-bottom-3
-        a.footer__tel(href='mailto:support@ceteralabs.ru' title='') support@ceteralabs.ru
+      div
+        a.footer__link(href='mailto:support@ceteralabs.ru' title='') support@ceteralabs.ru
         div Для текущих клиентов
-      .margin-bottom-3
-        a.footer__tel(href='mailto:hr@ceteralabs.ru' title='') hr@ceteralabs.ru
+      div
+        a.footer__link(href='mailto:hr@ceteralabs.ru' title='') hr@ceteralabs.ru
         div Для кандидатов в коллеги
   .grid-container: .grid-x.grid-padding-x: .cell.footer__soc
     include ../common/_soc

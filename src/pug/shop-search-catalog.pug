@@ -1,26 +1,25 @@
 extends shop-index
 
 block page
-  include components/common/_breadcrumbs
+  +breadcrumbs
   block content
     .grid-container: .grid-x.grid-padding-x: .cell
       h1 Поиск
-    .info
-      .grid-container: .grid-x.grid-padding-x: .cell
-        form(action='#' method='get')
-          .grid-x.grid-padding-x
-            .small-16.medium-18.large-20.cell
-              label: input(type='text', placeholder='Введите строку для поиска')
-            .small-8.medium-6.large-4.cell
-              input.button.button_expanded(type='submit', value='Искать')
-        .sect Результаты поиска 1-5 из 200
-        hr.hr
-        .grid-x.grid-padding-x.small-up-1.medium-up-3.large-up-4.xlarge-up-6.sect(data-equalizer data-equalize-by-row="true")
-          for i in [1,2,3,4,5]
-            +productTile('Комби-перфоратор Metabo KHE 2650', false)
-            +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
-            +productTile('Лобзик Metabo STEB 65 Quick', false)
-            +productTile('Торцовочная пила Ryobi EMS254L', true)
-            +productTile('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
-            +productTile('Лобзик Metabo STEB 65 Quick', false)
-        include ./components/common/_pagination
+    .info.grid-container: .grid-x.grid-padding-x: .cell
+      form(action='#' method='get')
+        .grid-x.grid-padding-x
+          .small-16.medium-18.large-20.cell
+            label: input(type='text', placeholder='Введите строку для поиска')
+          .small-8.medium-6.large-4.cell
+            +button('Искать','button_expanded')
+      .sect Результаты поиска 1-5 из 200
+      hr
+      .grid-x.grid-padding-x.medium-up-3.large-up-4.xlarge-up-6.sect(data-equalizer data-equalize-by-row="true")
+        for i in [1,2,3,4,5]
+          +prod('Комби-перфоратор Metabo KHE 2650', false)
+          +prod('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
+          +prod('Лобзик Metabo STEB 65 Quick', false)
+          +prod('Торцовочная пила Ryobi EMS254L', true)
+          +prod('Дрель-шуруповёрт RYOBI R18DDP-LL13G', false)
+          +prod('Лобзик Metabo STEB 65 Quick', false)
+      +pagination

@@ -5,6 +5,7 @@ a {
   -o-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
   color: scale-color($secondary-color, $lightness: 20%);
+  text-decoration-skip-ink: none;
 
   &:active,
   &:focus,
@@ -14,14 +15,19 @@ a {
 }
 
 hr {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-top: rem-calc(0);
+  margin-right: auto;
+  @include margin-level(bottom,red);
   border-bottom: rem-calc(1) solid $light-gray;
 }
+
 label {
   line-height: 1.5;
 }
+
 table {
-  margin-bottom: 6 * $global-margin;
+  @include margin-level(bottom,red);
   border-collapse: collapse;
   width: 100%;
   border-radius: rem-calc(4);
@@ -32,7 +38,7 @@ ol,
 p,
 ul {
   line-height: 1.5;
-  margin-bottom: rem-calc(21);
+  @include margin-level(bottom,red);
 }
 
 blockquote {
@@ -51,7 +57,7 @@ thead {
 
   td,
   th {
-    font-weight: 500;
+    font-weight: $global-weight-bold;
   }
 
   tr {
@@ -90,10 +96,140 @@ tbody {
 [type='color'],
 textarea {
   box-shadow: none;
+  height: $global-input-height;
 
   &:active,
   &:focus,
   &:hover {
     box-shadow: none;
+  }
+}
+select {
+    height: $global-input-height;
+    padding-top: rem-calc(0);
+    padding-bottom: rem-calc(0);
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: 300;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+}
+
+.h1,
+h1 {
+  @include margin-level(bottom,orange);
+  line-height: 1;
+  font-size: 3rem;
+}
+
+.h2,
+h2 {
+  line-height: 1.1;
+  font-size: 2.2rem;
+  @include margin-level(bottom,orange);
+}
+
+.h3,
+h3 {
+  line-height: 1.2;
+  font-size: rem-calc(23);
+  @include margin-level(bottom,blue);
+}
+
+.h4,
+h4 {
+  line-height: 1.3;
+  font-size: 1.5rem;
+  @include margin-level(bottom,blue);
+}
+
+.h5,
+h5 {
+  line-height: 1.4;
+  font-size: 1.3rem;
+  @include margin-level(bottom,blue);
+}
+
+.h6,
+h6 {
+  line-height: 1.5;
+  font-size: rem-calc(17);
+  @include margin-level(bottom,blue);
+}
+
+h1,
+h2 {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    background: $warning-color;
+    height: rem-calc(3);
+    width: 5rem;
+    left: 0;
+    right: 0;
+    bottom: -0.5rem;
+  }
+}
+@mixin position-center() {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+h1.large-text-center,
+h1.medium-text-center,
+h1.text-center,
+h2.large-text-center,
+h2.medium-text-center,
+h2.text-center {
+  &:after {
+    @include position-center();
+  }
+}
+@include breakpoint(small only) {
+  .h1,
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .h2,
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .h3,
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .h4,
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .h5,
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  .h6,
+  h6 {
+    font-size: 1.1rem;
   }
 }

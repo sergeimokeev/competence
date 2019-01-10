@@ -5,13 +5,13 @@ block personal
   .sect: a(href='#' title='') Посмотреть историю заказов
   h3 Заказы в статусе «Оплачен, формируется к отправке»
 
-  .callout
+  +callout
     h4: a(href='shop-order.html' title='') Заказ №3 от 27.10.2016, 2 товара на сумму 4 398
       i.fas.fa-ruble-sign.canv
     h5.callout__dark Оплата
     .sect
       strong.picture Счет №3/1 от 27.10.2016, Наличные курьеру
-      span.label.label_success Оплачено
+      +label('Оплачено','label_success')
       div
         | Сумма к оплате по счету: 4 398
         i.fas.fa-ruble-sign.canv
@@ -20,17 +20,17 @@ block personal
     .sect
       strong.picture Отгрузка №3/2, стоимость доставки 500
         i.fas.fa-ruble-sign.canv
-      span.label Не отгружено
+      +label('Не отгружено')
       div
         span.picture Статус отгрузки:
-        span.label.label_light-gray Ожидает обработки
+        +label('Ожидает обработки','label_light-gray')
       div
         | Служба доставки: Доставка курьером
-    hr.hr
+    hr
     .grid-x.grid-padding-x
-      .cell.small-24.medium-8
+      .cell.medium-8
         a(href='shop-order.html' title='') Подробнее о заказе
-      .cell.small-24.medium-16.medium-text-right
+      .cell.medium-16.medium-text-right
         a(href='#' title='').picture
           i.fas.fa-undo.picture
           | Повторить заказ
@@ -38,7 +38,7 @@ block personal
 
   h3 Заказы в статусе «Принят, ожидается оплата»
 
-  .callout
+  +callout
     h4: a(href='shop-order.html' title='') Заказ №6 от 27.10.2016, 2 товара на сумму 4 398
       i.fas.fa-ruble-sign.canv
     h5.callout__dark Оплата
@@ -46,32 +46,33 @@ block personal
       .cell.large-16
         .sect
           strong.picture Счет №6/1 от 27.10.2016, Наличные курьеру
-          span.label Не оплачено
+          +label('Не оплачено')
           div
             | Сумма к оплате по счету: 4 398
             i.fas.fa-ruble-sign.canv
           div
             a(href='#' title='') Сменить способ оплаты
       .cell.large-8.large-text-right
-        .sect: a.button(href='#')
-          i.far.fa-credit-card.picture
-          | Оплатить
+        .sect
+          +button('<i class="far fa-credit-card picture"></i>Оплатить')
+          
 
     h5.callout__dark Доставка
     .sect
       strong.picture Отгрузка №6/2, стоимость доставки 500
         i.fas.fa-ruble-sign.canv
-      span.label Не отгружено
+      +label('Не отгружено')    
+
       div
         span.picture Статус отгрузки:
-        span.label.label_light-gray Ожидает обработки
+        +label('Ожидает обработки','label_light-gray')
       div
         | Служба доставки: Доставка курьером
-    hr.hr
+    hr
     .grid-x.grid-padding-x
-      .cell.small-24.medium-8
+      .cell.medium-8
         a(href='shop-order.html' title='') Подробнее о заказе
-      .cell.small-24.medium-16.medium-text-right
+      .cell.medium-16.medium-text-right
         a(href='#' title='').picture
           i.fas.fa-undo.picture
           | Повторить заказ

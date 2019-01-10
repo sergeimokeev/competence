@@ -3,129 +3,105 @@ extends shop-regular
 block content
   .grid-container: .grid-x.grid-padding-x: .cell
     h1 Оформление заказа
-  .info
-    .grid-container: .grid-x.grid-padding-x
-      .cell.small-24.medium-16.large-18#order-container
-        .callout
-          h2 Товары в заказе
-          include components/shop/_duct
-          hr.hr
-          include components/shop/_duct
-          
-        .callout
-          h2 Регион доставки
-          fieldset
-            .info__type Тип плательщика
-            .info__dib: +radio('Физическое лицо','type')
-            .info__dib: +radio('Юридическое лицо','type')
-          
-          label
-            strong
-              span.text-primary *&nbsp;
-              | Местоположение
-            input(type='text')
-          p.help-text Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
-          label
-            strong
-              span.text-primary *&nbsp;
-              | Индекс
-            input(type='text')
-        .callout
-          h2 Доставка
-          .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-4(data-equalizer data-equalize-by-row="true")
-            .cell
-              label.callout(data-equalizer-watch)
-                input(type='radio' name='delivery')
-                i.fas.fa-lg.fa-car.callout__dark
-                = ' '
-                span.label
-                  | 0
-                  = ' '
-                  i.fas.fa-ruble-sign
-                span.callout__block Самовывоз
-            .cell
-              label.callout(data-equalizer-watch)
-                input(type='radio' name='delivery')
-                i.fas.fa-lg.fa-truck.callout__dark
-                = ' '
-                span.label
-                  | 500
-                  = ' '
-                  i.fas.fa-ruble-sign
-                span.callout__block Доставка курьером
-          hr.hr
-          .grid-x.grid-padding-x
-            .cell.small-24.medium-24.large-12.end
-              .search
-                input.search__input.search__input_border(type='text' placeholder='Применить купон')
-                .search__cont
-                  button.button.button_input(type='button')
-                    i.fas.fa-calculator.picture
-                    | Пересчитать
-        .callout
-          h2 Оплата
-          .grid-x.grid-padding-x.small-up-1.medium-up-2.large-up-4(data-equalizer data-equalize-by-row="true")
-            .cell
-              label.callout(data-equalizer-watch).callout_light-gray
-                input(type='radio' name='payment')
-                i.far.fa-lg.fa-money-bill-alt
-                span.callout__block
-                  | Наличными
-            .cell
-              label.callout(data-equalizer-watch).callout_light-gray
-                input(type='radio' name='payment')
-                img(src='./images/shop/visa-dark.svg' alt='иконка' ).callout__icon
-                span.callout__block
-                  | Банковские карты
-            .cell
-              label.callout(data-equalizer-watch).callout_light-gray
-                input(type='radio' name='payment')
-                img(src='./images/sber.svg' alt='иконка' ).callout__icon
-                span.callout__block
-                  | Квитанция Сбербанка
-            .cell
-              label.callout(data-equalizer-watch).callout_light-gray
-                input(type='radio' name='payment')
-                i.fa.fa-lg.fa-terminal
-                span.callout__block
-                  | Терминалы
-            .cell
-              label.callout(data-equalizer-watch).callout_light-gray
-                input(type='radio' name='payment')
-                img(src='./images/shop/ym.svg' alt='иконка' ).callout__icon
-                span.callout__block
-                  | Яндекс.Деньги
-            .cell
-              label.callout(data-equalizer-watch).callout_light-gray
-                input(type='radio' name='payment')
-                i.fa.fa-university.fa-lg
-                span.callout__block
-                  | Наложенный платеж
-        .callout
-          h2 Покупатель
-          label.info__label
-            span.info__primary *&nbsp;
+  .info.grid-container: .grid-x.grid-padding-x
+    .cell.medium-16.large-18#order-container
+      +callout
+        h2 Товары в заказе
+        +growth()
+        hr
+        +growth('Картридж совместимый SuperFine (SF-CN048AE) 951XL')
+        
+      +callout
+        h2 Регион доставки
+        fieldset
+          .sect.sect_type Тип плательщика
+          .sect.sect_dib: +radio('Физическое лицо','type')
+          .sect.sect_dib: +radio('Юридическое лицо','type')
+        
+        label
+          strong
+            span *&nbsp;
+            | Местоположение
+          input(type='text')
+        p.help-text Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
+        label
+          strong
+            span *&nbsp;
+            | Индекс
+          input(type='text')
+      +callout
+        h2 Доставка
+        .grid-x.grid-padding-x.medium-up-2.large-up-4(data-equalizer data-equalize-by-row="true")
+          .cell
+            +callout('',true)
+              +radio('<i class="fas fa-lg fa-car callout__tag"></i><span class="label">0 <i class="fas fa-ruble-sign"></i></span>','delivery')
+              span.callout__block Самовывоз
+          .cell
+            +callout('',true)
+              +radio('<i class="fas fa-lg fa-truck callout__tag"></i><span class="label">500 <i class="fas fa-ruble-sign"></i></span>','delivery')
+              span.callout__block Доставка курьером
+        
+        hr
+        .grid-x.grid-padding-x
+          .cell.medium-24.large-12
+            +search('Применить купон',true)
+              +button('<i class="fas fa-calculator picture fa-sm"></i>Пересчитать','button_input')
+      .callout
+        h2 Оплата
+        .grid-x.grid-padding-x.medium-up-2.large-up-4(data-equalizer data-equalize-by-row="true")
+          .cell
+            +callout('',true)
+              +radio('<i class="far fa-lg fa-money-bill-alt"></i>','payment')
+              span.callout__block Наличными
+          .cell
+            +callout('',true)
+              +radio("<img src='./images/shop/visa-dark.svg' alt='иконка' class='callout__icon' />",'payment')
+              span.callout__block Банковские карты
+          .cell
+            +callout('',true)
+              +radio("<img src='./images/sber.svg' alt='иконка' class='callout__icon' />",'payment')
+              span.callout__block Квитанция Сбербанка
+          .cell
+            +callout('',true)
+              +radio('<i class="fas fa-lg fa-terminal"></i>','payment')
+              span.callout__block Терминалы
+          .cell
+            +callout('',true)
+              +radio("<img src='./images/shop/ym.svg' alt='иконка' class='callout__icon' />",'payment')
+              span.callout__block Яндекс.Деньги
+          .cell
+            +callout('',true)
+              +radio('<i class="fas fa-lg fa-university"></i>','payment')
+              span.callout__block Наложенный платеж
+      .callout
+        h2 Покупатель
+        label
+          strong
+            span.sect.sect_primary *&nbsp;
             | ФИО
             input(type='text')
-          label.info__label
-            span.info__primary *&nbsp;
+        label
+          strong
+            span.sect.sect_primary *&nbsp;
             | E-Mail
             input(type='text')
-          label.info__label
-            span.info__primary *&nbsp;
+        label
+          strong
+            span.sect.sect_primary *&nbsp;
             | Телефон
             input(type='text')
-          label.info__label
-            span.info__primary *&nbsp;
+        label
+          strong
+            span.sect.sect_primary *&nbsp;
             | Адрес доставки
             input(type='text')
-          label.info__label
-            span.info__primary *&nbsp;
+        label
+          strong
+            span.sect.sect_primary *&nbsp;
             | Комментарий к заказу
             textarea
-      .cell.small-24.medium-8.large-6
-        include components/shop/_info-sticky
-      .cell.small-24.medium-16.large-18.text-right
-        a.button(href='shop-order-confirmation.html')
-          i.far.fa-credit-card.picture
-          | Оформить заказ
+    .cell.medium-8.large-6
+      include components/shop/_info-sticky
+    .cell.medium-16.large-18.text-right
+      +button('<i class="far fa-credit-card picture"></i>Оформить заказ','','shop-order-confirmation.html')
+        

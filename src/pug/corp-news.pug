@@ -1,34 +1,19 @@
 extends corp-index
 
 block page
-  include components/common/_breadcrumbs
+  +breadcrumbs
   block content
     .grid-container: .grid-x.grid-padding-x: .cell
       h1 Заголовок новости h1
-    .info
-      .grid-container: .grid-x.grid-padding-x
-        .cell.small-24.medium-14.large-16
-          p: img(src="./i/photo.svg")
-          .date 1 января 2018
-          hr.hr
-          include components/common/_text
-        .cell.small-24.medium-10.large-8
-          each title in ['Приняли на комплексное обслуживание новый сайт', 'Разработаем несколько интернет-магазинов по продаже сантехники', 'Приняли на комплексное обслуживание новый сайт', 'Серверная защита', 'Приняли на комплексное обслуживание новый сайт', 'Разработаем несколько интернет-магазинов по продаже сантехники']
-            .object.grid-x.grid-padding-x
-              .cell.shrink
-                a(href="#"): img(src="./i/photo.svg").object__img
-              .cell.auto
-                a(href="#")= title
-            hr.hr
-              
-          .object
-            a(href="#") Разработаем несколько интернет-магазинов по продаже сантехники
-          hr.hr
-          .object.grid-x.grid-padding-x
-            .cell.shrink
-              a(href="#"): img(src="./i/photo.svg").object__img
-            .cell.auto
-              a(href="#") Приняли на комплексное обслуживание новый сайт
-          hr.hr
-            
-          a(href="#").button Все новости<i class="fas fa-long-arrow-alt-right canv"></i>
+    
+    .grid-container.info: .grid-x.grid-padding-x
+      .cell.medium-14.large-16
+        p: img(src="./i/photo.svg")
+        .sect.sect_date 1 января 2018
+        hr
+        include components/common/_text
+      .cell.medium-10.large-8
+        +object(['Приняли на комплексное обслуживание новый сайт', 'Разработаем несколько интернет-магазинов по продаже сантехники', 'Приняли на комплексное обслуживание новый сайт', 'Серверная защита', 'Приняли на комплексное обслуживание новый сайт', 'Разработаем несколько интернет-магазинов по продаже сантехники'])
+        +object
+        +object(['Приняли на комплексное обслуживание новый сайт'])
+        +button('Все новости<i class="fas fa-long-arrow-alt-right canv"></i>')

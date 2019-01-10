@@ -1,11 +1,10 @@
 extends shop-index
 
 block page
-  include components/common/_breadcrumbs
+  +breadcrumbs
   block content
     .grid-container: .grid-x.grid-padding-x: .cell
       h1 Карта сайта
-    .info
-      .grid-container: .grid-x.grid-padding-x
-        .cell.small-24.medium-16.large-12
-          include components/shop/_sitemap
+    .info.grid-container: .grid-x.grid-padding-x
+      .cell.medium-16.large-12
+        include components/shop/_sitemap

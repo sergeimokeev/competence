@@ -1,11 +1,13 @@
 .sect.show-for-small-only
   span.button-group.expanded
-    span.button.button_light-gray.button_expanded(data-toggle='menu-left')
-      i.fas.fa-lg.fa-bars.picture
-      | Навигация
-    span.button.button_light-gray.button_expanded(data-toggle='filter-left')
-      i.fas.fa-lg.fa-filter.picture
-      | Фильтр
+    +button
+      span.button.button_light-gray.button_expanded(data-toggle='menu-left')
+        i.fas.fa-lg.fa-bars.picture
+        | Навигация
+    +button    
+      span.button.button_light-gray.button_expanded(data-toggle='filter-left')
+        i.fas.fa-lg.fa-filter.picture
+        | Фильтр
 .side#menu-left(data-toggler='.hide-for-small-only')
   ul.partners
     li.partners__item: a(href='#').partners__link Всё для сада
@@ -20,17 +22,11 @@
     li.partners__item: a(href='#').partners__link Силовая техника
 
 .hide-for-small-only#filter-left(data-toggler='.hide-for-small-only')
-  ul.accordion(data-accordion data-multi-expand='true' data-allow-all-closed='true')
+  +accordion
     li.accordion-item.is-active(data-accordion-item)
       a.accordion-title(href='#') Цена, руб
       .accordion-content(data-tab-content)
-        .slider(data-slider data-start="0" data-end="1000" data-initial-start="200" data-initial-end="800" data-binding="true")
-          span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1")
-          span.slider-fill(data-slider-fill)
-          span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2")
-        .grid-x.grid-padding-x
-          .small-12.cell: input(type="number" id="sliderOutput1")
-          .small-12.cell: input(type="number" id="sliderOutput2")
+        +slider(0,1000)
     li.accordion-item(data-accordion-item)
       a.accordion-title(href='#') Мощность, W
       .accordion-content(data-tab-content)
@@ -56,9 +52,6 @@
         +step('Зеленый')
         +step('Белый')
         +step('Черный')
-  button.button.button_expanded
-    i.fas.fa-filter.fa-lg.picture
-    | Подобрать
-  button.button.button_light-gray.button_expanded
-    i.fas.fa-ban.fa-lg.picture
-    | Сбросить фильтр
+  +button('<i class="fas fa-filter fa-lg picture"></i>Подобрать','button_expanded')
+  +button('<i class="fas fa-ban fa-lg picture"></i>Сбросить фильтр','button_light-gray button_expanded')
+    

@@ -7,34 +7,5 @@ header.header
       div(data-responsive-toggle='menu', data-hide-for='medium')
         div(data-toggle)
           i.fas.fa-bars
-    .small-24.large-18.large-offset-2.cell.align-self-middle#menu
-      ul.cat
-        li.cat__item
-          a.cat__link(href='#') Сайт
-          ul.cat
-            li.cat__item
-              a.cat__link(href='#') Видеонаблюдение
-              ul.cat
-                each title in ['Создание сайтов', 'Развитие сайтов', 'Техническая поддержка сайтов', 'Cetera CMS — управление сайтом', 'Fastsite — бесплатный конструктор сайтов', 'Портфолио', 'Исполнение 152-ФЗ «О персональных данных»', 'Посмотрите прототип', 'Вопросы и ответы']
-                  li.cat__item
-                    a.cat__link(href='#')= title
-            each title in ['Создание сайтов', 'Развитие сайтов', 'Техническая поддержка сайтов', 'Cetera CMS — управление сайтом']
-              li.cat__item
-                a.cat__link(href='#')= title
-        each title in ['Магазин', 'СМИ', 'Реклама', 'Мобильные', 'Обучение']
-          li.cat__item
-            a.cat__link(href='#')= title
-        li.cat__item
-          a.cat__link(href='#') Конверсия
-          ul.cat
-            li.cat__item
-              a.cat__link(href='#') Видеонаблюдение
-              ul.cat
-                each title in ['Создание сайтов', 'Развитие сайтов', 'Техническая поддержка сайтов', 'Cetera CMS — управление сайтом', 'Fastsite — бесплатный конструктор сайтов']
-                  li.cat__item
-                    a.cat__link(href='#')= title
-            each title in ['Создание сайтов', 'Развитие сайтов', 'Техническая поддержка сайтов', 'Cetera CMS — управление сайтом']
-              li.cat__item
-                a.cat__link(href='#')= title
-        li.cat__item
-          a.cat__link(href='#') Видеонаблюдение
+    .large-18.large-offset-2.cell.align-self-middle#menu
+      +cat()
