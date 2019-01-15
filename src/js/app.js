@@ -4,6 +4,10 @@ $(document).foundation();
 (function($) {
   "use strict";
   $(function() {
+
+
+
+
     /** fix bug equalizer */
     if ($('[data-equalizer]').length) {
       Foundation.reInit('equalizer');

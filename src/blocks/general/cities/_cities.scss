@@ -1,0 +1,169 @@
+.cities-main-window-list-link {
+  width: 10.4rem;
+  float: left;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 160%;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-right: 2.5rem;
+}
+
+.cities-main-window-wrapperlist {
+  column-count: 2;
+}
+
+.cities-main-window {
+  width: 100%;
+}
+
+.cities-main-window-inner-search {}
+
+.cities-main-window-inner-search input {
+  font-size: 1.2rem;
+  color: #333;
+  width: 100%;
+}
+
+.cities-main-window-inner {
+  position: relative;
+}
+
+.cities-main-window-inner-title {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+
+.cities-select {
+  cursor: pointer;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.cities-general {
+  position: relative;
+  display: inline-block;
+}
+
+.cities-container {
+  display: none;
+  z-index: 1;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  border-radius: 0.2rem;
+  top: 3rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  cursor: auto;
+  min-width: 19rem;
+}
+
+.cities-container__show {
+  display: flex;
+}
+
+.cities-container-list {
+  position: relative;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.25);
+}
+
+.cities-container-list-link {
+  float: left;
+  width: 9rem;
+  line-height: 2.4rem;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.cities-main-window-inner-title {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.cities-container-close {
+  position: absolute;
+  cursor: pointer;
+  font-size: 2rem;
+  opacity: 0.6;
+  transition: all 0.5s;
+  right: 0;
+  top: 0;
+}
+
+.cities-container-close * {
+  display: block;
+}
+
+.cities-container-close:hover {
+  opacity: 1;
+}
+/* cities-container-region */
+.cities-container-region {
+  display: none;
+  z-index: 1;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  border-radius: 0.2rem;
+  top: 3rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  cursor: auto;
+}
+
+.cities-container-region-inner-city {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+/* body */
+
+.body-overlay {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: inline;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.cities-container-region .button-cities-group {
+  margin: 0;
+}
+
+.cities-main-window .cities-message {
+  margin: 0;
+}
+
+.cities-container-region-inner .button-group .button-cities-yes {
+  margin: 0 1.25rem 0 0;
+}
+@media screen and (min-width: 40rem) {
+  .cities-container {
+    width: 30rem;
+  }
+}
+@media screen and (min-width: 26.5rem) {
+  .cities-container-region {
+    width: 23rem;
+  }
+}
+@media (min-width: 60rem) and (max-width: 85rem) {
+  .cities-container {
+    width: 25rem;
+  }
+
+  .cities-main-window-list-link {
+    width: 8rem;
+  }
+}

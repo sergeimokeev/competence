@@ -6,7 +6,8 @@ mixin contacts()
     else
       .grid-container: .grid-x.grid-padding-x
         .large-9.cell.medium-order-2
-          .contacts__info
+          +cities
+          span.contacts__info
             span.contacts__menu(data-responsive-toggle='responsive-menu', data-hide-for='medium')
               span(data-toggle): i.fas.fa-bars.fa-lg
             a(href='tel:+71234567890').contacts__link

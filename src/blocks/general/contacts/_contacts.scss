@@ -28,6 +28,7 @@
   }
 
   &__link {
+    display: inline-block;
     color: $white;
     font-weight: $global-weight-bold;
     margin-right: rem-calc(10);
