@@ -29,6 +29,7 @@ const paths = {
     dist: {
         html: 'dist/',
         js: 'dist/js/',
+        json: 'dist/json/',
         css: 'dist/css/',
         images: 'dist/images/',
         i: 'dist/i/',
@@ -37,6 +38,7 @@ const paths = {
     src: {
         html: 'src/pug/' + nameChosenPage + '.pug',
         js: 'src/js/*.js',
+        json: 'src/json/*.json',
         jsLib: [
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/foundation-sites/dist/js/foundation.min.js',
@@ -55,6 +57,7 @@ const paths = {
     watch: {
         html: ['src/pug/**/*.pug','src/blocks/**/*.pug'],
         js: ['src/js/**/*.js'],
+        json: ['src/json/**/*.json'],
         css:['src/scss/**/*.scss','src/blocks/**/*.scss'],
         images: 'src/images/**/*.*',
         i: 'src/i/**/*.*',
@@ -69,6 +72,7 @@ let cleanHtml = () => del(paths.dist.html + '*.html');
 let cleanI = () => del(paths.dist.i);
 let cleanFonts = () => del(paths.dist.fonts);
 let cleanJs = () => del(paths.dist.js);
+let cleanJson = () => del(paths.dist.json);
 
 let sass = () => gulp.src(paths.src.css)
     .pipe(gulpPlumber())
@@ -121,6 +125,9 @@ let jsApp = () => gulp.src(paths.src.js, {allowEmpty: true})
     .pipe(gulpConcat('app.js'))
     .pipe(gulp.dest(paths.dist.js));
 
+let json = () => gulp.src(paths.src.json, {allowEmpty: true})
+    .pipe(gulp.dest(paths.dist.json));
+
 let jsAppMinify = () => gulp.src(paths.src.js, {allowEmpty: true})
     .pipe(gulpBabel({
         presets: ['@babel/env']
@@ -140,6 +147,7 @@ let watch = () => {
     gulp.watch(paths.watch.i, gulp.series(cleanI, i, reloadBrowser));
     gulp.watch(paths.watch.fonts, gulp.series(cleanFonts, fonts, reloadBrowser));
     gulp.watch(paths.watch.js, gulp.series(cleanJs, jsLib, jsApp, reloadBrowser));
+    gulp.watch(paths.watch.json, gulp.series(cleanJson,json, reloadBrowser));
 
     let imagesWatcher = gulp.watch(paths.watch.images, images);
     imagesWatcher.on('unlink', (unlinkPath) => {
@@ -160,7 +168,7 @@ let browserSync = () =>
 gulp.task('default',
     gulp.series(
         clean,
-        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsApp),
+        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsApp,json),
         gulp.parallel(watch,browserSync)
     )
 );
@@ -168,6 +176,6 @@ gulp.task('default',
 gulp.task('minify',
     gulp.series(
         clean,
-        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsAppMinify)
+        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsAppMinify,json)
     )
 );

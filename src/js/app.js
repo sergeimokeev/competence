@@ -5,6 +5,98 @@ $(document).foundation();
   "use strict";
   $(function() {
 
+    //begin of choose city in .cities block
+    $(document).ready(function() {
+
+      const pathToJson = '../json/ajax.json';
+      /* links */
+      $('#cities-main-window-list').on('click', 'a', function(e) {
+        e.preventDefault();
+
+        const link = $(this).attr('href');
+
+        $.ajax({
+          method: 'POST',
+          url: pathToJson,
+          data: {
+            action: 'setCity',
+            link: link
+          },
+          success: function(response) {
+            const res = $.parseJSON(JSON.stringify(response));
+            if (res.res == 'success') {
+              document.location = link;
+
+            }
+          }
+        });
+      });
+
+      /* popup of the region */
+      const modalRegion = $('#cities-container-region');
+      const overlay = $('.overlay');
+      /* Ajax окна региона  */
+      $.ajax({
+        method: 'POST',
+        url: pathToJson,
+        data: {
+          action: 'checkIp',
+        },
+        success: function(response) {
+          const res = $.parseJSON(JSON.stringify(response));
+          if (res.res == 'success') {
+            overlay.addClass('body-overlay');
+            modalRegion.fadeIn();
+          }
+        }
+
+      });
+      const modalCities = $('#cities-container');
+
+      /* choose buttons */
+      $('#button-ok').on('click', function(e) {
+        e.preventDefault();
+        $.ajax({
+          method: 'POST',
+          url: pathToJson,
+          data: {
+            action: 'saveCity',
+          },
+          success: function(response) {
+            const res = $.parseJSON(JSON.stringify(response));
+            if (res.res == 'success') {
+              modalRegion.fadeOut();
+              overlay.removeClass('body-overlay');
+            }
+          }
+        });
+      });
+      $('#button-another').on('click', function(e) {
+        e.preventDefault();
+        modalRegion.fadeOut();
+        modalCities.fadeIn();
+      });
+
+      $('#main-window-close').on('click', function() {
+        modalCities.fadeOut();
+        overlay.removeClass('body-overlay');
+      });
+
+      $('#cities-select').on('click', function() {
+        modalCities.fadeIn();
+        $("#searchCities").focus();
+      });
+
+      $(document).on('keyup', function(e) {
+        if (e.keyCode === 27 && modalCities.is(':visible')) {
+          modalCities.fadeOut();
+          overlay.removeClass('body-overlay');
+        }
+      });
+
+
+    });
+
 
 
 
