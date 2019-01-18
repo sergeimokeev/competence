@@ -37,7 +37,7 @@ $(document).foundation();
       const overlay = $('.overlay');
       /* Ajax окна региона  */
       $.ajax({
-        method: 'POST',
+        method: 'GET',
         url: pathToJson,
         data: {
           action: 'checkIp',
@@ -47,17 +47,19 @@ $(document).foundation();
           if (res.res == 'success') {
             overlay.addClass('body-overlay');
             modalRegion.fadeIn();
+
           }
         }
 
       });
+
       const modalCities = $('#cities-container');
 
       /* choose buttons */
       $('#button-ok').on('click', function(e) {
         e.preventDefault();
         $.ajax({
-          method: 'POST',
+          method: 'GET',
           url: pathToJson,
           data: {
             action: 'saveCity',
