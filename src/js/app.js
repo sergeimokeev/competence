@@ -16,7 +16,7 @@ $(document).foundation();
         const link = $(this).attr('href');
 
         $.ajax({
-          method: 'POST',
+          method: 'GET',
           url: pathToJson,
           data: {
             action: 'setCity',
@@ -37,7 +37,7 @@ $(document).foundation();
       const overlay = $('.overlay');
       /* Ajax окна региона  */
       $.ajax({
-        method: 'POST',
+        method: 'GET',
         url: pathToJson,
         data: {
           action: 'checkIp',
@@ -59,7 +59,7 @@ $(document).foundation();
       $('#button-ok').on('click', function(e) {
         e.preventDefault();
         $.ajax({
-          method: 'POST',
+          method: 'GET',
           url: pathToJson,
           data: {
             action: 'saveCity',
