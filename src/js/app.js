@@ -8,7 +8,7 @@ $(document).foundation();
     //begin of choose city in .cities block
     $(document).ready(function() {
 
-      const pathToJson = '../json/ajax.json';
+      const pathToJson = './json/ajax.json';
       /* links */
       $('#cities-main-window-list').on('click', 'a', function(e) {
         e.preventDefault();
@@ -37,7 +37,7 @@ $(document).foundation();
       const overlay = $('.overlay');
       /* Ajax окна региона  */
       $.ajax({
-        method: 'GET',
+        method: 'POST',
         url: pathToJson,
         data: {
           action: 'checkIp',
@@ -59,7 +59,7 @@ $(document).foundation();
       $('#button-ok').on('click', function(e) {
         e.preventDefault();
         $.ajax({
-          method: 'GET',
+          method: 'POST',
           url: pathToJson,
           data: {
             action: 'saveCity',
