@@ -6,11 +6,11 @@ $(document).foundation();
     $(function () {
 
         //begin of choose city in .cities block
+            const staticCities = $('#cities-main-window-list').html();
+            const container = $('#cities-main-window-list');
             $('#searchCities').on('keyup', function () {
-
                 const data = $(this)[0].value;
                 const name = $(this).attr('name');
-                const container = $('#cities-main-window-list');
                 if (data != '') {
                     $.ajax({
                         method: 'GET',
@@ -30,17 +30,18 @@ $(document).foundation();
                                 container.empty();
                                 if (res.rows.length > 0) {
                                     for (var i = 0; i < res.rows.length; i++) {
-
                                         container.append("<a href=" + res.rows[i].link + " class='cities-main-window-list-link'>" + res.rows[i].name + "</a>");
                                     }
                                 } else {
-                                    console.log(res);
                                     container.empty();
                                     container.append("<p class='callout warning cities-message'>Ничего не найдено</p>");
                                 }
                             }
                         }
                     });
+                }else {
+                    container.empty();
+                    container.append(staticCities);
                 }
             });
 
