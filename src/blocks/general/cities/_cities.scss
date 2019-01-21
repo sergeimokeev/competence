@@ -1,12 +1,16 @@
 .cities-main-window-list-link {
-  width: 10.4rem;
+  width: 50%;
   float: left;
   text-align: left;
   font-size: 1rem;
   line-height: 160%;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
-  margin-right: 2.5rem;
+  padding-right: rem-calc(10);
+}
+
+.cities-wrap {
+  display: inline-block;
 }
 
 .cities-main-window-wrapperlist {
@@ -33,7 +37,7 @@
   font-size: 1.4rem;
   color: #333;
   font-weight: 400;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .cities-select {
@@ -52,9 +56,11 @@
   z-index: 101;
   text-align: left;
   position: absolute;
-  left: 0;
+  right: rem-calc(0);
   border-radius: 0.2rem;
+  box-shadow: rem-calc(0 0 10) $black;
   top: 3rem;
+  width: rem-calc(500);
   padding: 2rem;
   background-color: #fff;
   box-sizing: border-box;
@@ -103,15 +109,16 @@
 .cities-container-close:hover {
   opacity: 1;
 }
-/* cities-container-region */
+
 
 .cities-container-region {
   display: none;
   z-index: 101;
   text-align: left;
   position: absolute;
-  left: 0;
+  right: rem-calc(0);
   border-radius: 0.2rem;
+  width: rem-calc(350);
   top: 3rem;
   padding: 2rem;
   background-color: #fff;
@@ -148,22 +155,28 @@
 .cities-container-region-inner .button-group .button-cities-yes {
   margin: 0 1.25rem 0 0;
 }
-@media screen and (min-width: 40rem) {
+@include breakpoint(medium down) {
   .cities-container {
-    width: 30rem;
+    width: rem-calc(310);
+    right: auto;
+    left: rem-calc(0);
+  }
+.cities-container-region {
+  left: rem-calc(0);
+  right:auto;
+}
+  .cities-main-window-list-link {
+    width: 100%;
   }
 }
-@media screen and (min-width: 26.5rem) {
+@include breakpoint(small only) {
   .cities-container-region {
-    width: 23rem;
-  }
-}
-@media (min-width: 60rem) and (max-width: 85rem) {
-  .cities-container {
-    width: 25rem;
+    width: rem-calc(310);
+    padding-left: rem-calc(10);
+    padding-right: rem-calc(10);
   }
 
-  .cities-main-window-list-link {
-    width: 8rem;
+  .cities-general {
+    position: static;
   }
 }

@@ -65,6 +65,13 @@
   @include breakpoint(small only) {
     padding-bottom: rem-calc(13);
 
+    &__block {
+      &_spec {
+        display: inline-block;
+        width:calc(100% - 30px);
+      }
+    }
+
     &__icon {
       display: none;
     }
