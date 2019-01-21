@@ -11,6 +11,7 @@
 
 .cities-wrap {
   display: inline-block;
+  margin-bottom: rem-calc(5);
 }
 
 .cities-main-window-wrapperlist {
@@ -110,7 +111,6 @@
   opacity: 1;
 }
 
-
 .cities-container-region {
   display: none;
   z-index: 101;
@@ -132,6 +132,7 @@
   margin-bottom: 1.25rem;
 }
 /* body */
+
 .body-overlay {
   width: 100%;
   position: fixed;
@@ -161,10 +162,12 @@
     right: auto;
     left: rem-calc(0);
   }
-.cities-container-region {
-  left: rem-calc(0);
-  right:auto;
-}
+
+  .cities-container-region {
+    left: rem-calc(0);
+    right: auto;
+  }
+
   .cities-main-window-list-link {
     width: 100%;
   }
