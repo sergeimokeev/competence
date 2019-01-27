@@ -1,5 +1,6 @@
 {
   "res": "success",
+  "success": true,
   "rows": [
     {
       "link": "#",
@@ -30,9 +31,5 @@
       "link": "#",
       "name": "Тутаев"
     }
-
-
-
-
   ]
 }

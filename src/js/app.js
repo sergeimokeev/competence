@@ -6,45 +6,6 @@ $(document).foundation();
     $(function () {
 
         //begin of choose city in .cities block
-            const staticCities = $('#cities-main-window-list').html();
-            const container = $('#cities-main-window-list');
-            $('#searchCities').on('keyup', function () {
-                const data = $(this)[0].value;
-                const name = $(this).attr('name');
-                if (data != '') {
-                    $.ajax({
-                        method: 'GET',
-                        url: pathToJson,
-                        data: {
-                            action: name,
-                            data: data,
-                            count: 16,
-                        },
-                        success: function (response) {
-                            var res = undefined;
-                            if (response != "") {
-                                res = $.parseJSON(JSON.stringify(response));
-                            }
-
-                            if (typeof res != "undefined" && res.rows != null) {
-                                container.empty();
-                                if (res.rows.length > 0) {
-                                    for (var i = 0; i < res.rows.length; i++) {
-                                        container.append("<a href=" + res.rows[i].link + " class='cities-main-window-list-link'>" + res.rows[i].name + "</a>");
-                                    }
-                                } else {
-                                    container.empty();
-                                    container.append("<p class='callout warning cities-message'>Ничего не найдено</p>");
-                                }
-                            }
-                        }
-                    });
-                }else {
-                    container.empty();
-                    container.append(staticCities);
-                }
-            });
-
             const pathToJson = './json/ajax.json';
             /* links */
             $('#cities-main-window-list').on('click', 'a', function (e) {
@@ -60,15 +21,49 @@ $(document).foundation();
                         link: link
                     },
                     success: function (response) {
-                        const res = $.parseJSON(JSON.stringify(response));
-                        if (res.res == 'success') {
+                        let res;
+                        typeof response == 'string' ? res = $.parseJSON(response) : res = response;
+                        if (res.success) {
                             document.location = link;
 
                         }
                     }
                 });
             });
+            const staticCities = $('#cities-main-window-list').html();
+            const container = $('#cities-main-window-list');
 
+            $('#searchCities').on('keyup', function () {
+                const data = $(this)[0].value;
+                const name = $(this).attr('name');
+                if (data != '') {
+                    $.ajax({
+                        method: 'GET',
+                        url: pathToJson,
+                        data: {
+                            action: name,
+                            data: data,
+                            count: 16,
+                        },
+                        success: function (response) {
+                            let res;
+                            typeof response == 'string' ? res = $.parseJSON(response) : res = response;
+                            if(res.success) { 
+                                container.empty();
+                                    for (var i = 0; i < res.rows.length; i++) {
+                                        container.append("<a href=" + res.rows[i].link + " class='cities-main-window-list-link'>" + res.rows[i].name + "</a>");
+                                    }
+                                }else {
+                                    container.empty();
+                                    container.append("<p class='callout warning cities-message'>Ничего не найдено</p>");
+                                }
+                    }
+                    });
+                }else {
+                    container.empty();
+                    container.append(staticCities);
+                }
+            });
             /* popup of the region */
             const modalRegion = $('#cities-container-region');
             const overlay = $('.overlay');
@@ -80,15 +75,16 @@ $(document).foundation();
                     action: 'checkIp',
                 },
                 success: function (response) {
-                    const res = $.parseJSON(JSON.stringify(response));
-                    if (res.res == 'success') {
+                    let res;
+                    typeof response == 'string' ? res = $.parseJSON(response) : res = response;
+                    if(res.success) { 
                         overlay.addClass('body-overlay');
                         modalRegion.fadeIn();
-
                     }
                 }
 
             });
+
 
             const modalCities = $('#cities-container');
 
@@ -102,8 +98,10 @@ $(document).foundation();
                         action: 'saveCity',
                     },
                     success: function (response) {
-                        const res = $.parseJSON(JSON.stringify(response));
-                        if (res.res == 'success') {
+                    
+                    let res;
+                    typeof response == 'string' ? res = $.parseJSON(response) : res = response;
+                        if(res.success) { 
                             modalRegion.fadeOut();
                             overlay.removeClass('body-overlay');
                         }
@@ -133,7 +131,6 @@ $(document).foundation();
                     overlay.removeClass('body-overlay');
                 }
             });
-
 
 
 
