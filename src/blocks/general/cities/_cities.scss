@@ -26,7 +26,7 @@
 
 .cities-main-window-inner-search input {
   font-size: 1.2rem;
-  color: #333;
+  color: $black;
   width: 100%;
 }
 
@@ -36,7 +36,7 @@
 
 .cities-main-window-inner-title {
   font-size: 1.4rem;
-  color: #333;
+  color: $black;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
@@ -45,6 +45,10 @@
   cursor: pointer;
   color: white;
   margin-right: 0.5rem;
+
+  &_black {
+    color: $black;
+  }
 }
 
 .cities-general {
@@ -63,7 +67,7 @@
   top: 3rem;
   width: rem-calc(500);
   padding: 2rem;
-  background-color: #fff;
+  background-color: $white;
   box-sizing: border-box;
   cursor: auto;
   min-width: 19rem;
@@ -88,7 +92,7 @@
 
 .cities-main-window-inner-title {
   font-size: 1.4rem;
-  color: #333;
+  color: $black;
   font-weight: 400;
   display: inline-block;
 }
@@ -121,7 +125,7 @@
   width: rem-calc(350);
   top: 3rem;
   padding: 2rem;
-  background-color: #fff;
+  background-color: $white;
   box-sizing: border-box;
   cursor: auto;
 }
@@ -132,7 +136,6 @@
   margin-bottom: 1.25rem;
 }
 /* body */
-
 .body-overlay {
   width: 100%;
   position: fixed;
@@ -142,7 +145,7 @@
   bottom: 0;
   display: inline;
   z-index: 101;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba($insta, 0.65);
 }
 
 .cities-container-region .button-cities-group {
