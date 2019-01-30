@@ -1,8 +1,8 @@
-mixin cities(city="Ярославль")
+mixin cities(city="Ярославль",addClass)
   .cities-wrap
     .overlay
     .cities-general
-      span#cities-select.cities-select.cities-select_black
+      span#cities-select.cities-select(class=addClass)
         i.fas.fa-map-marker-alt.fa-lg
         |  #{city}
       #cities-container.cities-container
@@ -13,7 +13,7 @@ mixin cities(city="Ярославль")
             .cities-main-window-inner-search
               input#searchCities(type='text', name='searchCities', placeholder='Начните вводить город')
             #main-window-close.cities-container-close
-              i.fas.fa-times.text-secondary
+              i.fas.fa-times
           #cities-main-window-list.cities-main-window-list.clearfix
             a.cities-main-window-list-link(data-id='168', href='#')  Владимир
             a.cities-main-window-list-link(data-id='174', href='#')  Вологда
