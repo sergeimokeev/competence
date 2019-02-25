@@ -18,7 +18,7 @@ hr {
   margin-left: auto;
   margin-top: rem-calc(0);
   margin-right: auto;
-  @include margin-level(bottom,red);
+
   border-bottom: rem-calc(1) solid $light-gray;
 }
 
@@ -27,7 +27,7 @@ label {
 }
 
 table {
-  @include margin-level(bottom,red);
+
   border-collapse: collapse;
   width: 100%;
   border-radius: rem-calc(4);
@@ -38,7 +38,7 @@ ol,
 p,
 ul {
   line-height: 1.5;
-  @include margin-level(bottom,red);
+
 }
 
 blockquote {
@@ -130,7 +130,7 @@ h6 {
 
 .h1,
 h1 {
-  @include margin-level(bottom,orange);
+
   line-height: 1;
   font-size: 3rem;
 }
@@ -139,35 +139,35 @@ h1 {
 h2 {
   line-height: 1.1;
   font-size: 2.2rem;
-  @include margin-level(bottom,orange);
+
 }
 
 .h3,
 h3 {
   line-height: 1.2;
   font-size: rem-calc(23);
-  @include margin-level(bottom,blue);
+
 }
 
 .h4,
 h4 {
   line-height: 1.3;
   font-size: 1.5rem;
-  @include margin-level(bottom,blue);
+
 }
 
 .h5,
 h5 {
   line-height: 1.4;
   font-size: 1.3rem;
-  @include margin-level(bottom,blue);
+
 }
 
 .h6,
 h6 {
   line-height: 1.5;
   font-size: rem-calc(17);
-  @include margin-level(bottom,blue);
+
 }
 
 h1,

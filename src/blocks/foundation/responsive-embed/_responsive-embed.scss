@@ -1,9 +1,0 @@
-.responsive-embed {
-  @include margin-level(bottom,red);
-  padding-bottom: 56%;
-
-  iframe {
-    width: 100%;
-    border: rem-calc(0);
-  }
-}

@@ -1,27 +1,14 @@
 doctype html
 html.no-js(lang='ru')
-  include components/service/_head
+  include components/_head
   body
-    .grid-container
-      .grid-x.grid-padding-x: .cell
-        .info
-        h1 Cetera Labs Wireframes
-    
-    .grid-container.info
-      .grid-x.grid-padding-x: .cell
-        ul.tabs#product-tabs-1(data-tabs, data-deep-link='true')
-          li.tabs-title.is-active
-            a(href='#corp', aria-selected='true') Корпоративный
-          li.tabs-title
-            a(href='#smi') СМИ
-          li.tabs-title
-            a(href='#shop') Магазин
 
-        .tabs-content(data-tabs-content="product-tabs-1")
-          .tabs-panel.is-active#corp
-            include components/corporate/_sitemap
-          .tabs-panel#smi
-            include components/smi/_sitemap
-          .tabs-panel#shop
-            include components/shop/_sitemap
-    include components/service/_js
+    include ../blocks/cat/_cat
+
+    include components/_header
+
+    block page
+      include ../blocks/carousel-main/_carousel-main
+      include components/_footer
+
+    include components/_js

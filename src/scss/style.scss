@@ -9,6 +9,5 @@ $fontsPath: '../fonts' !default;
 @import "foundation";
 @import "motion-ui";
 @include foundation-everything(true, false);
-@import "../blocks/general/margin-level/_margin-level";
-@import "../blocks/**/*.scss";
+@import "../blocks/*/*.scss";
 @import "common";
