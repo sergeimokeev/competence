@@ -6,23 +6,7 @@ mixin cat(array)
                     li.cat__item
                         a.cat__link(href='#')= title
             else
-                li.cat__item
-                    a.cat__link(href='#') Сайт
-                    include _cat-inside
-                each title in ['Магазин', 'СМИ', 'Реклама', 'Мобильные', 'Обучение']
+                each title in ['О нас', 'Наши услуги', 'Медиа', 'Отзывы', 'Контакты']
                     li.cat__item
                         a.cat__link(href='#')= title
-                li.cat__item
-                    a.cat__link(href='#') Конверсия
-                    include _cat-inside
-                li.cat__item
-                    a.cat__link(href='#') Видеонаблюдение
-    else
-        ul.cat.cat_top
-            - n = 0
-            each title in ['Новинки', 'Бренды', 'Одежда', 'Обувь', 'Аксессуары']
-                li.cat__item
-                    a.cat__link(href='shop-catalog.html' data-toggle-hover-dd='menu_item_' + n)= title
-                - n++
-            li.cat__item
-                a.cat__link(href='#') Распродажа %
+

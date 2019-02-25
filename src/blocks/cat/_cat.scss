@@ -47,7 +47,7 @@
       & .cat__link {
         display: block;
         padding: 0.5rem 1rem;
-        color: $secondary-color;
+        color: #f57365;
 
         &:after {
           display: none;
@@ -76,19 +76,19 @@
   &__link {
     @include disable-mouse-outline;
     display: block;
-    color: $secondary-color;
+    color: #f57365;
     position: relative;
 
     &:active,
     &:focus,
     &:hover {
-      color: $secondary-color;
+      color: #f57365;
     }
 
     &:after {
       content: ' ';
       display: block;
-      border-bottom: rem-calc(2) solid $warning-color;
+      border-bottom: rem-calc(2) solid #f57365;
       width: 0;
       position: absolute;
       left: 0;
