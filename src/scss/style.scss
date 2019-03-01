@@ -11,3 +11,4 @@ $fontsPath: '../fonts' !default;
 @include foundation-everything(true, false);
 @import "../blocks/*/*.scss";
 @import "common";
+@import "button";
