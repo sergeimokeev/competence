@@ -4,13 +4,13 @@ a {
   -ms-transition: color 300ms ease-in-out;
   -o-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
-  color: scale-color($secondary-color, $lightness: 20%);
+  color: scale-color(#f57365, $lightness: 20%);
   text-decoration-skip-ink: none;
 
   &:active,
   &:focus,
   &:hover {
-    color: scale-color($secondary-color, $lightness: -30%);
+    color: scale-color(#f57365, $lightness: -30%);
   }
 }
 

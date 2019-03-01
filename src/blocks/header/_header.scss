@@ -50,12 +50,37 @@
   }
 
   &__tel {
-    color: #3f3f3f;
+    color: #000000;
     font-size: 18px;
     font-weight: bold;
   }
 
-  &__logo {
+  &__search{
+    padding-top: rem-calc(40);
+  }
+
+  &__search-input{
+    border-radius: rem-calc(42) !important;
+    padding: rem-calc(22) rem-calc(37) rem-calc(22) rem-calc(23);
+    box-shadow: inset 1px 1px 1px rgba(63, 63, 63, 0.1) !important;
+    border: 1px solid $medium-gray;
+    width: 220px;
+    height: 44px;
+    margin-left: 8px;
+  }
+
+  &__search-button {
+    display: inline-block;
+    position: relative;
+    top: rem-calc(-50);
+    right: rem-calc(-185);
+    width: rem-calc(16);
+    height: rem-calc(20);
+  }
+
+
+
+    &__logo {
     max-width: rem-calc(210);
   }
   @include breakpoint(large down) {
