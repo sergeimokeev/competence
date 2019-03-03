@@ -5,88 +5,107 @@
   padding-top: rem-calc(48);
   padding-bottom: rem-calc(24);
   color: $white;
-  background: #f7f7f7;
+  background: $main-color;
+  border-top: 1px solid $medium-gray;
 
-  &__head {
-    color: $white;
-    font-size: rem-calc(17);
-    display: block;
-    font-weight: 300;
-
-  }
-
-  &__shop {
-    color: $white;
-    display: block;
-    font-weight: 300;
-
-    line-height: 1.5;
-    font-size: rem-calc(17);
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: $light-gray;
-    }
-  }
-
-  &__bottom {
-    font-size: rem-calc(13);
-    text-align: center;
-  }
-
-  &__soc {
-
-    font-size: rem-calc(26);
-    text-align: center;
-  }
-
-  &__link {
-    font-weight: $global-weight-bold;
-    display: block;
-    margin-bottom: rem-calc(7);
-    color: $tertiary;
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: $white;
-    }
-  }
-
-  &__pay {
-    height: rem-calc(24);
-  }
-
-  &__cetera {
-    margin-right: rem-calc(18);
-  }
-
-  &__labs {
-    margin-right: rem-calc(18);
-    color: $tertiary;
-    display: inline-block;
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: $white;
-    }
-
-    &_right {
-      margin-right: rem-calc(0);
-    }
-  }
-
-  &__nav {
-    margin-bottom: rem-calc(12);
+  &__info {
+    align-self: center;
+    text-align: left;
   }
 
   &__logo {
-    width: rem-calc(140);
+    max-width: rem-calc(210);
   }
 
-  &__block {
+  &__copyright {
+    color: #c8c8c8;
+    margin-top: rem-calc(50);
+    font-size: 14px;
+    letter-spacing: 0;
+  }
 
+  &__design-by {
+    color: #b6b6b6;
+    text-transform: uppercase;
+    margin-top: rem-calc(50);
+  }
+
+  &__menu-bottom {
+    margin-top: rem-calc(20);
+  }
+
+
+  li {
+    display: inline-block;
+    margin-right: rem-calc(35);
+  }
+
+  a {
+    text-transform: uppercase;
+    color: $insta;
+    font-weight: bold;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+      color: $insta;
+    }
+  }
+
+  a.current {
+    text-decoration: underline;
+  }
+
+  &__cetera-name {
+    color: $insta;
+    letter-spacing: 3px;
+    margin-top: rem-calc(50);
+    font-size: 1rem;
+
+    a {
+      text-transform: none;
+      color: $insta;
+      font-weight: bold;
+
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+        color: $ok;
+      }
+    }
+  }
+
+  &__email {
+    text-align: center;
+
+    a {
+      color: $secondary-color;
+      font-size: rem-calc(16);
+      text-transform: none;
+      padding-left: rem-calc(20);
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+        color: scale-color($secondary-color, $lightness: -15%);
+      }
+    }
+  }
+
+  &__tel {
+    margin-top: rem-calc(35);
+    margin-bottom: rem-calc(15);
+    a {
+      color: $insta;
+      font-size: rem-calc(18);
+      font-weight: bold;
+      font-family: "Lato", sans-serif;
+      &:hover {
+        color: scale-color($ok, $lightness: -15%);
+        text-decoration: none;
+      }
+    }
   }
 }

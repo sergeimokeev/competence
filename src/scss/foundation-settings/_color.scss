@@ -1,12 +1,10 @@
-@import 'util/util';
-
 $foundation-palette: (
-  primary: #27bab5,
-  secondary: #634f8e,
+  primary: #f57365,
+  secondary: #f57365,
   tertiary: scale-color(#47616e, $lightness: 50%),
   quaternary: #48626F,
   success: scale-color(#27bab5, $lightness: -15%),
-  warning: #EEB301,
+  warning: #f57365,
   alert: #cc4b37,
   main: #fafafa,
   sky: #f2f2f2,
