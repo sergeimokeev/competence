@@ -26,14 +26,14 @@
     &:focus,
     &:hover {
       color: $white;
-      border-color: scale-color(#f57365, $lightness: 10%);
+      border-color: scale-color(#f57365, $lightness: 15%);
     }
   }
 
   &:active,
   &:focus,
   &:hover {
-    background: scale-color(#f57365, $lightness: 10%);
+    background: scale-color(#f57365, $lightness: 15%);
   }
 
   &_input {
