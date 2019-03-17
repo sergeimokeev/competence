@@ -7,6 +7,10 @@
   font-family: 'Lato', sans-serif;
   font-weight: bold;
 
+  &.button-filled{
+  background: #f57365;
+  }
+
   &.button-outline {
     background: transparent;
     border: 2px solid #000;
@@ -22,14 +26,14 @@
     &:focus,
     &:hover {
       color: $white;
-      border-color: scale-color(#f57365, $lightness: -15%);
+      border-color: scale-color(#f57365, $lightness: 15%);
     }
   }
 
   &:active,
   &:focus,
   &:hover {
-    background: scale-color(#f57365, $lightness: -15%);
+    background: scale-color(#f57365, $lightness: 15%);
   }
 
   &_input {
