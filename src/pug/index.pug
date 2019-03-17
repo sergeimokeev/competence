@@ -11,7 +11,14 @@ html.no-js(lang='ru')
       include ../blocks/carousel-main/_carousel-main
       include ../blocks/breadcrumbs/_breadcrumbs
       include ../blocks/advantages/_advantages
-      include ../blocks/recipes/_recipes
-      include components/_footer
+      .grid-container: .grid-x.grid-padding-x
+          .small-24.large-6.cell
+           include ../blocks/recipes/_recipes
+          .small-24.large-auto.cell
+           include ../blocks/text-main/_text-main.pug
+           include ../blocks/callback/_callback
+           include ../blocks/news/_news
+
+    include components/_footer
 
     include components/_js
