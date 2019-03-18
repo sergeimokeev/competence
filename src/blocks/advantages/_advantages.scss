@@ -5,7 +5,7 @@
   border-radius: $global-radius;
 
   &__title {
-    margin-bottom: rem-calc(10);
+    margin-bottom: 0.7rem;
     &::after {
       margin: 0 auto;
     }
@@ -22,7 +22,7 @@
     font-weight: 300;
     letter-spacing: 0.05px;
     line-height: 1.6;
-    margin-bottom: rem-calc(21);
+    margin-bottom: 1.5rem;
     text-align: center;
   }
 }
