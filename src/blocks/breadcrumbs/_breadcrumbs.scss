@@ -4,10 +4,10 @@
 
 
   li {
-    font-family: "Lato", sans-serif;
+    font-weight: bold;
     font-size: 16px;
     text-transform: none;
-    font-weight: bold;
+    font-family: "Lato", sans-serif;
   }
 
   a {
@@ -15,10 +15,10 @@
   }
 
   & li:not(:last-child)::after {
+    color: $black;
     position: relative;
     margin: 0 rem-calc(10);
     opacity: 1;
     content: "/";
-    color: $black;
   }
 }

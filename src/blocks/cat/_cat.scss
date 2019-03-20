@@ -48,6 +48,7 @@
         display: block;
         padding: 0.5rem 1rem;
         color: #f57365;
+        font-family: 'Lato', sans-serif;
 
         &:after {
           display: none;
@@ -78,6 +79,7 @@
     display: block;
     color: #f57365;
     position: relative;
+    font-family: 'Lato', sans-serif;
 
     &:active,
     &:focus,

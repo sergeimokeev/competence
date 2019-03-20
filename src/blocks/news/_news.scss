@@ -1,0 +1,26 @@
+.news{
+  &:nth-child(0), :nth-child(1) {
+    margin-right:0.525rem;
+  }
+  &__date{
+    color:#a5a5a5;
+    font-family: 'Lato', sans-serif;
+  }
+  &__title{
+    color:$black;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+  }
+  &__more {
+    color: $black;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+  }
+  &__text {
+    color:#222222;
+    padding-right:10px;
+    font-family: 'Lato', sans-serif;
+  }
+}

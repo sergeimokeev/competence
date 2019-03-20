@@ -1,0 +1,45 @@
+.text-main {
+  p {
+    color: #000;
+    font-family: "Lato", san-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  ul {
+    margin-left: 1.25rem;
+  }
+  li {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Lato", san-serif;
+  }
+  table{
+    border: 3px solid $white;
+    border-collapse: inherit !important;
+  }
+  th{
+    padding: 15px 25px 15px 25px;
+    background-color: #ebebeb;
+  }
+  td {
+    color: #000;
+    font-family: "Lato", san-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 15px 25px 15px 25px;
+    background-color: #f3f3f3;
+
+  }
+  td:first-child, th:first-child{
+    width:38%
+  }
+
+  td:first-child{
+    letter-spacing: 1px;
+  }
+
+  td:not(:first-child) {
+    font-weight: bold;
+  }
+}

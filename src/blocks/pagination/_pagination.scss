@@ -1,0 +1,20 @@
+.pagination {
+  text-align: center;
+  color: $secondary-color;
+  a {
+    color: $secondary-color;
+    border-radius:50%;
+
+  }
+
+  li{
+    border-radius:50%;
+
+  }
+
+  .current {
+    border-radius:50%;
+    background: #f1f1f1;
+    color: #a5a5a5;
+  }
+}

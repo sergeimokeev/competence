@@ -1,5 +1,7 @@
 .recipes {
-
+ ul{
+   margin-left: 0;
+ }
   &__title {
     &:after {
       display: none;

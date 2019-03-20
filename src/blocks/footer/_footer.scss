@@ -1,7 +1,6 @@
 .footer {
-  //begin sticky footer
+  font-family: 'Lato', sans-serif !important;
   margin-top: auto;
-  //end sticky footer
   padding-top: rem-calc(48);
   padding-bottom: rem-calc(24);
   color: $white;
@@ -32,18 +31,23 @@
 
   &__menu-bottom {
     margin-top: rem-calc(20);
+
   }
 
 
   li {
     display: inline-block;
     margin-right: rem-calc(35);
+    font-family: 'Lato', sans-serif !important;
+
   }
 
   a {
     text-transform: uppercase;
     color: $insta;
     font-weight: bold;
+    font-family: 'Lato', sans-serif !important;
+
 
     &:hover,
     &:active,
