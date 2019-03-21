@@ -1,12 +1,21 @@
 .pagination {
   text-align: center;
   color: $secondary-color;
+  padding:3rem;
   a {
     color: $secondary-color;
     border-radius:50%;
     padding: .1875rem .7rem !important;
-
+    text-decoration: none;
+    font-family: "Lato", san-serif;
+    font-size: 16px;
+    font-weight: bold;
   }
+
+   li:nth-child(3), li:nth-child(4), li:nth-child(5), li:nth-child(6) {
+    text-decoration: underline;
+  }
+
 
   li{
     border-radius:50%;
@@ -18,5 +27,8 @@
     background: #f1f1f1;
     color: #a5a5a5;
     padding: 0;
+    cursor: default;
+    pointer-events: none;
+    text-decoration: none;
   }
 }
