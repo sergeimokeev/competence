@@ -8,6 +8,8 @@
   position: relative;
   z-index: 100;
   font-weight: $global-weight-bold;
+  font-family: 'Lato', sans-serif;
+
   &_top {
     margin-top: rem-calc(5);
   }
@@ -16,6 +18,8 @@
     padding-right: rem-calc(30);
     @include disable-mouse-outline;
     position: relative;
+    font-family: 'Lato', sans-serif;
+
 
     &:last-child {
       padding-right: rem-calc(0);
@@ -33,6 +37,8 @@
       width: 13rem;
       background: scale-color($main-color, $lightness: 50%);
       border-bottom: rem-calc(2) solid $warning-color;
+      font-family: 'Lato', sans-serif;
+
 
       & .cat {
         left: 100%;
@@ -43,6 +49,8 @@
     & .cat__item {
       padding: 0;
       width: 100%;
+      font-family: 'Lato', sans-serif;
+
 
       & .cat__link {
         display: block;

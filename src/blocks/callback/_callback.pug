@@ -2,10 +2,11 @@ h2 Форма обратной связи
 form
     .grid-x.grid-padding-x.grid-padding-y
         .small-24.medium-12.large-12.cell.callback
-            input.callback__input(type="text" placeholder="ваше имя" required)
-            span(id="1") *
+            input.callback__input(id="input1" type="text" placeholder="ваше имя" required)
+            span(id="span1") *
         .small-24.medium-12.large-12.cell.callback
-            input.callback__input(type="tel" placeholder="+7 (XXX) XXX XX XX" required)
+            input.callback__input(id="input2" type="tel" placeholder="+7 (XXX) XXX XX XX" required)
+            span(id="span2") *
         .small-24.medium-12.large-12.cell.callback
             input.callback__input(type="text" id="mail" placeholder="email" required)
         .small-24.medium-12.large-12.cell.callback
