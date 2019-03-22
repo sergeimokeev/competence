@@ -2,7 +2,21 @@
 
   &__image {
     display: inline-block;
-    width: 20%;
     background-size: cover;
+    width:100%
+  }
+
+  &__recipes {
+    width: 30px;
+    position: relative;
+    bottom: 150px;
+    left: 150px;
+
+  }
+  &__category{
+    width: 30px;
+    position: relative;
+    bottom: 150px;
+    left: 150px;
   }
 }
