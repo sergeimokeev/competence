@@ -1,10 +1,16 @@
 .news{
   &:nth-child(0), :nth-child(1) {
-    margin-right:0.525rem;
+    margin-right:0.625rem;
   }
   &__date{
     color:#a5a5a5;
     font-family: 'Lato', sans-serif;
+    margin-top: rem-calc(7);
+    margin-bottom: rem-calc(4);
+    font-size:rem-calc(14)
+  }
+  &__image {
+    padding-bottom: rem-calc(15)
   }
   &__title{
     color:$black;
@@ -20,13 +26,15 @@
   }
   &__text {
     color:#222222;
-    padding-right:10px;
+    padding-right:rem-calc(13);
+    padding-top: rem-calc(15);
+    line-height: 1.2rem;
     font-family: 'Lato', sans-serif;
   }
   &__button {
     padding: 0.8rem 2.8125rem 0.8rem;;
     margin-top: 2.7rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.4rem;
     font-size: 18px;
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;

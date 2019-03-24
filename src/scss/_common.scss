@@ -190,8 +190,8 @@ h2 {
     content: '';
     position: absolute;
     background: $warning-color;
-    height: 1px;
-    width: 6rem;
+    height: rem-calc(1);
+    width: rem-calc(88);
     left: 0;
     right: 0;
     bottom: -0.4rem;
