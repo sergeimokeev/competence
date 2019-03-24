@@ -1,6 +1,7 @@
 .recipes {
  ul{
    margin-left: 0;
+   font-size: rem-calc(15);
  }
   &__title {
     &:after {
@@ -16,11 +17,10 @@
 
   &__section {
     display: block;
-    padding: 15px 0;
+    padding: 14px 0;
     a {
       color: #000;
       font-family: "Lato", sans-serif;
-      font-size: rem-calc(16px);
       font-weight: bold;
     }
 

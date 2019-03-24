@@ -1,14 +1,23 @@
 .callback {
-  height: 75px;
+  height: rem-calc(75);
+  margin-right:rem-calc(8);
 
+  &__form{
+    padding-top:rem-calc(25);
+    padding-bottom:rem-calc(49)
+  }
   &__input {
-    height: 50px;
+    height: rem-calc(54);
     box-shadow: inset 1px 1px 0.5px 0.5px #d7d7d7;
     text-transform: uppercase;
     font-size: 1.3rem;
+    width:rem-calc(400);
 
     &::placeholder {
       color: $black;
+      padding-left: rem-calc(10);
+      font-size: 1.1rem;
+      letter-spacing: 0.04rem;
     }
   }
 
@@ -28,4 +37,3 @@
     width: 1px
   }
 }
-

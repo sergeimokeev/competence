@@ -1,7 +1,10 @@
 body {
   font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
 }
-
+p {
+  margin-bottom: rem-calc(8);
+}
 a {
   -webkit-transition: color 300ms ease-in-out;
   -moz-transition: color 300ms ease-in-out;
@@ -145,7 +148,7 @@ h1 {
 .h2,
 h2 {
   line-height: 1.1;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: bold;
 
@@ -191,7 +194,7 @@ h2 {
     width: 6rem;
     left: 0;
     right: 0;
-    bottom: -0.5rem;
+    bottom: -0.4rem;
     margin: 0;
   }
 }
@@ -244,4 +247,7 @@ h2.text-center {
   h6 {
     font-size: 1.1rem;
   }
+}
+.padding-main {
+  margin-top: rem-calc(60);
 }

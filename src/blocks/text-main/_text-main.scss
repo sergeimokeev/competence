@@ -17,6 +17,7 @@
   table{
     border: 3px solid $white;
     border-collapse: inherit !important;
+    padding-bottom: rem-calc(68);
   }
   th{
     padding: 15px 25px 15px 25px;
@@ -27,12 +28,12 @@
     font-family: "Lato", sans-serif;
     font-size: 16px;
     font-weight: 300;
-    padding: 15px 25px 15px 25px;
+    padding: 8px 25px 10px 25px;
     background-color: #f3f3f3;
 
   }
   td:first-child, th:first-child{
-    width:38%
+    width:40%
   }
 
   td:first-child{
@@ -41,5 +42,6 @@
 
   td:not(:first-child) {
     font-weight: bold;
+    padding: 8px 25px 10px 25px
   }
 }
