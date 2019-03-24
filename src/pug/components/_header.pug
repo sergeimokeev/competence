@@ -2,14 +2,14 @@ header.header
   .grid-container: .grid-x.grid-padding-x
     .cell.large-2.align-self-middle
       a(href='#' title='')
-        img(src='./images/logo.png',  alt='logo').header__logo
-    .large-11.large-offset-1.cell.align-self-middle#menu
+        img.header__logo(src='./images/logo.png',  alt='logo')
+    .large-12.large-offset-1.cell.align-self-middle#menu
       +cat()
-    .large-5.large-offset-1.cell.align-self-middle.header__search
+    .large-5.cell.align-self-middle.header__search
       form
         input.header__search-input(type="text")
         button.header__search-button(type="submit")
           i.fa.fa-search
-    .large-4.cell.align-self-middle
+    .large-4.cell.align-self-middle(style="padding-bottom:18px")
      a.header__tel(href='#' title='Позвоните нам') +7 (900) 55 68 99
 

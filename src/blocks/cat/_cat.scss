@@ -3,7 +3,8 @@
   flex-flow: row wrap;
   margin: 0;
   list-style-type: none;
-  padding: 0;
+  padding-bottom: rem-calc(18);
+  padding-left: rem-calc(30);
   text-transform: uppercase;
   position: relative;
   z-index: 100;
@@ -15,7 +16,7 @@
   }
 
   &__item {
-    padding-right: rem-calc(30);
+    padding-right: rem-calc(40);
     @include disable-mouse-outline;
     position: relative;
     font-family: 'Lato', sans-serif;

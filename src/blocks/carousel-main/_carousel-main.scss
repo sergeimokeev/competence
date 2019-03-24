@@ -27,7 +27,9 @@
       font-weight: bold;
       font-style: italic;
       text-transform: none;
-      margin-bottom: rem-calc(27px);
+      padding-top:2.4375rem;
+      letter-spacing: 0.05rem;
+      margin-bottom: 0 !important;
       &:after {
         display: none;
       }
@@ -40,12 +42,13 @@
         font-weight: bold;
         text-transform: uppercase;
         font-style: normal;
-        margin-bottom: rem-calc(41px);
       }
     }
 
     .button {
       margin-bottom: rem-calc(41px);
+      width: 17.5rem;
+      padding: rem-calc(23) 2.8125rem 1.25rem !important;
     }
 
     &:first-child {

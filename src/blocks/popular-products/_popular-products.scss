@@ -1,22 +1,21 @@
 .popular-products {
 
+  width:20%;
+
   &__image {
-    display: inline-block;
     background-size: cover;
-    width:100%
+    width:100%;
+    height:100%;
   }
 
   &__recipes {
-    width: 30px;
     position: relative;
-    bottom: 150px;
-    left: 150px;
-
+    top: 100px;
+    left:150px;
   }
   &__category{
-    width: 30px;
     position: relative;
-    bottom: 150px;
-    left: 150px;
+    top: 100px;
+    left:150px;
   }
 }
