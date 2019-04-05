@@ -1,0 +1,129 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: 300;
+  color: inherit;
+  margin-bottom: rem-calc(21);
+  text-rendering: optimizeLegibility;
+}
+
+.h1,
+h1 {
+  margin-bottom: rem-calc(0);
+  line-height: 1;
+  font-size: 3rem;
+}
+
+.h2,
+h2 {
+  line-height: 1.1;
+  font-size: rem-calc(18px);
+  font-family: 'Lato', sans-serif;
+  color: $black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.h3,
+h3 {
+  line-height: 1.2;
+  font-size: rem-calc(18px);
+  font-family: 'Lato', sans-serif;
+  color: $black;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.h4,
+h4 {
+  line-height: 1.3;
+  font-size: 1.5rem;
+}
+
+.h5,
+h5 {
+  line-height: 1.4;
+  font-size: 1.3rem;
+  margin-bottom: rem-calc(8);
+}
+
+.h6,
+h6 {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  margin-bottom: rem-calc(8);
+}
+
+h1,
+h2 {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    background: $warning-color;
+    height: rem-calc(1);
+    width: 6rem;
+    left: 0;
+    right: 0;
+    bottom: -0.5rem;
+  }
+}
+@mixin position-center() {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+h1.large-text-center,
+h1.medium-text-center,
+h1.text-center,
+h2.large-text-center,
+h2.medium-text-center,
+h2.text-center {
+  &:after {
+    @include position-center();
+  }
+}
+@include breakpoint(small only) {
+  .h1,
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .h2,
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .h3,
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .h4,
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .h5,
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  .h6,
+  h6 {
+    font-size: 1.1rem;
+  }
+}

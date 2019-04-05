@@ -1,0 +1,41 @@
+$levels: (
+  //         640         960         1200         1440         1920         1920+
+  blue: (rem-calc(4),rem-calc(4),rem-calc(4),rem-calc(4),rem-calc(12),rem-calc(12),),
+  /*2xs*/
+  red: (rem-calc(8),rem-calc(16),rem-calc(16),rem-calc(16),rem-calc(24),rem-calc(24),),
+  /*xs*/
+  orange: (rem-calc(12),rem-calc(24),rem-calc(24),rem-calc(24),rem-calc(32),rem-calc(32),),
+  /*s*/
+  yellow: (rem-calc(16),rem-calc(32),rem-calc(32),rem-calc(32),rem-calc(40),rem-calc(40),),
+  /*m*/
+  green: (rem-calc(20),rem-calc(40),rem-calc(40),rem-calc(48),rem-calc(56),rem-calc(56),),
+  /*l*/
+  cyan: (rem-calc(28),rem-calc(48),rem-calc(48),rem-calc(64),rem-calc(80),rem-calc(80),),
+  /*xl*/
+  violet: (rem-calc(36),rem-calc(72),rem-calc(72),rem-calc(96),rem-calc(120),rem-calc(120),),
+  /*2xl*/
+  pink: (rem-calc(56),rem-calc(96),rem-calc(96),rem-calc(120),rem-calc(152),rem-calc(152),),
+  /*3xl*/
+);
+
+
+@mixin margin-level($direction,$type) {
+  $last-num: 6;
+  $margin-array: map-get($levels,$type);
+  margin-#{$direction}: nth($margin-array, $last-num);
+  @media only screen and (max-width: map_get($breakpoints, 'xxxlarge')) {
+    margin-#{$direction}: nth($margin-array, 5);
+  }
+  @media only screen and (max-width: map_get($breakpoints, 'xxlarge')) {
+    margin-#{$direction}: nth($margin-array,4);
+  }
+  @media only screen and (max-width: map_get($breakpoints, 'xlarge')) {
+    margin-#{$direction}: nth($margin-array, 3);
+  }
+  @media only screen and (max-width: map_get($breakpoints, 'large')) {
+    margin-#{$direction}: nth($margin-array, 2);
+  }
+  @media only screen and (max-width: map_get($breakpoints, 'medium')) {
+    margin-#{$direction}: nth($margin-array, 1);
+  }
+}

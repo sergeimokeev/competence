@@ -1,0 +1,122 @@
+.menu-base {
+  display: block;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 100;
+  font-weight: 500;
+}
+
+.menu-base__item {
+  display: block;
+  @include disable-mouse-outline;
+  padding: rem-calc(5 15 5 0);
+  position: relative;
+
+  & .menu-base {
+    text-transform: none;
+    font-weight: 400;
+    display: none;
+    position: absolute;
+    margin: rem-calc(-3 0 0) -1rem;
+    padding: 0.5rem 0;
+    top: 100%;
+    left: 0;
+    width: 13rem;
+    background: scale-color($main-color, $lightness: 50%);
+    border-bottom: rem-calc(2) solid $warning-color;
+
+    & .menu-base {
+      left: 100%;
+      top: 0;
+    }
+  }
+
+  & .menu-base__item {
+    padding: 0;
+    width: 100%;
+
+    & .menu-base__link {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: $secondary-color;
+      &:after {
+        display: none;
+      }
+      &:hover {
+        color: $secondary-color;
+        background: scale-color($main-color, $lightness: -5%);
+      }
+    }
+  }
+}
+
+.menu-base__link {
+  @include disable-mouse-outline;
+  display: block;
+  color: $secondary-color;
+  position: relative;
+
+  &:hover, &:focus {
+    color: $secondary-color;
+  }
+
+  &:after {
+    content: ' ';
+    display: block;
+    border-bottom: rem-calc(2) solid $warning-color;
+    width: 0;
+    position: absolute;
+    left: 0;
+
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -ms-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+  }
+}
+
+@include breakpoint(medium up) {
+  .menu-base {
+    text-align: center;
+  }
+  .menu-base__item {
+    display: inline-block;
+  }
+  .menu-base__link {
+    display: inline-block;
+  }
+}
+
+@include breakpoint(large up) {
+  .menu-base {
+    text-align: left;
+  }
+  .menu-base__item {
+    &:hover > .menu-base {
+      display: block;
+    }
+    &:hover > .menu-base__link:after {
+      width: 100%;
+    }
+    & .menu-base .menu-base__item:hover > .menu-base {
+      display: none;
+    }
+  }
+}
+
+@include breakpoint(xlarge up) {
+  .menu-base__item {
+    padding-right: rem-calc(30);
+    &:last-child {
+      padding-right: 0;
+    }
+    & .menu-base .menu-base__item:hover > .menu-base {
+      display: block;
+    }
+  }
+}
+

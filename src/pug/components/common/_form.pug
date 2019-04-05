@@ -1,0 +1,20 @@
+h2 Форма обратной связи
+form.webform: .grid-x.grid-padding-x.grid-padding-y.padding-bottom-9
+    .small-24.medium-12.cell.webform__item.webform__item-required
+        input.webform__input(type='text', required, placeholder="Ваше имя")
+        .webform__placeholder
+            | Ваше имя
+    .small-24.medium-12.cell.webform__item.webform__item-required
+        input.webform__input(type='text', required, placeholder="+7 (ххх) ххх хх хх")
+        .webform__placeholder
+            | +7 (ххх) ххх хх хх
+    .small-24.medium-12.cell.webform__item
+        input.webform__input(type='text', placeholder="Email")
+        .webform__placeholder
+            | Email
+    .small-24.medium-12.cell.webform__item
+        input.webform__input(type='text', placeholder="Тема")
+        .webform__placeholder
+            | Тема
+    .small-24.medium-6.cell
+        button.margin-top-4.button.button_expanded(type='submit') Отправить

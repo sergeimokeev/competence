@@ -1,0 +1,29 @@
+.services {
+  padding: rem-calc(42 21 21);
+  text-align: center;
+  background: $main-color;
+  border-radius: $global-radius;
+  @include margin-level(bottom,red);
+
+  &__title {
+    margin-bottom: rem-calc(10);
+    &::after {
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    max-width: rem-calc(98);
+  }
+
+  &__block {
+    color: $black;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.05px;
+    line-height: 1.6;
+    margin-bottom: rem-calc(21);
+    text-align: center;
+  }
+}

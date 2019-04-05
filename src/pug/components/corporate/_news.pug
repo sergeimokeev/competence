@@ -1,0 +1,11 @@
+include ../mixins/_mixin-news-tile
+.grid-container: .grid-x.grid-padding-x
+    .small-24.medium-16.cell
+        h2 Новости
+.grid-container: .grid-x.grid-padding-x(data-equalizer='news', data-equalize-by-row='true')
+    +newsTile('Заголовок новости', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '05.09.2018', 'news', './i/1.png')
+    +newsTile('Заголовок новости', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '08.09.2018', 'news', './i/2.png')
+    +newsTile('Заголовок новости', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '12.09.2018', 'news', './i/3.png')
+.grid-container: .grid-x.grid-padding-x
+    .small-24.text-center.cell
+        a.button.project__button.button-outline(href="#") Все новости

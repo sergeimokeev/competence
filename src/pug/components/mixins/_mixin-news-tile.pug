@@ -1,0 +1,21 @@
+mixin newsTile(title, block, data, dataEq, img)
+  .cell.news.small-24.medium-8
+    .grid-x
+      .cell
+        .news__date.margin-bottom-2= data
+      .cell.small-5.medium-24
+        img(src=img, alt='Новый сайт').news__img
+      .cell.small-18.medium-24.small-offset-1.medium-offset-0
+        h5.news__title(data-equalizer-watch=dataEq)
+          if title
+            a(href='#')= title
+          else
+            a(href='#') Приняли на комплексное обслуживание новый сайт
+    .news__text
+      if block
+        block
+      else
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    a.news__link(href='#') 
+      span Подробнее
+      span  »

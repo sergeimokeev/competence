@@ -1,16 +1,12 @@
 .button {
   padding: rem-calc(18px 45px 20px);
-  margin-top: 0.3125rem;
+  margin-top: rem-calc(21);
   margin-bottom: rem-calc(41);
   font-size: rem-calc(18);
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
-
-  &.button-filled{
-  background: #f57365;
-  }
-
+  
   &.button-outline {
     background: transparent;
     border: 2px solid #000;
@@ -26,14 +22,14 @@
     &:focus,
     &:hover {
       color: $white;
-      border-color: scale-color(#f57365, $lightness: 15%);
+      border-color: scale-color($primary-color, $lightness: -15%);
     }
   }
 
   &:active,
   &:focus,
   &:hover {
-    background: scale-color(#f57365, $lightness: 15%);
+    background: scale-color($primary-color, $lightness: -15%);
   }
 
   &_input {

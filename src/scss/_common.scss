@@ -1,74 +1,63 @@
 body {
-  font-family: 'Lato', sans-serif;
-  overflow-x: hidden;
+    color: $black;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
 }
-p {
-  margin-bottom: rem-calc(8);
-}
+
 a {
   -webkit-transition: color 300ms ease-in-out;
   -moz-transition: color 300ms ease-in-out;
   -ms-transition: color 300ms ease-in-out;
   -o-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
-  color: scale-color(#f57365, $lightness: 20%);
-  text-decoration-skip-ink: none;
+  color: scale-color($secondary-color, $lightness: 20%);
 
   &:active,
   &:focus,
   &:hover {
-    color: scale-color(#f57365, $lightness: 5%);
+    color: scale-color($secondary-color, $lightness: -30%);
   }
 }
 
-hr {
-  margin-left: auto;
-  margin-top: rem-calc(0);
-  margin-right: auto;
-
-  border-bottom: rem-calc(1) solid $light-gray;
+li {
+  line-height: 1.8;
 }
 
+hr {
+  margin: 0 auto;
+  border-bottom: rem-calc(1) solid $light-gray;
+}
 label {
   line-height: 1.5;
 }
-
 table {
-
   border-collapse: collapse;
-  width: 100%;
   border-radius: rem-calc(4);
-  margin-bottom: 1.5rem;
+  margin-bottom: 6 * $global-margin;
+  width: 100%;
+  tr {
+    border-bottom: 1px solid $white;
+  }
 }
 
 dl,
-ol{
-  line-height: 1.5;
-  margin-left:1.25rem !important;
-}
-
-ul{
-  line-height: 1.9;
-
-}
-
-blockquote {
-  border-left: rem-calc(2) solid $primary-color;
-}
-
-blockquote,
-blockquote p {
-  padding: rem-calc(0 14);
+ol,
+p,
+ul {
+  font-weight: 300;
+  margin-bottom: rem-calc(21);
 }
 
 tfoot,
 thead {
-  background: $sky;
-  border: rem-calc(1) solid $sky;
+  background: #ebebeb;
 
   td,
   th {
-    font-weight: $global-weight-bold;
+    font-weight: bold;
+    padding: rem-calc(15px 10px 17px 28px);
   }
 
   tr {
@@ -78,176 +67,25 @@ thead {
 
 tbody {
   background: $white;
-  border: rem-calc(1) solid $sky;
 
   td,
   th {
-    padding: rem-calc(8 10);
+    padding: rem-calc(15px 10px 17px 28px);
+
+  }
+  td:first-child {
+    width: 38%;
+    font-weight: 300;
+  }
+  td:not(:first-child) {
+    font-weight: bold;
   }
 
-  tr:nth-child(even) {
-    background: $sky;
-    border-bottom: rem-calc(0);
+  tr {
+    background: #f3f3f3;
   }
 }
 
-[type='text'],
-[type='password'],
-[type='date'],
-[type='datetime'],
-[type='datetime-local'],
-[type='month'],
-[type='week'],
-[type='email'],
-[type='number'],
-[type='search'],
-[type='tel'],
-[type='time'],
-[type='url'],
-[type='color'],
-textarea {
-
-  &:active,
-  &:focus,
-  &:hover {
-  }
-}
-select {
-    height: $global-input-height;
-    padding-top: rem-calc(0);
-    padding-bottom: rem-calc(0);
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-style: normal;
-  font-weight: 300;
-  color: inherit;
-  text-rendering: optimizeLegibility;
-  margin-bottom:1.5rem;
-  font-family: "Lato", sans-serif;
-}
-
-.h1,
-h1 {
-
-  line-height: 1;
-  font-size: 3rem;
-}
-
-.h2,
-h2 {
-  line-height: 1.1;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: bold;
-
-}
-
-.h3,
-h3 {
-  line-height: 1.2;
-  font-size: rem-calc(23);
-
-}
-
-.h4,
-h4 {
-  line-height: 1.3;
-  font-size: 1.5rem;
-
-}
-
-.h5,
-h5 {
-  line-height: 1.4;
-  font-size: 1.3rem;
-
-}
-
-.h6,
-h6 {
-  line-height: 1.5;
-  font-size: rem-calc(17);
-
-}
-
-h1,
-h2 {
-  position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    background: $warning-color;
-    height: rem-calc(1);
-    width: rem-calc(88);
-    left: 0;
-    right: 0;
-    bottom: -0.4rem;
-    margin: 0;
-  }
-}
-@mixin position-center() {
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
-
-h1.large-text-center,
-h1.medium-text-center,
-h1.text-center,
-h2.large-text-center,
-h2.medium-text-center,
-h2.text-center {
-  &:after {
-    @include position-center();
-  }
-}
-@include breakpoint(small only) {
-  .h1,
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  .h2,
-  h2 {
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    margin-bottom:1.5rem;
-  }
-
-  .h3,
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  .h4,
-  h4 {
-    font-size: 1.3rem;
-  }
-
-  .h5,
-  h5 {
-    font-size: 1.2rem;
-  }
-
-  .h6,
-  h6 {
-    font-size: 1.1rem;
-  }
-}
-.padding-main {
-  margin-top: rem-calc(60);
+form {
+  margin-top: rem-calc(50px);
 }

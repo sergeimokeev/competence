@@ -1,25 +1,22 @@
 doctype html
 html.no-js(lang='ru')
-  include components/_head
-  body
-
-    include ../blocks/cat/_cat
-
-    include components/_header
-
-    block page
-      include ../blocks/carousel-main/_carousel-main
-      include ../blocks/breadcrumbs/_breadcrumbs
-      include ../blocks/advantages/_advantages
-      .grid-container: .grid-x.grid-padding-x.padding-main
-          .small-24.large-6.cell
-           include ../blocks/recipes/_recipes
-          .small-24.large-auto.cell
-           include ../blocks/text-main/_text-main.pug
-           include ../blocks/callback/_callback
-           include ../blocks/news/_news
-      include ../blocks/popular-products/_popular-products
-      include ../blocks/pagination/_pagination
-    include components/_footer
-
-    include components/_js
+    include components/service/_head
+    body
+        include components/corporate/_header
+        block page
+            include components/corporate/_carousel-main
+            include components/common/_breadcrumbs
+            include components/corporate/_services
+            .grid-container: .grid-x.grid-padding-x
+                .small-24.large-6.cell
+                    include components/common/_catalog
+                .small-24.large-auto.cell
+                    include components/common/_text
+                    include components/common/_form
+                    include components/corporate/_news
+            .grid-container: .grid-x.grid-padding-x
+                .small-24.large-6.large-offset-6.cell
+            include components/corporate/_products
+            include components/common/_pagination
+        include components/corporate/_footer
+        include components/service/_js

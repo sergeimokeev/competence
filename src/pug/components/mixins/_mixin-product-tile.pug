@@ -1,0 +1,8 @@
+mixin productTile(title, subtitle, image)
+	.cell.product
+		a(href="#")
+			.product__image(style='background-image: url(' + image + '); background-size: cover;')
+				.product__block
+					.product__subtitle= subtitle
+					.product__title
+						h5= title

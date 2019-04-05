@@ -1,0 +1,85 @@
+.header {
+  background: $main-color;
+
+  &__hamb {
+    display: none;
+    font-size: rem-calc(28);
+    align-self: center;
+    text-align: center;
+    color: $primary-color;
+  }
+
+  &__logo {
+    max-width: rem-calc(210);
+  }
+  @include breakpoint(large down) {
+    &__block {
+      text-align: center;
+    }
+  }
+  @include breakpoint(medium down) {
+    &__info {
+      margin-bottom: rem-calc(10);
+      text-align: center;
+    }
+  }
+  @include breakpoint(small only) {
+    &__span {
+      display: none;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__age {
+      padding-top: rem-calc(0);
+      font-size: rem-calc(16);
+    }
+
+    &__logo {
+      &_mini {
+        width: rem-calc(150);
+      }
+    }
+
+    &__hamb {
+      display: block;
+    }
+  }
+  &__search {
+    background: $main-color;
+    border-color: #f7f7f7;
+    border-radius: 2.78571rem;
+    box-shadow: inset 0.5px 0.5px 3px 0.5px #b7b7b7;
+    
+    form {
+      display: flex;
+      margin: 0;
+      padding: 3px 10px 3px 0;
+    }
+
+    & .header__input {
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        margin-bottom: 0;
+        padding: rem-calc(20 15);
+    }
+
+    & .header__button:focus {
+      outline: none;
+    }
+  }
+
+  &__phone {
+    a {
+      color: $black;
+      font-family: "Lato";
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}

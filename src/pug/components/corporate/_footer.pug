@@ -1,0 +1,19 @@
+footer.footer
+  .grid-container: .grid-x.grid-padding-x
+    .small-24.medium-3.cell.footer__block
+      a(href='#')
+        img(src='./images/logo.png',  alt='logo').footer__logo
+    nav.small-24.medium-11.large-11.cell.align-self-middle.footer__nav
+      each title in ['О нас', 'Наши услуги', 'Медиа', 'Отзывы', 'Контакты']
+        a.footer__link(href='#')= title
+    .small-24.large-5.large-offset-1.cell.align-self-middle.footer__search
+      form
+        input.footer__input(type='text')
+        button.footer__button(type='submit')
+          i.fas.fa-search
+    .small-24.large-4.cell.footer__contacts
+      .footer__phone
+        a(href='#') +7 (900) 55 68 99
+      .footer__email
+        a(href='#') info@test.ru
+  include ../common/_footer-info

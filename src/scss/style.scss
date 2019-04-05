@@ -3,12 +3,57 @@
 $imagesPath: '../images' !default;
 $fontsPath: '../fonts' !default;
 
-@import "foundation-settings/*.scss";
+$textSizes: (tiny: 0.7rem, xsmall: 0.8rem, small: 0.9rem, default: 1rem, large: 1.1rem, xlarge: 1.25rem, xxlarge: 1.5rem, xxxlarge: 2.5rem) !default;
+
+@import "fonts";
+@import "color";
+
+@import "grid";
+@import "mixins/margin-level";
+@import "abide";
+@import "switch";
+@import "slider";
+@import "title-bar";
+@import "top-bar";
+@import "thumbnail";
+@import "media-object";
+@import "off-canvas";
+@import "orbit";
+@import "foundation-settings";
+@import "catalog";
 
 @import "slick.scss";
 @import "foundation";
 @import "motion-ui";
-@include foundation-everything(true, false);
-@import "../blocks/*/*.scss";
-@import "common";
+@include foundation-everything(true, true);
+
+@import "fa-layers";
+@import "pagination";
+@import "sticky";
+@import "slick/slick-theme";
+
+@import "carousel/carousel-main";
+@import "background";
+@import "menu-base";
+@import "menu-top";
+@import "search";
+@import "sticky-footer";
+@import "text";
+@import "text-size";
+@import "postfix";
+@import "badge";
+@import "breadcrumbs";
 @import "button";
+@import "header";
+@import "cat";
+@import "services";
+@import "product";
+@import "news";
+@import "footer";
+@import "step";
+@import "object";
+@import "way";
+@import "webform";
+@import "tile";
+@import "typography";
+@import "common";

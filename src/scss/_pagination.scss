@@ -1,0 +1,37 @@
+.pagination {
+  	@include margin-level(top,cyan);
+  	@include margin-level(bottom,cyan);
+  	text-align: center;
+	color: $secondary-color;
+
+	li:last-child, li:first-child {
+		::before, ::after, a::before, a::after {
+			display: none !important;
+		}
+	}
+
+	li {
+		border-radius: 50%;
+		font-weight: bold;
+		font-size: rem-calc(18px);
+  		font-family: "Lato";
+  		width: 25px;
+  		height: 25px;
+  		padding: 0;
+		a {
+  			color: $secondary-color;
+			border-radius: 50%;
+			width: 25px;
+  			height: 25px;
+  			padding: 0;
+		}
+	}
+	li:not(.current) {
+		text-decoration: underline;
+	}
+  	.current {
+    	background: #f1f1f1;
+    	color: #a5a5a5;
+    	padding: 0;
+  	}
+}

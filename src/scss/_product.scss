@@ -1,0 +1,43 @@
+.products {
+  h2 {
+    margin-bottom: rem-calc(40px);
+  }
+}
+.product {
+  position: relative;
+
+  &__image {
+    background-position: center;
+    transition: background .15s linear;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 75%;
+  }
+
+  &__subtitle {
+    font-size: rem-calc(16px);
+    font-family: "Times New Roman", sans-serif;
+    color: $white;
+    opacity: 0.9;  
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  &__title h5 {
+    display: block;
+    font-size: rem-calc(28px);
+    font-family: "Lato", sans-serif;
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+
+  &__block {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: rem-calc(80);
+    text-align: center; 
+  }
+}
