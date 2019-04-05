@@ -8,6 +8,12 @@
   .grid-x {
     align-items: baseline;
   }
+  &__menu__bottom{
+  }
+  li {
+    display: inline-block;
+    margin-right: rem-calc(25);
+  }
 
   &__bottom {
     font-size: rem-calc(13);

@@ -1,19 +1,27 @@
 footer.footer
   .grid-container: .grid-x.grid-padding-x
-    .small-24.medium-3.cell.footer__block
+    .small-24.medium-3.cell.footer__block.text-center
       a(href='#')
         img(src='./images/logo.png',  alt='logo').footer__logo
-    nav.small-24.medium-11.large-11.cell.align-self-middle.footer__nav
-      each title in ['О нас', 'Наши услуги', 'Медиа', 'Отзывы', 'Контакты']
-        a.footer__link(href='#')= title
-    .small-24.large-5.large-offset-1.cell.align-self-middle.footer__search
+    .small-24.medium-20.large-12.cell.align-self-middle.text-center
+      ul.footer__menu-bottom
+        li
+          a.footer__link.current(href='#' title='') О нас
+        li
+          a.footer__link(href='#' title='') Наши услуги
+        li
+          a.footer__link(href='#' title='') Медиа
+        li
+          a.footer__link(href='#' title='') Отзывы
+        li
+          a.footer__link(href='#' title='') Контакты
+    .small-24.medium-12.medium-offset-4.large-5.large-offset-0.cell.align-self-middle.footer__search
       form
         input.footer__input(type='text')
         button.footer__button(type='submit')
           i.fas.fa-search
-    .small-24.large-4.cell.footer__contacts
+    .small-24.medium-8.large-4.cell.footer__contacts
       .footer__phone
         a(href='#') +7 (900) 55 68 99
       .footer__email
         a(href='#') info@test.ru
-  include ../common/_footer-info
